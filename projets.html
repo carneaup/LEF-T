@@ -3,183 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEF-T | Projets</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Projets | LEF-T</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Bandeau supérieur -->
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="assets/images/logo-lef-t.png" alt="Logo LEF-T" onerror="this.src='https://via.placeholder.com/150x50/0056A3/FFFFFF?text=LEF-T'">
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="projets.html" class="active">Projets</a></li>
-                    <li><a href="bureau.html">Bureau</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- En-tête de page -->
-    <section class="projects-header">
-        <div class="container">
-            <h1>Nos Projets</h1>
-            <p>Découvrez notre portfolio de réalisations en ingénierie structurelle</p>
-        </div>
-    </section>
-
-    <!-- Filtres -->
-    <section class="container">
-        <div class="filters">
-            <button class="filter-btn active" data-filter="tous">Tous</button>
-            <button class="filter-btn" data-filter="membranes">Membranes</button>
-            <button class="filter-btn" data-filter="bois">Bois</button>
-            <button class="filter-btn" data-filter="façades">Façades</button>
-            <button class="filter-btn" data-filter="mobilités-douces">Mobilités douces</button>
-        </div>
-    </section>
-
-    <!-- Grille de projets -->
-    <main class="main-content">
-        <section class="container">
-            <div class="projects-grid-full">
-                <!-- Projet 1 - Membrane -->
-                <article class="project-card-full" data-category="membranes">
-                    <img src="assets/images/projet-membrane-1.jpg" alt="Toiture membrane du centre culturel" onerror="this.src='https://via.placeholder.com/400x250/0056A3/FFFFFF?text=Membrane+1'">
-                    <div class="project-info">
-                        <span class="project-category">Membranes</span>
-                        <h3>Centre culturel de Belleville</h3>
-                        <p>Toiture tendue en membrane PTFE pour un espace culturel polyvalent. Surface de 2500 m² avec système de tension innovant.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- Projet 2 - Bois -->
-                <article class="project-card-full" data-category="bois">
-                    <img src="assets/images/projet-bois-1.jpg" alt="Structure bois pour école" onerror="this.src='https://via.placeholder.com/400x250/8B4513/FFFFFF?text=Bois+1'">
-                    <div class="project-info">
-                        <span class="project-category">Bois</span>
-                        <h3>École primaire de Ménilmontant</h3>
-                        <p>Structure bois lamellé-collé pour une école primaire. Solution durable et esthétique avec certification PEFC.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- Projet 3 - Façade -->
-                <article class="project-card-full" data-category="façades">
-                    <img src="assets/images/projet-facade-1.jpg" alt="Façade double peau" onerror="this.src='https://via.placeholder.com/400x250/4682B4/FFFFFF?text=Façade+1'">
-                    <div class="project-info">
-                        <span class="project-category">Façades</span>
-                        <h3>Siège social La Défense</h3>
-                        <p>Façade double peau en verre et acier avec système de ventilation naturelle. Réduction de 30% des besoins en climatisation.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- Projet 4 - Mobilités douces -->
-                <article class="project-card-full" data-category="mobilités-douces">
-                    <img src="assets/images/projet-mobilite-1.jpg" alt="Passarelle piétonne" onerror="this.src='https://via.placeholder.com/400x250/FF6B35/FFFFFF?text=Mobilité+1'">
-                    <div class="project-info">
-                        <span class="project-category">Mobilités douces</span>
-                        <h3>Passarelle du canal Saint-Martin</h3>
-                        <p>Passarelle piétonne et cyclable en acier Corten. Portée de 45 mètres sans appui intermédiaire.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- Projet 5 - Membrane -->
-                <article class="project-card-full" data-category="membranes">
-                    <img src="assets/images/projet-membrane-2.jpg" alt="Canopée urbaine" onerror="this.src='https://via.placeholder.com/400x250/0056A3/FFFFFF?text=Membrane+2'">
-                    <div class="project-info">
-                        <span class="project-category">Membranes</span>
-                        <h3>Canopée de la place de la République</h3>
-                        <p>Structure légère en membrane ETFE pour créer des espaces ombragés en ville. Solution démontable et recyclable.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- Projet 6 - Bois -->
-                <article class="project-card-full" data-category="bois">
-                    <img src="assets/images/projet-bois-2.jpg" alt="Maison passive" onerror="this.src='https://via.placeholder.com/400x250/8B4513/FFFFFF?text=Bois+2'">
-                    <div class="project-info">
-                        <span class="project-category">Bois</span>
-                        <h3>Maison passive de Montreuil</h3>
-                        <p>Maison individuelle en ossature bois avec isolation en fibre de bois. Consommation énergétique quasi nulle.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- Projet 7 - Façade -->
-                <article class="project-card-full" data-category="façades">
-                    <img src="assets/images/projet-facade-2.jpg" alt="Façade végétalisée" onerror="this.src='https://via.placeholder.com/400x250/4682B4/FFFFFF?text=Façade+2'">
-                    <div class="project-info">
-                        <span class="project-category">Façades</span>
-                        <h3>Immeuble de bureaux éco-responsable</h3>
-                        <p>Façade végétalisée avec système d'irrigation intelligent. 500 m² de végétalisation et réduction des îlots de chaleur.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- Projet 8 - Mobilités douces -->
-                <article class="project-card-full" data-category="mobilités-douces">
-                    <img src="assets/images/projet-mobilite-2.jpg" alt="Piste cyclable" onerror="this.src='https://via.placeholder.com/400x250/FF6B35/FFFFFF?text=Mobilité+2'">
-                    <div class="project-info">
-                        <span class="project-category">Mobilités douces</span>
-                        <h3>Réseau cyclable du 20ème</h3>
-                        <p>Aménagement de 15 km de pistes cyclables sécurisées avec éclairage LED solaire et mobilier urbain intégré.</p>
-                        <a href="projet-exemple.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Voir le projet</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <!-- Bandeau inférieur -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="projets.html">Projets</a></li>
-                    <li><a href="bureau.html">Bureau</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="mentions.html">Mentions légales</a></li>
-                    <li><a href="privacy.html">Politique de confidentialité</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Coordonnées</h4>
-                <address>
-                    LEF-T Ingénierie<br>
-                    123 Rue de Belleville<br>
-                    75020 Paris, France<br>
-                    <br>
-                    <strong>Email:</strong> contact@lef-t.fr<br>
-                    <strong>Tél:</strong> +33 (0)1 23 45 67 89
-                </address>
-            </div>
-            <div class="footer-section">
-                <h4>Réseaux sociaux</h4>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="#" aria-label="Twitter">Twitter</a>
-                    <a href="#" aria-label="Instagram">Instagram</a>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo"><h1>LEF-T</h1></div>
+                <nav class="nav-main">
+                    <a href="index.html">Accueil</a>
+                    <a href="projets.html" class="active">Projets</a>
+                    <a href="bureau.html">Bureau</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="lang-switcher">
+                    <a href="#" class="active">FR</a>
+                    <a href="#">EN</a>
+                    <a href="#">DE</a>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 LEF-T Ingénierie. Tous droits réservés.</p>
-        </div>
-    </footer>
+        </header>
 
+        <main class="main">
+            <h1 class="page-title">Nos projets</h1>
+
+            <div class="projects-filters">
+                <button class="active">Tous</button>
+                <button>Membranes</button>
+                <button>Bois</button>
+                <button>Façades</button>
+                <button>Mobilités douces</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://source.unsplash.com/random/600x400/?tensile,structure" alt="Toiture tendue">
+                    <div class="project-card-info">
+                        <h3>Toiture tendue pour un centre culturel</h3>
+                        <p>Lyon, France</p>
+                        <div class="project-card-tags"><span>Membranes</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://source.unsplash.com/random/600x400/?wood,charpente" alt="Charpente bois">
+                    <div class="project-card-info">
+                        <h3>Charpente bois pour une école</h3>
+                        <p>Berlin, Allemagne</p>
+                        <div class="project-card-tags"><span>Bois</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://source.unsplash.com/random/600x400/?facade,modern" alt="Façade légère">
+                    <div class="project-card-info">
+                        <h3>Façade légère en ETFE</h3>
+                        <p>Paris, France</p>
+                        <div class="project-card-tags"><span>Façades</span><span>Membranes</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://source.unsplash.com/random/600x400/?bike,design" alt="Vélo de route">
+                    <div class="project-card-info">
+                        <h3>Vélo de route LEF-T 01</h3>
+                        <p>Conception structurelle</p>
+                        <div class="project-card-tags"><span>Mobilités douces</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-address">
+                        <p>LEF-T</p>
+                        <p>Bureau de Belleville, Paris</p>
+                        <p>France</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="https://leicht-bikes.eu" target="_blank">Leicht-bikes.eu</a>
+                        <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 LEF-T. Tous droits réservés.</p>
+                    <div class="footer-links">
+                        <a href="mentions.html">Mentions légales</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

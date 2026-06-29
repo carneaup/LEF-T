@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | LEF-T</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo"><h1>LEF-T</h1></div>
+                <nav class="nav-main">
+                    <a href="index.html">Accueil</a>
+                    <a href="projets.html">Projets</a>
+                    <a href="bureau.html">Bureau</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+                <div class="lang-switcher">
+                    <a href="#" class="active">FR</a>
+                    <a href="#">EN</a>
+                    <a href="#">DE</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <h1 class="page-title">Nous contacter</h1>
+
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <h2>Envoyez-nous un message</h2>
+                    <form class="contact-form" action="#" method="POST">
+                        <input type="text" name="nom" placeholder="Votre nom *" required>
+                        <input type="email" name="email" placeholder="Votre email *" required>
+                        <input type="tel" name="telephone" placeholder="Votre téléphone">
+                        <select name="type" required>
+                            <option value="" disabled selected>Type de demande *</option>
+                            <option value="devis">Demande de devis</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="information">Information</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        <textarea name="message" placeholder="Votre message *" required></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <h2>Nos coordonnées</h2>
+                    <div class="map-container"></div>
+                    <div class="contact-info">
+                        <h3>LEF-T</h3>
+                        <p>📍 Bureau de Belleville</p>
+                        <p>Rue de Belleville, 75020 Paris, France</p>
+                        <p>📧 <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a></p>
+                        <p>📞 +33 (0)1 23 45 67 89</p>
+                        <p>🌐 <a href="https://leicht-bikes.eu" target="_blank">leicht-bikes.eu</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Partenaire Allemagne</h3>
+                        <p>📍 FTR - Rosenheim</p>
+                        <p>Bavière, Allemagne</p>
+                        <p>📧 <a href="mailto:contact@ftr.de">contact@ftr.de</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Réseaux sociaux</h3>
+                        <p><a href="#" style="margin-right: 15px;">Instagram</a><a href="#">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-address">
+                        <p>LEF-T</p>
+                        <p>Bureau de Belleville, Paris</p>
+                        <p>France</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="https://leicht-bikes.eu" target="_blank">Leicht-bikes.eu</a>
+                        <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 LEF-T. Tous droits réservés.</p>
+                    <div class="footer-links">
+                        <a href="mentions.html">Mentions légales</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
