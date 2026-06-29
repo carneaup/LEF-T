@@ -3,9 +3,9 @@
 // Liste des images de fond pour la page d'accueil
 const bgImages = [
     'assets/images/Couverture-ETFE_Villejuif.jpg',
-    'assets/images/projets/Urwaldhaus_Muncih.jpg',
-    'assets/images/projets/aquascope_Poitiers.jpg',
-    'assets/images/projets/newton_garching_coussins-ETFE.jpg',
+    'assets/images/Urwaldhaus_Muncih.jpg',
+    'assets/images/aquascope_Poitiers.jpg',
+    'assets/images/newton_garching_coussins-ETFE.jpg',
 ];
 
 // Sélection aléatoire d'une image pour la page d'accueil
