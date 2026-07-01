@@ -112,14 +112,14 @@ a {
 }
 
 .home-footer {
-    text-align: center;
-    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
     color: var(--text-light);
     font-size: 0.9rem;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-    background: rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 10;
 }
 
 .home-footer a {
@@ -508,6 +508,18 @@ a {
 
 .project-content p {
     margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.project-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+}
+
+.project-content li {
+    margin-bottom: 0.5rem;
     font-size: 1rem;
     line-height: 1.8;
     color: var(--text-dark);
