@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <style>
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      letter-spacing: 0.1em;
+      fill: #2A2A2A;
+    }
+    .logo-text-white {
+      fill: #FFFFFF;
+    }
+  </style>
+  <!-- Version noire par défaut -->
+  <text x="10" y="55" class="logo-text">LEF-T</text>
+</svg>
