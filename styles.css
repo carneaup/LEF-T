@@ -13,11 +13,12 @@
     --text-dark: #333333;
     --text-light: #FFFFFF;
     --border-color: #E0E0E0;
-    --font-main: 'Inter', sans-serif;
+    --font-main: 'Roboto', sans-serif;
 }
 
 body {
     font-family: var(--font-main);
+    font-weight: 300;
     color: var(--text-dark);
     line-height: 1.6;
 }
@@ -55,7 +56,7 @@ a {
 
 .home-header .logo h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 300;
     color: var(--text-light);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.1em;
@@ -68,7 +69,7 @@ a {
 
 .home-nav a {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 300;
     color: var(--text-light);
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
     padding: 10px 0;
@@ -120,6 +121,7 @@ a {
     color: var(--text-light);
     font-size: 0.9rem;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    font-weight: 300;
 }
 
 .home-footer a {
@@ -251,6 +253,10 @@ a {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.footer-logo {
+    height: 40px;
 }
 
 .footer-links {
