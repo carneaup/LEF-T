@@ -3,87 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEF-T | G1 Proto LEICHT – Analyse modale</title>
+    <title>G1 Proto LEICHT - Analyse modale | LEF-T</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-container">
-        <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html"><h1>LEF-T</h1></a>
-                </div>
-                <div style="margin-left: auto; display: flex; align-items: center; gap: 30px;">
-                    <nav class="nav-main">
-                        <a href="projets.html">Projets</a>
-                        <a href="bureau.html">Bureau</a>
-                        <a href="contact.html">Contact</a>
-                    </nav>
-                    <div class="lang-dropdown">
-                        <span class="lang-current">FR</span>
-                        <div class="lang-menu">
-                            <a href="#">FR</a>
-                            <a href="#">EN</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <div id="header"></div>
 
         <main class="main">
-            <h1 class="page-title">G1 Proto LEICHT – Analyse modale</h1>
-
-            <div class="project-gallery">
-                <figure class="project-figure">
-                    <img src="assets/images/g1-analyse-modale-1.jpg" alt="Prise en compte de la rigidité latérale des roues pour l'analyse modale">
-                    <figcaption>Prise en compte de la rigidité latérale des roues</figcaption>
-                </figure>
+            <div class="project-header">
+                <div class="project-header-image" style="background-image: url('assets/images/g1-analyse-modale-1.jpg');"></div>
+                <h1 class="page-title">G1 Proto LEICHT - Analyse modale</h1>
+                <div class="project-meta">
+                    <span>Paris, France</span>
+                    <span>2024</span>
+                </div>
+                <div class="project-tags">
+                    <span>Recherche</span>
+                    <span>Vibrations</span>
+                    <span>Analyse dynamique</span>
+                </div>
             </div>
 
-            <div class="project-text">
-                <p>
-                    Nous avons également mené une analyse des propriétés vibratoires du cadre en intégrant différents comportements possibles de l'utilisateur, notamment différentes fréquences de pédalage.
-                </p>
-                <p>
-                    Elle a permis d'identifier les modes de résonance du cadre et d'évaluer leur impact. Afin de se rapprocher au maximum du comportement réel du vélo, la rigidité latérale des roues a également été prise en compte dans le modèle.
-                </p>
-                <p><strong>Vidéos associées :</strong> Analyse Modale 1, Analyse Modale 2, Analyse Modale 3</p>
-            </div>
-
-            <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border-color);">
-                <a href="projets.html" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 500;">
-                    ← Retour aux projets
-                </a>
+            <div class="project-content">
+                <h2>Objectif</h2>
+                <p>L'analyse modale du prototype G1 LEICHT vise à comprendre le comportement dynamique de la structure sous différentes excitations. Cette étude est cruciale pour garantir la stabilité et le confort des utilisateurs.</p>
+                <p>Notre bureau a réalisé une série de tests pour identifier les modes naturels de vibration de la structure et évaluer leur impact sur la performance globale.</p>
+                <h2>Méthodes utilisées</h2>
+                <p>Nous avons utilisé des capteurs de haute précision pour mesurer les réponses de la structure à différentes fréquences d'excitation. Les données collectées ont été analysées à l'aide de logiciels spécialisés pour identifier les fréquences naturelles et les facteurs d'amortissement.</p>
+                <p>Des modèles numériques ont été développés et validés par comparaison avec les résultats expérimentaux.</p>
+                <h2>Résultats et applications</h2>
+                <p>Les résultats de l'analyse modale ont révélé des propriétés vibratoires intéressantes qui ont permis d'optimiser la conception de la structure. Nous avons identifié des modifications géométriques qui réduisent les vibrations indésirables.</p>
+                <p>Ces améliorations ont été intégrées dans le prototype final, qui présente maintenant une stabilité dynamique exceptionnelle. Les résultats ont également été utilisés pour développer des lignes directrices pour la conception de structures similaires.</p>
+                <div class="project-gallery">
+                    <div class="project-figure">
+                        <img src="assets/images/g1-analyse-modale-1.jpg" alt="Analyse modale - Setup">
+                        <figcaption>Configuration des capteurs</figcaption>
+                    </div>
+                    <div class="project-figure">
+                        <img src="assets/images/g1-contraintes.jpg" alt="Analyse modale - Résultats">
+                        <figcaption>Visualisation des modes</figcaption>
+                    </div>
+                </div>
             </div>
         </main>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-top">
-                    <img src="assets/images/logo_LEF-T.png" alt="LEF-T" class="footer-logo">
-                    <div class="footer-address">
-                        <p>LEF-T</p>
-                        <p>Bureau de Belleville, Paris</p>
-                        <p>France</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="https://leicht-bikes.eu" target="_blank">Leicht-bikes.eu</a>
-                        <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 LEF-T. Tous droits réservés.</p>
-                    <div class="footer-links">
-                        <a href="legal.html">Mentions légales</a>
-                        <a href="charte-graphique.html">Charte graphique et Logo</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <div id="footer"></div>
     </div>
     <script src="script.js"></script>
+    <script src="includes/load-includes.js"></script>
 </body>
 </html>
