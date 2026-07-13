@@ -21,6 +21,7 @@ body {
     font-weight: 300;
     color: var(--text-dark);
     line-height: 1.6;
+    background-color: var(--primary-light);
 }
 
 a {
@@ -155,9 +156,8 @@ a {
 }
 
 .header {
-    background-color: var(--primary-light);
+    background-color: transparent;
     padding: 20px 40px;
-    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
