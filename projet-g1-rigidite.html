@@ -3,90 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEF-T | G1 Proto LEICHT – Rigidité et stabilité</title>
+    <title>G1 Proto LEICHT - Rigidité | LEF-T</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-container">
-        <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html"><h1>LEF-T</h1></a>
-                </div>
-                <div style="margin-left: auto; display: flex; align-items: center; gap: 30px;">
-                    <nav class="nav-main">
-                        <a href="projets.html">Projets</a>
-                        <a href="bureau.html">Bureau</a>
-                        <a href="contact.html">Contact</a>
-                    </nav>
-                    <div class="lang-dropdown">
-                        <span class="lang-current">FR</span>
-                        <div class="lang-menu">
-                            <a href="#">FR</a>
-                            <a href="#">EN</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <div id="header"></div>
 
         <main class="main">
-            <h1 class="page-title">G1 Proto LEICHT – Étude de rigidité et stabilité</h1>
-
-            <div class="project-gallery">
-                <figure class="project-figure">
-                    <img src="assets/images/g1-contraintes.jpg" alt="Étude des contraintes du cadre G1">
-                    <figcaption>Étude des contraintes</figcaption>
-                </figure>
-                <figure class="project-figure">
-                    <img src="assets/images/g1-deplacements.jpg" alt="Étude des déplacements du cadre G1">
-                    <figcaption>Étude des déplacements du cadre</figcaption>
-                </figure>
+            <div class="project-header">
+                <div class="project-header-image" style="background-image: url('assets/images/g1-contraintes.jpg');"></div>
+                <h1 class="page-title">G1 Proto LEICHT - Rigidité</h1>
+                <div class="project-meta">
+                    <span>Paris, France</span>
+                    <span>2024</span>
+                </div>
+                <div class="project-tags">
+                    <span>Recherche</span>
+                    <span>Structure légère</span>
+                    <span>Analyse</span>
+                </div>
             </div>
 
-            <div class="project-text">
-                <p>
-                    Nous avons procédé à une analyse par la méthode des éléments finis pour étudier le comportement du cadre en carbone du gravel.
-                </p>
-                <p>
-                    Une analyse des contraintes et des déformations du cadre a été réalisée afin d'évaluer la répartition des efforts au sein de la structure et d'identifier les zones les plus sollicitées. Cette étude a permis de vérifier la cohérence de la conception du cadre et de confirmer que son comportement mécanique est conforme aux attentes.
-                </p>
-            </div>
-
-            <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border-color);">
-                <a href="projets.html" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 500;">
-                    ← Retour aux projets
-                </a>
+            <div class="project-content">
+                <h2>Contexte</h2>
+                <p>Le projet G1 Proto LEICHT est une étude approfondie sur la rigidité des structures légères. Ce projet de recherche vise à comprendre et optimiser le comportement des structures en bois et composites sous différentes charges.</p>
+                <p>Notre bureau a été chargé de développer des modèles numériques et des tests physiques pour évaluer la rigidité et la stabilité de ces structures innovantes.</p>
+                <h2>Méthodologie</h2>
+                <p>Nous avons utilisé une combinaison d'analyses par éléments finis et de tests en laboratoire pour étudier le comportement des structures. Plusieurs prototypes ont été construits et testés sous différentes conditions de charge.</p>
+                <p>Les résultats ont permis de valider nos modèles numériques et d'identifier les paramètres clés influençant la rigidité des structures.</p>
+                <h2>Résultats</h2>
+                <p>Les conclusions de cette étude ont permis de développer des recommandations précises pour la conception de structures légères optimisées. Nous avons identifié des configurations géométriques qui maximisent la rigidité tout en minimisant le poids.</p>
+                <p>Ces résultats sont maintenant utilisés pour le développement de nouveaux projets et ont fait l'objet de publications dans des revues scientifiques spécialisées.</p>
+                <div class="project-gallery">
+                    <div class="project-figure">
+                        <img src="assets/images/g1-contraintes.jpg" alt="G1 Rigidité - Contraintes">
+                        <figcaption>Analyse des contraintes</figcaption>
+                    </div>
+                    <div class="project-figure">
+                        <img src="assets/images/g1-analyse-modale-1.jpg" alt="G1 Rigidité - Déformation">
+                        <figcaption>Étude des déformations</figcaption>
+                    </div>
+                </div>
             </div>
         </main>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-top">
-                    <img src="assets/images/logo_LEF-T.png" alt="LEF-T" class="footer-logo">
-                    <div class="footer-address">
-                        <p>LEF-T</p>
-                        <p>Bureau de Belleville, Paris</p>
-                        <p>France</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="https://leicht-bikes.eu" target="_blank">Leicht-bikes.eu</a>
-                        <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 LEF-T. Tous droits réservés.</p>
-                    <div class="footer-links">
-                        <a href="legal.html">Mentions légales</a>
-                        <a href="charte-graphique.html">Charte graphique et Logo</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <div id="footer"></div>
     </div>
     <script src="script.js"></script>
+    <script src="includes/load-includes.js"></script>
 </body>
 </html>
