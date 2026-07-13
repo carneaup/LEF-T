@@ -169,6 +169,11 @@ body.home-page .header {
     position: absolute;
 }
 
+/* Force le menu à droite sur index.html */
+body.home-page .header-content > div:last-child {
+    margin-left: auto;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
