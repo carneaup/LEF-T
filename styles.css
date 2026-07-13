@@ -164,10 +164,10 @@ a {
 }
 
 /* Header sur la page d'accueil */
-body.home-page .header {
+/*body.home-page .header {
     padding: 20px 40px;
     position: absolute;
-}
+}*/
 
 .header-content {
     display: flex;
