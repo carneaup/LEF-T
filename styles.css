@@ -163,6 +163,12 @@ a {
     z-index: 100;
 }
 
+/* Header sur la page d'accueil */
+body.home-page .header {
+    padding: 40px;
+    position: absolute;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -184,6 +190,22 @@ a {
     font-weight: 600;
     color: var(--primary-dark);
     letter-spacing: 0.05em;
+}
+
+/* Header sur page d'accueil - texte blanc */
+body.home-page .header .logo h1 {
+    color: var(--text-light);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.home-page .header .nav-main a {
+    color: var(--text-light);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+body.home-page .header .lang-current {
+    color: var(--text-light);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Menu à droite */
