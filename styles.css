@@ -165,11 +165,15 @@ a {
 
 /* Header sur la page d'accueil */
 body.home-page .header {
-    padding: 40px;
+    padding: 20px 40px;
     position: absolute;
 }
 
-/* Force le menu à droite sur index.html */
+/* Header content sur index : menu à droite */
+body.home-page .header-content {
+    justify-content: flex-start;
+}
+
 body.home-page .header-content > div:last-child {
     margin-left: auto;
 }
