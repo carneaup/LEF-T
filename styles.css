@@ -167,6 +167,8 @@ a {
 body.home-page .header {
     padding: 20px 40px;
     position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .header .logo a {
