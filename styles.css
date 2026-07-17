@@ -166,7 +166,7 @@ a {
 /* Header sur la page d'accueil */
 body.home-page .header {
     padding: 20px 40px;
-    position: sticky;
+    position: absolute;
 }
 
 .header-content {
