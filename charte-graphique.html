@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charte graphique et Logo | LEF-T</title>
+    <title data-translate="LEF-T | Bureau d'Études Structure">LEF-T | Bureau d'Études Structure</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-container">
@@ -14,129 +14,58 @@
                 <div class="logo">
                     <a href="index.html"><h1>LEF-T</h1></a>
                 </div>
-                <div style="margin-left: auto; display: flex; align-items: center; gap: 30px;">
+                <div class="header-right">
                     <nav class="nav-main">
-                        <a href="projets.html">Projets</a>
-                        <a href="bureau.html">Bureau</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
                     </nav>
                     <div class="lang-dropdown">
-                        <span class="lang-current">FR</span>
+                        <span class="lang-current" id="lang-current">FR</span>
                         <div class="lang-menu">
-                            <a href="#">FR</a>
-                            <a href="#">EN</a>
+                            <a href="#" onclick="changeLanguage('fr')">FR</a>
+                            <a href="#" onclick="changeLanguage('en')">EN</a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-
         <main class="main">
-            <h1 class="page-title">Charte graphique et Logo</h1>
+            <h1 class="page-title" data-translate="Charte graphique">Charte graphique</h1>
             <div style="max-width: 800px;">
+                <h2 data-translate="Logo">Logo</h2>
+                <p data-translate="Le logo LEF-T doit toujours être utilisé dans sa version officielle.">Le logo LEF-T doit toujours être utilisé dans sa version officielle.</p>
                 
-                <!-- ===== LOGO ===== -->
-                <section id="logo" style="margin-bottom: 40px;">
-                    <h2>Logo LEF-T</h2>
-                    <div style="text-align: center; margin: 20px 0;">
-                        <img src="assets/images/logo_LEF-T.png" alt="Logo LEF-T" style="max-width: 300px; height: auto;">
-                    </div>
-                    <p>Le logo LEF-T représente notre identité visuelle.</p>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">
-                        <strong>Utilisation :</strong> Le logo doit être utilisé tel quel, sans modification de couleurs ou de proportions.
-                    </p>
-                </section>
-
-                <!-- ===== CHARTE GRAPHIQUE ===== -->
-                <section id="charte-graphique">
-                    <h2>Charte graphique</h2>
-                    
-                    <h3>Police utilisée</h3>
-                    <p><strong>Famille :</strong> Roboto Light (Google Fonts)</p>
-                    <p><strong>Poids :</strong> 300 (Light)</p>
-                    <p><strong>Utilisation :</strong> Utilisée pour tous les textes du site, offrant une excellente lisibilité et un design moderne et épuré.</p>
-                    <p><a href="https://fonts.google.com/specimen/Roboto" target="_blank">Voir la police sur Google Fonts →</a></p>
-
-                    <h3 style="margin-top: 30px;">Palettes de couleurs</h3>
-                    <div style="display: flex; flex-direction: column; gap: 15px; margin: 20px 0;">
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 60px; height: 40px; background-color: #2A2A2A; border-radius: 4px;"></div>
-                            <div>
-                                <p><strong>Primary Dark</strong></p>
-                                <p style="font-size: 0.9rem; opacity: 0.7;">#2A2A2A</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 60px; height: 40px; background-color: #F5F5F5; border-radius: 4px; border: 1px solid #E0E0E0;"></div>
-                            <div>
-                                <p><strong>Primary Light</strong></p>
-                                <p style="font-size: 0.9rem; opacity: 0.7;">#F5F5F5</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 60px; height: 40px; background-color: #0056A3; border-radius: 4px;"></div>
-                            <div>
-                                <p><strong>Accent Blue</strong></p>
-                                <p style="font-size: 0.9rem; opacity: 0.7;">#0056A3</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 60px; height: 40px; background-color: #FF6B35; border-radius: 4px;"></div>
-                            <div>
-                                <p><strong>Accent Orange</strong></p>
-                                <p style="font-size: 0.9rem; opacity: 0.7;">#FF6B35</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 60px; height: 40px; background-color: #333333; border-radius: 4px;"></div>
-                            <div>
-                                <p><strong>Text Dark</strong></p>
-                                <p style="font-size: 0.9rem; opacity: 0.7;">#333333</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 60px; height: 40px; background-color: #FFFFFF; border-radius: 4px; border: 1px solid #E0E0E0;"></div>
-                            <div>
-                                <p><strong>Text Light</strong></p>
-                                <p style="font-size: 0.9rem; opacity: 0.7;">#FFFFFF</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 60px; height: 40px; background-color: #E0E0E0; border-radius: 4px;"></div>
-                            <div>
-                                <p><strong>Border Color</strong></p>
-                                <p style="font-size: 0.9rem; opacity: 0.7;">#E0E0E0</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <p style="margin-top: 60px;"><strong>Dernière mise à jour : Juillet 2026</strong></p>
+                <h2 data-translate="Couleurs">Couleurs</h2>
+                <p data-translate="Couleur principale sombre :">Couleur principale sombre : <strong>#2A2A2A</strong></p>
+                <p data-translate="Couleur principale claire :">Couleur principale claire : <strong>#F5F5F5</strong></p>
+                <p data-translate="Couleur accent bleu :">Couleur accent bleu : <strong>#0056A3</strong></p>
+                <p data-translate="Couleur accent orange :">Couleur accent orange : <strong>#FF6B35</strong></p>
+                
+                <h2 data-translate="Police">Police</h2>
+                <p data-translate="Police principale : Roboto (300, 400, 500, 600, 700)">Police principale : Roboto (300, 400, 500, 600, 700)</p>
+                <p data-translate="Police de secours : sans-serif">Police de secours : sans-serif</p>
+                
+                <h2 data-translate="Utilisation">Utilisation</h2>
+                <p data-translate="Toutes les pages doivent respecter cette charte graphique pour une cohérence visuelle.">Toutes les pages doivent respecter cette charte graphique pour une cohérence visuelle.</p>
             </div>
         </main>
-
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-top">
-                    <img src="assets/images/logo_LEF-T.png" alt="LEF-T" class="footer-logo">
-                    <div class="footer-address">
-                        <p>LEF-T</p>
-                        <p>Bureau de Belleville, Paris</p>
-                        <p>France</p>
+                    <div class="footer-logo">
+                        <img src="assets/images/logo_LEF-T.png" alt="LEF-T" class="footer-logo">
                     </div>
                     <div class="footer-links">
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="https://leicht-bikes.eu" target="_blank">Leicht-bikes.eu</a>
-                        <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a>
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
+                        <a href="legal.html" data-translate="Mentions légales">Mentions légales</a>
+                        <a href="charte-graphique.html" data-translate="Charte graphique">Charte graphique</a>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 LEF-T. Tous droits réservés.</p>
-                    <div class="footer-links">
-                        <a href="legal.html">Mentions légales</a>
-                        <a href="charte-graphique.html" class="active">Charte graphique et Logo</a>
-                    </div>
+                    <p data-translate="LEF-T &copy; 2026">LEF-T &copy; 2026 | <a href="legal.html" data-translate="Privacy Policy">Privacy Policy</a></p>
                 </div>
             </div>
         </footer>
