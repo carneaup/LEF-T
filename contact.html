@@ -3,64 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | LEF-T</title>
+    <title data-translate="LEF-T | Bureau d'Études Structure">LEF-T | Bureau d'Études Structure</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-container">
-        <div id="header"></div>
-
-        <main class="main">
-            <h1 class="page-title">Nous contacter</h1>
-
-            <div class="contact-container">
-                <div class="contact-form-container">
-                    <h2>Envoyez-nous un message</h2>
-                    <form class="contact-form" action="#" method="POST">
-                        <input type="text" name="nom" placeholder="Votre nom *" required>
-                        <input type="email" name="email" placeholder="Votre email *" required>
-                        <input type="tel" name="telephone" placeholder="Votre téléphone">
-                        <select name="type" required>
-                            <option value="" disabled selected>Type de demande *</option>
-                            <option value="devis">Demande de devis</option>
-                            <option value="partenariat">Partenariat</option>
-                            <option value="information">Information</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                        <textarea name="message" placeholder="Votre message *" required></textarea>
-                        <button type="submit">Envoyer</button>
-                    </form>
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>LEF-T</h1></a>
                 </div>
-
-                <div class="contact-info-container">
-                    <h2>Nos coordonnées</h2>
-                    <div class="map-container"></div>
-                    <div class="contact-info">
-                        <h3>LEF-T</h3>
-                        <p>📍 Bureau de Belleville</p>
-                        <p>Rue de Belleville, 75020 Paris, France</p>
-                        <p>📧 <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a></p>
-                        <p>📞 +33 (0)1 23 45 67 89</p>
-                        <p>🌐 <a href="https://leicht-bikes.eu" target="_blank">leicht-bikes.eu</a></p>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Partenaire Allemagne</h3>
-                        <p>📍 FTR - Rosenheim</p>
-                        <p>Bavière, Allemagne</p>
-                        <p>📧 <a href="mailto:contact@ftr.de">contact@ftr.de</a></p>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Réseaux sociaux</h3>
-                        <p><a href="#" style="margin-right: 15px;">Instagram</a><a href="#">LinkedIn</a></p>
+                <div class="header-right">
+                    <nav class="nav-main">
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
+                    </nav>
+                    <div class="lang-dropdown">
+                        <span class="lang-current" id="lang-current">FR</span>
+                        <div class="lang-menu">
+                            <a href="#" onclick="changeLanguage('fr')">FR</a>
+                            <a href="#" onclick="changeLanguage('en')">EN</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </header>
+        <main class="main">
+            <h1 class="page-title" data-translate="Contactez-nous">Contactez-nous</h1>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-translate="Nom">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-translate="Email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-translate="Message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="download-button" data-translate="Envoyer">Envoyer</button>
+            </form>
         </main>
-
-        <div id="footer"></div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo_LEF-T.png" alt="LEF-T" class="footer-logo">
+                    </div>
+                    <div class="footer-links">
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
+                        <a href="legal.html" data-translate="Mentions légales">Mentions légales</a>
+                        <a href="charte-graphique.html" data-translate="Charte graphique">Charte graphique</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p data-translate="LEF-T &copy; 2026">LEF-T &copy; 2026 | <a href="legal.html" data-translate="Privacy Policy">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
-    <script src="includes/load-includes.js"></script>
 </body>
 </html>
