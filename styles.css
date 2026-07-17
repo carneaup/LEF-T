@@ -163,11 +163,16 @@ a {
     z-index: 100;
 }
 
+
 /* Header sur la page d'accueil */
 body.home-page .header {
-    padding: 20px 40px;
     position: absolute;
+    width: 100%;  /* ✅ Largeur pleine */
+    z-index: 2;   /* ✅ Au-dessus du background (z-index:1) mais transparent */
+    background-color: transparent;
 }
+
+
 
 .header-content {
     display: flex;
