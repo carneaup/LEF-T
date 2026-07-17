@@ -3,63 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions légales | LEF-T</title>
+    <title data-translate="LEF-T | Bureau d'Études Structure">LEF-T | Bureau d'Études Structure</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-container">
-        <div id="header"></div>
-
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>LEF-T</h1></a>
+                </div>
+                <div class="header-right">
+                    <nav class="nav-main">
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
+                    </nav>
+                    <div class="lang-dropdown">
+                        <span class="lang-current" id="lang-current">FR</span>
+                        <div class="lang-menu">
+                            <a href="#" onclick="changeLanguage('fr')">FR</a>
+                            <a href="#" onclick="changeLanguage('en')">EN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main class="main">
-            <h1 class="page-title">Mentions légales</h1>
+            <h1 class="page-title" data-translate="Mentions légales">Mentions légales</h1>
             <div style="max-width: 800px;">
+                <h2 data-translate="Éditeur du site">Éditeur du site</h2>
+                <p>LEF-T<br>Bureau d'études structure<br>Rue de Belleville, 75020 Paris, France<br>Email : <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a></p>
                 
-                <!-- ===== MENTIONS LÉGALES ===== -->
-                <section id="mentions-legales">
-                    <h2>Mentions légales</h2>
-                    
-                    <h3>Éditeur du site</h3>
-                    <p>LEF-T<br>Bureau d'études structure<br>Rue de Belleville, 75020 Paris, France<br>Email : <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a></p>
-
-                    <h3>Hébergement</h3>
-                    <p>[Nom de l'hébergeur]<br>[Adresse de l'hébergeur]</p>
-
-                    <h3>Propriété intellectuelle</h3>
-                    <p>L'ensemble des contenus présents sur ce site est la propriété exclusive de LEF-T.</p>
-                </section>
-
-                <hr style="margin: 40px 0; border: 0; border-top: 1px solid var(--border-color);">
-
-                <!-- ===== POLITIQUE DE CONFIDENTIALITÉ ===== -->
-                <section id="politique-confidentialite">
-                    <h2>Politique de confidentialité</h2>
-                    
-                    <p>LEF-T s'engage à protéger la vie privée de ses utilisateurs.</p>
-
-                    <h3>1. Informations collectées</h3>
-                    <p>Nous collectons les informations que vous nous fournissez via notre formulaire de contact (nom, email, téléphone, message).</p>
-
-                    <h3>2. Utilisation</h3>
-                    <p>Les informations sont utilisées pour répondre à vos demandes et améliorer nos services.</p>
-
-                    <h3>3. Cookies</h3>
-                    <p>Ce site utilise des cookies pour améliorer l'expérience utilisateur. Vous pouvez les désactiver dans les paramètres de votre navigateur.</p>
-
-                    <h3>4. Partage</h3>
-                    <p>Nous ne partageons pas vos informations personnelles avec des tiers sans votre consentement.</p>
-
-                    <h3>5. Vos droits</h3>
-                    <p>Conformément au RGPD, vous avez le droit d'accéder, corriger ou supprimer vos données. Contactez-nous à <a href="mailto:contact@lef-t.eu">contact@lef-t.eu</a>.</p>
-                </section>
-
-                <p style="margin-top: 60px;"><strong>Dernière mise à jour : Juin 2026</strong></p>
+                <h2 data-translate="Hébergement">Hébergement</h2>
+                <p>[Nom de l'hébergeur]<br>[Adresse de l'hébergeur]</p>
+                
+                <h2 data-translate="Propriété intellectuelle">Propriété intellectuelle</h2>
+                <p data-translate="L'ensemble des contenus présents sur ce site est la propriété exclusive de LEF-T.">L'ensemble des contenus présents sur ce site est la propriété exclusive de LEF-T.</p>
+                
+                <h2 data-translate="Données personnelles">Données personnelles</h2>
+                <p data-translate="Pour en savoir plus, consultez notre">Pour en savoir plus, consultez notre <a href="legal.html" data-translate="Politique de confidentialité">Politique de confidentialité</a>.</p>
+                
+                <p style="margin-top: 40px;"><strong data-translate="Dernière mise à jour : Juin 2026">Dernière mise à jour : Juin 2026</strong></p>
             </div>
         </main>
-
-        <div id="footer"></div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo_LEF-T.png" alt="LEF-T" class="footer-logo">
+                    </div>
+                    <div class="footer-links">
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
+                        <a href="legal.html" data-translate="Mentions légales">Mentions légales</a>
+                        <a href="charte-graphique.html" data-translate="Charte graphique">Charte graphique</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p data-translate="LEF-T &copy; 2026">LEF-T &copy; 2026 | <a href="legal.html" data-translate="Privacy Policy">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
-    <script src="includes/load-includes.js"></script>
 </body>
 </html>
