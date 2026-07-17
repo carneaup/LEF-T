@@ -1,6 +1,6 @@
 /**
  * Load Includes - Système de chargement des includes HTML
- * Version corrigée: gère [data-include] ET les IDs spécifiques
+ * Version corrigée: utilise DOMParser pour la sécurité
  */
 
 // Cache des includes déjà chargés
@@ -16,11 +16,22 @@ const idToPathMap = {
  * Sanitize HTML content to prevent XSS
  */
 function sanitizeHTML(html) {
-    // Basic XSS protection
-    let sanitized = html.replace(/<script[^<]*(?:(?!</script>)<[^<]*)*</script>/gi, '');
-    sanitized = sanitized.replace(/javascript:/gi, '');
-    sanitized = sanitized.replace(/onw+="[^"]*"/g, '');
-    return sanitized;
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    
+    // Remove all script tags
+    const scripts = doc.querySelectorAll('script');
+    scripts.forEach(script => script.remove());
+    
+    // Remove event handlers from all elements
+    const allElements = doc.querySelectorAll('*');
+    allElements.forEach(el => {
+        ['onclick', 'onload', 'onerror', 'onmouseover', 'onmouseout', 'onfocus', 'onblur', 'onsubmit'].forEach(attr => {
+            el.removeAttribute(attr);
+        });
+    });
+    
+    return doc.body.innerHTML;
 }
 
 /**
@@ -63,17 +74,17 @@ async function initIncludes() {
     }
     
     // 2. Gère les éléments avec ID spécifique (header, footer)
-    const idElements = document.querySelectorAll('#header, #footer');
+    const headerEl = document.getElementById('header');
+    const footerEl = document.getElementById('footer');
     
-    for (let i = 0; i < idElements.length; i++) {
-        const el = idElements[i];
-        const id = el.id;
-        const path = idToPathMap[id];
-        
-        if (path) {
-            const html = await loadIncludeFile(path);
-            el.innerHTML = html;
-        }
+    if (headerEl) {
+        const html = await loadIncludeFile('includes/header.html');
+        headerEl.innerHTML = html;
+    }
+    
+    if (footerEl) {
+        const html = await loadIncludeFile('includes/footer.html');
+        footerEl.innerHTML = html;
     }
 }
 
