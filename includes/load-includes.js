@@ -1,74 +1,83 @@
 /**
  * Load Includes - Système de chargement des includes HTML
- * Version optimisée avec cache, gestion d'erreurs et sécurité
+ * Version corrigée: gère [data-include] ET les IDs spécifiques
  */
 
 // Cache des includes déjà chargés
 const includesCache = new Map();
 
+// Mapping des IDs vers les chemins de fichiers
+const idToPathMap = {
+    'header': 'includes/header.html',
+    'footer': 'includes/footer.html'
+};
+
 /**
- * Load an include file and return its content
- * @param {string} path - Path to the include file
- * @returns {Promise<string>} HTML content
+ * Sanitize HTML content to prevent XSS
+ */
+function sanitizeHTML(html) {
+    // Basic XSS protection
+    let sanitized = html.replace(/<script[^<]*(?:(?!</script>)<[^<]*)*</script>/gi, '');
+    sanitized = sanitized.replace(/javascript:/gi, '');
+    sanitized = sanitized.replace(/onw+="[^"]*"/g, '');
+    return sanitized;
+}
+
+/**
+ * Load an include file
  */
 async function loadIncludeFile(path) {
-    // Check cache first
     if (includesCache.has(path)) {
         return includesCache.get(path);
     }
 
     try {
         const response = await fetch(path);
-        
         if (!response.ok) {
-            throw new Error('Failed to load include: ' + response.status + ' ' + response.statusText);
+            throw new Error('Failed to load: ' + response.status);
         }
-        
         let html = await response.text();
-        
-        // Basic XSS protection: remove script tags
-        html = html.replace(/<script[^<]*(?:(?!</script>)<[^<]*)*</script>/gi, '');
-        html = html.replace(/javascript:/gi, '');
-        html = html.replace(/onw+="[^"]*"/g, '');
-        
-        // Cache the sanitized content
+        html = sanitizeHTML(html);
         includesCache.set(path, html);
-        
         return html;
     } catch (error) {
-        console.error('Error loading include ' + path + ':', error);
-        
-        // Return a fallback message
-        return '<div class="include-error" style="padding: 10px; background: #fee; border: 1px solid #fcc; color: #c33; font-size: 0.9rem;">Include not found: ' + path + '</div>';
+        console.error('Error loading ' + path + ':', error);
+        return '<div style="padding: 10px; background: #fee; border: 1px solid #fcc; color: #c33;">Error loading include</div>';
     }
 }
 
 /**
- * Initialize all includes on the page
+ * Initialize all includes
  */
 async function initIncludes() {
-    const includeElements = document.querySelectorAll('[data-include]');
+    // 1. Gère les éléments avec data-include
+    const dataIncludeElements = document.querySelectorAll('[data-include]');
     
-    for (let i = 0; i < includeElements.length; i++) {
-        const element = includeElements[i];
-        const path = element.getAttribute('data-include');
-        
-        if (!path) {
-            console.warn('Element has data-include attribute but no path specified');
-            continue;
-        }
-        
-        try {
+    for (let i = 0; i < dataIncludeElements.length; i++) {
+        const el = dataIncludeElements[i];
+        const path = el.getAttribute('data-include');
+        if (path) {
             const html = await loadIncludeFile(path);
-            element.innerHTML = html;
-        } catch (error) {
-            console.error('Failed to load include ' + path + ':', error);
-            element.innerHTML = '<div class="include-error" style="padding: 10px; background: #fee; border: 1px solid #fcc; color: #c33; font-size: 0.9rem;">Error loading: ' + path + '</div>';
+            el.innerHTML = html;
+        }
+    }
+    
+    // 2. Gère les éléments avec ID spécifique (header, footer)
+    const idElements = document.querySelectorAll('#header, #footer');
+    
+    for (let i = 0; i < idElements.length; i++) {
+        const el = idElements[i];
+        const id = el.id;
+        const path = idToPathMap[id];
+        
+        if (path) {
+            const html = await loadIncludeFile(path);
+            el.innerHTML = html;
         }
     }
 }
 
-// Initialize includes when DOM is loaded
+// Initialize when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initIncludes);
 } else {
