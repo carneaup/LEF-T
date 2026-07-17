@@ -3,81 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets | LEF-T</title>
+    <title>Projets - LEF-T</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="page-container">
-        <div id="header"></div>
-
-        <main class="main">
-            <h1 class="page-title">Nos projets</h1>
-
-            <div class="projects-filters">
-                <button class="active">Tous</button>
-                <button>Membranes</button>
-                <button>Bois</button>
-                <button>Façades</button>
-                <button>Mobilités douces</button>
-            </div>
-
-            <div class="projects-mosaic">
-                <a href="projet-villejuif.html" class="project-tile">
-                    <img src="assets/images/Couverture-ETFE_Villejuif.jpg" alt="Couverture ETFE Villejuif">
-                    <div class="project-tile-overlay">
-                        <h3>Couverture ETFE - Villejuif</h3>
-                        <p>Toiture tendue pour centre commercial</p>
-                    </div>
-                </a>
-                <a href="projet-munich.html" class="project-tile">
-                    <img src="assets/images/Urwaldhaus_Muncih.jpg" alt="Urwaldhaus Munich">
-                    <div class="project-tile-overlay">
-                        <h3>Urwaldhaus - Munich</h3>
-                        <p>Structure bois et membranes</p>
-                    </div>
-                </a>
-                <a href="projet-poitiers.html" class="project-tile">
-                    <img src="assets/images/aquascope_Poitiers.jpg" alt="Aquascope Poitiers">
-                    <div class="project-tile-overlay">
-                        <h3>Aquascope - Poitiers</h3>
-                        <p>Bassin couvert avec toiture légère</p>
-                    </div>
-                </a>
-                <a href="projet-garching.html" class="project-tile">
-                    <img src="assets/images/newton_garching_coussins-ETFE.jpg" alt="Newton Garching">
-                    <div class="project-tile-overlay">
-                        <h3>Newton - Garching</h3>
-                        <p>Coussins ETFE pour bâtiment scientifique</p>
-                    </div>
-                </a>
-                <a href="projet-g1-rigidite.html" class="project-tile">
-                    <img src="assets/images/g1-contraintes.jpg" alt="G1 Proto LEICHT - Étude de rigidité">
-                    <div class="project-tile-overlay">
-                        <h3>G1 Proto LEICHT - Rigidité</h3>
-                        <p>Étude de rigidité et stabilité</p>
-                    </div>
-                </a>
-                <a href="projet-g1-analyse-modale.html" class="project-tile">
-                    <img src="assets/images/g1-analyse-modale-1.jpg" alt="G1 Proto LEICHT - Analyse modale">
-                    <div class="project-tile-overlay">
-                        <h3>G1 Proto LEICHT - Analyse modale</h3>
-                        <p>Analyse modale et propriétés vibratoires</p>
-                    </div>
-                </a>
-                <a href="projet-cargo-schwehhr.html" class="project-tile">
-                    <img src="assets/images/cargo-schwehhr-1.jpg" alt="Vélo cargo proto SCHWEHHR">
-                    <div class="project-tile-overlay">
-                        <h3>Vélo cargo proto SCHWEHHR</h3>
-                        <p>Développement vélo cargo urbain</p>
-                    </div>
-                </a>
-            </div>
-        </main>
-
-        <div id="footer"></div>
-    </div>
-    <script src="script.js"></script>
+<body class="page-container">
+    <div id="header"></div>
+    
+    <main class="main">
+        <h1 class="page-title">Nos Projets</h1>
+        
+        <!-- Filtres de catégorie (seront générés dynamiquement) -->
+        <div class="projects-filters"></div>
+        
+        <!-- Mosaïque de projets (sera générée dynamiquement) -->
+        <div class="projects-mosaic"></div>
+    </main>
+    
+    <div id="footer"></div>
+    
+    <!-- Scripts -->
     <script src="includes/load-includes.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 </html>
