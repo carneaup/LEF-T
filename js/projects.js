@@ -23,8 +23,9 @@ function generateProjectCard(project) {
         '<h3>' + project.title + '</h3>' +
         '<p>' + project.location + ' - ' + project.year + '</p>' +
         '</div>';
-    const card = document.createElement('div');
+    const card = document.createElement('a');
     card.className = 'project-tile';
+    card.href = project.url;
     card.innerHTML = html;
     return card.outerHTML;
 }
