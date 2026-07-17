@@ -1,0 +1,85 @@
+{
+  "projects": [
+    {
+      "id": "g1-analyse-modale",
+      "title": "Projet G1 - Analyse Modale",
+      "image": "assets/images/projet-g1-analyse-modale.jpg",
+      "category": "g1",
+      "url": "projet-g1-analyse-modale.html",
+      "year": "2024",
+      "location": "Munich, Allemagne"
+    },
+    {
+      "id": "g1-rigidite",
+      "title": "Projet G1 - Rigidité",
+      "image": "assets/images/projet-g1-rigidite.jpg",
+      "category": "g1",
+      "url": "projet-g1-rigidite.html",
+      "year": "2024",
+      "location": "Munich, Allemagne"
+    },
+    {
+      "id": "garching",
+      "title": "Projet Garching",
+      "image": "assets/images/projet-garching.jpg",
+      "category": "bureau",
+      "url": "projet-garching.html",
+      "year": "2023",
+      "location": "Garching, Allemagne"
+    },
+    {
+      "id": "cargo-schwehhr",
+      "title": "Projet Cargo Schwehhr",
+      "image": "assets/images/projet-cargo-schwehhr.jpg",
+      "category": "logistique",
+      "url": "projet-cargo-schwehhr.html",
+      "year": "2023",
+      "location": "Allemagne"
+    },
+    {
+      "id": "munich",
+      "title": "Projet Munich",
+      "image": "assets/images/projet-munich.jpg",
+      "category": "bureau",
+      "url": "projet-munich.html",
+      "year": "2023",
+      "location": "Munich, Allemagne"
+    },
+    {
+      "id": "poitiers",
+      "title": "Projet Poitiers",
+      "image": "assets/images/projet-poitiers.jpg",
+      "category": "urbanisme",
+      "url": "projet-poitiers.html",
+      "year": "2022",
+      "location": "Poitiers, France"
+    },
+    {
+      "id": "villejuif",
+      "title": "Projet Villejuif",
+      "image": "assets/images/projet-villejuif.jpg",
+      "category": "urbanisme",
+      "url": "projet-villejuif.html",
+      "year": "2022",
+      "location": "Villejuif, France"
+    }
+  ],
+  "categories": [
+    {
+      "id": "g1",
+      "name": "G1"
+    },
+    {
+      "id": "bureau",
+      "name": "Bureau"
+    },
+    {
+      "id": "logistique",
+      "name": "Logistique"
+    },
+    {
+      "id": "urbanisme",
+      "name": "Urbanisme"
+    }
+  ]
+}
