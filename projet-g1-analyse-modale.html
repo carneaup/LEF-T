@@ -3,54 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G1 Proto LEICHT - Analyse modale | LEF-T</title>
+    <title data-translate="LEF-T | Bureau d'Études Structure">LEF-T | Bureau d'Études Structure</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-container">
-        <div id="header"></div>
-
-        <main class="main">
-            <div class="project-header">
-                <div class="project-header-image" style="background-image: url('assets/images/g1-analyse-modale-1.jpg');"></div>
-                <h1 class="page-title">G1 Proto LEICHT - Analyse modale</h1>
-                <div class="project-meta">
-                    <span>Paris, France</span>
-                    <span>2024</span>
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>LEF-T</h1></a>
                 </div>
-                <div class="project-tags">
-                    <span>Recherche</span>
-                    <span>Vibrations</span>
-                    <span>Analyse dynamique</span>
+                <div class="header-right">
+                    <nav class="nav-main">
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
+                    </nav>
+                    <div class="lang-dropdown">
+                        <span class="lang-current" id="lang-current">FR</span>
+                        <div class="lang-menu">
+                            <a href="#" onclick="changeLanguage('fr')">FR</a>
+                            <a href="#" onclick="changeLanguage('en')">EN</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-content">
-                <h2>Objectif</h2>
-                <p>L'analyse modale du prototype G1 LEICHT vise à comprendre le comportement dynamique de la structure sous différentes excitations. Cette étude est cruciale pour garantir la stabilité et le confort des utilisateurs.</p>
-                <p>Notre bureau a réalisé une série de tests pour identifier les modes naturels de vibration de la structure et évaluer leur impact sur la performance globale.</p>
-                <h2>Méthodes utilisées</h2>
-                <p>Nous avons utilisé des capteurs de haute précision pour mesurer les réponses de la structure à différentes fréquences d'excitation. Les données collectées ont été analysées à l'aide de logiciels spécialisés pour identifier les fréquences naturelles et les facteurs d'amortissement.</p>
-                <p>Des modèles numériques ont été développés et validés par comparaison avec les résultats expérimentaux.</p>
-                <h2>Résultats et applications</h2>
-                <p>Les résultats de l'analyse modale ont révélé des propriétés vibratoires intéressantes qui ont permis d'optimiser la conception de la structure. Nous avons identifié des modifications géométriques qui réduisent les vibrations indésirables.</p>
-                <p>Ces améliorations ont été intégrées dans le prototype final, qui présente maintenant une stabilité dynamique exceptionnelle. Les résultats ont également été utilisés pour développer des lignes directrices pour la conception de structures similaires.</p>
-                <div class="project-gallery">
-                    <div class="project-figure">
-                        <img src="assets/images/g1-analyse-modale-1.jpg" alt="Analyse modale - Setup">
-                        <figcaption>Configuration des capteurs</figcaption>
-                    </div>
-                    <div class="project-figure">
-                        <img src="assets/images/g1-contraintes.jpg" alt="Analyse modale - Résultats">
-                        <figcaption>Visualisation des modes</figcaption>
-                    </div>
-                </div>
+        </header>
+        <main class="main">
+            <h1 class="page-title" data-translate="Projet G1 - Analyse Modale">Projet G1 - Analyse Modale</h1>
+            <div style="max-width: 800px; margin: 20px 0;">
+                <p data-translate="Description du projet Projet G1 - Analyse Modale">Description du projet Projet G1 - Analyse Modale</p>
             </div>
         </main>
-        <div id="footer"></div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo_LEF-T.png" alt="LEF-T" class="footer-logo">
+                    </div>
+                    <div class="footer-links">
+                        <a href="projets.html" data-translate="Projets">Projets</a>
+                        <a href="bureau.html" data-translate="Bureau">Bureau</a>
+                        <a href="contact.html" data-translate="Contact">Contact</a>
+                        <a href="legal.html" data-translate="Mentions légales">Mentions légales</a>
+                        <a href="charte-graphique.html" data-translate="Charte graphique">Charte graphique</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p data-translate="LEF-T &copy; 2026">LEF-T &copy; 2026 | <a href="legal.html" data-translate="Privacy Policy">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
-    <script src="includes/load-includes.js"></script>
 </body>
 </html>
