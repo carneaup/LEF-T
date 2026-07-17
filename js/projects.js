@@ -18,21 +18,19 @@ async function loadProjects() {
 }
 
 function generateProjectCard(project) {
+    const html = '<img src="' + project.image + '" alt="' + project.title + '" loading="lazy">' +
+        '<div class="project-tile-overlay">' +
+        '<h3>' + project.title + '</h3>' +
+        '<p>' + project.location + ' - ' + project.year + '</p>' +
+        '</div>';
     const card = document.createElement('div');
     card.className = 'project-tile';
-    card.innerHTML = '
-        <img src="' + project.image + '" alt="' + project.title + '" loading="lazy">
-        <div class="project-tile-overlay">
-            <h3>' + project.title + '</h3>
-            <p>' + project.location + ' - ' + project.year + '</p>
-        </div>
-    ';
+    card.innerHTML = html;
     return card.outerHTML;
 }
 
 function generateCategoryFilters() {
     if (!projectsData || !projectsData.categories) return '';
-    
     let html = '<button class="active" data-category="all">Tous</button>';
     projectsData.categories.forEach(function(cat) {
         html += '<button data-category="' + cat.id + '">' + cat.name + '</button>';
@@ -42,15 +40,12 @@ function generateCategoryFilters() {
 
 function displayProjects(category) {
     if (!projectsData || !projectsData.projects) return;
-    
     const container = document.querySelector('.projects-mosaic');
     if (!container) return;
-    
     let projects = projectsData.projects;
     if (category !== 'all') {
         projects = projects.filter(function(p) { return p.category === category; });
     }
-    
     container.innerHTML = projects.map(generateProjectCard).join('');
 }
 
