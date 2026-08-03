@@ -5,7 +5,7 @@
       "title": "Projet G1 - Analyse Modale",
       "image": "/assets/images/g1-analyse-modale-1.jpg",
       "category": "g1",
-      "url": "projet-g1-analyse-modale.html",
+      "url": "/projets/projet-g1-analyse-modale.html",
       "year": "2024",
       "location": "Munich, Allemagne"
     },
@@ -14,7 +14,7 @@
       "title": "Projet G1 - Rigidité",
       "image": "/assets/images/g1-contraintes.jpg",
       "category": "g1",
-      "url": "projet-g1-rigidite.html",
+      "url": "/projets/projet-g1-rigidite.html",
       "year": "2024",
       "location": "Munich, Allemagne"
     },
@@ -23,7 +23,7 @@
       "title": "Projet Garching",
       "image": "/assets/images/newton_garching_coussins-ETFE.jpg",
       "category": "bureau",
-      "url": "projet-garching.html",
+      "url": "/projets/projet-garching.html",
       "year": "2023",
       "location": "Garching, Allemagne"
     },
@@ -32,7 +32,7 @@
       "title": "Projet Cargo Schwehhr",
       "image": "/assets/images/cargo-schwehhr-1.jpg",
       "category": "logistique",
-      "url": "projet-cargo-schwehhr.html",
+      "url": "/projets/projet-cargo-schwehhr.html",
       "year": "2023",
       "location": "Allemagne"
     },
@@ -41,7 +41,7 @@
       "title": "Projet Munich",
       "image": "/assets/images/Urwaldhaus_Muncih.jpg",
       "category": "bureau",
-      "url": "projet-munich.html",
+      "url": "/projets/projet-munich.html",
       "year": "2023",
       "location": "Munich, Allemagne"
     },
@@ -50,7 +50,7 @@
       "title": "Projet Poitiers",
       "image": "/assets/images/aquascope_Poitiers.jpg",
       "category": "urbanisme",
-      "url": "projet-poitiers.html",
+      "url": "/projets/projet-poitiers.html",
       "year": "2022",
       "location": "Poitiers, France"
     },
@@ -59,7 +59,7 @@
       "title": "Projet Villejuif",
       "image": "/assets/images/Couverture-ETFE_Villejuif.jpg",
       "category": "urbanisme",
-      "url": "projet-villejuif.html",
+      "url": "/projets/projet-villejuif.html",
       "year": "2022",
       "location": "Villejuif, France"
     }
