@@ -190,16 +190,21 @@ function updateLangClasses(lang) {
 function getCurrentPage() {
     const path = window.location.pathname;
     const page = path.split('/').pop().replace('.html', '');
+    // Si on est à la racine, retourner 'index'
     return page || 'index';
 }
 
 function applyTranslations(translations) {
+    // Appliquer le titre de la page
     if (translations.title) {
         const titleEl = document.querySelector('.page-title');
-        if (titleEl) titleEl.textContent = translations.title;
+        if (titleEl) {
+            titleEl.textContent = translations.title;
+        }
         document.title = translations.title + ' | LEF-T';
     }
 
+    // Appliquer les paragraphes du bureau
     if (translations.about1) {
         const aboutText = document.querySelector('.about-text');
         if (aboutText) {
@@ -213,6 +218,7 @@ function applyTranslations(translations) {
         }
     }
 
+    // Appliquer le meta des projets
     if (translations.meta) {
         const metaEl = document.querySelector('.project-meta');
         if (metaEl) {
@@ -224,44 +230,60 @@ function applyTranslations(translations) {
         }
     }
 
+    // Appliquer les titres de section
     if (translations.team) {
         const teamTitle = document.querySelector('h2');
-        if (teamTitle && (teamTitle.textContent.includes('équipe') || teamTitle.textContent.includes('Team'))) {
+        if (teamTitle && (teamTitle.textContent.includes('équipe') || teamTitle.textContent.includes('Team') || teamTitle.textContent.includes('L'équipe'))) {
             teamTitle.textContent = translations.team;
         }
     }
 
     if (translations.partners) {
-        const partnersTitle = document.querySelectorAll('h2')[1];
-        if (partnersTitle) partnersTitle.textContent = translations.partners;
-    }
-    
-    // Traduire le header si les traductions existent
-    if (translations.header) {
-        const navLinks = document.querySelectorAll('.nav-menu a, .header-nav a');
-        if (translations.header.nav) {
-            navLinks.forEach(link => {
-                const key = link.getAttribute('data-i18n') || link.href.split('/').pop().replace('.html', '');
-                if (translations.header.nav[key]) {
-                    link.textContent = translations.header.nav[key];
-                }
-            });
+        const allH2 = document.querySelectorAll('h2');
+        if (allH2.length >= 2) {
+            allH2[1].textContent = translations.partners;
         }
     }
     
-    // Traduire le footer si les traductions existent
+    // Traduire le header
+    if (translations.header && translations.header.nav) {
+        const navLinks = document.querySelectorAll('.nav-main a');
+        navLinks.forEach(link => {
+            const key = link.getAttribute('data-i18n');
+            if (key && translations.header.nav[key]) {
+                link.textContent = translations.header.nav[key];
+            }
+        });
+    }
+    
+    // Traduire le footer
     if (translations.footer) {
-        const footerText = document.querySelector('.footer-copyright, .footer-text');
-        if (footerText && translations.footer.copyright) {
-            footerText.textContent = translations.footer.copyright;
+        // Copyright et adresse
+        const footerSpans = document.querySelectorAll('.footer-bottom span');
+        if (footerSpans.length >= 2) {
+            if (translations.footer.copyright) {
+                footerSpans[0].textContent = translations.footer.copyright;
+            }
+            if (translations.footer.address) {
+                footerSpans[1].textContent = translations.footer.address;
+            }
         }
+        
+        // Liens du footer
+        const footerLinks = document.querySelectorAll('.footer-links a');
+        footerLinks.forEach(link => {
+            const key = link.getAttribute('data-i18n');
+            if (key && translations.footer[key]) {
+                link.textContent = translations.footer[key];
+            }
+        });
     }
     
-    // Traduire les tags si les traductions existent
+    // Traduire les tags
     if (translations.tags) {
         const tagButtons = document.querySelectorAll('.projects-filters button');
         tagButtons.forEach(button => {
-            const tagKey = button.getAttribute('data-tag') || button.textContent.trim().toLowerCase();
+            const tagKey = button.getAttribute('data-i18n') || button.textContent.trim().toLowerCase();
             if (translations.tags[tagKey]) {
                 button.textContent = translations.tags[tagKey];
             }
@@ -277,7 +299,7 @@ function translatePage(lang) {
         applyTranslations(pageTranslations);
     }
     
-    // Appliquer aussi les traductions header/footer indépendamment de la page
+    // Appliquer aussi les traductions header/footer/tags indépendamment de la page
     if (translations[lang]?.header) {
         applyTranslations({ header: translations[lang].header });
     }
