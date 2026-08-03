@@ -1,0 +1,85 @@
+{
+  "projects": [
+    {
+      "id": "g1-analyse-modale",
+      "title": "Projet G1 - Analyse Modale",
+      "image": "/assets/images/g1-analyse-modale-1.jpg",
+      "category": "g1",
+      "url": "/projets/projet-g1-analyse-modale.html",
+      "year": "2024",
+      "location": "Munich, Allemagne"
+    },
+    {
+      "id": "g1-rigidite",
+      "title": "Projet G1 - Rigidité",
+      "image": "/assets/images/g1-contraintes.jpg",
+      "category": "g1",
+      "url": "/projets/projet-g1-rigidite.html",
+      "year": "2024",
+      "location": "Munich, Allemagne"
+    },
+    {
+      "id": "garching",
+      "title": "Projet Garching",
+      "image": "/assets/images/newton_garching_coussins-ETFE.jpg",
+      "category": "bureau",
+      "url": "/projets/projet-garching.html",
+      "year": "2023",
+      "location": "Garching, Allemagne"
+    },
+    {
+      "id": "cargo-schwehhr",
+      "title": "Projet Cargo Schwehhr",
+      "image": "/assets/images/cargo-schwehhr-1.jpg",
+      "category": "logistique",
+      "url": "/projets/projet-cargo-schwehhr.html",
+      "year": "2023",
+      "location": "Allemagne"
+    },
+    {
+      "id": "munich",
+      "title": "Projet Munich",
+      "image": "/assets/images/Urwaldhaus_Muncih.jpg",
+      "category": "bureau",
+      "url": "/projets/projet-munich.html",
+      "year": "2023",
+      "location": "Munich, Allemagne"
+    },
+    {
+      "id": "poitiers",
+      "title": "Projet Poitiers",
+      "image": "/assets/images/aquascope_Poitiers.jpg",
+      "category": "urbanisme",
+      "url": "/projets/projet-poitiers.html",
+      "year": "2022",
+      "location": "Poitiers, France"
+    },
+    {
+      "id": "villejuif",
+      "title": "Projet Villejuif",
+      "image": "/assets/images/Couverture-ETFE_Villejuif.jpg",
+      "category": "urbanisme",
+      "url": "/projets/projet-villejuif.html",
+      "year": "2022",
+      "location": "Villejuif, France"
+    }
+  ],
+  "categories": [
+    {
+      "id": "g1",
+      "name": "G1"
+    },
+    {
+      "id": "bureau",
+      "name": "Bureau"
+    },
+    {
+      "id": "logistique",
+      "name": "Logistique"
+    },
+    {
+      "id": "urbanisme",
+      "name": "Urbanisme"
+    }
+  ]
+}
