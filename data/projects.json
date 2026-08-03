@@ -3,7 +3,7 @@
     {
       "id": "g1-analyse-modale",
       "title": "Projet G1 - Analyse Modale",
-      "image": "assets/images/g1-analyse-modale-1.jpg",
+      "image": "/assets/images/g1-analyse-modale-1.jpg",
       "category": "g1",
       "url": "projet-g1-analyse-modale.html",
       "year": "2024",
@@ -12,7 +12,7 @@
     {
       "id": "g1-rigidite",
       "title": "Projet G1 - Rigidité",
-      "image": "assets/images/g1-contraintes.jpg",
+      "image": "/assets/images/g1-contraintes.jpg",
       "category": "g1",
       "url": "projet-g1-rigidite.html",
       "year": "2024",
@@ -21,7 +21,7 @@
     {
       "id": "garching",
       "title": "Projet Garching",
-      "image": "assets/images/newton_garching_coussins-ETFE.jpg",
+      "image": "/assets/images/newton_garching_coussins-ETFE.jpg",
       "category": "bureau",
       "url": "projet-garching.html",
       "year": "2023",
@@ -30,7 +30,7 @@
     {
       "id": "cargo-schwehhr",
       "title": "Projet Cargo Schwehhr",
-      "image": "assets/images/cargo-schwehhr-1.jpg",
+      "image": "/assets/images/cargo-schwehhr-1.jpg",
       "category": "logistique",
       "url": "projet-cargo-schwehhr.html",
       "year": "2023",
@@ -39,7 +39,7 @@
     {
       "id": "munich",
       "title": "Projet Munich",
-      "image": "assets/images/Urwaldhaus_Muncih.jpg",
+      "image": "/assets/images/Urwaldhaus_Muncih.jpg",
       "category": "bureau",
       "url": "projet-munich.html",
       "year": "2023",
@@ -48,7 +48,7 @@
     {
       "id": "poitiers",
       "title": "Projet Poitiers",
-      "image": "assets/images/aquascope_Poitiers.jpg",
+      "image": "/assets/images/aquascope_Poitiers.jpg",
       "category": "urbanisme",
       "url": "projet-poitiers.html",
       "year": "2022",
@@ -57,7 +57,7 @@
     {
       "id": "villejuif",
       "title": "Projet Villejuif",
-      "image": "assets/images/Couverture-ETFE_Villejuif.jpg",
+      "image": "/assets/images/Couverture-ETFE_Villejuif.jpg",
       "category": "urbanisme",
       "url": "projet-villejuif.html",
       "year": "2022",
