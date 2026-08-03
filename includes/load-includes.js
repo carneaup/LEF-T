@@ -8,8 +8,8 @@ const includesCache = new Map();
 
 // Mapping des IDs vers les chemins de fichiers
 const idToPathMap = {
-    'header': 'includes/header.html',
-    'footer': 'includes/footer.html'
+    'header': '/includes/header.html',
+    'footer': '/includes/footer.html'
 };
 
 /**
@@ -78,12 +78,12 @@ async function initIncludes() {
     const footerEl = document.getElementById('footer');
     
     if (headerEl) {
-        const html = await loadIncludeFile('includes/header.html');
+        const html = await loadIncludeFile('/includes/header.html');
         headerEl.innerHTML = html;
     }
     
     if (footerEl) {
-        const html = await loadIncludeFile('includes/footer.html');
+        const html = await loadIncludeFile('/includes/footer.html');
         footerEl.innerHTML = html;
     }
 }
