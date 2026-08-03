@@ -1,0 +1,71 @@
+{
+  "index": {
+    "title": "LEF-T | Bureau d'Études Structure"
+  },
+  "bureau": {
+    "title": "Notre bureau",
+    "about1": "<strong>LEF-T</strong> est un bureau d'études structure basé à Paris, au cœur du quartier dynamique de Belleville.",
+    "about2": "Spécialisés dans les <strong>structures légères et les façades</strong>, nous travaillons sur des projets innovants en France et en Allemagne.",
+    "about3": "Notre force réside dans notre capacité à <strong>concevoir des solutions sur-mesure</strong>.",
+    "about4": "Bien que petite structure, notre équipe est <strong>réactive, flexible et engagée</strong>.",
+    "team": "L'équipe",
+    "partners": "Partenaires"
+  },
+  "projets": {
+    "title": "Nos projets",
+    "filter_all": "Tous"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "legal": {
+    "title": "Mentions légales"
+  },
+  "charte-graphique": {
+    "title": "Charte graphique et Logo"
+  },
+  "projet-villejuif": {
+    "title": "Couverture ETFE - Villejuif",
+    "meta": "Villejuif, France | 2024"
+  },
+  "projet-munich": {
+    "title": "Urwaldhaus - Munich",
+    "meta": "Munich, Allemagne | 2023"
+  },
+  "projet-poitiers": {
+    "title": "Aquascope - Poitiers",
+    "meta": "Poitiers, France | 2022"
+  },
+  "projet-garching": {
+    "title": "Newton - Garching",
+    "meta": "Garching, Allemagne | 2025"
+  },
+  "projet-g1-rigidite": {
+    "title": "G1 Proto LEICHT - Rigidité et stabilité"
+  },
+  "projet-g1-analyse-modale": {
+    "title": "G1 Proto LEICHT - Analyse modale"
+  },
+  "projet-cargo-schwehhr": {
+    "title": "Vélo cargo proto SCHWEHHR"
+  },
+  "header": {
+    "nav": {
+      "bureau": "Bureau",
+      "projets": "Projets",
+      "contact": "Contact",
+      "charte": "Charte graphique",
+      "legal": "Mentions légales"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 LEF-T. Tous droits réservés."
+  },
+  "tags": {
+    "all": "Tous",
+    "etfe": "ETFE",
+    "facade": "Façade",
+    "structure": "Structure",
+    "prototype": "Prototype"
+  }
+}
