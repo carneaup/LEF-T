@@ -1,94 +1,150 @@
 /**
- * Load Includes - Système de chargement des includes HTML
- * Version corrigée: utilise DOMParser pour la sécurité
+ * Load Includes + Traduction + Sélecteur de langue
+ * Version finale - Tout en un seul fichier
  */
 
-// Cache des includes déjà chargés
+// Cache et traductions
 const includesCache = new Map();
+let translations = {};
 
-// Mapping des IDs vers les chemins de fichiers
-const idToPathMap = {
-    'header': '/includes/header.html',
-    'footer': '/includes/footer.html'
-};
+// ===== TRADUCTION =====
+async function loadTranslations() {
+    try {
+        const [frResponse, enResponse] = await Promise.all([
+            fetch('/data/translations/fr.json'),
+            fetch('/data/translations/en.json')
+        ]);
+        if (frResponse.ok && enResponse.ok) {
+            translations.FR = await frResponse.json();
+            translations.EN = await enResponse.json();
+        }
+    } catch (error) {
+        console.error('Error loading translations:', error);
+    }
+}
 
-/**
- * Sanitize HTML content to prevent XSS
- */
+function getCurrentLanguage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang && ['FR', 'EN'].includes(urlLang)) return urlLang;
+
+    const savedLang = localStorage.getItem('lef-t-lang');
+    if (savedLang && ['FR', 'EN'].includes(savedLang)) return savedLang;
+
+    const browserLang = navigator.language.split('-')[0].toLowerCase();
+    return browserLang === 'fr' ? 'FR' : browserLang === 'en' ? 'EN' : 'FR';
+}
+
+function saveLanguage(lang) {
+    localStorage.setItem('lef-t-lang', lang);
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState({}, '', url);
+    window.location.reload(); // Recharge pour appliquer
+}
+
+// Traduire un élément
+function translateElement(element, lang, keyPath) {
+    const keys = keyPath.split('.');
+    let value = translations[lang];
+    for (const k of keys) {
+        if (!value) break;
+        value = value[k];
+    }
+    if (value && element) {
+        element.textContent = value;
+    }
+}
+
+// ===== SÉLECTEUR DE LANGUE =====
+function initLangDropdown() {
+    const langDropdown = document.querySelector('.lang-dropdown');
+    if (!langDropdown) return;
+
+    const currentLang = getCurrentLanguage();
+    const currentLangEl = langDropdown.querySelector('.lang-current');
+    if (currentLangEl) {
+        currentLangEl.textContent = currentLang;
+        currentLangEl.setAttribute('data-lang', currentLang);
+    }
+
+    const langOptions = langDropdown.querySelectorAll('.lang-menu a');
+    langOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const newLang = this.getAttribute('data-lang') || this.textContent.trim().toUpperCase();
+            saveLanguage(newLang);
+        });
+    });
+}
+
+// ===== CHARGEMENT DES INCLUDES =====
 function sanitizeHTML(html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
-    
-    // Remove all script tags
-    const scripts = doc.querySelectorAll('script');
-    scripts.forEach(script => script.remove());
-    
-    // Remove event handlers from all elements
-    const allElements = doc.querySelectorAll('*');
-    allElements.forEach(el => {
-        ['onclick', 'onload', 'onerror', 'onmouseover', 'onmouseout', 'onfocus', 'onblur', 'onsubmit'].forEach(attr => {
-            el.removeAttribute(attr);
-        });
+    doc.querySelectorAll('script').forEach(script => script.remove());
+    doc.querySelectorAll('*').forEach(el => {
+        ['onclick', 'onload', 'onerror', 'onmouseover', 'onmouseout', 'onfocus', 'onblur', 'onsubmit']
+            .forEach(attr => el.removeAttribute(attr));
     });
-    
     return doc.body.innerHTML;
 }
 
-/**
- * Load an include file
- */
 async function loadIncludeFile(path) {
-    if (includesCache.has(path)) {
-        return includesCache.get(path);
-    }
-
+    if (includesCache.has(path)) return includesCache.get(path);
     try {
         const response = await fetch(path);
-        if (!response.ok) {
-            throw new Error('Failed to load: ' + response.status);
-        }
+        if (!response.ok) throw new Error('Failed to load: ' + response.status);
         let html = await response.text();
-        html = sanitizeHTML(html);
-        includesCache.set(path, html);
-        return html;
+        includesCache.set(path, sanitizeHTML(html));
+        return includesCache.get(path);
     } catch (error) {
         console.error('Error loading ' + path + ':', error);
-        return '<div style="padding: 10px; background: #fee; border: 1px solid #fcc; color: #c33;">Error loading include</div>';
+        return '<div style="padding:10px;background:#fee;border:1px solid #fcc;color:#c33;">Error loading include</div>';
     }
 }
 
-/**
- * Initialize all includes
- */
+// ===== INITIALISATION =====
 async function initIncludes() {
-    // 1. Gère les éléments avec data-include
+    // Charger traductions
+    await loadTranslations();
+
+    // Charger includes
     const dataIncludeElements = document.querySelectorAll('[data-include]');
-    
-    for (let i = 0; i < dataIncludeElements.length; i++) {
-        const el = dataIncludeElements[i];
+    for (const el of dataIncludeElements) {
         const path = el.getAttribute('data-include');
-        if (path) {
-            const html = await loadIncludeFile(path);
-            el.innerHTML = html;
-        }
+        if (path) el.innerHTML = await loadIncludeFile(path);
     }
-    
-    // 2. Gère les éléments avec ID spécifique (header, footer)
+
+    // Header
     const headerEl = document.getElementById('header');
-    const footerEl = document.getElementById('footer');
-    
     if (headerEl) {
-        const html = await loadIncludeFile('/includes/header.html');
-        headerEl.innerHTML = html;
+        headerEl.innerHTML = await loadIncludeFile('/includes/header.html');
+        // Traduire header
+        const lang = getCurrentLanguage();
+        document.querySelectorAll('.nav-main a[data-i18n]').forEach(link => {
+            const key = link.getAttribute('data-i18n').split('.').pop();
+            translateElement(link, lang, `header.nav.${key}`);
+        });
+        // Initialiser sélecteur de langue
+        initLangDropdown();
     }
-    
+
+    // Footer
+    const footerEl = document.getElementById('footer');
     if (footerEl) {
-        const html = await loadIncludeFile('/includes/footer.html');
-        footerEl.innerHTML = html;
+        footerEl.innerHTML = await loadIncludeFile('/includes/footer.html');
+        // Traduire footer
+        const lang = getCurrentLanguage();
+        document.querySelectorAll('.footer-bottom span[data-i18n], .footer-links a[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n').split('.').pop();
+            const type = el.tagName === 'A' ? 'footer' : 'footer';
+            translateElement(el, lang, `${type}.${key}`);
+        });
     }
 }
 
-// Initialize when DOM is ready
+// Démarrer
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initIncludes);
 } else {
