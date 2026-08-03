@@ -1,0 +1,71 @@
+{
+  "index": {
+    "title": "LEF-T | Structural Engineering Office"
+  },
+  "bureau": {
+    "title": "Our Office",
+    "about1": "<strong>LEF-T</strong> is a structural engineering office based in Paris, in the heart of the dynamic Belleville district.",
+    "about2": "Specializing in <strong>lightweight structures and facades</strong>, we work on innovative projects in France and Germany.",
+    "about3": "Our strength lies in our ability to <strong>design tailor-made solutions</strong>.",
+    "about4": "Although a small structure, our team is <strong>responsive, flexible and committed</strong>.",
+    "team": "The Team",
+    "partners": "Partners"
+  },
+  "projets": {
+    "title": "Our Projects",
+    "filter_all": "All"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "legal": {
+    "title": "Legal Notice"
+  },
+  "charte-graphique": {
+    "title": "Graphic Charter and Logo"
+  },
+  "projet-villejuif": {
+    "title": "ETFE Cover - Villejuif",
+    "meta": "Villejuif, France | 2024"
+  },
+  "projet-munich": {
+    "title": "Urwaldhaus - Munich",
+    "meta": "Munich, Germany | 2023"
+  },
+  "projet-poitiers": {
+    "title": "Aquascope - Poitiers",
+    "meta": "Poitiers, France | 2022"
+  },
+  "projet-garching": {
+    "title": "Newton - Garching",
+    "meta": "Garching, Germany | 2025"
+  },
+  "projet-g1-rigidite": {
+    "title": "G1 Proto LEICHT - Rigidity and Stability"
+  },
+  "projet-g1-analyse-modale": {
+    "title": "G1 Proto LEICHT - Modal Analysis"
+  },
+  "projet-cargo-schwehhr": {
+    "title": "Cargo bike proto SCHWEHHR"
+  },
+  "header": {
+    "nav": {
+      "bureau": "Office",
+      "projets": "Projects",
+      "contact": "Contact",
+      "charte": "Graphic Charter",
+      "legal": "Legal Notice"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 LEF-T. All rights reserved."
+  },
+  "tags": {
+    "all": "All",
+    "etfe": "ETFE",
+    "facade": "Facade",
+    "structure": "Structure",
+    "prototype": "Prototype"
+  }
+}
