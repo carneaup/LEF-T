@@ -3,83 +3,101 @@
     {
       "id": "g1-analyse-modale",
       "title": "Projet G1 - Analyse Modale",
-      "image": "/assets/images/g1-analyse-modale-1.jpg",
+      "title_en": "G1 Project - Modal Analysis",
+      "image": "assets/images/g1-analyse-modale-1.jpg",
       "category": "g1",
-      "url": "/projets/projet-g1-analyse-modale.html",
+      "url": "projets/projet-g1-analyse-modale.html",
       "year": "2024",
-      "location": "Munich, Allemagne"
+      "location": "Munich, Allemagne",
+      "location_en": "Munich, Germany"
     },
     {
       "id": "g1-rigidite",
       "title": "Projet G1 - Rigidité",
-      "image": "/assets/images/g1-contraintes.jpg",
+      "title_en": "G1 Project - Stiffness",
+      "image": "assets/images/g1-contraintes.jpg",
       "category": "g1",
-      "url": "/projets/projet-g1-rigidite.html",
+      "url": "projets/projet-g1-rigidite.html",
       "year": "2024",
-      "location": "Munich, Allemagne"
+      "location": "Munich, Allemagne",
+      "location_en": "Munich, Germany"
     },
     {
       "id": "garching",
       "title": "Projet Garching",
-      "image": "/assets/images/newton_garching_coussins-ETFE.jpg",
+      "title_en": "Garching Project",
+      "image": "assets/images/newton_garching_coussins-ETFE.jpg",
       "category": "bureau",
-      "url": "/projets/projet-garching.html",
+      "url": "projets/projet-garching.html",
       "year": "2023",
-      "location": "Garching, Allemagne"
+      "location": "Garching, Allemagne",
+      "location_en": "Garching, Germany"
     },
     {
       "id": "cargo-schwehhr",
       "title": "Projet Cargo Schwehhr",
-      "image": "/assets/images/cargo-schwehhr-1.jpg",
+      "title_en": "Cargo Schwehhr Project",
+      "image": "assets/images/cargo-schwehhr-1.jpg",
       "category": "logistique",
-      "url": "/projets/projet-cargo-schwehhr.html",
+      "url": "projets/projet-cargo-schwehhr.html",
       "year": "2023",
-      "location": "Allemagne"
+      "location": "Allemagne",
+      "location_en": "Germany"
     },
     {
       "id": "munich",
       "title": "Projet Munich",
-      "image": "/assets/images/Urwaldhaus_Muncih.jpg",
+      "title_en": "Munich Project",
+      "image": "assets/images/Urwaldhaus_Muncih.jpg",
       "category": "bureau",
-      "url": "/projets/projet-munich.html",
+      "url": "projets/projet-munich.html",
       "year": "2023",
-      "location": "Munich, Allemagne"
+      "location": "Munich, Allemagne",
+      "location_en": "Munich, Germany"
     },
     {
       "id": "poitiers",
       "title": "Projet Poitiers",
-      "image": "/assets/images/aquascope_Poitiers.jpg",
+      "title_en": "Poitiers Project",
+      "image": "assets/images/aquascope_Poitiers.jpg",
       "category": "urbanisme",
-      "url": "/projets/projet-poitiers.html",
+      "url": "projets/projet-poitiers.html",
       "year": "2022",
-      "location": "Poitiers, France"
+      "location": "Poitiers, France",
+      "location_en": "Poitiers, France"
     },
     {
       "id": "villejuif",
       "title": "Projet Villejuif",
-      "image": "/assets/images/Couverture-ETFE_Villejuif.jpg",
+      "title_en": "Villejuif Project",
+      "image": "assets/images/Couverture-ETFE_Villejuif.jpg",
       "category": "urbanisme",
-      "url": "/projets/projet-villejuif.html",
+      "url": "projets/projet-villejuif.html",
       "year": "2022",
-      "location": "Villejuif, France"
+      "location": "Villejuif, France",
+      "location_en": "Villejuif, France"
     }
   ],
   "categories": [
     {
       "id": "g1",
-      "name": "G1"
+      "name": "G1",
+      "name_en": "G1"
     },
     {
       "id": "bureau",
-      "name": "Bureau"
+      "name": "Bureau",
+      "name_en": "Office"
     },
     {
       "id": "logistique",
-      "name": "Logistique"
+      "name": "Logistique",
+      "name_en": "Logistics"
     },
     {
       "id": "urbanisme",
-      "name": "Urbanisme"
+      "name": "Urbanisme",
+      "name_en": "Urbanism"
     }
   ]
 }

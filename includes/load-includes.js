@@ -8,12 +8,28 @@ const includesCache = new Map();
 // Variable GLOBALE pour les traductions
 window.translations = {};
 
+// ===== 0. CHEMIN DE BASE (racine du site) =====
+// Calcule le préfixe relatif vers la racine du site à partir du <script src="...">
+// utilisé pour charger CE fichier. Fonctionne quel que soit le dossier d'hébergement
+// (domaine racine, sous-dossier GitHub Pages, profondeur de la page, etc.)
+function getBasePath() {
+    const scripts = document.getElementsByTagName('script');
+    for (const s of scripts) {
+        const src = s.getAttribute('src');
+        if (src && src.indexOf('includes/load-includes.js') !== -1) {
+            return src.substring(0, src.indexOf('includes/load-includes.js'));
+        }
+    }
+    return '';
+}
+const BASE_PATH = getBasePath();
+
 // ===== 1. CHARGEMENT DES TRADUCTIONS =====
 async function loadTranslations() {
     try {
         const [frResponse, enResponse] = await Promise.all([
-            fetch('/data/translations/fr.json'),
-            fetch('/data/translations/en.json')
+            fetch(BASE_PATH + 'data/translations/fr.json'),
+            fetch(BASE_PATH + 'data/translations/en.json')
         ]);
         if (frResponse.ok && enResponse.ok) {
             window.translations.FR = await frResponse.json();
@@ -42,13 +58,27 @@ function saveLanguage(lang) {
     const url = new URL(window.location.href);
     url.searchParams.set('lang', lang);
     window.history.replaceState({}, '', url);
-    
+
     // Appliquer les blocs de langue
     applyLanguageBlocks(lang);
-    
+
     // Re-traduire header et footer
     translateHeader();
     translateFooter();
+
+    // Mettre à jour le badge de langue affiché dans le sélecteur
+    updateLangBadge(lang);
+
+    // Prévenir les autres scripts (ex: js/projects.js) qu'ils doivent se re-rendre
+    window.dispatchEvent(new CustomEvent('lang-changed', { detail: { lang } }));
+}
+
+function updateLangBadge(lang) {
+    const currentLangEl = document.querySelector('.lang-current');
+    if (currentLangEl) {
+        currentLangEl.textContent = lang;
+        currentLangEl.setAttribute('data-lang', lang);
+    }
 }
 
 // ===== 3. APPLY LANGUAGE BLOCKS =====
@@ -72,6 +102,14 @@ function sanitizeHTML(html) {
     return doc.body.innerHTML;
 }
 
+// ===== 4bis. REWRITE ABSOLUTE PATHS =====
+// Les fragments header.html / footer.html sont écrits avec des chemins commençant
+// par "/" (ex: /pages/projets.html). On les réécrit ici avec BASE_PATH pour qu'ils
+// fonctionnent aussi bien à la racine du domaine que dans un sous-dossier.
+function rewriteAbsolutePaths(html) {
+    return html.replace(/(href|src)="\/(?!\/)/g, '$1="' + BASE_PATH);
+}
+
 // ===== 5. CHARGEMENT DES INCLUDES =====
 async function loadIncludeFile(path) {
     if (includesCache.has(path)) return includesCache.get(path);
@@ -79,6 +117,7 @@ async function loadIncludeFile(path) {
         const response = await fetch(path);
         if (!response.ok) throw new Error('Failed to load: ' + response.status);
         let html = await response.text();
+        html = rewriteAbsolutePaths(html);
         includesCache.set(path, sanitizeHTML(html));
         return includesCache.get(path);
     } catch (error) {
@@ -103,7 +142,7 @@ function translateElement(element, lang, keyPath) {
 function translateHeader() {
     const lang = getCurrentLanguage();
     if (!window.translations[lang]?.header?.nav) return;
-    
+
     const navLinks = document.querySelectorAll('.nav-main a[data-i18n]');
     navLinks.forEach(link => {
         const key = link.getAttribute('data-i18n').split('.').pop();
@@ -114,13 +153,13 @@ function translateHeader() {
 function translateFooter() {
     const lang = getCurrentLanguage();
     if (!window.translations[lang]?.footer) return;
-    
+
     const footerSpans = document.querySelectorAll('.footer-bottom span[data-i18n]');
     footerSpans.forEach(span => {
         const key = span.getAttribute('data-i18n').split('.').pop();
         translateElement(span, lang, 'footer.' + key);
     });
-    
+
     const footerLinks = document.querySelectorAll('.footer-links a[data-i18n]');
     footerLinks.forEach(link => {
         const key = link.getAttribute('data-i18n').split('.').pop();
@@ -136,12 +175,12 @@ async function initIncludes() {
     // 2. Charger header et footer
     const headerEl = document.getElementById('header') || document.querySelector('header');
     if (headerEl) {
-        headerEl.innerHTML = await loadIncludeFile('/includes/header.html');
+        headerEl.innerHTML = await loadIncludeFile(BASE_PATH + 'includes/header.html');
     }
 
     const footerEl = document.getElementById('footer') || document.querySelector('footer');
     if (footerEl) {
-        footerEl.innerHTML = await loadIncludeFile('/includes/footer.html');
+        footerEl.innerHTML = await loadIncludeFile(BASE_PATH + 'includes/footer.html');
     }
 
     // 3. Charger les autres includes
@@ -166,11 +205,7 @@ function initLangDropdown() {
     if (!langDropdown) return;
 
     const currentLang = getCurrentLanguage();
-    const currentLangEl = langDropdown.querySelector('.lang-current');
-    if (currentLangEl) {
-        currentLangEl.textContent = currentLang;
-        currentLangEl.setAttribute('data-lang', currentLang);
-    }
+    updateLangBadge(currentLang);
 
     const langOptions = langDropdown.querySelectorAll('.lang-menu a');
     langOptions.forEach(option => {
