@@ -710,3 +710,25 @@ body.home-page .header .lang-current {
         font-size: 2rem;
     }
 }
+
+/* Style pour les blocs bilingues */
+.lang-block {
+    width: 100%;
+    display: block;
+}
+
+/* Assurer que le contenu reste centré */
+.lang-block .page-header,
+.lang-block .about-text,
+.lang-block .team-section,
+.lang-block .partners-section,
+.lang-block .contact-container,
+.lang-block .legal-content,
+.lang-block .charte-content,
+.lang-block .project-header,
+.lang-block .project-description {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
