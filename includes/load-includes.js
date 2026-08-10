@@ -1,5 +1,5 @@
 /**
- * Load Includes - Charge les includes ET les traductions
+ * Load Includes - Charge les includes et gère les blocs de langue
  */
 
 // Cache des includes
@@ -8,6 +8,7 @@ const includesCache = new Map();
 // Variable GLOBALE pour les traductions
 window.translations = {};
 
+// ===== 1. CHARGEMENT DES TRADUCTIONS =====
 async function loadTranslations() {
     try {
         const [frResponse, enResponse] = await Promise.all([
@@ -23,6 +24,7 @@ async function loadTranslations() {
     }
 }
 
+// ===== 2. GESTION DE LA LANGUE =====
 function getCurrentLanguage() {
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
@@ -49,7 +51,7 @@ function saveLanguage(lang) {
     translateFooter();
 }
 
-// NOUVELLE FONCTION: Affiche le bon bloc de langue
+// ===== 3. APPLY LANGUAGE BLOCKS =====
 function applyLanguageBlocks(lang) {
     document.querySelectorAll('.lang-block').forEach(block => {
         block.style.display = block.classList.contains('lang-' + lang.toLowerCase())
@@ -58,6 +60,7 @@ function applyLanguageBlocks(lang) {
     });
 }
 
+// ===== 4. SANITIZE HTML =====
 function sanitizeHTML(html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
@@ -69,6 +72,7 @@ function sanitizeHTML(html) {
     return doc.body.innerHTML;
 }
 
+// ===== 5. CHARGEMENT DES INCLUDES =====
 async function loadIncludeFile(path) {
     if (includesCache.has(path)) return includesCache.get(path);
     try {
@@ -83,7 +87,7 @@ async function loadIncludeFile(path) {
     }
 }
 
-// Traduire un élément
+// ===== 6. TRADUCTION =====
 function translateElement(element, lang, keyPath) {
     const keys = keyPath.split('.');
     let value = window.translations[lang];
@@ -96,7 +100,6 @@ function translateElement(element, lang, keyPath) {
     }
 }
 
-// Traduire le header après chargement
 function translateHeader() {
     const lang = getCurrentLanguage();
     if (!window.translations[lang]?.header?.nav) return;
@@ -108,7 +111,6 @@ function translateHeader() {
     });
 }
 
-// Traduire le footer après chargement
 function translateFooter() {
     const lang = getCurrentLanguage();
     if (!window.translations[lang]?.footer) return;
@@ -126,38 +128,65 @@ function translateFooter() {
     });
 }
 
+// ===== 7. INITIALISATION =====
 async function initIncludes() {
-    // Charger les traductions D'ABORD
+    // 1. Charger les traductions
     await loadTranslations();
 
-    // Charger les includes
+    // 2. Charger header et footer
+    const headerEl = document.getElementById('header') || document.querySelector('header');
+    if (headerEl) {
+        headerEl.innerHTML = await loadIncludeFile('/includes/header.html');
+    }
+
+    const footerEl = document.getElementById('footer') || document.querySelector('footer');
+    if (footerEl) {
+        footerEl.innerHTML = await loadIncludeFile('/includes/footer.html');
+    }
+
+    // 3. Charger les autres includes
     const dataIncludeElements = document.querySelectorAll('[data-include]');
     for (const el of dataIncludeElements) {
         const path = el.getAttribute('data-include');
         if (path) el.innerHTML = await loadIncludeFile(path);
     }
 
-    // Header
-    const headerEl = document.getElementById('header') || document.querySelector('header');
-    if (headerEl) {
-        headerEl.innerHTML = await loadIncludeFile('/includes/header.html');
-        translateHeader();
-    }
+    // 4. Traduire header et footer
+    translateHeader();
+    translateFooter();
 
-    // Footer
-    const footerEl = document.getElementById('footer') || document.querySelector('footer');
-    if (footerEl) {
-        footerEl.innerHTML = await loadIncludeFile('/includes/footer.html');
-        translateFooter();
-    }
-    
-    // Appliquer les blocs de langue au chargement initial
+    // 5. Appliquer les blocs de langue (APRÈS tout le reste)
     const currentLang = getCurrentLanguage();
     applyLanguageBlocks(currentLang);
 }
 
+// ===== 8. LANG DROPDOWN =====
+function initLangDropdown() {
+    const langDropdown = document.querySelector('.lang-dropdown');
+    if (!langDropdown) return;
+
+    const currentLang = getCurrentLanguage();
+    const currentLangEl = langDropdown.querySelector('.lang-current');
+    if (currentLangEl) {
+        currentLangEl.textContent = currentLang;
+        currentLangEl.setAttribute('data-lang', currentLang);
+    }
+
+    const langOptions = langDropdown.querySelectorAll('.lang-menu a');
+    langOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const newLang = this.getAttribute('data-lang') || this.textContent.trim().toUpperCase();
+            saveLanguage(newLang);
+        });
+    });
+}
+
+// Démarrer
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initIncludes);
+    document.addEventListener('DOMContentLoaded', function() {
+        initIncludes().then(initLangDropdown);
+    });
 } else {
-    initIncludes();
+    initIncludes().then(initLangDropdown);
 }
