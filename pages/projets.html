@@ -3,27 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets - LEF-T</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Nos projets - LEF-T</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="page-container">
-    <div id="header"></div>
+<body>
+    <header class="header"></header>
     
-    <main class="main">
-        <h1 class="page-title">Nos Projets</h1>
-        
-        <!-- Filtres de catégorie (seront générés dynamiquement) -->
-        <div class="projects-filters"></div>
-        
-        <!-- Mosaïque de projets (sera générée dynamiquement) -->
-        <div class="projects-mosaic"></div>
+    <main>
+        <!-- BLOC FRANÇAIS -->
+        <div class="lang-block lang-fr">
+            <div class="page-header">
+                <h1>Nos projets</h1>
+            </div>
+            
+            <div class="projects-filters">
+                <button class="active" data-i18n="tags.all">Tous</button>
+                <button data-i18n="tags.g1">G1</button>
+                <button data-i18n="tags.bureau">Bureau</button>
+                <button data-i18n="tags.logistique">Logistique</button>
+                <button data-i18n="tags.urbanisme">Urbanisme</button>
+            </div>
+            
+            <div class="projects-mosaic">
+                <a href="../projets/projet-villejuif.html" class="project-card">
+                    <img src="../assets/images/Couverture-ETFE_Villejuif.jpg" alt="Couverture ETFE Villejuif">
+                    <h3>Couverture ETFE Villejuif</h3>
+                </a>
+                <a href="../projets/projet-munich.html" class="project-card">
+                    <img src="../assets/images/Urwaldhaus_Muncih.jpg" alt="Urwaldhaus Munich">
+                    <h3>Urwaldhaus Munich</h3>
+                </a>
+                <a href="../projets/projet-poitiers.html" class="project-card">
+                    <img src="../assets/images/aquascope_Poitiers.jpg" alt="Aquascope Poitiers">
+                    <h3>Aquascope Poitiers</h3>
+                </a>
+                <a href="../projets/projet-garching.html" class="project-card">
+                    <img src="../assets/images/newton_garching_coussins-ETFE.jpg" alt="Newton Garching">
+                    <h3>Newton Garching</h3>
+                </a>
+                <a href="../projets/projet-g1-rigidite.html" class="project-card">
+                    <img src="../assets/images/projet-g1-rigidite.jpg" alt="G1 Rigidité">
+                    <h3>G1 Rigidité</h3>
+                </a>
+                <a href="../projets/projet-g1-analyse-modale.html" class="project-card">
+                    <img src="../assets/images/projet-g1-analyse-modale.jpg" alt="G1 Analyse Modale">
+                    <h3>G1 Analyse Modale</h3>
+                </a>
+                <a href="../projets/projet-cargo-schwehhr.html" class="project-card">
+                    <img src="../assets/images/projet-cargo-schwehhr.jpg" alt="Cargo Schwehhr">
+                    <h3>Cargo Schwehhr</h3>
+                </a>
+            </div>
+        </div>
+
+        <!-- BLOC ANGLAIS -->
+        <div class="lang-block lang-en" style="display: none;">
+            <div class="page-header">
+                <h1>Our Projects</h1>
+            </div>
+            
+            <div class="projects-filters">
+                <button class="active" data-i18n="tags.all">All</button>
+                <button data-i18n="tags.g1">G1</button>
+                <button data-i18n="tags.bureau">Office</button>
+                <button data-i18n="tags.logistique">Logistics</button>
+                <button data-i18n="tags.urbanisme">Urbanism</button>
+            </div>
+            
+            <div class="projects-mosaic">
+                <a href="../projets/projet-villejuif.html" class="project-card">
+                    <img src="../assets/images/Couverture-ETFE_Villejuif.jpg" alt="ETFE Cover Villejuif">
+                    <h3>ETFE Cover Villejuif</h3>
+                </a>
+                <a href="../projets/projet-munich.html" class="project-card">
+                    <img src="../assets/images/Urwaldhaus_Muncih.jpg" alt="Urwaldhaus Munich">
+                    <h3>Urwaldhaus Munich</h3>
+                </a>
+                <a href="../projets/projet-poitiers.html" class="project-card">
+                    <img src="../assets/images/aquascope_Poitiers.jpg" alt="Aquascope Poitiers">
+                    <h3>Aquascope Poitiers</h3>
+                </a>
+                <a href="../projets/projet-garching.html" class="project-card">
+                    <img src="../assets/images/newton_garching_coussins-ETFE.jpg" alt="Newton Garching">
+                    <h3>Newton Garching</h3>
+                </a>
+                <a href="../projets/projet-g1-rigidite.html" class="project-card">
+                    <img src="../assets/images/projet-g1-rigidite.jpg" alt="G1 Stiffness">
+                    <h3>G1 Stiffness</h3>
+                </a>
+                <a href="../projets/projet-g1-analyse-modale.html" class="project-card">
+                    <img src="../assets/images/projet-g1-analyse-modale.jpg" alt="G1 Modal Analysis">
+                    <h3>G1 Modal Analysis</h3>
+                </a>
+                <a href="../projets/projet-cargo-schwehhr.html" class="project-card">
+                    <img src="../assets/images/projet-cargo-schwehhr.jpg" alt="Cargo Schwehhr">
+                    <h3>Cargo Schwehhr</h3>
+                </a>
+            </div>
+        </div>
     </main>
     
-    <div id="footer"></div>
+    <footer class="footer"></footer>
     
-    <!-- Scripts -->
-    <script src="/includes/load-includes.js"></script>
-    <script src="/js/projects.js"></script>
+    <script src="../includes/load-includes.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
