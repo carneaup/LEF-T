@@ -7,7 +7,11 @@ let currentCategory = 'all';
 
 // Calcule le préfixe relatif vers la racine du site à partir du <script src="...">
 // utilisé pour charger CE fichier (mêmes principes que dans load-includes.js).
-function getBasePath() {
+// IMPORTANT : nom différent de celui utilisé dans load-includes.js (BASE_PATH) car
+// deux "const" de même nom déclarés dans deux <script> distincts sur la même page
+// provoquent une SyntaxError globale ("Identifier has already been declared"), ce qui
+// empêchait TOUT ce fichier de s'exécuter (mosaïque + filtres invisibles, FR et EN).
+function getProjectsBasePath() {
     const scripts = document.getElementsByTagName('script');
     for (const s of scripts) {
         const src = s.getAttribute('src');
@@ -17,7 +21,7 @@ function getBasePath() {
     }
     return '';
 }
-const BASE_PATH = getBasePath();
+const PROJECTS_BASE_PATH = getProjectsBasePath();
 
 // Langue courante : réutilise getCurrentLanguage() défini dans load-includes.js
 // (chargé avant ce script). Filet de sécurité si jamais l'ordre change.
@@ -28,7 +32,7 @@ function getLang() {
 
 async function loadProjects() {
     try {
-        const response = await fetch(BASE_PATH + 'data/projects.json');
+        const response = await fetch(PROJECTS_BASE_PATH + 'data/projects.json');
         if (!response.ok) throw new Error('Failed to load projects');
         projectsData = await response.json();
         return projectsData;
@@ -40,8 +44,8 @@ async function loadProjects() {
 
 function generateProjectCard(project) {
     const isEN = getLang() === 'EN';
-    const image = BASE_PATH + project.image;
-    const url = BASE_PATH + project.url;
+    const image = PROJECTS_BASE_PATH + project.image;
+    const url = PROJECTS_BASE_PATH + project.url;
     const title = (isEN && project.title_en) ? project.title_en : project.title;
     const location = (isEN && project.location_en) ? project.location_en : project.location;
 

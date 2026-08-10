@@ -33,8 +33,11 @@ function setRandomBgImage() {
 }
 
 function initMap() {
-    const mapContainer = document.querySelector('.map-container');
-    if (mapContainer) {
+    // Il peut y avoir plusieurs conteneurs .map-container sur une même page
+    // (un par bloc de langue .lang-fr / .lang-en) : on les remplit tous,
+    // sinon celui du bloc caché au chargement (souvent l'anglais) reste vide.
+    const mapContainers = document.querySelectorAll('.map-container');
+    mapContainers.forEach(function(mapContainer) {
         const iframe = document.createElement('iframe');
         iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=2.386474609375,48.86415795898437,2.406474609375,48.88415795898437&layer=mapnik&marker=48.87415795898437,2.396474609375';
         iframe.width = '100%';
@@ -42,18 +45,22 @@ function initMap() {
         iframe.style.border = 'none';
         mapContainer.innerHTML = '';
         mapContainer.appendChild(iframe);
-    }
+    });
 }
 
 function handleContactForm() {
-    const form = document.querySelector('.contact-form');
-    if (form) {
+    // Idem : un formulaire par bloc de langue.
+    const forms = document.querySelectorAll('.contact-form');
+    forms.forEach(function(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Merci pour votre message ! Nous vous répondrons rapidement.');
+            const isEN = typeof getCurrentLanguage === 'function' && getCurrentLanguage() === 'EN';
+            alert(isEN
+                ? 'Thank you for your message! We will reply shortly.'
+                : 'Merci pour votre message ! Nous vous répondrons rapidement.');
             form.reset();
         });
-    }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
