@@ -1,13 +1,13 @@
 /**
- * Load Includes + Traduction + Sélecteur de langue
- * Version finale - Tout en un seul fichier
+ * Load Includes - Charge les includes ET les traductions
  */
 
-// Cache et traductions
+// Cache des includes
 const includesCache = new Map();
-let translations = {};
 
-// ===== TRADUCTION =====
+// Variable GLOBALE pour les traductions
+window.translations = {};
+
 async function loadTranslations() {
     try {
         const [frResponse, enResponse] = await Promise.all([
@@ -15,8 +15,8 @@ async function loadTranslations() {
             fetch('/data/translations/en.json')
         ]);
         if (frResponse.ok && enResponse.ok) {
-            translations.FR = await frResponse.json();
-            translations.EN = await enResponse.json();
+            window.translations.FR = await frResponse.json();
+            window.translations.EN = await enResponse.json();
         }
     } catch (error) {
         console.error('Error loading translations:', error);
@@ -40,45 +40,24 @@ function saveLanguage(lang) {
     const url = new URL(window.location.href);
     url.searchParams.set('lang', lang);
     window.history.replaceState({}, '', url);
-    window.location.reload(); // Recharge pour appliquer
+    
+    // Appliquer les blocs de langue
+    applyLanguageBlocks(lang);
+    
+    // Re-traduire header et footer
+    translateHeader();
+    translateFooter();
 }
 
-// Traduire un élément
-function translateElement(element, lang, keyPath) {
-    const keys = keyPath.split('.');
-    let value = translations[lang];
-    for (const k of keys) {
-        if (!value) break;
-        value = value[k];
-    }
-    if (value && element) {
-        element.textContent = value;
-    }
-}
-
-// ===== SÉLECTEUR DE LANGUE =====
-function initLangDropdown() {
-    const langDropdown = document.querySelector('.lang-dropdown');
-    if (!langDropdown) return;
-
-    const currentLang = getCurrentLanguage();
-    const currentLangEl = langDropdown.querySelector('.lang-current');
-    if (currentLangEl) {
-        currentLangEl.textContent = currentLang;
-        currentLangEl.setAttribute('data-lang', currentLang);
-    }
-
-    const langOptions = langDropdown.querySelectorAll('.lang-menu a');
-    langOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
-            e.preventDefault();
-            const newLang = this.getAttribute('data-lang') || this.textContent.trim().toUpperCase();
-            saveLanguage(newLang);
-        });
+// NOUVELLE FONCTION: Affiche le bon bloc de langue
+function applyLanguageBlocks(lang) {
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.style.display = block.classList.contains('lang-' + lang.toLowerCase())
+            ? ''
+            : 'none';
     });
 }
 
-// ===== CHARGEMENT DES INCLUDES =====
 function sanitizeHTML(html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
@@ -104,12 +83,54 @@ async function loadIncludeFile(path) {
     }
 }
 
-// ===== INITIALISATION =====
+// Traduire un élément
+function translateElement(element, lang, keyPath) {
+    const keys = keyPath.split('.');
+    let value = window.translations[lang];
+    for (const k of keys) {
+        if (!value) break;
+        value = value[k];
+    }
+    if (value && element) {
+        element.textContent = value;
+    }
+}
+
+// Traduire le header après chargement
+function translateHeader() {
+    const lang = getCurrentLanguage();
+    if (!window.translations[lang]?.header?.nav) return;
+    
+    const navLinks = document.querySelectorAll('.nav-main a[data-i18n]');
+    navLinks.forEach(link => {
+        const key = link.getAttribute('data-i18n').split('.').pop();
+        translateElement(link, lang, 'header.nav.' + key);
+    });
+}
+
+// Traduire le footer après chargement
+function translateFooter() {
+    const lang = getCurrentLanguage();
+    if (!window.translations[lang]?.footer) return;
+    
+    const footerSpans = document.querySelectorAll('.footer-bottom span[data-i18n]');
+    footerSpans.forEach(span => {
+        const key = span.getAttribute('data-i18n').split('.').pop();
+        translateElement(span, lang, 'footer.' + key);
+    });
+    
+    const footerLinks = document.querySelectorAll('.footer-links a[data-i18n]');
+    footerLinks.forEach(link => {
+        const key = link.getAttribute('data-i18n').split('.').pop();
+        translateElement(link, lang, 'footer.' + key);
+    });
+}
+
 async function initIncludes() {
-    // Charger traductions
+    // Charger les traductions D'ABORD
     await loadTranslations();
 
-    // Charger includes
+    // Charger les includes
     const dataIncludeElements = document.querySelectorAll('[data-include]');
     for (const el of dataIncludeElements) {
         const path = el.getAttribute('data-include');
@@ -117,34 +138,24 @@ async function initIncludes() {
     }
 
     // Header
-    const headerEl = document.getElementById('header');
+    const headerEl = document.getElementById('header') || document.querySelector('header');
     if (headerEl) {
         headerEl.innerHTML = await loadIncludeFile('/includes/header.html');
-        // Traduire header
-        const lang = getCurrentLanguage();
-        document.querySelectorAll('.nav-main a[data-i18n]').forEach(link => {
-            const key = link.getAttribute('data-i18n').split('.').pop();
-            translateElement(link, lang, `header.nav.${key}`);
-        });
-        // Initialiser sélecteur de langue
-        initLangDropdown();
+        translateHeader();
     }
 
     // Footer
-    const footerEl = document.getElementById('footer');
+    const footerEl = document.getElementById('footer') || document.querySelector('footer');
     if (footerEl) {
         footerEl.innerHTML = await loadIncludeFile('/includes/footer.html');
-        // Traduire footer
-        const lang = getCurrentLanguage();
-        document.querySelectorAll('.footer-bottom span[data-i18n], .footer-links a[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n').split('.').pop();
-            const type = el.tagName === 'A' ? 'footer' : 'footer';
-            translateElement(el, lang, `${type}.${key}`);
-        });
+        translateFooter();
     }
+    
+    // Appliquer les blocs de langue au chargement initial
+    const currentLang = getCurrentLanguage();
+    applyLanguageBlocks(currentLang);
 }
 
-// Démarrer
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initIncludes);
 } else {
