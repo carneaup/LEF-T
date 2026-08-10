@@ -737,7 +737,9 @@ body.home-page .header .lang-current {
 .lang-block .legal-content,
 .lang-block .charte-content,
 .lang-block .project-header,
-.lang-block .project-description {
+.lang-block .project-description,
+.lang-block .projects-filters,
+.lang-block .projects-mosaic {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;

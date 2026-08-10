@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header class="header"></header>
+    <div id="header"></div>
     
     <main class="project-page">
         <!-- BLOC FRANÇAIS -->
         <div class="lang-block lang-fr">
             <div class="project-header">
+                <div class="project-header-image" style="background-image: url('../assets/images/g1-contraintes.jpg');"></div>
                 <h1>G1 Rigidité</h1>
                 <div class="project-meta">
                     <span>Paris, France</span>
@@ -21,23 +22,19 @@
                 </div>
             </div>
             
-            <div class="project-gallery">
-                <div class="project-figure">
-                    <img src="../assets/images/g1-contraintes.jpg" alt="G1 Rigidité - Contraintes">
-                </div>
-                <div class="project-figure">
-                    <img src="../assets/images/g1-deplacements.jpg" alt="G1 Rigidité - Déplacements">
-                </div>
+            <div class="project-content">
+                <p>Analyse de rigidité structurelle pour le projet G1. Étude des contraintes et déformations.</p>
             </div>
             
-            <div class="project-description">
-                <p>Analyse de rigidité structurelle pour le projet G1. Étude des contraintes et déformations.</p>
+            <div class="project-gallery-single">
+                <img src="../assets/images/g1-deplacements.jpg" alt="G1 Rigidité - Déplacements">
             </div>
         </div>
 
         <!-- BLOC ANGLAIS -->
         <div class="lang-block lang-en" style="display: none;">
             <div class="project-header">
+                <div class="project-header-image" style="background-image: url('../assets/images/g1-contraintes.jpg');"></div>
                 <h1>G1 Stiffness</h1>
                 <div class="project-meta">
                     <span>Paris, France</span>
@@ -46,22 +43,17 @@
                 </div>
             </div>
             
-            <div class="project-gallery">
-                <div class="project-figure">
-                    <img src="../assets/images/g1-contraintes.jpg" alt="G1 Stiffness - Stresses">
-                </div>
-                <div class="project-figure">
-                    <img src="../assets/images/g1-deplacements.jpg" alt="G1 Stiffness - Displacements">
-                </div>
+            <div class="project-content">
+                <p>Structural stiffness analysis for the G1 project. Study of stresses and deformations.</p>
             </div>
             
-            <div class="project-description">
-                <p>Structural stiffness analysis for the G1 project. Study of stresses and deformations.</p>
+            <div class="project-gallery-single">
+                <img src="../assets/images/g1-deplacements.jpg" alt="G1 Stiffness - Displacements">
             </div>
         </div>
     </main>
     
-    <footer class="footer"></footer>
+    <div id="footer"></div>
     
     <script src="../includes/load-includes.js"></script>
     <script src="../script.js"></script>
