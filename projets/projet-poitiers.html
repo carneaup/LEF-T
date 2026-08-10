@@ -3,49 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquascope - Poitiers | LEF-T</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Aquascope Poitiers - LEF-T</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <div class="page-container">
-        <div id="header"></div>
-
-        <main class="main">
+    <header class="header"></header>
+    
+    <main class="project-page">
+        <!-- BLOC FRANÇAIS -->
+        <div class="lang-block lang-fr">
             <div class="project-header">
-                <div class="project-header-image" style="background-image: url('/assets/images/aquascope_Poitiers.jpg');"></div>
-                <h1 class="page-title">Aquascope - Poitiers</h1>
+                <h1>Aquascope Poitiers</h1>
                 <div class="project-meta">
                     <span>Poitiers, France</span>
-                    <span>2022</span>
-                </div>
-                <div class="project-tags">
-                    <span>Membranes</span>
-                    <span>Toiture légère</span>
-                    <span>Bassin couvert</span>
+                    <span>|</span>
+                    <span>2023</span>
                 </div>
             </div>
+            
+            <div class="project-gallery">
+                <img src="../assets/images/aquascope_Poitiers.jpg" alt="Aquascope Poitiers">
+            </div>
+            
+            <div class="project-description">
+                <p>Projet d'aquarium public avec structure en verre et acier pour la ville de Poitiers.</p>
+            </div>
+        </div>
 
-            <div class="project-content">
-                <h2>Description du projet</h2>
-                <p>L'Aquascope de Poitiers est un projet fascinant qui allie fonctionnalité et esthétique pour créer un espace aquatique unique. Ce bassin couvert, conçu pour abriter une grande variété de vie marine, nécessite une structure capable de résister à l'humidité constante et aux charges importantes.</p>
-                <p>Notre bureau a conçu une toiture légère en membrane tendue qui permet de couvrir le bassin tout en laissant passer une lumière naturelle diffuse, idéale pour l'écosystème aquatique. La structure est conçue pour minimiser les ombres portées et créer un environnement optimal pour les plantes et les animaux.</p>
-                <h2>Solutions techniques</h2>
-                <p>La principale innovation de ce projet réside dans l'utilisation d'une membrane spécialement traitée pour résister à l'humidité constante et aux produits chimiques utilisés dans l'entretien des bassins. Le système de tension a été conçu pour maintenir la membrane parfaitement tendue malgré les variations de température et d'humidité.</p>
-                <p>De plus, la structure intègre un système de drainage innovant qui permet d'évacuer efficacement l'eau de condensation, empêchant ainsi toute accumulation d'eau sur la membrane.</p>
-                <h2>Impact environnemental</h2>
-                <p>L'Aquascope de Poitiers est un exemple parfait de la manière dont les structures légères peuvent contribuer à la durabilité environnementale. La toiture en membrane réduit considérablement la consommation d'énergie nécessaire pour le chauffage et l'éclairage du bassin.</p>
-                <p>De plus, les matériaux utilisés sont recyclables et la conception permet une longue durée de vie avec un entretien minimal, ce qui en fait une solution économique et écologique.</p>
-                <div class="project-gallery-single">
-                    <img src="/assets/images/aquascope_Poitiers.jpg" alt="Aquascope Poitiers - Vue 1">
-                    <img src="/assets/images/Couverture-ETFE_Villejuif.jpg" alt="Aquascope Poitiers - Vue 2">
-                    <img src="/assets/images/Urwaldhaus_Muncih.jpg" alt="Aquascope Poitiers - Vue 3">
+        <!-- BLOC ANGLAIS -->
+        <div class="lang-block lang-en" style="display: none;">
+            <div class="project-header">
+                <h1>Aquascope Poitiers</h1>
+                <div class="project-meta">
+                    <span>Poitiers, France</span>
+                    <span>|</span>
+                    <span>2023</span>
                 </div>
             </div>
-        </main>
-        <div id="footer"></div>
-    </div>
-    <script src="/script.js"></script>
-    <script src="/includes/load-includes.js"></script>
+            
+            <div class="project-gallery">
+                <img src="../assets/images/aquascope_Poitiers.jpg" alt="Aquascope Poitiers">
+            </div>
+            
+            <div class="project-description">
+                <p>Public aquarium project with glass and steel structure for the city of Poitiers.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer"></footer>
+    
+    <script src="../includes/load-includes.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
