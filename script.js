@@ -39,7 +39,8 @@ function initMap() {
     const mapContainers = document.querySelectorAll('.map-container');
     mapContainers.forEach(function(mapContainer) {
         const iframe = document.createElement('iframe');
-        iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=2.386474609375,48.86415795898437,2.406474609375,48.88415795898437&layer=mapnik&marker=48.87415795898437,2.396474609375';
+        // Centré sur le 64 rue de Saintonge, 75003 Paris (adresse du bureau).
+        iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=2.355124,48.853938,2.375124,48.873938&layer=mapnik&marker=48.863938,2.365124';
         iframe.width = '100%';
         iframe.height = '100%';
         iframe.style.border = 'none';
