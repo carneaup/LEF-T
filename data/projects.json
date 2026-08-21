@@ -6,10 +6,16 @@
       "title_en": "G1 Project - Modal Analysis",
       "image": "assets/images/g1-analyse-modale-1.jpg",
       "category": "g1",
-      "url": "projets/projet-g1-analyse-modale.html",
       "year": "2024",
       "location": "Munich, Allemagne",
-      "location_en": "Munich, Germany"
+      "location_en": "Munich, Germany",
+      "description": [
+        "Analyse modale pour le projet G1. Étude des fréquences propres et des modes de vibration de la structure."
+      ],
+      "description_en": [
+        "Modal analysis for the G1 project. Study of the structure's natural frequencies and vibration modes."
+      ],
+      "gallery": []
     },
     {
       "id": "g1-rigidite",
@@ -17,10 +23,18 @@
       "title_en": "G1 Project - Stiffness",
       "image": "assets/images/g1-contraintes.jpg",
       "category": "g1",
-      "url": "projets/projet-g1-rigidite.html",
       "year": "2024",
       "location": "Munich, Allemagne",
-      "location_en": "Munich, Germany"
+      "location_en": "Munich, Germany",
+      "description": [
+        "Analyse de rigidité structurelle pour le projet G1. Étude des contraintes et déformations."
+      ],
+      "description_en": [
+        "Structural stiffness analysis for the G1 project. Study of stresses and deformations."
+      ],
+      "gallery": [
+        "assets/images/g1-deplacements.jpg"
+      ]
     },
     {
       "id": "garching",
@@ -28,10 +42,16 @@
       "title_en": "Garching Project",
       "image": "assets/images/newton_garching_coussins-ETFE.jpg",
       "category": "bureau",
-      "url": "projets/projet-garching.html",
       "year": "2023",
       "location": "Garching, Allemagne",
-      "location_en": "Garching, Germany"
+      "location_en": "Garching, Germany",
+      "description": [
+        "Projet de structure ETFE pour le campus de Garching. Coussins gonflables pour une façade innovante."
+      ],
+      "description_en": [
+        "ETFE structure project for the Garching campus. Inflatable cushions for an innovative facade."
+      ],
+      "gallery": []
     },
     {
       "id": "cargo-schwehhr",
@@ -39,10 +59,22 @@
       "title_en": "Cargo Schwehhr Project",
       "image": "assets/images/cargo-schwehhr-1.jpg",
       "category": "logistique",
-      "url": "projets/projet-cargo-schwehhr.html",
       "year": "2023",
       "location": "Allemagne",
-      "location_en": "Germany"
+      "location_en": "Germany",
+      "description": [
+        "Projet de structure pour un entrepôt logistique à Schwehhr. Optimisation de l'espace et de la portance."
+      ],
+      "description_en": [
+        "Structural project for a logistics warehouse in Schwehhr. Space and load-bearing optimization."
+      ],
+      "gallery": [
+        "assets/images/cargo-schwehhr-2.jpg",
+        "assets/images/cargo-schwehhr-3.jpg",
+        "assets/images/cargo-schwehhr-4.jpg",
+        "assets/images/cargo-schwehhr-5.jpg",
+        "assets/images/cargo-schwehhr-6.jpg"
+      ]
     },
     {
       "id": "munich",
@@ -50,10 +82,16 @@
       "title_en": "Munich Project",
       "image": "assets/images/Urwaldhaus_Muncih.jpg",
       "category": "bureau",
-      "url": "projets/projet-munich.html",
       "year": "2023",
       "location": "Munich, Allemagne",
-      "location_en": "Munich, Germany"
+      "location_en": "Munich, Germany",
+      "description": [
+        "Projet de structure en bois et verre pour le musée Urwaldhaus à Munich."
+      ],
+      "description_en": [
+        "Wood and glass structure project for the Urwaldhaus museum in Munich."
+      ],
+      "gallery": []
     },
     {
       "id": "poitiers",
@@ -61,10 +99,16 @@
       "title_en": "Poitiers Project",
       "image": "assets/images/aquascope_Poitiers.jpg",
       "category": "urbanisme",
-      "url": "projets/projet-poitiers.html",
       "year": "2022",
       "location": "Poitiers, France",
-      "location_en": "Poitiers, France"
+      "location_en": "Poitiers, France",
+      "description": [
+        "Projet d'aquarium public avec structure en verre et acier pour la ville de Poitiers."
+      ],
+      "description_en": [
+        "Public aquarium project with glass and steel structure for the city of Poitiers."
+      ],
+      "gallery": []
     },
     {
       "id": "villejuif",
@@ -72,10 +116,16 @@
       "title_en": "Villejuif Project",
       "image": "assets/images/Couverture-ETFE_Villejuif.jpg",
       "category": "urbanisme",
-      "url": "projets/projet-villejuif.html",
       "year": "2022",
       "location": "Villejuif, France",
-      "location_en": "Villejuif, France"
+      "location_en": "Villejuif, France",
+      "description": [
+        "Projet de couverture ETFE pour la ville de Villejuif. Structure légère et innovante."
+      ],
+      "description_en": [
+        "ETFE cover project for the city of Villejuif. Lightweight and innovative structure."
+      ],
+      "gallery": []
     }
   ],
   "categories": [

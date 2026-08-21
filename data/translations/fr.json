@@ -24,31 +24,6 @@
   "charte-graphique": {
     "title": "Charte graphique et Logo"
   },
-  "projet-villejuif": {
-    "title": "Couverture ETFE - Villejuif",
-    "meta": "Villejuif, France | 2024"
-  },
-  "projet-munich": {
-    "title": "Urwaldhaus - Munich",
-    "meta": "Munich, Allemagne | 2023"
-  },
-  "projet-poitiers": {
-    "title": "Aquascope - Poitiers",
-    "meta": "Poitiers, France | 2022"
-  },
-  "projet-garching": {
-    "title": "Newton - Garching",
-    "meta": "Garching, Allemagne | 2025"
-  },
-  "projet-g1-rigidite": {
-    "title": "G1 Proto LEICHT - Rigidité et stabilité"
-  },
-  "projet-g1-analyse-modale": {
-    "title": "G1 Proto LEICHT - Analyse modale"
-  },
-  "projet-cargo-schwehhr": {
-    "title": "Vélo cargo proto SCHWEHHR"
-  },
   "header": {
     "nav": {
       "bureau": "Bureau",

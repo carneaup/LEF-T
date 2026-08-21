@@ -45,7 +45,11 @@ async function loadProjects() {
 function generateProjectCard(project) {
     const isEN = getLang() === 'EN';
     const image = PROJECTS_BASE_PATH + project.image;
-    const url = PROJECTS_BASE_PATH + project.url;
+    // L'URL est calculée depuis l'id : une seule page projet.html sert tous les
+    // projets, son contenu dépend de "?id=...". Ainsi ajouter/retirer un projet
+    // ne demande jamais de créer ou supprimer de fichier HTML, juste d'éditer
+    // data/projects.json.
+    const url = PROJECTS_BASE_PATH + 'projets/projet.html?id=' + encodeURIComponent(project.id);
     const title = (isEN && project.title_en) ? project.title_en : project.title;
     const location = (isEN && project.location_en) ? project.location_en : project.location;
 
