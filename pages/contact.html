@@ -18,33 +18,41 @@
             </div>
             
             <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Nous contacter</h2>
-                    <p>Email: info@lef-t.eu</p>
-                    <p>Téléphone: +33 1 89 29 45 00</p>
-                    <p>Adresse: 64, rue de Saintonge, 75003 Paris</p>
+                <div class="contact-intro">
+                    <div class="contact-info">
+                        <h2>Nous contacter</h2>
+                        <p>Email : <a href="mailto:info@lef-t.eu">info@lef-t.eu</a></p>
+                        <p>Téléphone : <a href="tel:+33189294500">+33 1 89 29 45 00</a></p>
+                        <p><strong>Bureau</strong> — 17, rue Ramponeau, 75020 Paris</p>
+                        <p><strong>Siège social</strong> — 64, rue de Saintonge, 75003 Paris</p>
+                        <p class="contact-invite">Venez nous rencontrer dans nos bureaux, au cœur de Belleville.</p>
+                    </div>
+                    <div class="map-container"></div>
                 </div>
-                
-                <div class="contact-form-container">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit">Envoyer</button>
-                    </form>
+
+                <div class="contact-form-section">
+                    <h2>Contactez-nous</h2>
+                    <div class="contact-form-container">
+                        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <input type="hidden" name="_subject" value="Nouveau message depuis le site LEF-T">
+                            <button type="submit">Envoyer</button>
+                            <p class="form-status" aria-live="polite"></p>
+                        </form>
+                    </div>
                 </div>
             </div>
-            
-            <div class="map-container"></div>
         </div>
 
         <!-- BLOC ANGLAIS -->
@@ -54,33 +62,41 @@
             </div>
             
             <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Contact Us</h2>
-                    <p>Email: info@lef-t.eu</p>
-                    <p>Phone: +33 1 89 29 45 00</p>
-                    <p>Address: 64, rue de Saintonge, 75003 Paris</p>
+                <div class="contact-intro">
+                    <div class="contact-info">
+                        <h2>Contact Us</h2>
+                        <p>Email: <a href="mailto:info@lef-t.eu">info@lef-t.eu</a></p>
+                        <p>Phone: <a href="tel:+33189294500">+33 1 89 29 45 00</a></p>
+                        <p><strong>Office</strong> — 17, rue Ramponeau, 75020 Paris</p>
+                        <p><strong>Registered office</strong> — 64, rue de Saintonge, 75003 Paris</p>
+                        <p class="contact-invite">Come meet us at our office, in the heart of Belleville.</p>
+                    </div>
+                    <div class="map-container"></div>
                 </div>
-                
-                <div class="contact-form-container">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
+
+                <div class="contact-form-section">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-form-container">
+                        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <div class="form-group">
+                                <label for="name-en">Name</label>
+                                <input type="text" id="name-en" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email-en">Email</label>
+                                <input type="email" id="email-en" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-en">Message</label>
+                                <textarea id="message-en" name="message" required></textarea>
+                            </div>
+                            <input type="hidden" name="_subject" value="New message from the LEF-T website">
+                            <button type="submit">Send</button>
+                            <p class="form-status" aria-live="polite"></p>
+                        </form>
+                    </div>
                 </div>
             </div>
-            
-            <div class="map-container"></div>
         </div>
     </main>
     

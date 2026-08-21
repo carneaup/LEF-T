@@ -44,8 +44,9 @@ function initMap() {
     const mapContainers = document.querySelectorAll('.map-container');
     mapContainers.forEach(function(mapContainer) {
         const iframe = document.createElement('iframe');
-        // Centré sur le 64 rue de Saintonge, 75003 Paris (adresse du bureau).
-        iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=2.355124,48.853938,2.375124,48.873938&layer=mapnik&marker=48.863938,2.365124';
+        // Centré sur le 17 rue Ramponeau, 75020 Paris (le bureau, adresse où l'on
+        // reçoit les visiteurs — à ne pas confondre avec le siège social).
+        iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=2.3695301,48.86145565,2.3895301,48.88145565&layer=mapnik&marker=48.87145565,2.3795301';
         iframe.width = '100%';
         iframe.height = '100%';
         iframe.style.border = 'none';
@@ -55,16 +56,49 @@ function initMap() {
 }
 
 function handleContactForm() {
-    // Idem : un formulaire par bloc de langue.
+    // Idem : un formulaire par bloc de langue. Envoi réel via Formspree
+    // (formspree.io) — remplacer YOUR_FORM_ID dans contact.html par l'ID
+    // du formulaire créé sur le compte Formspree du client. La soumission
+    // se fait en AJAX pour rester sur la page (pas de redirection).
     const forms = document.querySelectorAll('.contact-form');
     forms.forEach(function(form) {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
             const isEN = typeof getCurrentLanguage === 'function' && getCurrentLanguage() === 'EN';
-            alert(isEN
-                ? 'Thank you for your message! We will reply shortly.'
-                : 'Merci pour votre message ! Nous vous répondrons rapidement.');
-            form.reset();
+            const statusEl = form.querySelector('.form-status');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const data = new FormData(form);
+
+            if (submitBtn) submitBtn.disabled = true;
+            if (statusEl) {
+                statusEl.textContent = '';
+                statusEl.className = 'form-status';
+            }
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!response.ok) throw new Error('Submission failed');
+                if (statusEl) {
+                    statusEl.textContent = isEN
+                        ? 'Thank you for your message! We will reply shortly.'
+                        : 'Merci pour votre message ! Nous vous répondrons rapidement.';
+                    statusEl.classList.add('form-status--success');
+                }
+                form.reset();
+            } catch (err) {
+                if (statusEl) {
+                    statusEl.textContent = isEN
+                        ? 'Something went wrong. Please email us directly at info@lef-t.eu.'
+                        : "Une erreur s'est produite. Vous pouvez nous écrire directement à info@lef-t.eu.";
+                    statusEl.classList.add('form-status--error');
+                }
+            } finally {
+                if (submitBtn) submitBtn.disabled = false;
+            }
         });
     });
 }

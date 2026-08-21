@@ -989,13 +989,144 @@ body.lightbox-open {
     }
 }
 
-/* Carte OpenStreetMap (page contact) */
+/* ===== PAGE CONTACT ===== */
+.contact-intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: stretch;
+    margin: 2rem 0;
+}
+
+.contact-info {
+    flex: 1 1 320px;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: var(--accent-blue);
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-invite {
+    margin-top: 16px;
+    font-style: italic;
+    color: var(--text-dark);
+    opacity: 0.85;
+}
+
+/* Carte OpenStreetMap : réduite et à côté de l'adresse plutôt qu'en pleine
+   largeur sous le contenu. */
 .map-container {
+    flex: 1 1 320px;
+    max-width: 420px;
+    min-height: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+@media (max-width: 700px) {
+    .map-container {
+        max-width: none;
+        min-height: 220px;
+    }
+}
+
+.contact-form-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.contact-form-container {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    max-width: 1200px;
-    min-height: 400px;
-    margin: 2rem auto;
-    padding: 0 20px;
+    padding: 10px 14px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    padding: 12px 28px;
+    background-color: var(--accent-blue);
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #00407A;
+}
+
+.contact-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-status {
+    margin-top: 14px;
+    font-size: 0.9rem;
+}
+
+.form-status--success {
+    color: #1a7a3c;
+}
+
+.form-status--error {
+    color: #b02a2a;
 }
 
 /* ===== STYLES POUR G1 PROTO LEICHT ===== */
