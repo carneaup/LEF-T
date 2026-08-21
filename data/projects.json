@@ -11,10 +11,12 @@
       "location": "Munich, Allemagne",
       "location_en": "Munich, Germany",
       "description": [
-        "Analyse modale pour le projet G1. Étude des fréquences propres et des modes de vibration de la structure."
+        "Nous avons mené une analyse des propriétés vibratoires du cadre en intégrant différents comportements possibles de l'utilisateur, notamment différentes fréquences de pédalage.",
+        "Cette étude a permis d'identifier les modes de résonance du cadre et d'évaluer leur impact. Afin de se rapprocher au maximum du comportement réel du vélo, la rigidité latérale des roues a également été prise en compte dans le modèle."
       ],
       "description_en": [
-        "Modal analysis for the G1 project. Study of the structure's natural frequencies and vibration modes."
+        "We carried out a modal analysis of the frame's vibrational properties, factoring in different possible rider behaviours, in particular various pedalling frequencies.",
+        "This made it possible to identify the frame's resonance modes and assess their impact. To stay as close as possible to the bike's real-world behaviour, the lateral stiffness of the wheels was also included in the model."
       ],
       "gallery": []
     },
@@ -29,10 +31,12 @@
       "location": "Munich, Allemagne",
       "location_en": "Munich, Germany",
       "description": [
-        "Analyse de rigidité structurelle pour le projet G1. Étude des contraintes et déformations."
+        "Nous avons procédé à une analyse par la méthode des éléments finis pour étudier le comportement du cadre en carbone du gravel.",
+        "Une analyse des contraintes et des déformations du cadre a été réalisée afin d'évaluer la répartition des efforts au sein de la structure et d'identifier les zones les plus sollicitées. Cette étude a permis de vérifier la cohérence de la conception du cadre et de confirmer que son comportement mécanique est conforme aux attentes."
       ],
       "description_en": [
-        "Structural stiffness analysis for the G1 project. Study of stresses and deformations."
+        "We carried out a finite element analysis to study the behaviour of the gravel bike's carbon frame.",
+        "A stress and deformation analysis of the frame was performed to assess how loads are distributed throughout the structure and identify the most heavily stressed areas. This study confirmed the consistency of the frame's design and validated that its mechanical behaviour meets expectations."
       ],
       "gallery": [
         "assets/images/g1-rigidite/01.jpg"
@@ -71,16 +75,18 @@
       "title": "Projet Cargo Schwehhr",
       "title_en": "Cargo Schwehhr Project",
       "image": "assets/images/cargo-schwehhr/cover.jpg",
-      "category": "logistique",
+      "category": "cargo",
       "featured": true,
       "year": "2023",
       "location": "Allemagne",
       "location_en": "Germany",
       "description": [
-        "Projet de structure pour un entrepôt logistique à Schwehhr. Optimisation de l'espace et de la portance."
+        "Un autre axe d'étude au sein de notre équipe concerne le développement d'un vélo cargo. Notre objectif est de concevoir un vélo capable de répondre aux contraintes spécifiques liées à l'usage urbain et au stockage dans des espaces restreints.",
+        "Dans le cadre de ce travail, nous réalisons des analyses similaires à celles menées sur le vélo gravel. Ce travail nous permet de définir la géométrie répondant au mieux au cahier des charges et de concevoir certains systèmes innovants offrant de nouvelles options d'usage."
       ],
       "description_en": [
-        "Structural project for a logistics warehouse in Schwehhr. Space and load-bearing optimization."
+        "Another area of research within our team focuses on developing a cargo bike. Our goal is to design a bike able to meet the specific constraints of urban use and storage in tight spaces.",
+        "As part of this work, we carry out analyses similar to those performed on the gravel bike. This lets us define the geometry that best meets the specifications, and design innovative systems that open up new ways to use the bike."
       ],
       "gallery": [
         "assets/images/cargo-schwehhr/01.jpg",
@@ -184,9 +190,9 @@
       "name_en": "Office"
     },
     {
-      "id": "logistique",
-      "name": "Logistique",
-      "name_en": "Logistics"
+      "id": "cargo",
+      "name": "Cargo",
+      "name_en": "Cargo"
     },
     {
       "id": "urbanisme",
