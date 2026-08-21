@@ -46,6 +46,73 @@ function showProjectNotFound() {
         '</div>';
 }
 
+// ===== Lightbox : ouvre les images de la page projet en grand, à leur taille
+// réelle (pas d'agrandissement au-delà de la taille naturelle de l'image,
+// juste une réduction si besoin pour tenir dans l'écran). Navigable au clavier
+// (flèches gauche/droite, Échap) et par les boutons prev/next. L'image d'en-tête
+// et toutes les photos de la galerie partagent une seule liste navigable, dans
+// l'ordre où elles apparaissent sur la page.
+let lightboxImages = [];
+let lightboxIndex = 0;
+
+function showLightboxImage(index) {
+    if (!lightboxImages.length) return;
+    lightboxIndex = (index + lightboxImages.length) % lightboxImages.length;
+    const entry = lightboxImages[lightboxIndex];
+    const imgEl = document.getElementById('lightboxImage');
+    if (imgEl) {
+        imgEl.src = entry.src;
+        imgEl.alt = entry.alt;
+    }
+    const multi = lightboxImages.length > 1;
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+    if (prevBtn) prevBtn.style.display = multi ? '' : 'none';
+    if (nextBtn) nextBtn.style.display = multi ? '' : 'none';
+}
+
+function openLightbox(index) {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    showLightboxImage(index);
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+}
+
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', function() { showLightboxImage(lightboxIndex - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { showLightboxImage(lightboxIndex + 1); });
+
+    // Clic sur le fond sombre (en dehors de l'image et des boutons) : ferme.
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') showLightboxImage(lightboxIndex - 1);
+        else if (e.key === 'ArrowRight') showLightboxImage(lightboxIndex + 1);
+    });
+}
+
 function renderProjectDetail(project) {
     const isEN = getLang() === 'EN';
     const title = (isEN && project.title_en) ? project.title_en : project.title;
@@ -56,9 +123,18 @@ function renderProjectDetail(project) {
 
     document.title = title + ' - LEF-T';
 
+    // Reconstruit la liste d'images navigables dans la lightbox : l'en-tête
+    // (si présente) puis toutes les photos de la galerie, dans l'ordre.
+    lightboxImages = [];
+
     const headerImg = document.getElementById('projectHeaderImage');
     if (headerImg && project.image) {
-        headerImg.style.backgroundImage = "url('" + PROJECT_DETAIL_BASE_PATH + project.image + "')";
+        const headerSrc = PROJECT_DETAIL_BASE_PATH + project.image;
+        headerImg.style.backgroundImage = "url('" + headerSrc + "')";
+        headerImg.classList.add('is-clickable');
+        const headerImageIndex = lightboxImages.length;
+        lightboxImages.push({ src: headerSrc, alt: title || '' });
+        headerImg.onclick = function() { openLightbox(headerImageIndex); };
     }
 
     const titleEl = document.getElementById('projectTitle');
@@ -85,10 +161,15 @@ function renderProjectDetail(project) {
         galleryEl.innerHTML = '';
         const images = project.gallery || [];
         images.forEach(function(src, index) {
+            const fullSrc = PROJECT_DETAIL_BASE_PATH + src;
+            const alt = (title || '') + ' – photo ' + (index + 1);
             const img = document.createElement('img');
-            img.src = PROJECT_DETAIL_BASE_PATH + src;
-            img.alt = (title || '') + ' – photo ' + (index + 1);
+            img.src = fullSrc;
+            img.alt = alt;
             img.loading = 'lazy';
+            const galleryImageIndex = lightboxImages.length;
+            lightboxImages.push({ src: fullSrc, alt: alt });
+            img.addEventListener('click', function() { openLightbox(galleryImageIndex); });
             galleryEl.appendChild(img);
         });
     }
@@ -113,6 +194,7 @@ async function initProjectDetail() {
         }
 
         renderProjectDetail(project);
+        initLightbox();
 
         // Se remettre à jour quand la langue change (déclenché par load-includes.js).
         window.addEventListener('lang-changed', function() {
