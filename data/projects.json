@@ -4,8 +4,9 @@
       "id": "g1-analyse-modale",
       "title": "Projet G1 - Analyse Modale",
       "title_en": "G1 Project - Modal Analysis",
-      "image": "assets/images/g1-analyse-modale-1.jpg",
+      "image": "assets/images/g1-analyse-modale/cover.jpg",
       "category": "g1",
+      "featured": true,
       "year": "2024",
       "location": "Munich, Allemagne",
       "location_en": "Munich, Germany",
@@ -21,8 +22,9 @@
       "id": "g1-rigidite",
       "title": "Projet G1 - Rigidité",
       "title_en": "G1 Project - Stiffness",
-      "image": "assets/images/g1-contraintes.jpg",
+      "image": "assets/images/g1-rigidite/cover.jpg",
       "category": "g1",
+      "featured": true,
       "year": "2024",
       "location": "Munich, Allemagne",
       "location_en": "Munich, Germany",
@@ -33,15 +35,68 @@
         "Structural stiffness analysis for the G1 project. Study of stresses and deformations."
       ],
       "gallery": [
-        "assets/images/g1-deplacements.jpg"
+        "assets/images/g1-rigidite/01.jpg"
+      ]
+    },
+    {
+      "id": "r2-cfd",
+      "title": "Simulation CFD - Vélo R2",
+      "title_en": "CFD Simulation - R2 Road Bike",
+      "image": "assets/images/r2-cfd/cover.jpg",
+      "category": "r2",
+      "featured": true,
+      "year": "2026",
+      "location": "Paris, France",
+      "location_en": "Paris, France",
+      "description": [
+        "Simulation numérique d'écoulement (CFD) réalisée avec RWIND sur le vélo de route R2, équipé des roues W1.",
+        "Étude menée à une vitesse de vent de 12,5 m/s (45 km/h) pour analyser le comportement aérodynamique du vélo : champs de vitesse, lignes de courant et répartition de pression sur la structure."
+      ],
+      "description_en": [
+        "Computational fluid dynamics (CFD) simulation run with RWIND on the R2 road bike, fitted with W1 wheels.",
+        "Study performed at a wind speed of 12.5 m/s (45 km/h) to analyse the bike's aerodynamic behaviour: velocity fields, streamlines and pressure distribution across the structure."
+      ],
+      "gallery": [
+        "assets/images/r2-cfd/01.jpg",
+        "assets/images/r2-cfd/02.jpg",
+        "assets/images/r2-cfd/03.jpg",
+        "assets/images/r2-cfd/04.jpg",
+        "assets/images/r2-cfd/05.jpg",
+        "assets/images/r2-cfd/06.jpg",
+        "assets/images/r2-cfd/07.jpg"
+      ]
+    },
+    {
+      "id": "cargo-schwehhr",
+      "title": "Projet Cargo Schwehhr",
+      "title_en": "Cargo Schwehhr Project",
+      "image": "assets/images/cargo-schwehhr/cover.jpg",
+      "category": "logistique",
+      "featured": true,
+      "year": "2023",
+      "location": "Allemagne",
+      "location_en": "Germany",
+      "description": [
+        "Projet de structure pour un entrepôt logistique à Schwehhr. Optimisation de l'espace et de la portance."
+      ],
+      "description_en": [
+        "Structural project for a logistics warehouse in Schwehhr. Space and load-bearing optimization."
+      ],
+      "gallery": [
+        "assets/images/cargo-schwehhr/01.jpg",
+        "assets/images/cargo-schwehhr/02.jpg",
+        "assets/images/cargo-schwehhr/03.jpg",
+        "assets/images/cargo-schwehhr/04.jpg",
+        "assets/images/cargo-schwehhr/05.jpg"
       ]
     },
     {
       "id": "garching",
       "title": "Projet Garching",
       "title_en": "Garching Project",
-      "image": "assets/images/newton_garching_coussins-ETFE.jpg",
+      "image": "assets/images/garching/cover.jpg",
       "category": "bureau",
+      "featured": false,
       "year": "2023",
       "location": "Garching, Allemagne",
       "location_en": "Garching, Germany",
@@ -54,34 +109,12 @@
       "gallery": []
     },
     {
-      "id": "cargo-schwehhr",
-      "title": "Projet Cargo Schwehhr",
-      "title_en": "Cargo Schwehhr Project",
-      "image": "assets/images/cargo-schwehhr-1.jpg",
-      "category": "logistique",
-      "year": "2023",
-      "location": "Allemagne",
-      "location_en": "Germany",
-      "description": [
-        "Projet de structure pour un entrepôt logistique à Schwehhr. Optimisation de l'espace et de la portance."
-      ],
-      "description_en": [
-        "Structural project for a logistics warehouse in Schwehhr. Space and load-bearing optimization."
-      ],
-      "gallery": [
-        "assets/images/cargo-schwehhr-2.jpg",
-        "assets/images/cargo-schwehhr-3.jpg",
-        "assets/images/cargo-schwehhr-4.jpg",
-        "assets/images/cargo-schwehhr-5.jpg",
-        "assets/images/cargo-schwehhr-6.jpg"
-      ]
-    },
-    {
       "id": "munich",
       "title": "Projet Munich",
       "title_en": "Munich Project",
-      "image": "assets/images/Urwaldhaus_Muncih.jpg",
+      "image": "assets/images/munich/cover.jpg",
       "category": "bureau",
+      "featured": false,
       "year": "2023",
       "location": "Munich, Allemagne",
       "location_en": "Munich, Germany",
@@ -97,8 +130,9 @@
       "id": "poitiers",
       "title": "Projet Poitiers",
       "title_en": "Poitiers Project",
-      "image": "assets/images/aquascope_Poitiers.jpg",
+      "image": "assets/images/poitiers/cover.jpg",
       "category": "urbanisme",
+      "featured": false,
       "year": "2022",
       "location": "Poitiers, France",
       "location_en": "Poitiers, France",
@@ -114,8 +148,9 @@
       "id": "villejuif",
       "title": "Projet Villejuif",
       "title_en": "Villejuif Project",
-      "image": "assets/images/Couverture-ETFE_Villejuif.jpg",
+      "image": "assets/images/villejuif/cover.jpg",
       "category": "urbanisme",
+      "featured": false,
       "year": "2022",
       "location": "Villejuif, France",
       "location_en": "Villejuif, France",
@@ -133,6 +168,11 @@
       "id": "g1",
       "name": "G1",
       "name_en": "G1"
+    },
+    {
+      "id": "r2",
+      "name": "R2",
+      "name_en": "R2"
     },
     {
       "id": "bureau",

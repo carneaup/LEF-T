@@ -14,24 +14,27 @@ function getScriptBasePath() {
 }
 const SCRIPT_BASE_PATH = getScriptBasePath();
 
-// Chaque projet a maintenant une seule page (projets/projet.html?id=...),
-// voir data/projects.json pour le détail de chaque projet.
-const bgImages = [
-    { src: 'assets/images/Couverture-ETFE_Villejuif.jpg', link: 'projets/projet.html?id=villejuif' },
-    { src: 'assets/images/Urwaldhaus_Muncih.jpg', link: 'projets/projet.html?id=munich' },
-    { src: 'assets/images/aquascope_Poitiers.jpg', link: 'projets/projet.html?id=poitiers' },
-    { src: 'assets/images/newton_garching_coussins-ETFE.jpg', link: 'projets/projet.html?id=garching' },
-];
-
-function setRandomBgImage() {
+// Le fond tournant de la page d'accueil est piloté depuis data/projects.json :
+// seuls les projets avec "featured": true y apparaissent. Pour changer la
+// sélection, il suffit de modifier ce champ dans projects.json (pas besoin de
+// toucher à ce fichier). Dépend de js/projects.js chargé avant ce script
+// (loadProjects, projectsData).
+async function setRandomBgImage() {
     const bgElement = document.getElementById('bgImage');
     const bgLink = document.getElementById('bgLink');
-    if (bgElement) {
-        const randomIndex = Math.floor(Math.random() * bgImages.length);
-        const chosen = bgImages[randomIndex];
-        bgElement.style.backgroundImage = `url(${SCRIPT_BASE_PATH}${chosen.src}?${Date.now()})`;
-        if (bgLink) bgLink.href = SCRIPT_BASE_PATH + chosen.link;
-    }
+    if (!bgElement) return; // pas sur la page d'accueil
+
+    await loadProjects();
+    const featured = (projectsData && projectsData.projects)
+        ? projectsData.projects.filter(function(p) { return p.featured; })
+        : [];
+
+    if (!featured.length) return; // aucun projet marqué "featured" : on garde le fond par défaut du HTML
+
+    const chosen = featured[Math.floor(Math.random() * featured.length)];
+    const src = chosen.heroImage || chosen.image;
+    bgElement.style.backgroundImage = `url(${SCRIPT_BASE_PATH}${src}?${Date.now()})`;
+    if (bgLink) bgLink.href = SCRIPT_BASE_PATH + 'projets/projet.html?id=' + encodeURIComponent(chosen.id);
 }
 
 function initMap() {
