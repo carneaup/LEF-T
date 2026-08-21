@@ -106,7 +106,8 @@
       "description_en": [
         "ETFE structure project for the Garching campus. Inflatable cushions for an innovative facade."
       ],
-      "gallery": []
+      "gallery": [],
+      "draft": true
     },
     {
       "id": "munich",
@@ -124,7 +125,8 @@
       "description_en": [
         "Wood and glass structure project for the Urwaldhaus museum in Munich."
       ],
-      "gallery": []
+      "gallery": [],
+      "draft": true
     },
     {
       "id": "poitiers",
@@ -142,7 +144,8 @@
       "description_en": [
         "Public aquarium project with glass and steel structure for the city of Poitiers."
       ],
-      "gallery": []
+      "gallery": [],
+      "draft": true
     },
     {
       "id": "villejuif",
@@ -160,7 +163,8 @@
       "description_en": [
         "ETFE cover project for the city of Villejuif. Lightweight and innovative structure."
       ],
-      "gallery": []
+      "gallery": [],
+      "draft": true
     }
   ],
   "categories": [

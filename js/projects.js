@@ -65,11 +65,27 @@ function generateProjectCard(project) {
     return card.outerHTML;
 }
 
+// Un projet marqué "draft": true dans projects.json est mis en pause : il
+// reste dans le fichier (texte, photos, catégorie conservés) mais disparaît
+// de la mosaïque, des filtres et du fond d'écran d'accueil. Utile pour un
+// projet à publier plus tard sans avoir à ressaisir son contenu. Sa fiche
+// individuelle (projet.html?id=...) reste consultable si on a le lien direct.
+function publishedProjects() {
+    if (!projectsData || !projectsData.projects) return [];
+    return projectsData.projects.filter(function(p) { return !p.draft; });
+}
+
 function generateCategoryFilters() {
     if (!projectsData || !projectsData.categories) return '';
     const isEN = getLang() === 'EN';
+    // On ne propose que les catégories qui ont au moins un projet publié,
+    // sinon on se retrouve avec un filtre qui n'affiche jamais rien.
+    const usedCategoryIds = {};
+    publishedProjects().forEach(function(p) { usedCategoryIds[p.category] = true; });
+
     let html = '<button class="active" data-category="all">' + (isEN ? 'All' : 'Tous') + '</button>';
     projectsData.categories.forEach(function(cat) {
+        if (!usedCategoryIds[cat.id]) return;
         const name = (isEN && cat.name_en) ? cat.name_en : cat.name;
         html += '<button data-category="' + cat.id + '">' + name + '</button>';
     });
@@ -77,12 +93,11 @@ function generateCategoryFilters() {
 }
 
 function displayProjects(category) {
-    if (!projectsData || !projectsData.projects) return;
     // Il peut y avoir plusieurs conteneurs .projects-mosaic sur une même page
     // (un par bloc de langue .lang-fr / .lang-en) : on les met tous à jour.
     const containers = document.querySelectorAll('.projects-mosaic');
     if (!containers.length) return;
-    let projects = projectsData.projects;
+    let projects = publishedProjects();
     if (category !== 'all') {
         projects = projects.filter(function(p) { return p.category === category; });
     }

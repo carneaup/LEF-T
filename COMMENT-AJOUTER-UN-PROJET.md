@@ -52,7 +52,26 @@ traduction séparée à tenir à jour.
 4. C'est tout — le projet apparaît automatiquement dans la mosaïque, les
    filtres par catégorie et sur sa propre fiche (`projets/projet.html?id=mon-projet`).
 
-## Retirer un projet
+## Mettre un projet en pause (à republier plus tard)
+
+Pour retirer un projet de la mosaïque, des filtres et du fond d'écran sans
+perdre son contenu (texte, photos), ajouter `"draft": true` dans son entrée :
+
+```json
+{
+  "id": "garching",
+  ...
+  "draft": true
+}
+```
+
+Le projet reste dans `projects.json`, ses photos restent dans
+`assets/images/garching/`, et sa fiche reste consultable si on a le lien
+direct (`projet.html?id=garching`) — juste invisible dans la navigation du
+site. Pour le republier, il suffit de retirer la ligne `"draft": true` (ou de
+la passer à `false`).
+
+## Retirer définitivement un projet
 
 1. Supprimer son entrée dans `data/projects.json`.
 2. Supprimer son dossier `assets/images/<id>/`.
