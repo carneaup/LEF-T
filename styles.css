@@ -175,8 +175,9 @@ a {
 /* Citation d'accroche sur la page d'accueil, en incrustation sur le visuel. */
 .home-tagline {
     position: absolute;
-    bottom: 90px;
+    top: 50%;
     right: 40px;
+    transform: translateY(-50%);
     z-index: 5;
     max-width: 380px;
     margin: 0;
@@ -195,7 +196,6 @@ a {
         right: 20px;
         max-width: none;
         font-size: 1.3rem;
-        bottom: 90px;
     }
 }
 
