@@ -577,6 +577,168 @@ body.home-page .header .lang-current {
     line-height: 1.8;
 }
 
+/* ===== PAGE BUREAU : équipe / outils / partenaires ===== */
+.page-tagline {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--accent-blue);
+    margin-top: -0.5rem;
+}
+
+.team-section h2,
+.tools-section h2,
+.partners-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: var(--primary-dark);
+}
+
+/* Liens externes mis en avant (site partenaire, etc.) : se démarquent du
+   texte courant par une forme de pastille plutôt qu'un simple lien souligné. */
+.link-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background-color: rgba(0, 86, 163, 0.08);
+    border-radius: 20px;
+    color: var(--accent-blue);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.link-chip::after {
+    content: '\2192';
+}
+
+.link-chip:hover {
+    background-color: rgba(0, 86, 163, 0.15);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.tool-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 16px;
+    background-color: var(--primary-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-yellow);
+}
+
+.tool-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.tool-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--primary-dark);
+}
+
+.tool-card p {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.partners-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.partner-card {
+    padding: 20px;
+    background-color: var(--primary-light);
+    border: 1px solid var(--border-color);
+}
+
+.partner-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+.partner-card p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+/* ===== CHARTE GRAPHIQUE ===== */
+.charte-content h2 {
+    margin-top: 2rem;
+}
+
+.charte-content p {
+    margin-bottom: 0.75rem;
+}
+
+.logo-links a {
+    color: var(--accent-blue);
+}
+
+.logo-links a:hover {
+    text-decoration: underline;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+}
+
+.color-swatch--dark {
+    background-color: var(--primary-dark);
+}
+
+.color-swatch--white {
+    background-color: var(--text-light);
+}
+
+.color-swatch--blue {
+    background-color: var(--accent-blue);
+}
+
+.color-swatch--yellow {
+    background-color: var(--accent-yellow);
+}
+
 /* ===== PAGE PROJET INDIVIDUEL ===== */
 .project-header {
     margin-bottom: 40px;
@@ -893,7 +1055,8 @@ body.lightbox-open {
 .lang-block .project-header,
 .lang-block .project-description,
 .lang-block .projects-filters,
-.lang-block .projects-mosaic {
+.lang-block .projects-mosaic,
+.lang-block .tools-section {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
