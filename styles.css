@@ -172,6 +172,33 @@ a {
     opacity: 1;
 }
 
+/* Citation d'accroche sur la page d'accueil, en incrustation sur le visuel. */
+.home-tagline {
+    position: absolute;
+    bottom: 90px;
+    right: 40px;
+    z-index: 5;
+    max-width: 380px;
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: right;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .home-tagline {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        font-size: 1.3rem;
+        bottom: 90px;
+    }
+}
+
 /* ===== PAGES STANDARD ===== */
 .page-container {
     display: flex;
@@ -578,11 +605,14 @@ body.home-page .header .lang-current {
 }
 
 /* ===== PAGE BUREAU : équipe / outils / partenaires ===== */
-.page-tagline {
-    font-size: 1.15rem;
-    font-style: italic;
-    color: var(--accent-blue);
-    margin-top: -0.5rem;
+.partner-logo {
+    display: block;
+    max-width: 140px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    margin-bottom: 12px;
+    object-fit: contain;
 }
 
 .team-section h2,
