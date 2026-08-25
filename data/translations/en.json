@@ -1,29 +1,4 @@
 {
-  "index": {
-    "title": "LEF-T | Structural Engineering Office"
-  },
-  "bureau": {
-    "title": "Our Office",
-    "about1": "<strong>LEF-T</strong> is a structural engineering office based in Paris, in the heart of the dynamic Belleville district.",
-    "about2": "Specializing in <strong>lightweight structures and facades</strong>, we work on innovative projects in France and Germany.",
-    "about3": "Our strength lies in our ability to <strong>design tailor-made solutions</strong>.",
-    "about4": "Although a small structure, our team is <strong>responsive, flexible and committed</strong>.",
-    "team": "The Team",
-    "partners": "Partners"
-  },
-  "projets": {
-    "title": "Our Projects",
-    "filter_all": "All"
-  },
-  "contact": {
-    "title": "Contact"
-  },
-  "legal": {
-    "title": "Legal Notice"
-  },
-  "charte-graphique": {
-    "title": "Graphic Charter and Logo"
-  },
   "header": {
     "nav": {
       "bureau": "Office",
@@ -37,13 +12,7 @@
     "copyright": "© LEF-T 2026",
     "address": "64, rue de Saintonge, 75003 Paris",
     "charte": "Graphic Charter",
-    "legal": "Legal Notice"
-  },
-  "tags": {
-    "all": "All",
-    "etfe": "ETFE",
-    "facade": "Facade",
-    "structure": "Structure",
-    "prototype": "Prototype"
+    "legal": "Legal Notice",
+    "confidentialite": "Privacy Policy"
   }
 }

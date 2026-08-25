@@ -1,29 +1,4 @@
 {
-  "index": {
-    "title": "LEF-T | Bureau d'Études Structure"
-  },
-  "bureau": {
-    "title": "Notre bureau",
-    "about1": "<strong>LEF-T</strong> est un bureau d'études structure basé à Paris, au cœur du quartier dynamique de Belleville.",
-    "about2": "Spécialisés dans les <strong>structures légères et les façades</strong>, nous travaillons sur des projets innovants en France et en Allemagne.",
-    "about3": "Notre force réside dans notre capacité à <strong>concevoir des solutions sur-mesure</strong>.",
-    "about4": "Bien que petite structure, notre équipe est <strong>réactive, flexible et engagée</strong>.",
-    "team": "L'équipe",
-    "partners": "Partenaires"
-  },
-  "projets": {
-    "title": "Nos projets",
-    "filter_all": "Tous"
-  },
-  "contact": {
-    "title": "Contact"
-  },
-  "legal": {
-    "title": "Mentions légales"
-  },
-  "charte-graphique": {
-    "title": "Charte graphique et Logo"
-  },
   "header": {
     "nav": {
       "bureau": "Bureau",
@@ -37,13 +12,7 @@
     "copyright": "© LEF-T 2026",
     "address": "64, rue de Saintonge, 75003 Paris",
     "charte": "Charte graphique",
-    "legal": "Mentions légales"
-  },
-  "tags": {
-    "all": "Tous",
-    "etfe": "ETFE",
-    "facade": "Façade",
-    "structure": "Structure",
-    "prototype": "Prototype"
+    "legal": "Mentions légales",
+    "confidentialite": "Politique de confidentialité"
   }
 }

@@ -123,6 +123,13 @@ function renderProjectDetail(project) {
 
     document.title = title + ' - LEF-T';
 
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && paragraphs.length) {
+        const firstParagraph = paragraphs[0];
+        const summary = firstParagraph.length > 155 ? firstParagraph.slice(0, 152) + '…' : firstParagraph;
+        metaDesc.setAttribute('content', summary);
+    }
+
     // Reconstruit la liste d'images navigables dans la lightbox : l'en-tête
     // (si présente) puis toutes les photos de la galerie, dans l'ordre.
     lightboxImages = [];

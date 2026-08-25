@@ -814,20 +814,6 @@ body.home-page .header .lang-current {
     opacity: 0.7;
 }
 
-.project-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.project-tags span {
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    background-color: var(--accent-blue);
-    color: var(--text-light);
-    border-radius: 12px;
-}
-
 .project-content {
     max-width: 800px;
     margin: 0 auto;
