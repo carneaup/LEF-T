@@ -3,27 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets - LEF-T</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Nos projets - LEF-T</title>
+    <meta name="description" content="Découvrez les projets de LEF-T : structures légères, membranes, enveloppes complexes et bois, en maîtrise d'œuvre, EXE ou ingénierie pure.">
+    <link rel="canonical" href="https://carneaup.github.io/LEF-T/pages/projets.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nos projets - LEF-T">
+    <meta property="og:description" content="Découvrez les projets de LEF-T : structures légères, membranes, enveloppes complexes et bois.">
+    <meta property="og:url" content="https://carneaup.github.io/LEF-T/pages/projets.html">
+    <meta property="og:image" content="https://carneaup.github.io/LEF-T/assets/brand/logo_LEF-T.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nos projets - LEF-T">
+    <meta name="twitter:description" content="Découvrez les projets de LEF-T : structures légères, membranes, enveloppes complexes et bois.">
+    <meta name="twitter:image" content="https://carneaup.github.io/LEF-T/assets/brand/logo_LEF-T.png">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="page-container">
+<body>
     <div id="header"></div>
     
-    <main class="main">
-        <h1 class="page-title">Nos Projets</h1>
-        
-        <!-- Filtres de catégorie (seront générés dynamiquement) -->
-        <div class="projects-filters"></div>
-        
-        <!-- Mosaïque de projets (sera générée dynamiquement) -->
-        <div class="projects-mosaic"></div>
+    <main>
+        <!-- BLOC FRANÇAIS -->
+        <div class="lang-block lang-fr">
+            <div class="page-header">
+                <h1>Nos projets</h1>
+            </div>
+            
+            <div class="projects-filters"></div>
+            
+            <div class="projects-mosaic"></div>
+        </div>
+
+        <!-- BLOC ANGLAIS -->
+        <div class="lang-block lang-en" style="display: none;">
+            <div class="page-header">
+                <h1>Our Projects</h1>
+            </div>
+            
+            <div class="projects-filters"></div>
+            
+            <div class="projects-mosaic"></div>
+        </div>
     </main>
     
     <div id="footer"></div>
     
-    <!-- Scripts -->
-    <script src="/includes/load-includes.js"></script>
-    <script src="/js/projects.js"></script>
+    <script src="../includes/load-includes.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

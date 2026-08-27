@@ -3,83 +3,201 @@
     {
       "id": "g1-analyse-modale",
       "title": "Projet G1 - Analyse Modale",
-      "image": "/assets/images/g1-analyse-modale-1.jpg",
+      "title_en": "G1 Project - Modal Analysis",
+      "image": "assets/images/g1-analyse-modale/cover.jpg",
       "category": "g1",
-      "url": "/projets/projet-g1-analyse-modale.html",
-      "year": "2024",
-      "location": "Munich, Allemagne"
+      "featured": true,
+      "year": "2025",
+      "location": "Paris, France",
+      "location_en": "Paris, France",
+      "description": [
+        "Nous avons mené une analyse des propriétés vibratoires du cadre en intégrant différents comportements possibles de l'utilisateur, notamment différentes fréquences de pédalage.",
+        "Cette étude a permis d'identifier les modes de résonance du cadre et d'évaluer leur impact. Afin de se rapprocher au maximum du comportement réel du vélo, la rigidité latérale des roues a également été prise en compte dans le modèle."
+      ],
+      "description_en": [
+        "We carried out a modal analysis of the frame's vibrational properties, factoring in different possible rider behaviours, in particular various pedalling frequencies.",
+        "This made it possible to identify the frame's resonance modes and assess their impact. To stay as close as possible to the bike's real-world behaviour, the lateral stiffness of the wheels was also included in the model."
+      ],
+      "gallery": []
     },
     {
       "id": "g1-rigidite",
       "title": "Projet G1 - Rigidité",
-      "image": "/assets/images/g1-contraintes.jpg",
+      "title_en": "G1 Project - Stiffness",
+      "image": "assets/images/g1-rigidite/cover.jpg",
       "category": "g1",
-      "url": "/projets/projet-g1-rigidite.html",
-      "year": "2024",
-      "location": "Munich, Allemagne"
+      "featured": true,
+      "year": "2025",
+      "location": "Paris, France",
+      "location_en": "Paris, France",
+      "description": [
+        "Nous avons procédé à une analyse par la méthode des éléments finis pour étudier le comportement du cadre en carbone du gravel.",
+        "Une analyse des contraintes et des déformations du cadre a été réalisée afin d'évaluer la répartition des efforts au sein de la structure et d'identifier les zones les plus sollicitées. Cette étude a permis de vérifier la cohérence de la conception du cadre et de confirmer que son comportement mécanique est conforme aux attentes."
+      ],
+      "description_en": [
+        "We carried out a finite element analysis to study the behaviour of the gravel bike's carbon frame.",
+        "A stress and deformation analysis of the frame was performed to assess how loads are distributed throughout the structure and identify the most heavily stressed areas. This study confirmed the consistency of the frame's design and validated that its mechanical behaviour meets expectations."
+      ],
+      "gallery": [
+        "assets/images/g1-rigidite/01.jpg"
+      ]
     },
     {
-      "id": "garching",
-      "title": "Projet Garching",
-      "image": "/assets/images/newton_garching_coussins-ETFE.jpg",
-      "category": "bureau",
-      "url": "/projets/projet-garching.html",
-      "year": "2023",
-      "location": "Garching, Allemagne"
+      "id": "r2-cfd",
+      "title": "Simulation CFD - Vélo R2",
+      "title_en": "CFD Simulation - R2 Road Bike",
+      "image": "assets/images/r2-cfd/cover.jpg",
+      "category": "r2",
+      "featured": true,
+      "year": "2025",
+      "location": "Paris, France",
+      "location_en": "Paris, France",
+      "description": [
+        "Simulation numérique d'écoulement (CFD) réalisée avec RWIND sur le vélo de route R2, équipé des roues W1.",
+        "Étude menée à une vitesse de vent de 12,5 m/s (45 km/h) pour analyser le comportement aérodynamique du vélo : champs de vitesse, lignes de courant et répartition de pression sur la structure."
+      ],
+      "description_en": [
+        "Computational fluid dynamics (CFD) simulation run with RWIND on the R2 road bike, fitted with W1 wheels.",
+        "Study performed at a wind speed of 12.5 m/s (45 km/h) to analyse the bike's aerodynamic behaviour: velocity fields, streamlines and pressure distribution across the structure."
+      ],
+      "gallery": [
+        "assets/images/r2-cfd/01.jpg",
+        "assets/images/r2-cfd/02.jpg",
+        "assets/images/r2-cfd/03.jpg",
+        "assets/images/r2-cfd/04.jpg",
+        "assets/images/r2-cfd/05.jpg",
+        "assets/images/r2-cfd/06.jpg",
+        "assets/images/r2-cfd/07.jpg"
+      ]
     },
     {
       "id": "cargo-schwehhr",
       "title": "Projet Cargo Schwehhr",
-      "image": "/assets/images/cargo-schwehhr-1.jpg",
-      "category": "logistique",
-      "url": "/projets/projet-cargo-schwehhr.html",
+      "title_en": "Cargo Schwehhr Project",
+      "image": "assets/images/cargo-schwehhr/cover.jpg",
+      "category": "cargo",
+      "featured": true,
+      "year": "2026",
+      "location": "Paris, France",
+      "location_en": "Paris, France",
+      "description": [
+        "Un autre axe d'étude au sein de notre équipe concerne le développement d'un vélo cargo. Notre objectif est de concevoir un vélo capable de répondre aux contraintes spécifiques liées à l'usage urbain et au stockage dans des espaces restreints.",
+        "Dans le cadre de ce travail, nous réalisons des analyses similaires à celles menées sur le vélo gravel. Ce travail nous permet de définir la géométrie répondant au mieux au cahier des charges et de concevoir certains systèmes innovants offrant de nouvelles options d'usage."
+      ],
+      "description_en": [
+        "Another area of research within our team focuses on developing a cargo bike. Our goal is to design a bike able to meet the specific constraints of urban use and storage in tight spaces.",
+        "As part of this work, we carry out analyses similar to those performed on the gravel bike. This lets us define the geometry that best meets the specifications, and design innovative systems that open up new ways to use the bike."
+      ],
+      "gallery": [
+        "assets/images/cargo-schwehhr/01.jpg",
+        "assets/images/cargo-schwehhr/02.jpg",
+        "assets/images/cargo-schwehhr/03.jpg",
+        "assets/images/cargo-schwehhr/04.jpg",
+        "assets/images/cargo-schwehhr/05.jpg"
+      ]
+    },
+    {
+      "id": "garching",
+      "title": "Projet Garching",
+      "title_en": "Garching Project",
+      "image": "assets/images/garching/cover.jpg",
+      "category": "bureau",
+      "featured": false,
       "year": "2023",
-      "location": "Allemagne"
+      "location": "Garching, Allemagne",
+      "location_en": "Garching, Germany",
+      "description": [
+        "Projet de structure ETFE pour le campus de Garching. Coussins gonflables pour une façade innovante."
+      ],
+      "description_en": [
+        "ETFE structure project for the Garching campus. Inflatable cushions for an innovative facade."
+      ],
+      "gallery": [],
+      "draft": true
     },
     {
       "id": "munich",
       "title": "Projet Munich",
-      "image": "/assets/images/Urwaldhaus_Muncih.jpg",
+      "title_en": "Munich Project",
+      "image": "assets/images/munich/cover.jpg",
       "category": "bureau",
-      "url": "/projets/projet-munich.html",
+      "featured": false,
       "year": "2023",
-      "location": "Munich, Allemagne"
+      "location": "Munich, Allemagne",
+      "location_en": "Munich, Germany",
+      "description": [
+        "Projet de structure en bois et verre pour le musée Urwaldhaus à Munich."
+      ],
+      "description_en": [
+        "Wood and glass structure project for the Urwaldhaus museum in Munich."
+      ],
+      "gallery": [],
+      "draft": true
     },
     {
       "id": "poitiers",
       "title": "Projet Poitiers",
-      "image": "/assets/images/aquascope_Poitiers.jpg",
+      "title_en": "Poitiers Project",
+      "image": "assets/images/poitiers/cover.jpg",
       "category": "urbanisme",
-      "url": "/projets/projet-poitiers.html",
+      "featured": false,
       "year": "2022",
-      "location": "Poitiers, France"
+      "location": "Poitiers, France",
+      "location_en": "Poitiers, France",
+      "description": [
+        "Projet d'aquarium public avec structure en verre et acier pour la ville de Poitiers."
+      ],
+      "description_en": [
+        "Public aquarium project with glass and steel structure for the city of Poitiers."
+      ],
+      "gallery": [],
+      "draft": true
     },
     {
       "id": "villejuif",
       "title": "Projet Villejuif",
-      "image": "/assets/images/Couverture-ETFE_Villejuif.jpg",
+      "title_en": "Villejuif Project",
+      "image": "assets/images/villejuif/cover.jpg",
       "category": "urbanisme",
-      "url": "/projets/projet-villejuif.html",
+      "featured": false,
       "year": "2022",
-      "location": "Villejuif, France"
+      "location": "Villejuif, France",
+      "location_en": "Villejuif, France",
+      "description": [
+        "Projet de couverture ETFE pour la ville de Villejuif. Structure légère et innovante."
+      ],
+      "description_en": [
+        "ETFE cover project for the city of Villejuif. Lightweight and innovative structure."
+      ],
+      "gallery": [],
+      "draft": true
     }
   ],
   "categories": [
     {
       "id": "g1",
-      "name": "G1"
+      "name": "G1",
+      "name_en": "G1"
+    },
+    {
+      "id": "r2",
+      "name": "R2",
+      "name_en": "R2"
     },
     {
       "id": "bureau",
-      "name": "Bureau"
+      "name": "Bureau",
+      "name_en": "Office"
     },
     {
-      "id": "logistique",
-      "name": "Logistique"
+      "id": "cargo",
+      "name": "Cargo",
+      "name_en": "Cargo"
     },
     {
       "id": "urbanisme",
-      "name": "Urbanisme"
+      "name": "Urbanisme",
+      "name_en": "Urbanism"
     }
   ]
 }

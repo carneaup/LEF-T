@@ -1,0 +1,18 @@
+{
+  "header": {
+    "nav": {
+      "bureau": "Bureau",
+      "projets": "Projets",
+      "contact": "Contact",
+      "charte": "Charte graphique",
+      "legal": "Mentions légales"
+    }
+  },
+  "footer": {
+    "copyright": "© LEF-T 2026",
+    "address": "64, rue de Saintonge, 75003 Paris",
+    "charte": "Charte graphique",
+    "legal": "Mentions légales",
+    "confidentialite": "Politique de confidentialité"
+  }
+}

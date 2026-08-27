@@ -1,96 +1,227 @@
 /**
- * Load Includes - Système de chargement des includes HTML
- * Version corrigée: utilise DOMParser pour la sécurité
+ * Load Includes - Charge les includes et gère les blocs de langue
  */
 
-// Cache des includes déjà chargés
+// Cache des includes
 const includesCache = new Map();
 
-// Mapping des IDs vers les chemins de fichiers
-const idToPathMap = {
-    'header': '/includes/header.html',
-    'footer': '/includes/footer.html'
-};
+// Variable GLOBALE pour les traductions
+window.translations = {};
 
-/**
- * Sanitize HTML content to prevent XSS
- */
+// ===== 0. CHEMIN DE BASE (racine du site) =====
+// Calcule le préfixe relatif vers la racine du site à partir du <script src="...">
+// utilisé pour charger CE fichier. Fonctionne quel que soit le dossier d'hébergement
+// (domaine racine, sous-dossier GitHub Pages, profondeur de la page, etc.)
+function getBasePath() {
+    const scripts = document.getElementsByTagName('script');
+    for (const s of scripts) {
+        const src = s.getAttribute('src');
+        if (src && src.indexOf('includes/load-includes.js') !== -1) {
+            return src.substring(0, src.indexOf('includes/load-includes.js'));
+        }
+    }
+    return '';
+}
+const BASE_PATH = getBasePath();
+
+// ===== 1. CHARGEMENT DES TRADUCTIONS =====
+async function loadTranslations() {
+    try {
+        const [frResponse, enResponse] = await Promise.all([
+            fetch(BASE_PATH + 'data/translations/fr.json'),
+            fetch(BASE_PATH + 'data/translations/en.json')
+        ]);
+        if (frResponse.ok && enResponse.ok) {
+            window.translations.FR = await frResponse.json();
+            window.translations.EN = await enResponse.json();
+        }
+    } catch (error) {
+        console.error('Error loading translations:', error);
+    }
+}
+
+// ===== 2. GESTION DE LA LANGUE =====
+function getCurrentLanguage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang && ['FR', 'EN'].includes(urlLang)) return urlLang;
+
+    const savedLang = localStorage.getItem('lef-t-lang');
+    if (savedLang && ['FR', 'EN'].includes(savedLang)) return savedLang;
+
+    const browserLang = navigator.language.split('-')[0].toLowerCase();
+    return browserLang === 'fr' ? 'FR' : browserLang === 'en' ? 'EN' : 'FR';
+}
+
+function saveLanguage(lang) {
+    localStorage.setItem('lef-t-lang', lang);
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState({}, '', url);
+
+    // Appliquer les blocs de langue
+    applyLanguageBlocks(lang);
+
+    // Re-traduire header et footer
+    translateHeader();
+    translateFooter();
+
+    // Mettre à jour le badge de langue affiché dans le sélecteur
+    updateLangBadge(lang);
+
+    // Prévenir les autres scripts (ex: js/projects.js) qu'ils doivent se re-rendre
+    window.dispatchEvent(new CustomEvent('lang-changed', { detail: { lang } }));
+}
+
+function updateLangBadge(lang) {
+    const currentLangEl = document.querySelector('.lang-current');
+    if (currentLangEl) {
+        currentLangEl.textContent = lang;
+        currentLangEl.setAttribute('data-lang', lang);
+    }
+}
+
+// ===== 3. APPLY LANGUAGE BLOCKS =====
+function applyLanguageBlocks(lang) {
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.style.display = block.classList.contains('lang-' + lang.toLowerCase())
+            ? ''
+            : 'none';
+    });
+}
+
+// ===== 4. SANITIZE HTML =====
 function sanitizeHTML(html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
-    
-    // Remove all script tags
-    const scripts = doc.querySelectorAll('script');
-    scripts.forEach(script => script.remove());
-    
-    // Remove event handlers from all elements
-    const allElements = doc.querySelectorAll('*');
-    allElements.forEach(el => {
-        ['onclick', 'onload', 'onerror', 'onmouseover', 'onmouseout', 'onfocus', 'onblur', 'onsubmit'].forEach(attr => {
-            el.removeAttribute(attr);
-        });
+    doc.querySelectorAll('script').forEach(script => script.remove());
+    doc.querySelectorAll('*').forEach(el => {
+        ['onclick', 'onload', 'onerror', 'onmouseover', 'onmouseout', 'onfocus', 'onblur', 'onsubmit']
+            .forEach(attr => el.removeAttribute(attr));
     });
-    
     return doc.body.innerHTML;
 }
 
-/**
- * Load an include file
- */
-async function loadIncludeFile(path) {
-    if (includesCache.has(path)) {
-        return includesCache.get(path);
-    }
+// ===== 4bis. REWRITE ABSOLUTE PATHS =====
+// Les fragments header.html / footer.html sont écrits avec des chemins commençant
+// par "/" (ex: /pages/projets.html). On les réécrit ici avec BASE_PATH pour qu'ils
+// fonctionnent aussi bien à la racine du domaine que dans un sous-dossier.
+function rewriteAbsolutePaths(html) {
+    return html.replace(/(href|src)="\/(?!\/)/g, '$1="' + BASE_PATH);
+}
 
+// ===== 5. CHARGEMENT DES INCLUDES =====
+async function loadIncludeFile(path) {
+    if (includesCache.has(path)) return includesCache.get(path);
     try {
         const response = await fetch(path);
-        if (!response.ok) {
-            throw new Error('Failed to load: ' + response.status);
-        }
+        if (!response.ok) throw new Error('Failed to load: ' + response.status);
         let html = await response.text();
-        html = sanitizeHTML(html);
-        includesCache.set(path, html);
-        return html;
+        html = rewriteAbsolutePaths(html);
+        includesCache.set(path, sanitizeHTML(html));
+        return includesCache.get(path);
     } catch (error) {
         console.error('Error loading ' + path + ':', error);
-        return '<div style="padding: 10px; background: #fee; border: 1px solid #fcc; color: #c33;">Error loading include</div>';
+        return '<div style="padding:10px;background:#fee;border:1px solid #fcc;color:#c33;">Error loading include</div>';
     }
 }
 
-/**
- * Initialize all includes
- */
+// ===== 6. TRADUCTION =====
+function translateElement(element, lang, keyPath) {
+    const keys = keyPath.split('.');
+    let value = window.translations[lang];
+    for (const k of keys) {
+        if (!value) break;
+        value = value[k];
+    }
+    if (value && element) {
+        element.textContent = value;
+    }
+}
+
+function translateHeader() {
+    const lang = getCurrentLanguage();
+    if (!window.translations[lang]?.header?.nav) return;
+
+    const navLinks = document.querySelectorAll('.nav-main a[data-i18n]');
+    navLinks.forEach(link => {
+        const key = link.getAttribute('data-i18n').split('.').pop();
+        translateElement(link, lang, 'header.nav.' + key);
+    });
+}
+
+function translateFooter() {
+    const lang = getCurrentLanguage();
+    if (!window.translations[lang]?.footer) return;
+
+    const footerSpans = document.querySelectorAll('.footer-bottom span[data-i18n]');
+    footerSpans.forEach(span => {
+        const key = span.getAttribute('data-i18n').split('.').pop();
+        translateElement(span, lang, 'footer.' + key);
+    });
+
+    const footerLinks = document.querySelectorAll('.footer-links a[data-i18n]');
+    footerLinks.forEach(link => {
+        const key = link.getAttribute('data-i18n').split('.').pop();
+        translateElement(link, lang, 'footer.' + key);
+    });
+}
+
+// ===== 7. INITIALISATION =====
 async function initIncludes() {
-    // 1. Gère les éléments avec data-include
-    const dataIncludeElements = document.querySelectorAll('[data-include]');
-    
-    for (let i = 0; i < dataIncludeElements.length; i++) {
-        const el = dataIncludeElements[i];
-        const path = el.getAttribute('data-include');
-        if (path) {
-            const html = await loadIncludeFile(path);
-            el.innerHTML = html;
-        }
-    }
-    
-    // 2. Gère les éléments avec ID spécifique (header, footer)
-    const headerEl = document.getElementById('header');
-    const footerEl = document.getElementById('footer');
-    
+    // 1. Charger les traductions
+    await loadTranslations();
+
+    // 2. Charger header et footer
+    const headerEl = document.getElementById('header') || document.querySelector('header');
     if (headerEl) {
-        const html = await loadIncludeFile('/includes/header.html');
-        headerEl.innerHTML = html;
+        headerEl.innerHTML = await loadIncludeFile(BASE_PATH + 'includes/header.html');
     }
-    
+
+    const footerEl = document.getElementById('footer') || document.querySelector('footer');
     if (footerEl) {
-        const html = await loadIncludeFile('/includes/footer.html');
-        footerEl.innerHTML = html;
+        footerEl.innerHTML = await loadIncludeFile(BASE_PATH + 'includes/footer.html');
     }
+
+    // 3. Charger les autres includes
+    const dataIncludeElements = document.querySelectorAll('[data-include]');
+    for (const el of dataIncludeElements) {
+        const path = el.getAttribute('data-include');
+        if (path) el.innerHTML = await loadIncludeFile(path);
+    }
+
+    // 4. Traduire header et footer
+    translateHeader();
+    translateFooter();
+
+    // 5. Appliquer les blocs de langue (APRÈS tout le reste)
+    const currentLang = getCurrentLanguage();
+    applyLanguageBlocks(currentLang);
 }
 
-// Initialize when DOM is ready
+// ===== 8. LANG DROPDOWN =====
+function initLangDropdown() {
+    const langDropdown = document.querySelector('.lang-dropdown');
+    if (!langDropdown) return;
+
+    const currentLang = getCurrentLanguage();
+    updateLangBadge(currentLang);
+
+    const langOptions = langDropdown.querySelectorAll('.lang-menu a');
+    langOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const newLang = this.getAttribute('data-lang') || this.textContent.trim().toUpperCase();
+            saveLanguage(newLang);
+        });
+    });
+}
+
+// Démarrer
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initIncludes);
+    document.addEventListener('DOMContentLoaded', function() {
+        initIncludes().then(initLangDropdown);
+    });
 } else {
-    initIncludes();
+    initIncludes().then(initLangDropdown);
 }

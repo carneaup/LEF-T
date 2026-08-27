@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet - LEF-T</title>
+    <meta name="description" content="Découvrez ce projet réalisé par LEF-T, bureau d'études structure spécialisé dans les structures légères.">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+
+    <main class="project-page">
+        <div class="project-header">
+            <div class="project-header-image" id="projectHeaderImage"></div>
+            <h1 id="projectTitle"></h1>
+            <div class="project-meta">
+                <span id="projectLocation"></span>
+                <span id="projectYear"></span>
+            </div>
+        </div>
+
+        <div class="project-content" id="projectContent"></div>
+
+        <div class="project-gallery-single" id="projectGallery"></div>
+    </main>
+
+    <div id="footer"></div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Image précédente">&#8249;</button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Image suivante">&#8250;</button>
+    </div>
+
+    <script src="../includes/load-includes.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../js/project-detail.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
