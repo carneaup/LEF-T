@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://carneaup.github.io/LEF-T/sitemap.xml
+Sitemap: https://lef-t.eu/sitemap.xml
