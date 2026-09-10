@@ -68,7 +68,8 @@
         "assets/images/r2-cfd/05.jpg",
         "assets/images/r2-cfd/06.jpg",
         "assets/images/r2-cfd/07.jpg"
-      ]
+      ],
+      "draft": true
     },
     {
       "id": "cargo-schwehhr",
