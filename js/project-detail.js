@@ -163,6 +163,34 @@ function renderProjectDetail(project) {
         });
     }
 
+    const factsEl = document.getElementById('projectFacts');
+    if (factsEl) {
+        factsEl.innerHTML = '';
+        const baseFacts = project.facts || null;
+        if (baseFacts) {
+            const overrides = (isEN && project.facts_en) ? project.facts_en : {};
+            const labels = isEN
+                ? { address: 'Address', client: 'Client', architect: 'Architect', surface: 'Area', cost: 'Cost' }
+                : { address: 'Adresse', client: "Maître d'ouvrage", architect: 'Architecte', surface: 'Surface', cost: 'Coût' };
+            const order = ['address', 'client', 'architect', 'surface', 'cost'];
+            order.forEach(function(key) {
+                const value = overrides[key] || baseFacts[key];
+                if (!value) return;
+                const item = document.createElement('div');
+                item.className = 'project-fact';
+                const label = document.createElement('span');
+                label.className = 'project-fact-label';
+                label.textContent = labels[key];
+                const val = document.createElement('span');
+                val.className = 'project-fact-value';
+                val.textContent = value;
+                item.appendChild(label);
+                item.appendChild(val);
+                factsEl.appendChild(item);
+            });
+        }
+    }
+
     const galleryEl = document.getElementById('projectGallery');
     if (galleryEl) {
         galleryEl.innerHTML = '';

@@ -845,6 +845,46 @@ body.home-page .header .lang-current {
     color: var(--text-dark);
 }
 
+.project-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px 24px;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    padding: 0 20px;
+}
+
+.project-facts:empty {
+    display: none;
+    margin: 0;
+}
+
+.project-fact {
+    padding: 14px 18px;
+    background-color: var(--primary-light);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+}
+
+.project-fact-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-dark);
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.project-fact-value {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
 .project-gallery-single {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

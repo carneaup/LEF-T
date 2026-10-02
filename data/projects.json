@@ -172,6 +172,129 @@
       ],
       "gallery": [],
       "draft": true
+    },
+    {
+      "id": "memorial-alsace-moselle",
+      "title": "Mémorial Alsace-Moselle",
+      "title_en": "Alsace-Moselle Memorial",
+      "image": "assets/images/memorial-alsace-moselle/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2025",
+      "location": "Schirmeck, France",
+      "location_en": "Schirmeck, France",
+      "description": [
+        "Construction du Mémorial aux morts et disparus alsaciens et mosellans de la Seconde Guerre mondiale, rendant hommage à toutes les catégories de victimes identifiées par un comité scientifique associé dès le démarrage du projet.",
+        "Missionnés sur la partie structure, nous avons conçu une charpente bois couvrant l'ensemble du volume, avec un débord de toit périphérique de profondeur variable et un auvent conséquent sur le parvis."
+      ],
+      "description_en": [
+        "Construction of the Memorial to the dead and missing from Alsace and Moselle during the Second World War, honouring all categories of victims identified by a scientific committee involved from the project's outset.",
+        "Commissioned for the structural engineering, we designed a timber frame covering the entire volume, with a perimeter roof overhang of varying depth and a substantial canopy over the forecourt."
+      ],
+      "gallery": [
+        "assets/images/memorial-alsace-moselle/01.jpg"
+      ],
+      "facts": {
+        "address": "All. du Souvenir Français, 67130 Schirmeck, France",
+        "client": "Région Grand Est",
+        "architect": "Benoit Zeimett",
+        "surface": "219 m² (intérieur) / 282 m² (extérieur)",
+        "cost": "1 400 000 € HT"
+      },
+      "facts_en": {
+        "surface": "219 m² (indoor) / 282 m² (outdoor)"
+      }
+    },
+    {
+      "id": "swatch-group-bienne",
+      "title": "Siège social Swatch Group",
+      "title_en": "Swatch Group Headquarters",
+      "image": "assets/images/swatch-group-bienne/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2019",
+      "location": "Bienne, Suisse",
+      "location_en": "Biel/Bienne, Switzerland",
+      "description": [
+        "La façade du siège social du groupe Swatch se présente comme une coque de forme libre composée de multiples éléments en verre, en ETFE, en polycarbonate et en bois. La complexité du projet résidait dans l'intégration, au sein de cette forme libre à double courbure, d'éléments quadrangulaires.",
+        "Nous avons réalisé l'ensemble de la conception et des calculs de la façade : panneaux de verre en triple vitrage courbés à froid, coussins en ETFE, polycarbonate et panneaux de bois, ainsi que les études d'exécution et de fabrication des coussins ETFE."
+      ],
+      "description_en": [
+        "The facade of the Swatch Group headquarters takes the form of a free-form shell made up of multiple glass, ETFE, polycarbonate and timber elements. The project's complexity lay in integrating quadrangular envelope elements within this doubly-curved free form.",
+        "We carried out the full design and engineering of the facade: cold-bent triple-glazed glass panels, ETFE and polycarbonate cushions and timber panels, along with the execution and fabrication studies for the ETFE cushions."
+      ],
+      "gallery": [
+        "assets/images/swatch-group-bienne/01.jpg"
+      ],
+      "facts": {
+        "address": "Rue Nicolas G. Hayek, 2502 Bienne, Suisse",
+        "client": "Swatch Group",
+        "architect": "Shigeru Ban Architects",
+        "surface": "21 000 m² (façade : 11 000 m²)",
+        "cost": "122 000 000 € HT"
+      },
+      "facts_en": {
+        "address": "Rue Nicolas G. Hayek, 2502 Biel/Bienne, Switzerland",
+        "surface": "21,000 m² (façade: 11,000 m²)"
+      }
+    },
+    {
+      "id": "arboretum-nanterre",
+      "title": "Arboretum de Nanterre",
+      "title_en": "Arboretum de Nanterre",
+      "image": "assets/images/arboretum-nanterre/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2022",
+      "location": "Nanterre, France",
+      "location_en": "Nanterre, France",
+      "description": [
+        "Pour le compte de WO2 et BNP Paribas Real Estate, nous avons assuré la conception structurelle de l'un des immeubles de bureaux les plus innovants en matière de construction bois, baptisé « Épicéa », situé dans le quartier de La Défense, au sein d'un campus bas carbone.",
+        "Notre mission a porté sur l'ingénierie de la structure ainsi que le calcul des sections et des connexions."
+      ],
+      "description_en": [
+        "On behalf of WO2 and BNP Paribas Real Estate, we provided the structural design for one of the most innovative timber office buildings of its kind, named « Épicéa », located in the La Défense district as part of a low-carbon campus.",
+        "Our work covered the structural engineering as well as the design of sections and connections."
+      ],
+      "gallery": [
+        "assets/images/arboretum-nanterre/01.jpg"
+      ],
+      "facts": {
+        "address": "1 Pl des Papeteries, 92000 Nanterre, France",
+        "client": "WO2, BNP Paribas Real Estate, ICAWOOD et Ivanhoé Cambridge",
+        "architect": "Nicolas Laisné Architectes, DREAM, BASE, Berim, Hubert & Roy Architectes et Leclercq Associés",
+        "surface": "126 000 m²",
+        "cost": "350 000 000 € HT"
+      }
+    },
+    {
+      "id": "gymnase-grassau",
+      "title": "Gymnase de Grassau",
+      "title_en": "Grassau Gymnasium",
+      "image": "assets/images/gymnase-grassau/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2024",
+      "location": "Grassau, Allemagne",
+      "location_en": "Grassau, Germany",
+      "description": [
+        "Rénovation du gymnase de Grassau, en Allemagne, suite à l'apparition de fentes sur les poutres en bois lamellé-collé de la structure existante.",
+        "Notre mission a porté sur l'étude des poutres en bois lamellé-collé, la recherche de solutions de renfort et la détermination de leur méthode de calcul, jusqu'au dossier de consultation des entreprises et au suivi des travaux."
+      ],
+      "description_en": [
+        "Renovation of the Grassau gymnasium in Germany, following the appearance of cracks in the glued-laminated timber beams of the existing structure.",
+        "Our work covered the study of the glued-laminated timber beams, the search for reinforcement solutions and the determination of their calculation method, through to the tender documents and site supervision."
+      ],
+      "gallery": [],
+      "facts": {
+        "address": "Grassau, Allemagne",
+        "client": "Ville de Grassau",
+        "architect": "Thomas W. Weitzel, m.a²rch – Munich (D)",
+        "surface": "1 200 m²"
+      },
+      "facts_en": {
+        "address": "Grassau, Germany"
+      }
     }
   ],
   "categories": [
@@ -199,6 +322,31 @@
       "id": "urbanisme",
       "name": "Urbanisme",
       "name_en": "Urbanism"
+    },
+    {
+      "id": "structure",
+      "name": "Structure",
+      "name_en": "Structure"
+    },
+    {
+      "id": "facade",
+      "name": "Façade",
+      "name_en": "Facade"
+    },
+    {
+      "id": "mobilite-douce",
+      "name": "Mobilité douce",
+      "name_en": "Soft mobility"
+    },
+    {
+      "id": "bois",
+      "name": "Bois",
+      "name_en": "Timber"
+    },
+    {
+      "id": "membrane",
+      "name": "Membrane",
+      "name_en": "Membrane"
     }
   ]
 }
