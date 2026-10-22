@@ -26,7 +26,7 @@ async function setRandomBgImage() {
 
     await loadProjects();
     const featured = (projectsData && projectsData.projects)
-        ? projectsData.projects.filter(function(p) { return p.featured && !p.draft; })
+        ? projectsData.projects.filter(function(p) { return p.featured && !p.draft && p.image; })
         : [];
 
     if (!featured.length) return; // aucun projet marqué "featured" : on garde le fond par défaut du HTML

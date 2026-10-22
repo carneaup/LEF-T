@@ -96,18 +96,71 @@ function generateCategoryFilters() {
     return html;
 }
 
+// Un projet publié SANS photo ("image" absent ou vide) n'apparaît pas dans la
+// mosaïque mais dans la liste « Autres références » sous celle-ci : on peut
+// ainsi citer une référence sans avoir de visuel.
+function hasImage(project) {
+    return !!project.image;
+}
+
 function displayProjects(category) {
-    // Il peut y avoir plusieurs conteneurs .projects-mosaic sur une même page
-    // (un par bloc de langue .lang-fr / .lang-en) : on les met tous à jour.
-    const containers = document.querySelectorAll('.projects-mosaic');
-    if (!containers.length) return;
     let projects = publishedProjects();
     if (category !== 'all') {
         projects = projects.filter(function(p) { return p.category === category; });
     }
-    const cardsHTML = projects.map(generateProjectCard).join('');
-    containers.forEach(function(container) {
+
+    // Il peut y avoir plusieurs conteneurs .projects-mosaic sur une même page
+    // (un par bloc de langue .lang-fr / .lang-en) : on les met tous à jour.
+    const cardsHTML = projects.filter(hasImage).map(generateProjectCard).join('');
+    document.querySelectorAll('.projects-mosaic').forEach(function(container) {
         container.innerHTML = cardsHTML;
+    });
+
+    displayReferences(projects.filter(function(p) { return !hasImage(p); }));
+}
+
+// Liste « Autres références » : année, projet, lieu, mission. Le titre mène à
+// la fiche du projet si elle a un texte de présentation.
+function displayReferences(projects) {
+    const sections = document.querySelectorAll('.projects-references');
+    if (!sections.length) return;
+    const isEN = getLang() === 'EN';
+    sections.forEach(function(section) {
+        const list = section.querySelector('.references-list');
+        if (!list) return;
+        list.innerHTML = '';
+        section.style.display = projects.length ? '' : 'none';
+        projects.forEach(function(project) {
+            const pick = function(fr, en) { return (isEN && project[en]) ? project[en] : (project[fr] || ''); };
+            const row = document.createElement('li');
+            row.className = 'reference-row';
+
+            const year = document.createElement('span');
+            year.className = 'reference-year';
+            year.textContent = pick('year', 'year_en');
+
+            const titleText = pick('title', 'title_en');
+            let title;
+            if ((project.description || []).length) {
+                title = document.createElement('a');
+                title.href = PROJECTS_BASE_PATH + 'projets/projet.html?id=' + encodeURIComponent(project.id);
+            } else {
+                title = document.createElement('span');
+            }
+            title.className = 'reference-title';
+            title.textContent = titleText;
+
+            const location = document.createElement('span');
+            location.className = 'reference-location';
+            location.textContent = pick('location', 'location_en');
+
+            const mission = document.createElement('span');
+            mission.className = 'reference-mission';
+            mission.textContent = pick('mission', 'mission_en');
+
+            [year, title, location, mission].forEach(function(el) { row.appendChild(el); });
+            list.appendChild(row);
+        });
     });
 }
 

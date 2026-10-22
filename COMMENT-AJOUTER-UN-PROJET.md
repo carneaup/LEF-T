@@ -63,6 +63,30 @@ traduction séparée à tenir à jour.
 5. C'est tout — le projet apparaît automatiquement dans la mosaïque, les
    filtres par catégorie et sur sa propre fiche (`projets/projet.html?id=mon-projet`).
 
+## Ajouter une référence sans photo
+
+Pour citer un projet dont on n'a pas de visuel, créer son entrée dans
+`data/projects.json` **sans champ `image`** (et `gallery: []`). Il apparaît
+alors dans la liste « Autres références » sous la mosaïque, avec son année,
+son lieu et sa mission :
+
+```json
+{
+  "id": "ma-reference",
+  "title": "Titre", "title_en": "Title",
+  "category": "structure",
+  "featured": false,
+  "year": "2021",
+  "location": "Lyon, France", "location_en": "Lyon, France",
+  "mission": "Études d'exécution charpente bois",
+  "mission_en": "Timber frame execution studies",
+  "gallery": []
+}
+```
+
+Si on ajoute aussi une `description` / `description_en`, le titre devient un
+lien vers une fiche (texte seul).
+
 ## Mettre un projet en pause (à republier plus tard)
 
 Pour retirer un projet de la mosaïque, des filtres et du fond d'écran sans

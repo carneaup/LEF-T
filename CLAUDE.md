@@ -49,6 +49,16 @@ Paul, c'est ce dossier qui est connecté.
     affiché dans un encart "fiche technique" sur la page projet (`facts_en` ne sert que
     pour les valeurs qui diffèrent vraiment en anglais — sinon `facts` suffit pour les
     deux langues).
+- **Fiche projet (oct. 2026)** : mise en page deux colonnes façon fiches PDF — texte +
+  fiche technique (`<dl>`) à gauche (sticky), photos à droite en taille réelle (jamais
+  agrandies). Mobile : photo principale, texte, autres photos. En bas : projet
+  précédent/suivant + 3 vignettes « Autres projets » (même catégorie d'abord). Un projet
+  sans aucune photo s'affiche sur une seule colonne.
+- **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
+  mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
+  lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution
+  charpente bois »). Le titre mène à la fiche seulement s'il y a une `description`.
+  Filtrée par catégorie comme la mosaïque ; exclue du fond d'accueil et des vignettes.
 - `generateCategoryFilters()` (dans `js/projects.js`) n'affiche un bouton de filtre que
   pour les catégories ayant au moins un projet publié (non-`draft`).
 - Langue stockée dans `localStorage` sous la clé `lef-t-lang`, valeurs **`'FR'` ou `'EN'`

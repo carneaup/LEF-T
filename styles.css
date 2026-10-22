@@ -769,48 +769,113 @@ body.home-page .header .lang-current {
     background-color: var(--accent-yellow);
 }
 
-/* ===== PAGE PROJET INDIVIDUEL ===== */
+/* ===== AUTRES RÉFÉRENCES (page Projets) =====
+   Projets publiés sans photo, listés sous la mosaïque (js/projects.js). */
+.projects-references {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.projects-references h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent-yellow);
+}
+
+.references-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.reference-row {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 2fr);
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.reference-year,
+.reference-location,
+.reference-mission {
+    color: var(--text-dark);
+    opacity: 0.75;
+}
+
+.reference-title {
+    font-weight: 600;
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+a.reference-title:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-yellow);
+    text-decoration-thickness: 2px;
+}
+
+@media (max-width: 700px) {
+    .reference-row {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 2px 12px;
+    }
+
+    .reference-location,
+    .reference-mission {
+        grid-column: 2;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== PAGE PROJET INDIVIDUEL =====
+   Deux colonnes, sur le modèle des fiches projet PDF : texte + fiche technique
+   à gauche (collés en haut de l'écran au défilement), photos à droite à leur
+   taille réelle (jamais agrandies, donc nettes même en ~1000 px). La page reste
+   équilibrée avec une seule photo comme avec plusieurs.
+   Mobile : photo principale, texte, puis autres photos. */
 .project-header {
     margin-bottom: 40px;
 }
 
-/* La page projet.html est générée dynamiquement (pas de .lang-block dupliqué
-   FR/EN comme sur les autres pages) : on lui applique directement le même
-   centrage / la même largeur max que .lang-block .project-header ailleurs. */
-.project-page .project-header {
-    margin-left: auto;
-    margin-right: auto;
+.project-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-areas:
+        "text cover"
+        "text photos";
+    grid-template-rows: auto 1fr;
+    column-gap: 56px;
     max-width: 1200px;
+    margin: 10px auto 0;
     padding: 0 20px;
 }
 
-.project-header-image {
-    width: 100%;
-    height: 50vh;
-    min-height: 400px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 0;
-    margin-bottom: 20px;
+.project-text {
+    grid-area: text;
+    align-self: start;
+    position: sticky;
+    top: 24px;
 }
 
-.project-header-image.is-clickable {
-    cursor: pointer;
-}
-
-/* Le crédit (« © Auteur ») est positionné dans l'image d'en-tête. */
-.project-header-image {
-    position: relative;
+.project-text h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
 }
 
 .project-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
     flex-wrap: wrap;
     gap: 8px;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--accent-yellow);
 }
 
 .project-meta span {
@@ -832,43 +897,25 @@ body.home-page .header .lang-current {
 }
 
 .project-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.75;
     color: var(--text-dark);
 }
 
-.project-content ul {
-    margin-bottom: 1.5rem;
-    padding-left: 20px;
-}
-
-.project-content li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--text-dark);
-}
-
+/* Fiche technique : liste label / valeur, séparée par de fins filets. */
 .project-facts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px 24px;
-    max-width: 800px;
-    margin: 0 auto 2.5rem;
-    padding: 0 20px;
+    margin: 28px 0 0;
+    border-top: 1px solid var(--border-color);
 }
 
 .project-facts:empty {
     display: none;
-    margin: 0;
 }
 
 .project-fact {
-    padding: 14px 18px;
-    background-color: var(--primary-light);
-    border: 1px solid var(--border-color);
-    border-radius: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .project-fact-label {
@@ -879,38 +926,172 @@ body.home-page .header .lang-current {
     letter-spacing: 0.06em;
     color: var(--text-dark);
     opacity: 0.6;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .project-fact-value {
     display: block;
+    margin: 0;
     font-size: 0.95rem;
-    line-height: 1.4;
+    line-height: 1.45;
     color: var(--primary-dark);
-    font-weight: 600;
 }
 
-.project-gallery-single {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/* Photos : affichées en entier (pas de recadrage), centrées dans la colonne. */
+.project-cover {
+    grid-area: cover;
+}
+
+.project-photos {
+    grid-area: photos;
+    align-self: start;
+}
+
+.project-cover,
+.project-photos .gallery-item {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 24px;
+}
+
+.project-cover img,
+.project-photos .gallery-item img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    cursor: zoom-in;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.project-cover:empty {
+    display: none;
+}
+
+/* Fiche sans photo (référence) : une seule colonne de texte. */
+.project-layout--text-only {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "text";
+    max-width: 840px;
+}
+
+.project-layout--text-only .project-text {
+    position: static;
+}
+
+/* Projet précédent / suivant */
+.project-pager {
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
-    margin: 2rem auto;
-    max-width: 1000px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 24px 20px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.project-pager:empty {
+    display: none;
+}
+
+.project-pager a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 48%;
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.project-pager-next {
+    margin-left: auto;
+    text-align: right;
+}
+
+.project-pager-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.6;
+}
+
+.project-pager-prev .project-pager-label::before {
+    content: '← ';
+}
+
+.project-pager-next .project-pager-label::after {
+    content: ' →';
+}
+
+.project-pager-title {
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+    align-self: flex-start;
+}
+
+.project-pager-next .project-pager-title {
+    align-self: flex-end;
+}
+
+.project-pager a:hover .project-pager-title {
+    border-bottom-color: var(--accent-yellow);
+}
+
+/* Autres projets : 3 vignettes au format de la mosaïque */
+.project-related {
+    max-width: 1200px;
+    margin: 40px auto 60px;
     padding: 0 20px;
 }
 
-.project-gallery-single img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: opacity 0.2s ease;
+.project-related h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
-.project-gallery-single img:hover {
-    opacity: 0.85;
+.project-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+@media (max-width: 900px) {
+    .project-layout {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "cover"
+            "text"
+            "photos";
+        grid-template-rows: auto;
+    }
+
+    .project-text {
+        position: static;
+        margin-bottom: 32px;
+    }
+
+    .project-cover img,
+    .project-photos .gallery-item img {
+        max-height: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .project-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-related-grid .project-tile:nth-child(3) {
+        display: none;
+    }
 }
 
 /* ===== Lightbox : ouvre une image de la page projet en grand, à sa taille
@@ -1022,7 +1203,7 @@ body.lightbox-open {
 
 /* ===== CRÉDITS IMAGES (« © Auteur ») =====
    Ajoutés par js/credits.js à partir de data/credits.json, en bas à droite de
-   chaque image : en-tête et galerie des pages projet, vignettes de la
+   chaque image : photo principale et galerie des pages projet, vignettes de la
    mosaïque, fond de la page d'accueil, et sous l'image dans la lightbox. */
 .image-credit {
     position: absolute;
@@ -1049,16 +1230,6 @@ body.lightbox-open {
 .project-tile .image-credit {
     top: 6px;
     bottom: auto;
-}
-
-/* Galerie des pages projet : chaque photo est dans un <figure>. */
-.project-gallery-single .gallery-item {
-    position: relative;
-    margin: 0;
-}
-
-.project-gallery-single .gallery-item img {
-    display: block;
 }
 
 /* Page d'accueil : en bas à droite, au-dessus du voile dégradé. */
@@ -1326,6 +1497,7 @@ body.lightbox-open {
 .lang-block .project-description,
 .lang-block .projects-filters,
 .lang-block .projects-mosaic,
+.lang-block .projects-references,
 .lang-block .tools-section {
     margin-left: auto;
     margin-right: auto;

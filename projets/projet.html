@@ -15,20 +15,29 @@
     <div id="header"></div>
 
     <main class="project-page">
-        <div class="project-header">
-            <div class="project-header-image" id="projectHeaderImage"></div>
-            <h1 id="projectTitle"></h1>
-            <div class="project-meta">
-                <span id="projectLocation"></span>
-                <span id="projectYear"></span>
+        <!-- Mise en page en deux colonnes, sur le modèle des fiches projet PDF :
+             texte + fiche technique à gauche, photos à droite à leur taille
+             réelle. Sur mobile : photo principale, texte, puis autres photos. -->
+        <article class="project-layout">
+            <div class="project-text">
+                <h1 id="projectTitle"></h1>
+                <div class="project-meta">
+                    <span id="projectLocation"></span>
+                    <span id="projectYear"></span>
+                </div>
+                <div class="project-content" id="projectContent"></div>
+                <dl class="project-facts" id="projectFacts"></dl>
             </div>
-        </div>
+            <figure class="project-cover" id="projectCover"></figure>
+            <div class="project-photos" id="projectGallery"></div>
+        </article>
 
-        <div class="project-content" id="projectContent"></div>
-
-        <div class="project-facts" id="projectFacts"></div>
-
-        <div class="project-gallery-single" id="projectGallery"></div>
+        <!-- Suite de navigation : projet précédent / suivant + autres projets -->
+        <nav class="project-pager" id="projectPager"></nav>
+        <section class="project-related" id="projectRelated">
+            <h2 id="projectRelatedTitle"></h2>
+            <div class="project-related-grid" id="projectRelatedGrid"></div>
+        </section>
     </main>
 
     <div id="footer"></div>

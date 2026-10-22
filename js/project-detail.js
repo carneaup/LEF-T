@@ -49,7 +49,7 @@ function showProjectNotFound() {
 // ===== Lightbox : ouvre les images de la page projet en grand, à leur taille
 // réelle (pas d'agrandissement au-delà de la taille naturelle de l'image,
 // juste une réduction si besoin pour tenir dans l'écran). Navigable au clavier
-// (flèches gauche/droite, Échap) et par les boutons prev/next. L'image d'en-tête
+// (flèches gauche/droite, Échap) et par les boutons prev/next. La photo principale
 // et toutes les photos de la galerie partagent une seule liste navigable, dans
 // l'ordre où elles apparaissent sur la page.
 let lightboxImages = [];
@@ -119,6 +119,20 @@ function imageCreditOf(path) {
     return typeof getImageCredit === 'function' ? getImageCredit(path) : null;
 }
 
+// Crée une image cliquable (ouvre la lightbox) avec son crédit « © Auteur »,
+// et l'ajoute à la liste navigable de la lightbox.
+function buildProjectImage(src, alt, eager) {
+    const fullSrc = PROJECT_DETAIL_BASE_PATH + src;
+    const img = document.createElement('img');
+    img.src = fullSrc;
+    img.alt = alt;
+    if (!eager) img.loading = 'lazy';
+    const index = lightboxImages.length;
+    lightboxImages.push({ src: fullSrc, alt: alt, credit: imageCreditOf(src) });
+    img.addEventListener('click', function() { openLightbox(index); });
+    return img;
+}
+
 function renderProjectDetail(project) {
     const isEN = getLang() === 'EN';
     const title = (isEN && project.title_en) ? project.title_en : project.title;
@@ -136,23 +150,18 @@ function renderProjectDetail(project) {
         metaDesc.setAttribute('content', summary);
     }
 
-    // Reconstruit la liste d'images navigables dans la lightbox : l'en-tête
-    // (si présente) puis toutes les photos de la galerie, dans l'ordre.
+    // Liste d'images navigables dans la lightbox : la photo principale puis
+    // toutes les photos de la galerie, dans l'ordre de la page.
     lightboxImages = [];
 
-    const headerImg = document.getElementById('projectHeaderImage');
-    if (headerImg && project.image) {
-        const headerSrc = PROJECT_DETAIL_BASE_PATH + project.image;
-        headerImg.style.backgroundImage = "url('" + headerSrc + "')";
-        headerImg.classList.add('is-clickable');
-        // Crédit de l'image d'en-tête (js/credits.js) : on remplace l'éventuel
-        // crédit précédent (re-rendu lors d'un changement de langue).
-        headerImg.querySelectorAll('.image-credit').forEach(function(el) { el.remove(); });
-        const headerCredit = typeof createCreditElement === 'function' ? createCreditElement(project.image) : null;
-        if (headerCredit) headerImg.appendChild(headerCredit);
-        const headerImageIndex = lightboxImages.length;
-        lightboxImages.push({ src: headerSrc, alt: title || '', credit: imageCreditOf(project.image) });
-        headerImg.onclick = function() { openLightbox(headerImageIndex); };
+    const coverEl = document.getElementById('projectCover');
+    if (coverEl) {
+        coverEl.innerHTML = '';
+        if (project.image) {
+            coverEl.appendChild(buildProjectImage(project.image, title || '', true));
+            const credit = typeof createCreditElement === 'function' ? createCreditElement(project.image) : null;
+            if (credit) coverEl.appendChild(credit);
+        }
     }
 
     const titleEl = document.getElementById('projectTitle');
@@ -161,8 +170,8 @@ function renderProjectDetail(project) {
     const locationEl = document.getElementById('projectLocation');
     if (locationEl) locationEl.textContent = location || '';
 
-    const yearEl = document.getElementById('projectYear');
     // "year_en" (optionnel) : pour une année non numérique, ex. "En cours" / "Ongoing"
+    const yearEl = document.getElementById('projectYear');
     if (yearEl) yearEl.textContent = ((isEN && project.year_en) ? project.year_en : project.year) || '';
 
     const contentEl = document.getElementById('projectContent');
@@ -175,6 +184,7 @@ function renderProjectDetail(project) {
         });
     }
 
+    // Fiche technique : liste label / valeur (<dl>) dans la colonne de texte.
     const factsEl = document.getElementById('projectFacts');
     if (factsEl) {
         factsEl.innerHTML = '';
@@ -184,16 +194,16 @@ function renderProjectDetail(project) {
             const labels = isEN
                 ? { address: 'Address', client: 'Client', architect: 'Architect', surface: 'Area', cost: 'Cost' }
                 : { address: 'Adresse', client: "Maître d'ouvrage", architect: 'Architecte', surface: 'Surface', cost: 'Coût' };
-            const order = ['address', 'client', 'architect', 'surface', 'cost'];
+            const order = ['client', 'architect', 'address', 'surface', 'cost'];
             order.forEach(function(key) {
                 const value = overrides[key] || baseFacts[key];
                 if (!value) return;
                 const item = document.createElement('div');
                 item.className = 'project-fact';
-                const label = document.createElement('span');
+                const label = document.createElement('dt');
                 label.className = 'project-fact-label';
                 label.textContent = labels[key];
-                const val = document.createElement('span');
+                const val = document.createElement('dd');
                 val.className = 'project-fact-value';
                 val.textContent = value;
                 item.appendChild(label);
@@ -206,26 +216,85 @@ function renderProjectDetail(project) {
     const galleryEl = document.getElementById('projectGallery');
     if (galleryEl) {
         galleryEl.innerHTML = '';
-        const images = project.gallery || [];
-        images.forEach(function(src, index) {
-            const fullSrc = PROJECT_DETAIL_BASE_PATH + src;
-            const alt = (title || '') + ' – photo ' + (index + 1);
-            // Chaque photo est enveloppée dans un <figure> pour pouvoir
-            // superposer son crédit (« © Auteur ») en bas à droite.
+        (project.gallery || []).forEach(function(src, index) {
+            // Chaque photo est dans un <figure> pour superposer son crédit.
             const figure = document.createElement('figure');
             figure.className = 'gallery-item';
-            const img = document.createElement('img');
-            img.src = fullSrc;
-            img.alt = alt;
-            img.loading = 'lazy';
-            const galleryImageIndex = lightboxImages.length;
-            lightboxImages.push({ src: fullSrc, alt: alt, credit: imageCreditOf(src) });
-            img.addEventListener('click', function() { openLightbox(galleryImageIndex); });
-            figure.appendChild(img);
+            figure.appendChild(buildProjectImage(src, (title || '') + ' – photo ' + (index + 2), false));
             const credit = typeof createCreditElement === 'function' ? createCreditElement(src) : null;
             if (credit) figure.appendChild(credit);
             galleryEl.appendChild(figure);
         });
+    }
+
+    // Projet sans aucune photo (référence) : texte sur une seule colonne.
+    const layoutEl = document.querySelector('.project-layout');
+    if (layoutEl) {
+        const noPhoto = !project.image && !(project.gallery || []).length;
+        layoutEl.classList.toggle('project-layout--text-only', noPhoto);
+    }
+
+    renderProjectNavigation(project, isEN);
+}
+
+// ===== Suite de navigation en bas de page =====
+// - Projet précédent / suivant parmi les projets publiés (ordre de
+//   projects.json, en boucle) ;
+// - « Autres projets » : 3 vignettes, en priorité de la même catégorie,
+//   complétées par d'autres projets si besoin.
+function renderProjectNavigation(project, isEN) {
+    // Seuls les projets qui ont une fiche à montrer (photo ou texte) : une
+    // simple ligne de référence sans description n'a pas de page à ouvrir.
+    const published = ((typeof publishedProjects === 'function') ? publishedProjects() : [])
+        .filter(function(p) { return p.image || (p.description || []).length; });
+    // Les autres projets, en commençant par ceux qui suivent le projet courant :
+    // les suggestions varient ainsi d'une page à l'autre.
+    const start = published.findIndex(function(p) { return p.id === project.id; }) + 1;
+    const others = published.slice(start).concat(published.slice(0, start))
+        .filter(function(p) { return p.id !== project.id; });
+
+    const pagerEl = document.getElementById('projectPager');
+    if (pagerEl) {
+        pagerEl.innerHTML = '';
+        if (others.length) {
+            // Pour un brouillon (absent de la liste publiée), on part du début.
+            const index = published.findIndex(function(p) { return p.id === project.id; });
+            const prev = index === -1 ? published[published.length - 1] : published[(index - 1 + published.length) % published.length];
+            const next = index === -1 ? published[0] : published[(index + 1) % published.length];
+            [
+                { p: prev, cls: 'project-pager-prev', label: isEN ? 'Previous project' : 'Projet précédent' },
+                { p: next, cls: 'project-pager-next', label: isEN ? 'Next project' : 'Projet suivant' }
+            ].forEach(function(entry) {
+                const a = document.createElement('a');
+                a.className = entry.cls;
+                a.href = PROJECT_DETAIL_BASE_PATH + 'projets/projet.html?id=' + encodeURIComponent(entry.p.id);
+                const small = document.createElement('span');
+                small.className = 'project-pager-label';
+                small.textContent = entry.label;
+                const name = document.createElement('span');
+                name.className = 'project-pager-title';
+                name.textContent = (isEN && entry.p.title_en) ? entry.p.title_en : entry.p.title;
+                a.appendChild(small);
+                a.appendChild(name);
+                pagerEl.appendChild(a);
+            });
+        }
+    }
+
+    const relatedEl = document.getElementById('projectRelated');
+    const gridEl = document.getElementById('projectRelatedGrid');
+    const relTitleEl = document.getElementById('projectRelatedTitle');
+    if (relatedEl && gridEl) {
+        // Vignettes : uniquement des projets avec photo.
+        const withImage = others.filter(function(p) { return !!p.image; });
+        const sameCat = withImage.filter(function(p) { return p.category === project.category; });
+        const rest = withImage.filter(function(p) { return p.category !== project.category; });
+        const picks = sameCat.concat(rest).slice(0, 3);
+        relatedEl.style.display = picks.length ? '' : 'none';
+        if (relTitleEl) relTitleEl.textContent = isEN ? 'Other projects' : 'Autres projets';
+        gridEl.innerHTML = (typeof generateProjectCard === 'function')
+            ? picks.map(generateProjectCard).join('')
+            : '';
     }
 }
 
