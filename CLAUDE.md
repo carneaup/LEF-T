@@ -1,0 +1,95 @@
+# LEF-T — Contexte projet pour Claude
+
+Ce fichier résume tout ce qu'une nouvelle session Claude (ou un·e collègue) doit savoir
+pour reprendre ce projet sans repartir de zéro. Il est volontairement tenu à jour au fil
+des évolutions du site — si tu es un Claude qui vient de le lire, regarde aussi
+`COMMENT-AJOUTER-UN-PROJET.md` pour la procédure détaillée d'ajout/retrait de projet.
+
+## C'est quoi, LEF-T ?
+
+LEF-T est un bureau d'études structure / façade, qui est aussi la continuation officielle
+de l'ancien bureau **LEICHT France** (le lien entre les deux peut et doit être assumé
+ouvertement, y compris sur le site — ce n'était pas le cas historiquement, mais c'est
+tranché). LEF-T travaille aussi sur l'ingénierie vélo avec un partenaire, **Leicht-bikes**.
+
+## Hébergement et déploiement
+
+- Site statique, **aucun build step** (pas de framework, pas de bundler) : HTML/CSS/JS
+  servis tels quels.
+- Hébergé sur **GitHub Pages**, dépôt `carneaup/LEF-T`.
+- Domaine personnalisé **https://lef-t.eu/**, HTTPS fonctionnel.
+- Le propriétaire (Paul) travaille sous **VSCode**, sur Windows, et commite/pousse
+  **lui-même** — voir règle de collaboration plus bas.
+- Branche de travail : **`develop`** exclusivement.
+
+## Où vit le code (sur la machine de Paul)
+
+`C:\Users\carne\Nextcloud\Dedalis\02_Projets\2026\2026-007-Site_LEF-T\_source\LEF-T`
+(synchronisé via Nextcloud). Quand une session Claude (Cowork) est liée à l'ordinateur de
+Paul, c'est ce dossier qui est connecté.
+
+## Architecture du site
+
+- Système d'includes maison : `includes/header.html`, `includes/footer.html`, chargés par
+  `includes/load-includes.js`. Un `BASE_PATH` est calculé à l'exécution pour gérer les
+  chemins préfixés par `/`.
+- **Architecture « single-source » pour les projets** : tout le contenu vit dans
+  `data/projects.json`. Il n'y a **qu'une seule page HTML de détail projet**,
+  `projets/projet.html?id=...`, rendue dynamiquement par `js/project-detail.js` (qui
+  dépend de `js/projects.js` pour `loadProjects()`, `getLang()`, `projectsData`). On ne
+  crée **jamais** de fichier HTML par projet.
+- Schéma d'une entrée dans `data/projects.json` (tableau `projects`) :
+  `id`, `title` / `title_en`, `image` (cover), `category` (**une seule chaîne**, doit
+  correspondre à un `id` du tableau `categories`), `featured` (bool, carrousel accueil),
+  `year`, `location` / `location_en`, `description` / `description_en` (tableaux de
+  paragraphes), `gallery` (tableau de chemins d'images), et en option :
+  - `draft: true` → masque le projet de la mosaïque/filtres/carrousel sans le supprimer
+    (fiche restant accessible par lien direct) ;
+  - `facts` / `facts_en` → objet optionnel `{ address, client, architect, surface, cost }`
+    affiché dans un encart "fiche technique" sur la page projet (`facts_en` ne sert que
+    pour les valeurs qui diffèrent vraiment en anglais — sinon `facts` suffit pour les
+    deux langues).
+- `generateCategoryFilters()` (dans `js/projects.js`) n'affiche un bouton de filtre que
+  pour les catégories ayant au moins un projet publié (non-`draft`).
+- Langue stockée dans `localStorage` sous la clé `lef-t-lang`, valeurs **`'FR'` ou `'EN'`
+  en majuscules strictement** (un bug de casse a déjà été corrigé — à ne pas réintroduire).
+
+## Taxonomie des catégories
+
+Catégories historiques (vélo/bureau) : `g1`, `r2`, `cargo`, `bureau`, `urbanisme`.
+
+Catégories ajoutées pour les projets patrimoniaux LEICHT France (bâtiment) : `structure`,
+`facade`, `mobilite-douce`, `bois`, `membrane`. Préférence explicite de Paul : **peu de
+tags mais clairs** — ne pas en ajouter d'autres sans son accord. Les 3 dernières
+(mobilité douce / bois / membrane) existent déjà dans `projects.json` mais ne sont pour
+l'instant utilisées par aucun projet publié.
+
+## Règle de collaboration (IMPORTANT)
+
+**Claude ne lance jamais de commande git lui-même** (ni commit, ni push). Le
+fonctionnement établi est :
+1. Claude modifie les fichiers, teste localement (serveur HTTP + Playwright avant
+   livraison), puis livre les fichiers à Paul (via le pont vers son ordinateur).
+2. Claude **propose un message de commit**.
+3. Paul relit, commite et pousse lui-même depuis VSCode, quand il est satisfait.
+
+## Historique récent / état actuel
+
+- Le site est en ligne depuis un moment, HTTPS + domaine personnalisé finalisés.
+- Projet `r2-cfd` (simulation CFD vélo) passé en `draft: true` à la demande de Paul.
+- 4 projets patrimoniaux LEICHT France ajoutés depuis une liste de 18 slides pptx
+  fournie par Paul (`2025-01-16-fiche de projet Bois.pptx`) : Mémorial Alsace-Moselle,
+  Siège social Swatch Group, Arboretum de Nanterre, Gymnase de Grassau — catégories
+  `structure` / `facade`, avec encart "fiche technique" (`facts`).
+- **Reste à faire, si Paul le demande** : 14 autres projets de ce même pptx n'ont pas
+  encore été sélectionnés/ajoutés. Ne pas les ajouter sans qu'il les ait explicitement
+  choisis.
+
+## Pour une nouvelle session Claude qui découvre ce projet
+
+1. Lire ce fichier + `COMMENT-AJOUTER-UN-PROJET.md`.
+2. Si des fichiers sources (pptx, images...) sont fournis pour de nouveaux projets,
+   suivre le même schéma que les 4 projets patrimoniaux ci-dessus (texte poli, pas de
+   copier-coller brut ; images converties en JPEG web ~2400px max, qualité 85).
+3. Toujours tester en local (mosaïque + fiches FR/EN) avant de livrer.
+4. Ne jamais commit/push à la place de Paul.
