@@ -54,6 +54,11 @@ Paul, c'est ce dossier qui est connecté.
   agrandies). Mobile : photo principale, texte, autres photos. En bas : projet
   précédent/suivant + 3 vignettes « Autres projets » (même catégorie d'abord). Un projet
   sans aucune photo s'affiche sur une seule colonne.
+- **Mosaïque** : ordre = ordre du tableau `projects` dans `projects.json` (volontairement
+  mélangé pour alterner visuels vélo blancs et photos bâtiment ; garder ce principe en
+  ajoutant un projet). Option `"tile": "large"` → tuile 2 × 2 (`grid-auto-flow: dense`) ;
+  actuellement Halle de Villeneuve et Cnam Intechmer (10 tuiles = grille pleine sur
+  4 colonnes). Tuiles toutes identiques sur mobile (1 colonne) et dans « Autres projets ».
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
   mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
   lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution

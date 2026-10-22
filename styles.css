@@ -482,7 +482,22 @@ body.home-page .header .lang-current {
 .projects-mosaic {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense; /* les petites tuiles comblent les trous laissés par les grandes */
     gap: 8px;
+}
+
+/* Tuile double ("tile": "large" dans projects.json) : 2 colonnes × 2 rangées. */
+.projects-mosaic .project-tile--large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.projects-mosaic .project-tile--large h3 {
+    font-size: 1.3rem;
+}
+
+.projects-mosaic .project-tile--large .project-tile-overlay {
+    padding: 28px 20px 20px;
 }
 
 .project-tile {
@@ -562,6 +577,12 @@ body.home-page .header .lang-current {
 @media (max-width: 600px) {
     .projects-mosaic {
         grid-template-columns: 1fr;
+    }
+
+    /* Une seule colonne : toutes les tuiles ont la même taille. */
+    .projects-mosaic .project-tile--large {
+        grid-column: auto;
+        grid-row: auto;
     }
 }
 

@@ -1,24 +1,34 @@
 {
   "projects": [
     {
-      "id": "g1-analyse-modale",
-      "title": "Projet G1 - Analyse Modale",
-      "title_en": "G1 Project - Modal Analysis",
-      "image": "assets/images/g1-analyse-modale/cover.jpg",
-      "category": "mobilite-douce",
-      "featured": true,
+      "id": "halle-villeneuve-la-garenne",
+      "title": "Halle de marché de Villeneuve-la-Garenne",
+      "title_en": "Villeneuve-la-Garenne Market Hall",
+      "image": "assets/images/halle-villeneuve-la-garenne/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "tile": "large",
       "year": "2025",
-      "location": "Paris, France",
-      "location_en": "Paris, France",
+      "location": "Villeneuve-la-Garenne, France",
+      "location_en": "Villeneuve-la-Garenne, France",
       "description": [
-        "Nous avons mené une analyse des propriétés vibratoires du cadre en intégrant différents comportements possibles de l'utilisateur, notamment différentes fréquences de pédalage.",
-        "Cette étude a permis d'identifier les modes de résonance du cadre et d'évaluer leur impact. Afin de se rapprocher au maximum du comportement réel du vélo, la rigidité latérale des roues a également été prise en compte dans le modèle."
+        "Reconstruction de la halle de marché de Villeneuve-la-Garenne et construction d'un parc de stationnement, accompagnées de l'aménagement des abords : création d'un parvis, requalification des rues adjacentes et du parking commerçant.",
+        "Nous avons réalisé les études d'exécution pour l'entreprise de charpente bois."
       ],
       "description_en": [
-        "We carried out a modal analysis of the frame's vibrational properties, factoring in different possible rider behaviours, in particular various pedalling frequencies.",
-        "This made it possible to identify the frame's resonance modes and assess their impact. To stay as close as possible to the bike's real-world behaviour, the lateral stiffness of the wheels was also included in the model."
+        "Reconstruction of the Villeneuve-la-Garenne market hall and construction of a car park, together with the redevelopment of the surrounding area: a new forecourt, upgraded adjacent streets and a renovated shoppers' car park.",
+        "We carried out the execution studies for the timber framing contractor."
       ],
-      "gallery": []
+      "gallery": [],
+      "facts": {
+        "client": "Mairie de Villeneuve-la-Garenne",
+        "architect": "Atelier du Pont",
+        "surface": "2 410 m² (halle et commerces), 3 000 m² (parking), 8 700 m² (espace public)",
+        "cost": "12 400 000 € HT"
+      },
+      "facts_en": {
+        "surface": "2,410 m² (hall and shops), 3,000 m² (car park), 8,700 m² (public space)"
+      }
     },
     {
       "id": "g1-rigidite",
@@ -41,6 +51,241 @@
       "gallery": [
         "assets/images/g1-rigidite/01.jpg"
       ]
+    },
+    {
+      "id": "arboretum-nanterre",
+      "title": "Arboretum de Nanterre",
+      "title_en": "Arboretum de Nanterre",
+      "image": "assets/images/arboretum-nanterre/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2022",
+      "location": "Nanterre, France",
+      "location_en": "Nanterre, France",
+      "description": [
+        "Pour le compte de WO2 et BNP Paribas Real Estate, nous avons assuré la conception structurelle de l'un des immeubles de bureaux les plus innovants en matière de construction bois, baptisé « Épicéa », situé dans le quartier de La Défense, au sein d'un campus bas carbone.",
+        "Notre mission a porté sur l'ingénierie de la structure ainsi que le calcul des sections et des connexions."
+      ],
+      "description_en": [
+        "On behalf of WO2 and BNP Paribas Real Estate, we provided the structural design for one of the most innovative timber office buildings of its kind, named « Épicéa », located in the La Défense district as part of a low-carbon campus.",
+        "Our work covered the structural engineering as well as the design of sections and connections."
+      ],
+      "gallery": [
+        "assets/images/arboretum-nanterre/01.jpg"
+      ],
+      "facts": {
+        "address": "1 Pl des Papeteries, 92000 Nanterre, France",
+        "client": "WO2, BNP Paribas Real Estate, ICAWOOD et Ivanhoé Cambridge",
+        "architect": "Nicolas Laisné Architectes, DREAM, BASE, Berim, Hubert & Roy Architectes et Leclercq Associés",
+        "surface": "126 000 m²",
+        "cost": "350 000 000 € HT"
+      }
+    },
+    {
+      "id": "memorial-alsace-moselle",
+      "title": "Mémorial Alsace-Moselle",
+      "title_en": "Alsace-Moselle Memorial",
+      "image": "assets/images/memorial-alsace-moselle/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2025",
+      "location": "Schirmeck, France",
+      "location_en": "Schirmeck, France",
+      "description": [
+        "Construction du Mémorial aux morts et disparus alsaciens et mosellans de la Seconde Guerre mondiale, rendant hommage à toutes les catégories de victimes identifiées par un comité scientifique associé dès le démarrage du projet.",
+        "Missionnés sur la partie structure, nous avons conçu une charpente bois couvrant l'ensemble du volume, avec un débord de toit périphérique de profondeur variable et un auvent conséquent sur le parvis."
+      ],
+      "description_en": [
+        "Construction of the Memorial to the dead and missing from Alsace and Moselle during the Second World War, honouring all categories of victims identified by a scientific committee involved from the project's outset.",
+        "Commissioned for the structural engineering, we designed a timber frame covering the entire volume, with a perimeter roof overhang of varying depth and a substantial canopy over the forecourt."
+      ],
+      "gallery": [
+        "assets/images/memorial-alsace-moselle/01.jpg"
+      ],
+      "facts": {
+        "address": "All. du Souvenir Français, 67130 Schirmeck, France",
+        "client": "Région Grand Est",
+        "architect": "Benoit Zeimett",
+        "surface": "219 m² (intérieur) / 282 m² (extérieur)",
+        "cost": "1 400 000 € HT"
+      },
+      "facts_en": {
+        "surface": "219 m² (indoor) / 282 m² (outdoor)"
+      }
+    },
+    {
+      "id": "cargo-schwehhr",
+      "title": "Projet Cargo Schwehhr",
+      "title_en": "Cargo Schwehhr Project",
+      "image": "assets/images/cargo-schwehhr/cover.jpg",
+      "category": "mobilite-douce",
+      "featured": true,
+      "year": "2026",
+      "location": "Paris, France",
+      "location_en": "Paris, France",
+      "description": [
+        "Un autre axe d'étude au sein de notre équipe concerne le développement d'un vélo cargo. Notre objectif est de concevoir un vélo capable de répondre aux contraintes spécifiques liées à l'usage urbain et au stockage dans des espaces restreints.",
+        "Dans le cadre de ce travail, nous réalisons des analyses similaires à celles menées sur le vélo gravel. Ce travail nous permet de définir la géométrie répondant au mieux au cahier des charges et de concevoir certains systèmes innovants offrant de nouvelles options d'usage."
+      ],
+      "description_en": [
+        "Another area of research within our team focuses on developing a cargo bike. Our goal is to design a bike able to meet the specific constraints of urban use and storage in tight spaces.",
+        "As part of this work, we carry out analyses similar to those performed on the gravel bike. This lets us define the geometry that best meets the specifications, and design innovative systems that open up new ways to use the bike."
+      ],
+      "gallery": [
+        "assets/images/cargo-schwehhr/01.jpg",
+        "assets/images/cargo-schwehhr/02.jpg",
+        "assets/images/cargo-schwehhr/03.jpg",
+        "assets/images/cargo-schwehhr/04.jpg",
+        "assets/images/cargo-schwehhr/05.jpg"
+      ]
+    },
+    {
+      "id": "ilot-condorcet",
+      "title": "Îlot Condorcet",
+      "title_en": "Îlot Condorcet",
+      "image": "assets/images/ilot-condorcet/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "En cours",
+      "year_en": "Ongoing",
+      "location": "Paris 9e, France",
+      "location_en": "Paris 9th, France",
+      "description": [
+        "Réhabilitation lourde, restructuration et valorisation d'un ensemble immobilier complexe au cœur du 9e arrondissement de Paris. Le projet comprend notamment des interventions d'envergure, comme la surélévation de bâtiments (dont le bâtiment D) au moyen d'une structure hybride. Un chantier porté par de fortes ambitions écologiques.",
+        "Nous avons réalisé les études d'exécution ainsi que les plans de fabrication et de chantier (PAC)."
+      ],
+      "description_en": [
+        "Major refurbishment, restructuring and enhancement of a complex property portfolio in the heart of Paris's 9th arrondissement. The project includes large-scale interventions such as adding storeys to existing buildings (including building D) using a hybrid structure. A worksite driven by strong environmental ambitions.",
+        "We carried out the execution studies along with the fabrication and site drawings."
+      ],
+      "gallery": [
+        "assets/images/ilot-condorcet/01.jpg"
+      ],
+      "facts": {
+        "address": "4-8 rue Condorcet, 75009 Paris, France",
+        "client": "Société Foncière Lyonnaise (SFL)",
+        "architect": "Franklin Azzi Architecture",
+        "surface": "environ 28 000 m²"
+      },
+      "facts_en": {
+        "surface": "approx. 28,000 m²"
+      }
+    },
+    {
+      "id": "swatch-group-bienne",
+      "title": "Siège social Swatch Group",
+      "title_en": "Swatch Group Headquarters",
+      "image": "assets/images/swatch-group-bienne/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2019",
+      "location": "Bienne, Suisse",
+      "location_en": "Biel/Bienne, Switzerland",
+      "description": [
+        "La façade du siège social du groupe Swatch se présente comme une coque de forme libre composée de multiples éléments en verre, en ETFE, en polycarbonate et en bois. La complexité du projet résidait dans l'intégration, au sein de cette forme libre à double courbure, d'éléments quadrangulaires.",
+        "Nous avons réalisé l'ensemble de la conception et des calculs de la façade : panneaux de verre en triple vitrage courbés à froid, coussins en ETFE, polycarbonate et panneaux de bois, ainsi que les études d'exécution et de fabrication des coussins ETFE."
+      ],
+      "description_en": [
+        "The facade of the Swatch Group headquarters takes the form of a free-form shell made up of multiple glass, ETFE, polycarbonate and timber elements. The project's complexity lay in integrating quadrangular envelope elements within this doubly-curved free form.",
+        "We carried out the full design and engineering of the facade: cold-bent triple-glazed glass panels, ETFE and polycarbonate cushions and timber panels, along with the execution and fabrication studies for the ETFE cushions."
+      ],
+      "gallery": [
+        "assets/images/swatch-group-bienne/01.jpg"
+      ],
+      "facts": {
+        "address": "Rue Nicolas G. Hayek, 2502 Bienne, Suisse",
+        "client": "Swatch Group",
+        "architect": "Shigeru Ban Architects",
+        "surface": "21 000 m² (façade : 11 000 m²)",
+        "cost": "122 000 000 € HT"
+      },
+      "facts_en": {
+        "address": "Rue Nicolas G. Hayek, 2502 Biel/Bienne, Switzerland",
+        "surface": "21,000 m² (façade: 11,000 m²)"
+      }
+    },
+    {
+      "id": "cnam-intechmer",
+      "title": "Cnam Intechmer",
+      "title_en": "Cnam Intechmer",
+      "image": "assets/images/cnam-intechmer/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "tile": "large",
+      "year": "2026",
+      "location": "Cherbourg-en-Cotentin, France",
+      "location_en": "Cherbourg-en-Cotentin, France",
+      "description": [
+        "L'Institut national des sciences et techniques de la mer (Intechmer, Cnam) bénéficie d'une rénovation et d'une extension pour continuer à former ses étudiants. Construit il y a plus de 40 ans, le bâtiment existant était devenu vétuste, mal isolé et peu fonctionnel.",
+        "Le projet porte de fortes ambitions environnementales : l'architecte a fait le choix de réutiliser au maximum les matériaux issus de la déconstruction. Nous avons assuré l'ingénierie de la structure de la partie neuve et de la restructuration de l'existant (mission base + visa)."
+      ],
+      "description_en": [
+        "The National Institute of Marine Science and Technology (Intechmer, Cnam) is being renovated and extended so it can keep training its students. Built more than 40 years ago, the existing building had become run-down, poorly insulated and impractical.",
+        "The project has strong environmental ambitions: the architect chose to reuse as much material from the demolition as possible. We provided the structural engineering for the new extension and the restructuring of the existing building (base design + review of execution studies)."
+      ],
+      "gallery": [
+        "assets/images/cnam-intechmer/01.jpg",
+        "assets/images/cnam-intechmer/02.jpg"
+      ],
+      "facts": {
+        "address": "Bd de Collignon, 50110 Tourlaville, France",
+        "client": "Communauté d'agglomération de Cherbourg",
+        "architect": "TITAN Architectes (Nantes)",
+        "surface": "3 745 m² (existant + extension), dont 2 166 m² d'extension",
+        "cost": "11 000 000 € HT"
+      },
+      "facts_en": {
+        "surface": "3,745 m² (existing + extension), including 2,166 m² of extension"
+      }
+    },
+    {
+      "id": "g1-analyse-modale",
+      "title": "Projet G1 - Analyse Modale",
+      "title_en": "G1 Project - Modal Analysis",
+      "image": "assets/images/g1-analyse-modale/cover.jpg",
+      "category": "mobilite-douce",
+      "featured": true,
+      "year": "2025",
+      "location": "Paris, France",
+      "location_en": "Paris, France",
+      "description": [
+        "Nous avons mené une analyse des propriétés vibratoires du cadre en intégrant différents comportements possibles de l'utilisateur, notamment différentes fréquences de pédalage.",
+        "Cette étude a permis d'identifier les modes de résonance du cadre et d'évaluer leur impact. Afin de se rapprocher au maximum du comportement réel du vélo, la rigidité latérale des roues a également été prise en compte dans le modèle."
+      ],
+      "description_en": [
+        "We carried out a modal analysis of the frame's vibrational properties, factoring in different possible rider behaviours, in particular various pedalling frequencies.",
+        "This made it possible to identify the frame's resonance modes and assess their impact. To stay as close as possible to the bike's real-world behaviour, the lateral stiffness of the wheels was also included in the model."
+      ],
+      "gallery": []
+    },
+    {
+      "id": "gymnase-grassau",
+      "title": "Gymnase de Grassau",
+      "title_en": "Grassau Gymnasium",
+      "image": "assets/images/gymnase-grassau/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2024",
+      "location": "Grassau, Allemagne",
+      "location_en": "Grassau, Germany",
+      "description": [
+        "Rénovation du gymnase de Grassau, en Allemagne, suite à l'apparition de fentes sur les poutres en bois lamellé-collé de la structure existante.",
+        "Notre mission a porté sur l'étude des poutres en bois lamellé-collé, la recherche de solutions de renfort et la détermination de leur méthode de calcul, jusqu'au dossier de consultation des entreprises et au suivi des travaux."
+      ],
+      "description_en": [
+        "Renovation of the Grassau gymnasium in Germany, following the appearance of cracks in the glued-laminated timber beams of the existing structure.",
+        "Our work covered the study of the glued-laminated timber beams, the search for reinforcement solutions and the determination of their calculation method, through to the tender documents and site supervision."
+      ],
+      "gallery": [],
+      "facts": {
+        "address": "Grassau, Allemagne",
+        "client": "Ville de Grassau",
+        "architect": "Thomas W. Weitzel, m.a²rch – Munich (D)",
+        "surface": "1 200 m²"
+      },
+      "facts_en": {
+        "address": "Grassau, Germany"
+      }
     },
     {
       "id": "r2-cfd",
@@ -70,32 +315,6 @@
         "assets/images/r2-cfd/07.jpg"
       ],
       "draft": true
-    },
-    {
-      "id": "cargo-schwehhr",
-      "title": "Projet Cargo Schwehhr",
-      "title_en": "Cargo Schwehhr Project",
-      "image": "assets/images/cargo-schwehhr/cover.jpg",
-      "category": "mobilite-douce",
-      "featured": true,
-      "year": "2026",
-      "location": "Paris, France",
-      "location_en": "Paris, France",
-      "description": [
-        "Un autre axe d'étude au sein de notre équipe concerne le développement d'un vélo cargo. Notre objectif est de concevoir un vélo capable de répondre aux contraintes spécifiques liées à l'usage urbain et au stockage dans des espaces restreints.",
-        "Dans le cadre de ce travail, nous réalisons des analyses similaires à celles menées sur le vélo gravel. Ce travail nous permet de définir la géométrie répondant au mieux au cahier des charges et de concevoir certains systèmes innovants offrant de nouvelles options d'usage."
-      ],
-      "description_en": [
-        "Another area of research within our team focuses on developing a cargo bike. Our goal is to design a bike able to meet the specific constraints of urban use and storage in tight spaces.",
-        "As part of this work, we carry out analyses similar to those performed on the gravel bike. This lets us define the geometry that best meets the specifications, and design innovative systems that open up new ways to use the bike."
-      ],
-      "gallery": [
-        "assets/images/cargo-schwehhr/01.jpg",
-        "assets/images/cargo-schwehhr/02.jpg",
-        "assets/images/cargo-schwehhr/03.jpg",
-        "assets/images/cargo-schwehhr/04.jpg",
-        "assets/images/cargo-schwehhr/05.jpg"
-      ]
     },
     {
       "id": "garching",
@@ -172,223 +391,6 @@
       ],
       "gallery": [],
       "draft": true
-    },
-    {
-      "id": "memorial-alsace-moselle",
-      "title": "Mémorial Alsace-Moselle",
-      "title_en": "Alsace-Moselle Memorial",
-      "image": "assets/images/memorial-alsace-moselle/cover.jpg",
-      "category": "structure",
-      "featured": false,
-      "year": "2025",
-      "location": "Schirmeck, France",
-      "location_en": "Schirmeck, France",
-      "description": [
-        "Construction du Mémorial aux morts et disparus alsaciens et mosellans de la Seconde Guerre mondiale, rendant hommage à toutes les catégories de victimes identifiées par un comité scientifique associé dès le démarrage du projet.",
-        "Missionnés sur la partie structure, nous avons conçu une charpente bois couvrant l'ensemble du volume, avec un débord de toit périphérique de profondeur variable et un auvent conséquent sur le parvis."
-      ],
-      "description_en": [
-        "Construction of the Memorial to the dead and missing from Alsace and Moselle during the Second World War, honouring all categories of victims identified by a scientific committee involved from the project's outset.",
-        "Commissioned for the structural engineering, we designed a timber frame covering the entire volume, with a perimeter roof overhang of varying depth and a substantial canopy over the forecourt."
-      ],
-      "gallery": [
-        "assets/images/memorial-alsace-moselle/01.jpg"
-      ],
-      "facts": {
-        "address": "All. du Souvenir Français, 67130 Schirmeck, France",
-        "client": "Région Grand Est",
-        "architect": "Benoit Zeimett",
-        "surface": "219 m² (intérieur) / 282 m² (extérieur)",
-        "cost": "1 400 000 € HT"
-      },
-      "facts_en": {
-        "surface": "219 m² (indoor) / 282 m² (outdoor)"
-      }
-    },
-    {
-      "id": "swatch-group-bienne",
-      "title": "Siège social Swatch Group",
-      "title_en": "Swatch Group Headquarters",
-      "image": "assets/images/swatch-group-bienne/cover.jpg",
-      "category": "facade",
-      "featured": false,
-      "year": "2019",
-      "location": "Bienne, Suisse",
-      "location_en": "Biel/Bienne, Switzerland",
-      "description": [
-        "La façade du siège social du groupe Swatch se présente comme une coque de forme libre composée de multiples éléments en verre, en ETFE, en polycarbonate et en bois. La complexité du projet résidait dans l'intégration, au sein de cette forme libre à double courbure, d'éléments quadrangulaires.",
-        "Nous avons réalisé l'ensemble de la conception et des calculs de la façade : panneaux de verre en triple vitrage courbés à froid, coussins en ETFE, polycarbonate et panneaux de bois, ainsi que les études d'exécution et de fabrication des coussins ETFE."
-      ],
-      "description_en": [
-        "The facade of the Swatch Group headquarters takes the form of a free-form shell made up of multiple glass, ETFE, polycarbonate and timber elements. The project's complexity lay in integrating quadrangular envelope elements within this doubly-curved free form.",
-        "We carried out the full design and engineering of the facade: cold-bent triple-glazed glass panels, ETFE and polycarbonate cushions and timber panels, along with the execution and fabrication studies for the ETFE cushions."
-      ],
-      "gallery": [
-        "assets/images/swatch-group-bienne/01.jpg"
-      ],
-      "facts": {
-        "address": "Rue Nicolas G. Hayek, 2502 Bienne, Suisse",
-        "client": "Swatch Group",
-        "architect": "Shigeru Ban Architects",
-        "surface": "21 000 m² (façade : 11 000 m²)",
-        "cost": "122 000 000 € HT"
-      },
-      "facts_en": {
-        "address": "Rue Nicolas G. Hayek, 2502 Biel/Bienne, Switzerland",
-        "surface": "21,000 m² (façade: 11,000 m²)"
-      }
-    },
-    {
-      "id": "arboretum-nanterre",
-      "title": "Arboretum de Nanterre",
-      "title_en": "Arboretum de Nanterre",
-      "image": "assets/images/arboretum-nanterre/cover.jpg",
-      "category": "structure",
-      "featured": false,
-      "year": "2022",
-      "location": "Nanterre, France",
-      "location_en": "Nanterre, France",
-      "description": [
-        "Pour le compte de WO2 et BNP Paribas Real Estate, nous avons assuré la conception structurelle de l'un des immeubles de bureaux les plus innovants en matière de construction bois, baptisé « Épicéa », situé dans le quartier de La Défense, au sein d'un campus bas carbone.",
-        "Notre mission a porté sur l'ingénierie de la structure ainsi que le calcul des sections et des connexions."
-      ],
-      "description_en": [
-        "On behalf of WO2 and BNP Paribas Real Estate, we provided the structural design for one of the most innovative timber office buildings of its kind, named « Épicéa », located in the La Défense district as part of a low-carbon campus.",
-        "Our work covered the structural engineering as well as the design of sections and connections."
-      ],
-      "gallery": [
-        "assets/images/arboretum-nanterre/01.jpg"
-      ],
-      "facts": {
-        "address": "1 Pl des Papeteries, 92000 Nanterre, France",
-        "client": "WO2, BNP Paribas Real Estate, ICAWOOD et Ivanhoé Cambridge",
-        "architect": "Nicolas Laisné Architectes, DREAM, BASE, Berim, Hubert & Roy Architectes et Leclercq Associés",
-        "surface": "126 000 m²",
-        "cost": "350 000 000 € HT"
-      }
-    },
-    {
-      "id": "gymnase-grassau",
-      "title": "Gymnase de Grassau",
-      "title_en": "Grassau Gymnasium",
-      "image": "assets/images/gymnase-grassau/cover.jpg",
-      "category": "structure",
-      "featured": false,
-      "year": "2024",
-      "location": "Grassau, Allemagne",
-      "location_en": "Grassau, Germany",
-      "description": [
-        "Rénovation du gymnase de Grassau, en Allemagne, suite à l'apparition de fentes sur les poutres en bois lamellé-collé de la structure existante.",
-        "Notre mission a porté sur l'étude des poutres en bois lamellé-collé, la recherche de solutions de renfort et la détermination de leur méthode de calcul, jusqu'au dossier de consultation des entreprises et au suivi des travaux."
-      ],
-      "description_en": [
-        "Renovation of the Grassau gymnasium in Germany, following the appearance of cracks in the glued-laminated timber beams of the existing structure.",
-        "Our work covered the study of the glued-laminated timber beams, the search for reinforcement solutions and the determination of their calculation method, through to the tender documents and site supervision."
-      ],
-      "gallery": [],
-      "facts": {
-        "address": "Grassau, Allemagne",
-        "client": "Ville de Grassau",
-        "architect": "Thomas W. Weitzel, m.a²rch – Munich (D)",
-        "surface": "1 200 m²"
-      },
-      "facts_en": {
-        "address": "Grassau, Germany"
-      }
-    },
-    {
-      "id": "cnam-intechmer",
-      "title": "Cnam Intechmer",
-      "title_en": "Cnam Intechmer",
-      "image": "assets/images/cnam-intechmer/cover.jpg",
-      "category": "structure",
-      "featured": false,
-      "year": "2026",
-      "location": "Cherbourg-en-Cotentin, France",
-      "location_en": "Cherbourg-en-Cotentin, France",
-      "description": [
-        "L'Institut national des sciences et techniques de la mer (Intechmer, Cnam) bénéficie d'une rénovation et d'une extension pour continuer à former ses étudiants. Construit il y a plus de 40 ans, le bâtiment existant était devenu vétuste, mal isolé et peu fonctionnel.",
-        "Le projet porte de fortes ambitions environnementales : l'architecte a fait le choix de réutiliser au maximum les matériaux issus de la déconstruction. Nous avons assuré l'ingénierie de la structure de la partie neuve et de la restructuration de l'existant (mission base + visa)."
-      ],
-      "description_en": [
-        "The National Institute of Marine Science and Technology (Intechmer, Cnam) is being renovated and extended so it can keep training its students. Built more than 40 years ago, the existing building had become run-down, poorly insulated and impractical.",
-        "The project has strong environmental ambitions: the architect chose to reuse as much material from the demolition as possible. We provided the structural engineering for the new extension and the restructuring of the existing building (base design + review of execution studies)."
-      ],
-      "gallery": [
-        "assets/images/cnam-intechmer/01.jpg",
-        "assets/images/cnam-intechmer/02.jpg"
-      ],
-      "facts": {
-        "address": "Bd de Collignon, 50110 Tourlaville, France",
-        "client": "Communauté d'agglomération de Cherbourg",
-        "architect": "TITAN Architectes (Nantes)",
-        "surface": "3 745 m² (existant + extension), dont 2 166 m² d'extension",
-        "cost": "11 000 000 € HT"
-      },
-      "facts_en": {
-        "surface": "3,745 m² (existing + extension), including 2,166 m² of extension"
-      }
-    },
-    {
-      "id": "ilot-condorcet",
-      "title": "Îlot Condorcet",
-      "title_en": "Îlot Condorcet",
-      "image": "assets/images/ilot-condorcet/cover.jpg",
-      "category": "structure",
-      "featured": false,
-      "year": "En cours",
-      "year_en": "Ongoing",
-      "location": "Paris 9e, France",
-      "location_en": "Paris 9th, France",
-      "description": [
-        "Réhabilitation lourde, restructuration et valorisation d'un ensemble immobilier complexe au cœur du 9e arrondissement de Paris. Le projet comprend notamment des interventions d'envergure, comme la surélévation de bâtiments (dont le bâtiment D) au moyen d'une structure hybride. Un chantier porté par de fortes ambitions écologiques.",
-        "Nous avons réalisé les études d'exécution ainsi que les plans de fabrication et de chantier (PAC)."
-      ],
-      "description_en": [
-        "Major refurbishment, restructuring and enhancement of a complex property portfolio in the heart of Paris's 9th arrondissement. The project includes large-scale interventions such as adding storeys to existing buildings (including building D) using a hybrid structure. A worksite driven by strong environmental ambitions.",
-        "We carried out the execution studies along with the fabrication and site drawings."
-      ],
-      "gallery": [
-        "assets/images/ilot-condorcet/01.jpg"
-      ],
-      "facts": {
-        "address": "4-8 rue Condorcet, 75009 Paris, France",
-        "client": "Société Foncière Lyonnaise (SFL)",
-        "architect": "Franklin Azzi Architecture",
-        "surface": "environ 28 000 m²"
-      },
-      "facts_en": {
-        "surface": "approx. 28,000 m²"
-      }
-    },
-    {
-      "id": "halle-villeneuve-la-garenne",
-      "title": "Halle de marché de Villeneuve-la-Garenne",
-      "title_en": "Villeneuve-la-Garenne Market Hall",
-      "image": "assets/images/halle-villeneuve-la-garenne/cover.jpg",
-      "category": "structure",
-      "featured": false,
-      "year": "2025",
-      "location": "Villeneuve-la-Garenne, France",
-      "location_en": "Villeneuve-la-Garenne, France",
-      "description": [
-        "Reconstruction de la halle de marché de Villeneuve-la-Garenne et construction d'un parc de stationnement, accompagnées de l'aménagement des abords : création d'un parvis, requalification des rues adjacentes et du parking commerçant.",
-        "Nous avons réalisé les études d'exécution pour l'entreprise de charpente bois."
-      ],
-      "description_en": [
-        "Reconstruction of the Villeneuve-la-Garenne market hall and construction of a car park, together with the redevelopment of the surrounding area: a new forecourt, upgraded adjacent streets and a renovated shoppers' car park.",
-        "We carried out the execution studies for the timber framing contractor."
-      ],
-      "gallery": [],
-      "facts": {
-        "client": "Mairie de Villeneuve-la-Garenne",
-        "architect": "Atelier du Pont",
-        "surface": "2 410 m² (halle et commerces), 3 000 m² (parking), 8 700 m² (espace public)",
-        "cost": "12 400 000 € HT"
-      },
-      "facts_en": {
-        "surface": "2,410 m² (hall and shops), 3,000 m² (car park), 8,700 m² (public space)"
-      }
     }
   ],
   "categories": [

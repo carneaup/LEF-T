@@ -63,7 +63,8 @@ function generateProjectCard(project) {
         // Crédit de l'image (« © Auteur »), voir js/credits.js et data/credits.json
         (typeof creditHTML === 'function' ? creditHTML(project.image) : '');
     const card = document.createElement('a');
-    card.className = 'project-tile';
+    // "tile": "large" dans projects.json → tuile double (2 × 2) dans la mosaïque.
+    card.className = 'project-tile' + (project.tile === 'large' ? ' project-tile--large' : '');
     card.href = url;
     card.innerHTML = html;
     return card.outerHTML;
