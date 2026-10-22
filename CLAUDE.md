@@ -107,8 +107,9 @@ fonctionnement établi est :
   (projet LEF-T, © LEF-T, chantier en cours → `year: "En cours"` / `year_en: "Ongoing"`,
   coût omis tant qu'il n'est pas définitif), remplacement des photos
   d'`arboretum-nanterre` (© Mathis, l'entreprise bois). Images extraites du PDF
-  (~1000 px). Le PDF contient aussi Maison Ste Germaine et Halle de Villeneuve-la-Garenne,
-  non ajoutés (pas demandé).
+  (~1000 px). Ajout ensuite de `halle-villeneuve-la-garenne` (photo intérieure seule,
+  © Mathis — l'image de rendu de la fiche est volontairement écartée à la demande de Paul).
+  Maison Ste Germaine (aussi dans le PDF) non ajoutée.
 - - **Reste à faire, si Paul le demande** : 14 autres projets de ce même pptx n'ont pas
   encore été sélectionnés/ajoutés. Ne pas les ajouter sans qu'il les ait explicitement
   choisis.

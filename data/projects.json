@@ -360,6 +360,35 @@
       "facts_en": {
         "surface": "approx. 28,000 m²"
       }
+    },
+    {
+      "id": "halle-villeneuve-la-garenne",
+      "title": "Halle de marché de Villeneuve-la-Garenne",
+      "title_en": "Villeneuve-la-Garenne Market Hall",
+      "image": "assets/images/halle-villeneuve-la-garenne/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2025",
+      "location": "Villeneuve-la-Garenne, France",
+      "location_en": "Villeneuve-la-Garenne, France",
+      "description": [
+        "Reconstruction de la halle de marché de Villeneuve-la-Garenne et construction d'un parc de stationnement, accompagnées de l'aménagement des abords : création d'un parvis, requalification des rues adjacentes et du parking commerçant.",
+        "Nous avons réalisé les études d'exécution pour l'entreprise de charpente bois."
+      ],
+      "description_en": [
+        "Reconstruction of the Villeneuve-la-Garenne market hall and construction of a car park, together with the redevelopment of the surrounding area: a new forecourt, upgraded adjacent streets and a renovated shoppers' car park.",
+        "We carried out the execution studies for the timber framing contractor."
+      ],
+      "gallery": [],
+      "facts": {
+        "client": "Mairie de Villeneuve-la-Garenne",
+        "architect": "Atelier du Pont",
+        "surface": "2 410 m² (halle et commerces), 3 000 m² (parking), 8 700 m² (espace public)",
+        "cost": "12 400 000 € HT"
+      },
+      "facts_en": {
+        "surface": "2,410 m² (hall and shops), 3,000 m² (car park), 8,700 m² (public space)"
+      }
     }
   ],
   "categories": [
