@@ -78,8 +78,10 @@ Catégories historiques (vélo/bureau) : `g1`, `r2`, `cargo`, `bureau`, `urbanis
 Catégories ajoutées pour les projets patrimoniaux LEICHT France (bâtiment) : `structure`,
 `facade`, `mobilite-douce`, `bois`, `membrane`. Préférence explicite de Paul : **peu de
 tags mais clairs** — ne pas en ajouter d'autres sans son accord. Les 3 dernières
-(mobilité douce / bois / membrane) existent déjà dans `projects.json` mais ne sont pour
-l'instant utilisées par aucun projet publié.
+(bois / membrane) existent déjà dans `projects.json` mais ne sont pour l'instant utilisées
+par aucun projet publié. Les projets vélo G1 et Cargo sont regroupés sous `mobilite-douce`
+(demande de Paul) ; les catégories `g1` / `cargo` restent définies mais inutilisées
+(donc sans bouton de filtre). `r2-cfd` (brouillon) est encore en `r2`.
 
 ## Règle de collaboration (IMPORTANT)
 
