@@ -162,7 +162,8 @@ function renderProjectDetail(project) {
     if (locationEl) locationEl.textContent = location || '';
 
     const yearEl = document.getElementById('projectYear');
-    if (yearEl) yearEl.textContent = project.year || '';
+    // "year_en" (optionnel) : pour une année non numérique, ex. "En cours" / "Ongoing"
+    if (yearEl) yearEl.textContent = ((isEN && project.year_en) ? project.year_en : project.year) || '';
 
     const contentEl = document.getElementById('projectContent');
     if (contentEl) {

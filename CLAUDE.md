@@ -41,7 +41,7 @@ Paul, c'est ce dossier qui est connecté.
 - Schéma d'une entrée dans `data/projects.json` (tableau `projects`) :
   `id`, `title` / `title_en`, `image` (cover), `category` (**une seule chaîne**, doit
   correspondre à un `id` du tableau `categories`), `featured` (bool, carrousel accueil),
-  `year`, `location` / `location_en`, `description` / `description_en` (tableaux de
+  `year` (+ `year_en` optionnel, ex. "En cours"/"Ongoing"), `location` / `location_en`, `description` / `description_en` (tableaux de
   paragraphes), `gallery` (tableau de chemins d'images), et en option :
   - `draft: true` → masque le projet de la mosaïque/filtres/carrousel sans le supprimer
     (fiche restant accessible par lien direct) ;
@@ -102,7 +102,14 @@ fonctionnement établi est :
   fournie par Paul (`2025-01-16-fiche de projet Bois.pptx`) : Mémorial Alsace-Moselle,
   Siège social Swatch Group, Arboretum de Nanterre, Gymnase de Grassau — catégories
   `structure` / `facade`, avec encart "fiche technique" (`facts`).
-- **Reste à faire, si Paul le demande** : 14 autres projets de ce même pptx n'ont pas
+- Oct. 2026 : depuis `projets bois _ site web.pdf` (fiches mises à jour avec auteurs
+  des photos) : ajout de `cnam-intechmer` (© Valentin Leflamand) et `ilot-condorcet`
+  (projet LEF-T, © LEF-T, chantier en cours → `year: "En cours"` / `year_en: "Ongoing"`,
+  coût omis tant qu'il n'est pas définitif), remplacement des photos
+  d'`arboretum-nanterre` (© Mathis, l'entreprise bois). Images extraites du PDF
+  (~1000 px). Le PDF contient aussi Maison Ste Germaine et Halle de Villeneuve-la-Garenne,
+  non ajoutés (pas demandé).
+- - **Reste à faire, si Paul le demande** : 14 autres projets de ce même pptx n'ont pas
   encore été sélectionnés/ajoutés. Ne pas les ajouter sans qu'il les ait explicitement
   choisis.
 

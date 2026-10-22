@@ -295,6 +295,71 @@
       "facts_en": {
         "address": "Grassau, Germany"
       }
+    },
+    {
+      "id": "cnam-intechmer",
+      "title": "Cnam Intechmer",
+      "title_en": "Cnam Intechmer",
+      "image": "assets/images/cnam-intechmer/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2026",
+      "location": "Cherbourg-en-Cotentin, France",
+      "location_en": "Cherbourg-en-Cotentin, France",
+      "description": [
+        "L'Institut national des sciences et techniques de la mer (Intechmer, Cnam) bénéficie d'une rénovation et d'une extension pour continuer à former ses étudiants. Construit il y a plus de 40 ans, le bâtiment existant était devenu vétuste, mal isolé et peu fonctionnel.",
+        "Le projet porte de fortes ambitions environnementales : l'architecte a fait le choix de réutiliser au maximum les matériaux issus de la déconstruction. Nous avons assuré l'ingénierie de la structure de la partie neuve et de la restructuration de l'existant (mission base + visa)."
+      ],
+      "description_en": [
+        "The National Institute of Marine Science and Technology (Intechmer, Cnam) is being renovated and extended so it can keep training its students. Built more than 40 years ago, the existing building had become run-down, poorly insulated and impractical.",
+        "The project has strong environmental ambitions: the architect chose to reuse as much material from the demolition as possible. We provided the structural engineering for the new extension and the restructuring of the existing building (base design + review of execution studies)."
+      ],
+      "gallery": [
+        "assets/images/cnam-intechmer/01.jpg",
+        "assets/images/cnam-intechmer/02.jpg"
+      ],
+      "facts": {
+        "address": "Bd de Collignon, 50110 Tourlaville, France",
+        "client": "Communauté d'agglomération de Cherbourg",
+        "architect": "TITAN Architectes (Nantes)",
+        "surface": "3 745 m² (existant + extension), dont 2 166 m² d'extension",
+        "cost": "11 000 000 € HT"
+      },
+      "facts_en": {
+        "surface": "3,745 m² (existing + extension), including 2,166 m² of extension"
+      }
+    },
+    {
+      "id": "ilot-condorcet",
+      "title": "Îlot Condorcet",
+      "title_en": "Îlot Condorcet",
+      "image": "assets/images/ilot-condorcet/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "En cours",
+      "year_en": "Ongoing",
+      "location": "Paris 9e, France",
+      "location_en": "Paris 9th, France",
+      "description": [
+        "Réhabilitation lourde, restructuration et valorisation d'un ensemble immobilier complexe au cœur du 9e arrondissement de Paris. Le projet comprend notamment des interventions d'envergure, comme la surélévation de bâtiments (dont le bâtiment D) au moyen d'une structure hybride. Un chantier porté par de fortes ambitions écologiques.",
+        "Nous avons réalisé les études d'exécution ainsi que les plans de fabrication et de chantier (PAC)."
+      ],
+      "description_en": [
+        "Major refurbishment, restructuring and enhancement of a complex property portfolio in the heart of Paris's 9th arrondissement. The project includes large-scale interventions such as adding storeys to existing buildings (including building D) using a hybrid structure. A worksite driven by strong environmental ambitions.",
+        "We carried out the execution studies along with the fabrication and site drawings."
+      ],
+      "gallery": [
+        "assets/images/ilot-condorcet/01.jpg"
+      ],
+      "facts": {
+        "address": "4-8 rue Condorcet, 75009 Paris, France",
+        "client": "Société Foncière Lyonnaise (SFL)",
+        "architect": "Franklin Azzi Architecture",
+        "surface": "environ 28 000 m²"
+      },
+      "facts_en": {
+        "surface": "approx. 28,000 m²"
+      }
     }
   ],
   "categories": [

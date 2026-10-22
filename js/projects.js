@@ -52,11 +52,13 @@ function generateProjectCard(project) {
     const url = PROJECTS_BASE_PATH + 'projets/projet.html?id=' + encodeURIComponent(project.id);
     const title = (isEN && project.title_en) ? project.title_en : project.title;
     const location = (isEN && project.location_en) ? project.location_en : project.location;
+    const year = (isEN && project.year_en) ? project.year_en : project.year;
 
     const html = '<img src="' + image + '" alt="' + title + '" loading="lazy">' +
         '<div class="project-tile-overlay">' +
         '<h3>' + title + '</h3>' +
-        '<p>' + location + ' - ' + project.year + '</p>' +
+        // L'année est facultative ; "year_en" permet une traduction (ex. "En cours" / "Ongoing")
+        '<p>' + location + (year ? ' - ' + year : '') + '</p>' +
         '</div>' +
         // Crédit de l'image (« © Auteur »), voir js/credits.js et data/credits.json
         (typeof creditHTML === 'function' ? creditHTML(project.image) : '');
