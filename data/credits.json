@@ -1,0 +1,25 @@
+{
+  "_doc": "Registre des crédits images du site. Une entrée par fichier image affiché (chemin depuis la racine du site). 'author' est affiché sous la forme « © author » sur l'image. 'label' (optionnel) sert à nommer dans les mentions légales une image qui n'appartient à aucun projet (ex. photo d'équipe). Vérification : python tools/check-credits.py",
+  "images": {
+    "assets/images/g1-analyse-modale/cover.jpg": { "author": "LEF-T" },
+
+    "assets/images/g1-rigidite/cover.jpg": { "author": "LEF-T" },
+    "assets/images/g1-rigidite/01.jpg": { "author": "LEF-T" },
+
+    "assets/images/r2-cfd/cover.jpg": { "author": "LEF-T" },
+    "assets/images/r2-cfd/01.jpg": { "author": "LEF-T" },
+    "assets/images/r2-cfd/02.jpg": { "author": "LEF-T" },
+    "assets/images/r2-cfd/03.jpg": { "author": "LEF-T" },
+    "assets/images/r2-cfd/04.jpg": { "author": "LEF-T" },
+    "assets/images/r2-cfd/05.jpg": { "author": "LEF-T" },
+    "assets/images/r2-cfd/06.jpg": { "author": "LEF-T" },
+    "assets/images/r2-cfd/07.jpg": { "author": "LEF-T" },
+
+    "assets/images/cargo-schwehhr/cover.jpg": { "author": "LEF-T" },
+    "assets/images/cargo-schwehhr/01.jpg": { "author": "LEF-T" },
+    "assets/images/cargo-schwehhr/02.jpg": { "author": "LEF-T" },
+    "assets/images/cargo-schwehhr/03.jpg": { "author": "LEF-T" },
+    "assets/images/cargo-schwehhr/04.jpg": { "author": "LEF-T" },
+    "assets/images/cargo-schwehhr/05.jpg": { "author": "LEF-T" }
+  }
+}

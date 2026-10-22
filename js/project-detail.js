@@ -64,6 +64,8 @@ function showLightboxImage(index) {
         imgEl.src = entry.src;
         imgEl.alt = entry.alt;
     }
+    const creditEl = document.getElementById('lightboxCredit');
+    if (creditEl) creditEl.textContent = entry.credit ? '© ' + entry.credit : '';
     const multi = lightboxImages.length > 1;
     const prevBtn = document.getElementById('lightboxPrev');
     const nextBtn = document.getElementById('lightboxNext');
@@ -113,6 +115,10 @@ function initLightbox() {
     });
 }
 
+function imageCreditOf(path) {
+    return typeof getImageCredit === 'function' ? getImageCredit(path) : null;
+}
+
 function renderProjectDetail(project) {
     const isEN = getLang() === 'EN';
     const title = (isEN && project.title_en) ? project.title_en : project.title;
@@ -139,8 +145,13 @@ function renderProjectDetail(project) {
         const headerSrc = PROJECT_DETAIL_BASE_PATH + project.image;
         headerImg.style.backgroundImage = "url('" + headerSrc + "')";
         headerImg.classList.add('is-clickable');
+        // Crédit de l'image d'en-tête (js/credits.js) : on remplace l'éventuel
+        // crédit précédent (re-rendu lors d'un changement de langue).
+        headerImg.querySelectorAll('.image-credit').forEach(function(el) { el.remove(); });
+        const headerCredit = typeof createCreditElement === 'function' ? createCreditElement(project.image) : null;
+        if (headerCredit) headerImg.appendChild(headerCredit);
         const headerImageIndex = lightboxImages.length;
-        lightboxImages.push({ src: headerSrc, alt: title || '' });
+        lightboxImages.push({ src: headerSrc, alt: title || '', credit: imageCreditOf(project.image) });
         headerImg.onclick = function() { openLightbox(headerImageIndex); };
     }
 
@@ -198,14 +209,21 @@ function renderProjectDetail(project) {
         images.forEach(function(src, index) {
             const fullSrc = PROJECT_DETAIL_BASE_PATH + src;
             const alt = (title || '') + ' – photo ' + (index + 1);
+            // Chaque photo est enveloppée dans un <figure> pour pouvoir
+            // superposer son crédit (« © Auteur ») en bas à droite.
+            const figure = document.createElement('figure');
+            figure.className = 'gallery-item';
             const img = document.createElement('img');
             img.src = fullSrc;
             img.alt = alt;
             img.loading = 'lazy';
             const galleryImageIndex = lightboxImages.length;
-            lightboxImages.push({ src: fullSrc, alt: alt });
+            lightboxImages.push({ src: fullSrc, alt: alt, credit: imageCreditOf(src) });
             img.addEventListener('click', function() { openLightbox(galleryImageIndex); });
-            galleryEl.appendChild(img);
+            figure.appendChild(img);
+            const credit = typeof createCreditElement === 'function' ? createCreditElement(src) : null;
+            if (credit) figure.appendChild(credit);
+            galleryEl.appendChild(figure);
         });
     }
 }
@@ -217,6 +235,7 @@ async function initProjectDetail() {
     try {
         const id = getProjectIdFromURL();
         await loadProjects(); // défini dans js/projects.js, remplit projectsData
+        if (typeof loadCredits === 'function') await loadCredits(); // js/credits.js
 
         const project = (projectsData && projectsData.projects)
             ? projectsData.projects.find(function(p) { return p.id === id; })

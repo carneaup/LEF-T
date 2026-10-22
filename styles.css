@@ -799,6 +799,11 @@ body.home-page .header .lang-current {
     cursor: pointer;
 }
 
+/* Le crédit (« © Auteur ») est positionné dans l'image d'en-tête. */
+.project-header-image {
+    position: relative;
+}
+
 .project-meta {
     display: flex;
     justify-content: space-between;
@@ -1013,6 +1018,84 @@ body.lightbox-open {
     .lightbox-next {
         right: 6px;
     }
+}
+
+/* ===== CRÉDITS IMAGES (« © Auteur ») =====
+   Ajoutés par js/credits.js à partir de data/credits.json, en bas à droite de
+   chaque image : en-tête et galerie des pages projet, vignettes de la
+   mosaïque, fond de la page d'accueil, et sous l'image dans la lightbox. */
+.image-credit {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    z-index: 2;
+    padding: 2px 6px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: var(--text-light);
+    font-size: 0.7rem;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.image-credit:empty {
+    display: none;
+}
+
+/* Vignettes de la mosaïque : en haut à droite, la légende du projet
+   occupant le bas de la vignette au survol. */
+.project-tile .image-credit {
+    top: 6px;
+    bottom: auto;
+}
+
+/* Galerie des pages projet : chaque photo est dans un <figure>. */
+.project-gallery-single .gallery-item {
+    position: relative;
+    margin: 0;
+}
+
+.project-gallery-single .gallery-item img {
+    display: block;
+}
+
+/* Page d'accueil : en bas à droite, au-dessus du voile dégradé. */
+.home-credit {
+    right: 16px;
+    bottom: 20px;
+    z-index: 10;
+    background: none;
+    font-size: 0.8rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .home-credit {
+        bottom: 90px;
+    }
+}
+
+.lightbox-credit {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    margin: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.credits-list {
+    padding-left: 1.2em;
+}
+
+.credits-list li {
+    margin-bottom: 4px;
 }
 
 /* ===== PAGE CONTACT ===== */

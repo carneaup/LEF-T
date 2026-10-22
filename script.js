@@ -26,7 +26,7 @@ async function setRandomBgImage() {
 
     await loadProjects();
     const featured = (projectsData && projectsData.projects)
-        ? projectsData.projects.filter(function(p) { return p.featured; })
+        ? projectsData.projects.filter(function(p) { return p.featured && !p.draft; })
         : [];
 
     if (!featured.length) return; // aucun projet marqué "featured" : on garde le fond par défaut du HTML
@@ -34,6 +34,14 @@ async function setRandomBgImage() {
     const chosen = featured[Math.floor(Math.random() * featured.length)];
     const src = chosen.heroImage || chosen.image;
     bgElement.style.backgroundImage = `url(${SCRIPT_BASE_PATH}${src}?${Date.now()})`;
+
+    // Crédit de l'image de fond (« © Auteur »), voir js/credits.js
+    const bgCredit = document.getElementById('bgCredit');
+    if (bgCredit && typeof loadCredits === 'function') {
+        await loadCredits();
+        const author = getImageCredit(src);
+        bgCredit.textContent = author ? '© ' + author : '';
+    }
     if (bgLink) bgLink.href = SCRIPT_BASE_PATH + 'projets/projet.html?id=' + encodeURIComponent(chosen.id);
 }
 

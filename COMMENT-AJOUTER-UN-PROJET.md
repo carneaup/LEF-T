@@ -49,7 +49,18 @@ traduction séparée à tenir à jour.
    - `gallery` peut être un tableau vide `[]` s'il n'y a pas de photo
      supplémentaire.
 
-4. C'est tout — le projet apparaît automatiquement dans la mosaïque, les
+4. **Créditer chaque image** dans `data/credits.json` (couverture ET photos
+   de galerie), avec son auteur :
+
+   ```json
+   "assets/images/mon-projet/cover.jpg": { "author": "Nom du photographe" },
+   "assets/images/mon-projet/01.jpg": { "author": "LEF-T" }
+   ```
+
+   Le site affiche alors « © Nom » sur l'image. Une image sans entrée
+   n'affiche aucun crédit : vérifier avec `python tools/check-credits.py`.
+
+5. C'est tout — le projet apparaît automatiquement dans la mosaïque, les
    filtres par catégorie et sur sa propre fiche (`projets/projet.html?id=mon-projet`).
 
 ## Mettre un projet en pause (à republier plus tard)

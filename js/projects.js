@@ -57,7 +57,9 @@ function generateProjectCard(project) {
         '<div class="project-tile-overlay">' +
         '<h3>' + title + '</h3>' +
         '<p>' + location + ' - ' + project.year + '</p>' +
-        '</div>';
+        '</div>' +
+        // Crédit de l'image (« © Auteur »), voir js/credits.js et data/credits.json
+        (typeof creditHTML === 'function' ? creditHTML(project.image) : '');
     const card = document.createElement('a');
     card.className = 'project-tile';
     card.href = url;
@@ -134,7 +136,11 @@ function initFilters() {
 }
 
 async function initProjects() {
-    await loadProjects();
+    // Les crédits images (js/credits.js) doivent être chargés avant le rendu.
+    await Promise.all([
+        loadProjects(),
+        typeof loadCredits === 'function' ? loadCredits() : Promise.resolve()
+    ]);
     if (projectsData) {
         refreshFilters();
         displayProjects('all');

@@ -54,6 +54,23 @@ Paul, c'est ce dossier qui est connecté.
 - Langue stockée dans `localStorage` sous la clé `lef-t-lang`, valeurs **`'FR'` ou `'EN'`
   en majuscules strictement** (un bug de casse a déjà été corrigé — à ne pas réintroduire).
 
+## Crédits images (règle de rigueur demandée par Paul)
+
+**Chaque image/photo/dessin affiché sur le site doit montrer son auteur.**
+- Registre unique : `data/credits.json` → `images["<chemin depuis la racine>"] = { "author": "..." }`
+  (option `label` / `label_en` pour une image hors projet, ex. photo d'équipe).
+- `js/credits.js` (chargé avant `js/projects.js`) affiche « © Auteur » en bas à droite
+  de chaque image : fond d'accueil, vignettes de la mosaïque (en haut à droite),
+  en-tête + galerie des pages projet, lightbox ; et génère la section
+  « Crédits photographiques » des mentions légales (`[data-credits-list]`).
+- Image sans entrée = **aucun crédit affiché** (on ne devine jamais un auteur) +
+  avertissement console. Contrôle : `python tools/check-credits.py` — à lancer avant
+  toute livraison ; ne pas livrer de nouvelle image sans crédit.
+- Format retenu : « © Auteur » (identique FR/EN). Logos (LEF-T, partenaires) non crédités.
+- État : images des projets vélo (G1, R2, Cargo) créditées « LEF-T ». Projets
+  bâtiment (patrimoniaux + brouillons garching/munich/poitiers/villejuif) en attente
+  des fiches projets mises à jour avec les auteurs.
+
 ## Taxonomie des catégories
 
 Catégories historiques (vélo/bureau) : `g1`, `r2`, `cargo`, `bureau`, `urbanisme`.
@@ -77,6 +94,8 @@ fonctionnement établi est :
 
 - Le site est en ligne depuis un moment, HTTPS + domaine personnalisé finalisés.
 - Projet `r2-cfd` (simulation CFD vélo) passé en `draft: true` à la demande de Paul.
+- Corrigé : le fond d'accueil excluait mal les projets `draft` (filtre `featured && !draft`
+  dans `script.js`).
 - 4 projets patrimoniaux LEICHT France ajoutés depuis une liste de 18 slides pptx
   fournie par Paul (`2025-01-16-fiche de projet Bois.pptx`) : Mémorial Alsace-Moselle,
   Siège social Swatch Group, Arboretum de Nanterre, Gymnase de Grassau — catégories
