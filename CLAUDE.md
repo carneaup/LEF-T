@@ -57,8 +57,9 @@ Paul, c'est ce dossier qui est connecté.
 - **Mosaïque** : ordre = ordre du tableau `projects` dans `projects.json` (volontairement
   mélangé pour alterner visuels vélo blancs et photos bâtiment ; garder ce principe en
   ajoutant un projet). Option `"tile": "large"` → tuile 2 × 2 (`grid-auto-flow: dense`) ;
-  actuellement Halle de Villeneuve et Cnam Intechmer (10 tuiles = grille pleine sur
-  4 colonnes). Tuiles toutes identiques sur mobile (1 colonne) et dans « Autres projets ».
+  actuellement Gymnase de Grassau et Mémorial Alsace-Moselle, choisis pour la définition
+  de leur photo (10 tuiles = grille pleine sur 4 colonnes). Réserver les grandes tuiles
+  aux photos ≥ 1200 px en carré. Tuiles toutes identiques sur mobile (1 colonne) et dans « Autres projets ».
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
   mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
   lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution
@@ -110,6 +111,7 @@ fonctionnement établi est :
 ## Historique récent / état actuel
 
 - Le site est en ligne depuis un moment, HTTPS + domaine personnalisé finalisés.
+- Accroche « Simple comme LEF-T. » retirée de l'accueil à la demande de Paul (oct. 2026).
 - Projet `r2-cfd` (simulation CFD vélo) passé en `draft: true` à la demande de Paul.
 - Corrigé : le fond d'accueil excluait mal les projets `draft` (filtre `featured && !draft`
   dans `script.js`).
