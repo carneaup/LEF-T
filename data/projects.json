@@ -246,7 +246,7 @@
       "title_en": "G1 Project - Modal Analysis",
       "image": "assets/images/g1-analyse-modale/cover.jpg",
       "category": "mobilite-douce",
-      "featured": true,
+      "featured": false,
       "year": "2025",
       "location": "Paris, France",
       "location_en": "Paris, France",
