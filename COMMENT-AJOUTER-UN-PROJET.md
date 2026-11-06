@@ -123,8 +123,10 @@ au lieu de planter.
   agréable.
 - Ajouter `"tile": "large"` à un projet affiche sa vignette en grand
   (2 × 2 tuiles). À réserver à 2 ou 3 projets avec une belle photo bien
-  définie. Astuce : sur 4 colonnes, la grille est pleine quand
-  (nombre de projets + 3 × nombre de grandes tuiles) est un multiple de 4.
+  définie. Astuce : la mosaïque affiche 8 colonnes sur grand écran, 6 sur
+  écran moyen, 4 sur tablette et 2 sur mobile. La grille est pleine partout
+  quand (nombre de projets + 3 × nombre de grandes tuiles) est un multiple
+  de 24 (sinon, viser au moins un multiple de 8 pour les grands écrans).
 
 ## Choisir les photos du fond d'écran de la page d'accueil
 

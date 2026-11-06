@@ -58,8 +58,13 @@ Paul, c'est ce dossier qui est connecté.
   mélangé pour alterner visuels vélo blancs et photos bâtiment ; garder ce principe en
   ajoutant un projet). Option `"tile": "large"` → tuile 2 × 2 (`grid-auto-flow: dense`) ;
   actuellement Gymnase de Grassau, Mémorial Alsace-Moselle et Station d'épuration de Wurtzbourg (nov. 2026), choisis pour la définition
-  de leur photo (10 tuiles = grille pleine sur 4 colonnes). Réserver les grandes tuiles
-  aux photos ≥ 1200 px en carré. Tuiles toutes identiques sur mobile (1 colonne) et dans « Autres projets ».
+  de leur photo. Réserver les grandes tuiles aux photos ≥ 1200 px en carré.
+  Colonnes (nov. 2026) : 8 au-delà de 1500 px de large, 6 jusqu'à 1500, 4 jusqu'à 1100,
+  2 sur mobile (≤ 760 px, les grandes tuiles y gardent leur 2 × 2 = pleine largeur).
+  Largeur de la mosaïque alignée sur l'en-tête (1400 px max, classe `page-projets` sur le
+  `<body>` de projets.html). Grille pleine partout quand (projets publiés avec photo +
+  3 × grandes tuiles) est un multiple de 24 (actuellement 15 + 3 × 3 = 24).
+  Tuiles toutes identiques dans « Autres projets ».
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
   mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
   lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution

@@ -451,12 +451,38 @@ body.home-page .header .lang-current {
     border-color: var(--accent-blue);
 }
 
-/* Mosaïque de projets */
+/* Mosaïque de projets
+   Aligné sur l'en-tête (logo et menu, 1400 px max) pour loger 8 tuiles
+   par ligne sur grand écran ; 6 sur écran moyen, 4 sur tablette, 2 sur mobile.
+   Grille pleine quand (nb de projets + 3 × nb de grandes tuiles) est un multiple
+   de 8 (donc aussi de 4 et 2) — et de 6 pour l'écran moyen. */
 .projects-mosaic {
+    --mosaic-width: min(1400px, calc(100vw - 80px));
+    width: var(--mosaic-width);
+    margin-left: calc(50% - var(--mosaic-width) / 2);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-auto-flow: dense; /* les petites tuiles comblent les trous laissés par les grandes */
-    gap: 8px;
+    gap: 6px;
+}
+
+/* Page Projets : titre, filtres et « Autres références » alignés sur la mosaïque. */
+.page-projets .lang-block .page-header,
+.page-projets .lang-block .projects-filters,
+.page-projets .lang-block .projects-references {
+    --mosaic-width: min(1400px, calc(100vw - 80px));
+    max-width: none;
+    width: var(--mosaic-width);
+    margin-left: calc(50% - var(--mosaic-width) / 2);
+    padding: 0;
+}
+
+@media (max-width: 760px) {
+    .page-projets .lang-block .page-header,
+    .page-projets .lang-block .projects-filters,
+    .page-projets .lang-block .projects-references {
+        --mosaic-width: calc(100vw - 32px);
+    }
 }
 
 /* Tuile double ("tile": "large" dans projects.json) : 2 colonnes × 2 rangées. */
@@ -535,27 +561,32 @@ body.home-page .header .lang-current {
     opacity: 0.9;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
     .projects-mosaic {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     .projects-mosaic {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    .projects-mosaic {
+        --mosaic-width: calc(100vw - 32px);
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .projects-mosaic {
-        grid-template-columns: 1fr;
+        gap: 4px;
     }
 
-    /* Une seule colonne : toutes les tuiles ont la même taille. */
-    .projects-mosaic .project-tile--large {
-        grid-column: auto;
-        grid-row: auto;
+    /* Petites tuiles sur 2 colonnes : légende réduite au titre. */
+    .projects-mosaic .project-tile:not(.project-tile--large) h3 {
+        font-size: 0.85rem;
+    }
+
+    .projects-mosaic .project-tile:not(.project-tile--large) p {
+        display: none;
     }
 }
 
@@ -1224,6 +1255,12 @@ body.lightbox-open {
 .project-tile .image-credit {
     top: 6px;
     bottom: auto;
+    /* Crédits longs (plusieurs auteurs) : retour à la ligne plutôt que coupés
+       par les petites tuiles de la mosaïque. */
+    max-width: calc(100% - 12px);
+    white-space: normal;
+    text-align: right;
+    font-size: 0.65rem;
 }
 
 /* Page d'accueil : en bas à droite, au-dessus du voile dégradé. */
@@ -1490,7 +1527,6 @@ body.lightbox-open {
 .lang-block .project-header,
 .lang-block .project-description,
 .lang-block .projects-filters,
-.lang-block .projects-mosaic,
 .lang-block .projects-references,
 .lang-block .tools-section {
     margin-left: auto;
