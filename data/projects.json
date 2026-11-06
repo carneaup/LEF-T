@@ -82,6 +82,38 @@
       }
     },
     {
+      "id": "gare-de-rennes",
+      "title": "Gare de Rennes",
+      "title_en": "Rennes railway station",
+      "image": "assets/images/gare-de-rennes/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2020",
+      "location": "Rennes, France",
+      "location_en": "Rennes, France",
+      "description": [
+        "Restructuration de la gare de Rennes en pôle d'échanges multimodal majeur, sous une couverture innovante en coussins ETFE.",
+        "Pour le compte des entreprises Gagne et Taiyo, nous avons réalisé les plans d'exécution et de fabrication de la charpente acier et des coussins ETFE de l'ensemble de la couverture."
+      ],
+      "description_en": [
+        "Redevelopment of Rennes station into a major multimodal transport hub, beneath an innovative ETFE cushion roof.",
+        "On behalf of the contractors Gagne and Taiyo, we produced the execution and fabrication drawings for the steel structure and ETFE cushions of the entire roof."
+      ],
+      "gallery": [
+        "assets/images/gare-de-rennes/01.jpg",
+        "assets/images/gare-de-rennes/02.jpg",
+        "assets/images/gare-de-rennes/03.jpg",
+        "assets/images/gare-de-rennes/04.jpg",
+        "assets/images/gare-de-rennes/05.jpg",
+        "assets/images/gare-de-rennes/06.jpg"
+      ],
+      "facts": {
+        "client": "SNCF Gares & Connexions",
+        "architect": "AREP",
+        "surface": "3 000 m²"
+      }
+    },
+    {
       "id": "halle-villeneuve-la-garenne",
       "title": "Halle de marché de Villeneuve-la-Garenne",
       "title_en": "Villeneuve-la-Garenne Market Hall",
@@ -171,6 +203,41 @@
       }
     },
     {
+      "id": "tour-saint-gobain",
+      "title": "Tour Saint-Gobain, La Défense",
+      "title_en": "Saint-Gobain Tower, La Défense",
+      "image": "assets/images/tour-saint-gobain/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2019",
+      "location": "La Défense, France",
+      "location_en": "La Défense, France",
+      "description": [
+        "Nouveau siège social du groupe Saint-Gobain à La Défense : une tour de 44 niveaux comptant 1 100 m² de balcons et de terrasses végétalisés.",
+        "Nous avons réalisé la reprise de conception, les études d'exécution ainsi que les plans d'exécution et de fabrication de la coiffe de la tour, en charpente acier et verre extérieur attaché (5 400 m² de façade)."
+      ],
+      "description_en": [
+        "New headquarters of the Saint-Gobain group at La Défense: a 44-storey tower with 1,100 m² of planted balconies and terraces.",
+        "We carried out the design review, the execution studies and the execution and fabrication drawings for the tower's crown, in steel and point-fixed glazing (5,400 m² of facade)."
+      ],
+      "gallery": [
+        "assets/images/tour-saint-gobain/01.jpg",
+        "assets/images/tour-saint-gobain/02.jpg",
+        "assets/images/tour-saint-gobain/03.jpg",
+        "assets/images/tour-saint-gobain/04.jpg",
+        "assets/images/tour-saint-gobain/05.jpg",
+        "assets/images/tour-saint-gobain/06.jpg"
+      ],
+      "facts": {
+        "client": "Generali / Saint-Gobain",
+        "architect": "Valode & Pistre",
+        "surface": "48 900 m² (44 étages)"
+      },
+      "facts_en": {
+        "surface": "48 900 m² (44 storeys)"
+      }
+    },
+    {
       "id": "swatch-group-bienne",
       "title": "Siège social Swatch Group",
       "title_en": "Swatch Group Headquarters",
@@ -241,6 +308,72 @@
       }
     },
     {
+      "id": "step-wurtzbourg",
+      "title": "Station d'épuration, Wurtzbourg",
+      "title_en": "Wastewater treatment plant, Würzburg",
+      "image": "assets/images/step-wurtzbourg/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2019",
+      "location": "Wurtzbourg, Allemagne",
+      "location_en": "Würzburg, Germany",
+      "description": [
+        "Construction d'une station de traitement des eaux usées à Wurtzbourg, comprenant deux digesteurs et des bureaux.",
+        "Nous avons étudié les enveloppes en membrane PVC surpressée des deux digesteurs, soit 4 000 m² de membrane."
+      ],
+      "description_en": [
+        "Construction of a wastewater treatment plant in Würzburg, including two digesters and offices.",
+        "We designed the air-supported PVC membrane envelopes of the two digesters — 4,000 m² of membrane in total."
+      ],
+      "gallery": [
+        "assets/images/step-wurtzbourg/01.jpg",
+        "assets/images/step-wurtzbourg/02.jpg",
+        "assets/images/step-wurtzbourg/03.jpg",
+        "assets/images/step-wurtzbourg/04.jpg",
+        "assets/images/step-wurtzbourg/05.jpg"
+      ],
+      "facts": {
+        "client": "Ville de Wurtzbourg",
+        "architect": "Auer + Weber + Assoziierte",
+        "surface": "4 000 m² de membrane"
+      },
+      "facts_en": {
+        "client": "City of Würzburg",
+        "surface": "4 000 m² of membrane"
+      },
+      "tile": "large"
+    },
+    {
+      "id": "garching",
+      "title": "Toit du bâtiment de recherche Newton, Garching",
+      "title_en": "Newton research building roof, Garching",
+      "image": "assets/images/garching/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2022",
+      "location": "Garching, Allemagne",
+      "location_en": "Garching, Germany",
+      "description": [
+        "Rénovation de la toiture du bâtiment de recherche « Newton » à Garching, dans la banlieue de Munich.",
+        "Nous avons assuré la conception et les études de la nouvelle toiture en coussins ETFE."
+      ],
+      "description_en": [
+        "Renovation of the roof of the « Newton » research building in Garching, near Munich.",
+        "We carried out the design and engineering of the new ETFE cushion roof."
+      ],
+      "gallery": [
+        "assets/images/garching/01.jpg",
+        "assets/images/garching/02.jpg"
+      ],
+      "facts": {
+        "client": "Adldinger (investisseur)",
+        "surface": "9 380 m²"
+      },
+      "facts_en": {
+        "client": "Adldinger (investor)"
+      }
+    },
+    {
       "id": "g1-analyse-modale",
       "title": "Projet G1 - Analyse Modale",
       "title_en": "G1 Project - Modal Analysis",
@@ -294,6 +427,34 @@
       }
     },
     {
+      "id": "fachhochschule-rosenheim",
+      "title": "Fachhochschule, Rosenheim",
+      "title_en": "University of Applied Sciences, Rosenheim",
+      "image": "assets/images/fachhochschule-rosenheim/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2021",
+      "location": "Rosenheim, Allemagne",
+      "location_en": "Rosenheim, Germany",
+      "description": [
+        "Rénovation d'un établissement d'enseignement supérieur construit en 1988 à Rosenheim.",
+        "Nous avons analysé et diagnostiqué la structure — charpente bois, dalles en béton léger et toiture-terrasse —, conçu au cas par cas les reprises et renforts des zones endommagées et planifié les travaux selon leur degré d'urgence. Nous avons également analysé les désordres d'étanchéité et leurs causes, et conçu un nouveau système de toiture garantissant la pérennité de l'ouvrage."
+      ],
+      "description_en": [
+        "Renovation of a higher-education building in Rosenheim, built in 1988.",
+        "We analysed and assessed the structure — timber frame, lightweight-concrete slabs and flat roof — designed case-by-case repairs and reinforcements for the damaged areas, and scheduled the works according to their urgency. We also analysed the waterproofing failures and their causes, and designed a new roofing system to ensure the building's durability."
+      ],
+      "gallery": [
+        "assets/images/fachhochschule-rosenheim/01.jpg",
+        "assets/images/fachhochschule-rosenheim/02.jpg"
+      ],
+      "facts": {
+        "client": "Staatliches Bauamt Rosenheim",
+        "architect": "Leyck-Hugle-Kendlbacher Architekten",
+        "surface": "2 850 m²"
+      }
+    },
+    {
       "id": "r2-cfd",
       "title": "Simulation CFD - Vélo R2",
       "title_en": "CFD Simulation - R2 Road Bike",
@@ -320,37 +481,6 @@
         "assets/images/r2-cfd/06.jpg",
         "assets/images/r2-cfd/07.jpg"
       ],
-      "draft": true
-    },
-    {
-      "id": "garching",
-      "title": "Toit du bâtiment de recherche Newton, Garching",
-      "title_en": "Newton research building roof, Garching",
-      "image": "assets/images/garching/cover.jpg",
-      "category": "membrane",
-      "featured": false,
-      "year": "2022",
-      "location": "Garching, Allemagne",
-      "location_en": "Garching, Germany",
-      "description": [
-        "Rénovation de la toiture du bâtiment de recherche « Newton » à Garching, dans la banlieue de Munich.",
-        "Nous avons assuré la conception et les études de la nouvelle toiture en coussins ETFE."
-      ],
-      "description_en": [
-        "Renovation of the roof of the « Newton » research building in Garching, near Munich.",
-        "We carried out the design and engineering of the new ETFE cushion roof."
-      ],
-      "gallery": [
-        "assets/images/garching/01.jpg",
-        "assets/images/garching/02.jpg"
-      ],
-      "facts": {
-        "client": "Adldinger (investisseur)",
-        "surface": "9 380 m²"
-      },
-      "facts_en": {
-        "client": "Adldinger (investor)"
-      },
       "draft": true
     },
     {
@@ -569,68 +699,6 @@
       "draft": true
     },
     {
-      "id": "fachhochschule-rosenheim",
-      "title": "Fachhochschule, Rosenheim",
-      "title_en": "University of Applied Sciences, Rosenheim",
-      "image": "assets/images/fachhochschule-rosenheim/cover.jpg",
-      "category": "structure",
-      "featured": false,
-      "year": "2021",
-      "location": "Rosenheim, Allemagne",
-      "location_en": "Rosenheim, Germany",
-      "description": [
-        "Rénovation d'un établissement d'enseignement supérieur construit en 1988 à Rosenheim.",
-        "Nous avons analysé et diagnostiqué la structure — charpente bois, dalles en béton léger et toiture-terrasse —, conçu au cas par cas les reprises et renforts des zones endommagées et planifié les travaux selon leur degré d'urgence. Nous avons également analysé les désordres d'étanchéité et leurs causes, et conçu un nouveau système de toiture garantissant la pérennité de l'ouvrage."
-      ],
-      "description_en": [
-        "Renovation of a higher-education building in Rosenheim, built in 1988.",
-        "We analysed and assessed the structure — timber frame, lightweight-concrete slabs and flat roof — designed case-by-case repairs and reinforcements for the damaged areas, and scheduled the works according to their urgency. We also analysed the waterproofing failures and their causes, and designed a new roofing system to ensure the building's durability."
-      ],
-      "gallery": [
-        "assets/images/fachhochschule-rosenheim/01.jpg",
-        "assets/images/fachhochschule-rosenheim/02.jpg"
-      ],
-      "facts": {
-        "client": "Staatliches Bauamt Rosenheim",
-        "architect": "Leyck-Hugle-Kendlbacher Architekten",
-        "surface": "2 850 m²"
-      },
-      "draft": true
-    },
-    {
-      "id": "gare-de-rennes",
-      "title": "Gare de Rennes",
-      "title_en": "Rennes railway station",
-      "image": "assets/images/gare-de-rennes/cover.jpg",
-      "category": "membrane",
-      "featured": false,
-      "year": "2020",
-      "location": "Rennes, France",
-      "location_en": "Rennes, France",
-      "description": [
-        "Restructuration de la gare de Rennes en pôle d'échanges multimodal majeur, sous une couverture innovante en coussins ETFE.",
-        "Pour le compte des entreprises Gagne et Taiyo, nous avons réalisé les plans d'exécution et de fabrication de la charpente acier et des coussins ETFE de l'ensemble de la couverture."
-      ],
-      "description_en": [
-        "Redevelopment of Rennes station into a major multimodal transport hub, beneath an innovative ETFE cushion roof.",
-        "On behalf of the contractors Gagne and Taiyo, we produced the execution and fabrication drawings for the steel structure and ETFE cushions of the entire roof."
-      ],
-      "gallery": [
-        "assets/images/gare-de-rennes/01.jpg",
-        "assets/images/gare-de-rennes/02.jpg",
-        "assets/images/gare-de-rennes/03.jpg",
-        "assets/images/gare-de-rennes/04.jpg",
-        "assets/images/gare-de-rennes/05.jpg",
-        "assets/images/gare-de-rennes/06.jpg"
-      ],
-      "facts": {
-        "client": "SNCF Gares & Connexions",
-        "architect": "AREP",
-        "surface": "3 000 m²"
-      },
-      "draft": true
-    },
-    {
       "id": "diamaltpark-munich",
       "title": "Diamaltpark, Munich",
       "title_en": "Diamaltpark, Munich",
@@ -685,78 +753,6 @@
         "client": "SNCF",
         "architect": "TITAN",
         "surface": "800 m²"
-      },
-      "draft": true
-    },
-    {
-      "id": "tour-saint-gobain",
-      "title": "Tour Saint-Gobain, La Défense",
-      "title_en": "Saint-Gobain Tower, La Défense",
-      "image": "assets/images/tour-saint-gobain/cover.jpg",
-      "category": "facade",
-      "featured": false,
-      "year": "2019",
-      "location": "La Défense, France",
-      "location_en": "La Défense, France",
-      "description": [
-        "Nouveau siège social du groupe Saint-Gobain à La Défense : une tour de 44 niveaux comptant 1 100 m² de balcons et de terrasses végétalisés.",
-        "Nous avons réalisé la reprise de conception, les études d'exécution ainsi que les plans d'exécution et de fabrication de la coiffe de la tour, en charpente acier et verre extérieur attaché (5 400 m² de façade)."
-      ],
-      "description_en": [
-        "New headquarters of the Saint-Gobain group at La Défense: a 44-storey tower with 1,100 m² of planted balconies and terraces.",
-        "We carried out the design review, the execution studies and the execution and fabrication drawings for the tower's crown, in steel and point-fixed glazing (5,400 m² of facade)."
-      ],
-      "gallery": [
-        "assets/images/tour-saint-gobain/01.jpg",
-        "assets/images/tour-saint-gobain/02.jpg",
-        "assets/images/tour-saint-gobain/03.jpg",
-        "assets/images/tour-saint-gobain/04.jpg",
-        "assets/images/tour-saint-gobain/05.jpg",
-        "assets/images/tour-saint-gobain/06.jpg"
-      ],
-      "facts": {
-        "client": "Generali / Saint-Gobain",
-        "architect": "Valode & Pistre",
-        "surface": "48 900 m² (44 étages)"
-      },
-      "facts_en": {
-        "surface": "48 900 m² (44 storeys)"
-      },
-      "draft": true
-    },
-    {
-      "id": "step-wurtzbourg",
-      "title": "Station d'épuration, Wurtzbourg",
-      "title_en": "Wastewater treatment plant, Würzburg",
-      "image": "assets/images/step-wurtzbourg/cover.jpg",
-      "category": "membrane",
-      "featured": false,
-      "year": "2019",
-      "location": "Wurtzbourg, Allemagne",
-      "location_en": "Würzburg, Germany",
-      "description": [
-        "Construction d'une station de traitement des eaux usées à Wurtzbourg, comprenant deux digesteurs et des bureaux.",
-        "Nous avons étudié les enveloppes en membrane PVC surpressée des deux digesteurs, soit 4 000 m² de membrane."
-      ],
-      "description_en": [
-        "Construction of a wastewater treatment plant in Würzburg, including two digesters and offices.",
-        "We designed the air-supported PVC membrane envelopes of the two digesters — 4,000 m² of membrane in total."
-      ],
-      "gallery": [
-        "assets/images/step-wurtzbourg/01.jpg",
-        "assets/images/step-wurtzbourg/02.jpg",
-        "assets/images/step-wurtzbourg/03.jpg",
-        "assets/images/step-wurtzbourg/04.jpg",
-        "assets/images/step-wurtzbourg/05.jpg"
-      ],
-      "facts": {
-        "client": "Ville de Wurtzbourg",
-        "architect": "Auer + Weber + Assoziierte",
-        "surface": "4 000 m² de membrane"
-      },
-      "facts_en": {
-        "client": "City of Würzburg",
-        "surface": "4 000 m² of membrane"
       },
       "draft": true
     },

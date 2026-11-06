@@ -57,7 +57,7 @@ Paul, c'est ce dossier qui est connecté.
 - **Mosaïque** : ordre = ordre du tableau `projects` dans `projects.json` (volontairement
   mélangé pour alterner visuels vélo blancs et photos bâtiment ; garder ce principe en
   ajoutant un projet). Option `"tile": "large"` → tuile 2 × 2 (`grid-auto-flow: dense`) ;
-  actuellement Gymnase de Grassau et Mémorial Alsace-Moselle, choisis pour la définition
+  actuellement Gymnase de Grassau, Mémorial Alsace-Moselle et Station d'épuration de Wurtzbourg (nov. 2026), choisis pour la définition
   de leur photo (10 tuiles = grille pleine sur 4 colonnes). Réserver les grandes tuiles
   aux photos ≥ 1200 px en carré. Tuiles toutes identiques sur mobile (1 colonne) et dans « Autres projets ».
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
@@ -136,6 +136,9 @@ fonctionnement établi est :
   (bâtiment Newton, toit ETFE) — pas de crédit photo sur l'ancien site. `augustenstrasse-munich`
   sans description sur l'ancien site. `bastide-niel-bordeaux` encore « En cours » (date 2020).
   Catégories utilisées : membrane, bois, structure, facade.
+  Publiés ensuite à la demande de Paul : gare-de-rennes, fachhochschule-rosenheim,
+  tour-saint-gobain, step-wurtzbourg (tuile large), garching — intercalés dans la mosaïque
+  (15 projets + 3 grandes tuiles = 24 cases, grille pleine).
 - **Reste à faire, si Paul le demande** : 14 autres projets de ce même pptx n'ont pas
   encore été sélectionnés/ajoutés. Ne pas les ajouter sans qu'il les ait explicitement
   choisis.
