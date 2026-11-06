@@ -181,15 +181,19 @@
       "location": "Bienne, Suisse",
       "location_en": "Biel/Bienne, Switzerland",
       "description": [
-        "La façade du siège social du groupe Swatch se présente comme une coque de forme libre composée de multiples éléments en verre, en ETFE, en polycarbonate et en bois. La complexité du projet résidait dans l'intégration, au sein de cette forme libre à double courbure, d'éléments quadrangulaires.",
-        "Nous avons réalisé l'ensemble de la conception et des calculs de la façade : panneaux de verre en triple vitrage courbés à froid, coussins en ETFE, polycarbonate et panneaux de bois, ainsi que les études d'exécution et de fabrication des coussins ETFE."
+        "La façade du siège du groupe Swatch se présente comme une coque de forme libre composée de multiples éléments en verre, en ETFE, en polycarbonate et en bois. Toute la complexité du projet consistait à intégrer des éléments d'enveloppe quadrangulaires dans cette forme libre à double courbure.",
+        "Nous avons réalisé l'ensemble de la conception et des calculs de la façade : panneaux de verre en triple vitrage à face extérieure courbée à froid, coussins ETFE et polycarbonate, panneaux de bois. Portée par un gridshell en bois, cette enveloppe intègre dans son épaisseur tous les équipements de gestion de la lumière et de la chaleur. Nous avons également mené les études d'exécution et de fabrication des coussins ETFE."
       ],
       "description_en": [
-        "The facade of the Swatch Group headquarters takes the form of a free-form shell made up of multiple glass, ETFE, polycarbonate and timber elements. The project's complexity lay in integrating quadrangular envelope elements within this doubly-curved free form.",
-        "We carried out the full design and engineering of the facade: cold-bent triple-glazed glass panels, ETFE and polycarbonate cushions and timber panels, along with the execution and fabrication studies for the ETFE cushions."
+        "The facade of the Swatch Group headquarters is a free-form shell made up of multiple glass, ETFE, polycarbonate and timber elements. The challenge lay in fitting quadrangular envelope elements into this doubly-curved free form.",
+        "We carried out the full design and engineering of the facade: triple-glazed panels with a cold-bent outer pane, ETFE and polycarbonate cushions, and timber panels. Carried by a timber gridshell, the envelope integrates all light- and heat-management equipment within its depth. We also carried out the execution and fabrication studies for the ETFE cushions."
       ],
       "gallery": [
-        "assets/images/swatch-group-bienne/01.jpg"
+        "assets/images/swatch-group-bienne/01.jpg",
+        "assets/images/swatch-group-bienne/02.jpg",
+        "assets/images/swatch-group-bienne/03.jpg",
+        "assets/images/swatch-group-bienne/04.jpg",
+        "assets/images/swatch-group-bienne/05.jpg"
       ],
       "facts": {
         "address": "Rue Nicolas G. Hayek, 2502 Bienne, Suisse",
@@ -320,21 +324,33 @@
     },
     {
       "id": "garching",
-      "title": "Projet Garching",
-      "title_en": "Garching Project",
+      "title": "Toit du bâtiment de recherche Newton, Garching",
+      "title_en": "Newton research building roof, Garching",
       "image": "assets/images/garching/cover.jpg",
-      "category": "bureau",
+      "category": "membrane",
       "featured": false,
-      "year": "2023",
+      "year": "2022",
       "location": "Garching, Allemagne",
       "location_en": "Garching, Germany",
       "description": [
-        "Projet de structure ETFE pour le campus de Garching. Coussins gonflables pour une façade innovante."
+        "Rénovation de la toiture du bâtiment de recherche « Newton » à Garching, dans la banlieue de Munich.",
+        "Nous avons assuré la conception et les études de la nouvelle toiture en coussins ETFE."
       ],
       "description_en": [
-        "ETFE structure project for the Garching campus. Inflatable cushions for an innovative facade."
+        "Renovation of the roof of the « Newton » research building in Garching, near Munich.",
+        "We carried out the design and engineering of the new ETFE cushion roof."
       ],
-      "gallery": [],
+      "gallery": [
+        "assets/images/garching/01.jpg",
+        "assets/images/garching/02.jpg"
+      ],
+      "facts": {
+        "client": "Adldinger (investisseur)",
+        "surface": "9 380 m²"
+      },
+      "facts_en": {
+        "client": "Adldinger (investor)"
+      },
       "draft": true
     },
     {
@@ -392,6 +408,951 @@
         "ETFE cover project for the city of Villejuif. Lightweight and innovative structure."
       ],
       "gallery": [],
+      "draft": true
+    },
+    {
+      "id": "pressoir-crouttes-sur-marne",
+      "title": "Pressoir Bourgeois-Diaz, Crouttes-sur-Marne",
+      "title_en": "Bourgeois-Diaz wine press, Crouttes-sur-Marne",
+      "image": "assets/images/pressoir-crouttes-sur-marne/cover.jpg",
+      "category": "bois",
+      "featured": false,
+      "year": "2022",
+      "location": "Crouttes-sur-Marne, France",
+      "location_en": "Crouttes-sur-Marne, France",
+      "description": [
+        "Création d'un nouveau pressoir et d'un showroom en structure bois pour Bourgeois-Diaz, producteur de champagne en biodynamie. La toiture déborde de 5 m en porte-à-faux sur les 33 m de façade.",
+        "Pour le compte du charpentier HFCB, et en partenariat avec Z'eebb, nous avons réalisé l'ingénierie de la charpente bois."
+      ],
+      "description_en": [
+        "A new wine press and showroom with a timber structure for Bourgeois-Diaz, a biodynamic champagne producer. The roof cantilevers 5 m beyond the 33 m facade.",
+        "On behalf of the carpentry contractor HFCB, and in partnership with Z'eebb, we carried out the structural engineering of the timber frame."
+      ],
+      "gallery": [
+        "assets/images/pressoir-crouttes-sur-marne/01.jpg",
+        "assets/images/pressoir-crouttes-sur-marne/02.jpg",
+        "assets/images/pressoir-crouttes-sur-marne/03.jpg"
+      ],
+      "facts": {
+        "client": "Bourgeois-Diaz",
+        "architect": "Thierry Bonne, Château-Thierry",
+        "surface": "450 m² environ"
+      },
+      "facts_en": {
+        "surface": "approx. 450 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "halles-saint-nazaire",
+      "title": "Halles centrales, Saint-Nazaire",
+      "title_en": "Central market hall, Saint-Nazaire",
+      "image": "assets/images/halles-saint-nazaire/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2022",
+      "location": "Saint-Nazaire, France",
+      "location_en": "Saint-Nazaire, France",
+      "description": [
+        "Érigées pendant la Reconstruction et labellisées Patrimoine du XXe siècle, les halles de Saint-Nazaire font l'objet d'une rénovation qui met à nu leur squelette de béton : les voiles conoïdes en béton armé s'accompagnent de grandes surfaces vitrées, plus lumineuses, tout en préservant le caractère du bâtiment.",
+        "Nous avons réalisé le diagnostic de la structure en coques béton des années 1960 et accompagné la maîtrise d'œuvre dans les travaux de rénovation et de réaménagement du marché couvert."
+      ],
+      "description_en": [
+        "Built during the post-war Reconstruction and listed as 20th-century heritage, the Saint-Nazaire market halls are being renovated to reveal their concrete skeleton: the reinforced-concrete conoid shells are paired with large glazed surfaces that bring in more light while preserving the building's character.",
+        "We carried out the structural assessment of the 1960s concrete shells and advised the design team on the renovation and refurbishment of the covered market."
+      ],
+      "gallery": [
+        "assets/images/halles-saint-nazaire/01.jpg",
+        "assets/images/halles-saint-nazaire/02.jpg"
+      ],
+      "facts": {
+        "client": "Ville de Saint-Nazaire",
+        "architect": "Atelier Ferret Architectures",
+        "surface": "4 500 m²"
+      },
+      "facts_en": {
+        "client": "City of Saint-Nazaire"
+      },
+      "draft": true
+    },
+    {
+      "id": "bastide-niel-bordeaux",
+      "title": "ZAC Bastide Niel, îlot B138-2, Bordeaux",
+      "title_en": "Bastide Niel, block B138-2, Bordeaux",
+      "image": "assets/images/bastide-niel-bordeaux/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "En cours",
+      "year_en": "Ongoing",
+      "location": "Bordeaux, France",
+      "location_en": "Bordeaux, France",
+      "description": [
+        "Dans le cadre du réaménagement de la ZAC Bastide Niel, l'îlot B138-2 accueille près de 70 logements dans un volume complexe, sur un terrain argileux.",
+        "Nous avons assuré la conception des structures : fondations spéciales, béton, maçonnerie et charpentes bois des pans inclinés."
+      ],
+      "description_en": [
+        "As part of the redevelopment of the Bastide Niel district, block B138-2 houses nearly 70 homes within a complex volume, on clay soil.",
+        "We were responsible for the structural design: special foundations, concrete, masonry and the timber framing of the sloping roofs."
+      ],
+      "gallery": [
+        "assets/images/bastide-niel-bordeaux/01.jpg",
+        "assets/images/bastide-niel-bordeaux/02.jpg"
+      ],
+      "facts": {
+        "client": "Domofrance",
+        "architect": "Atelier Ferret Architectures",
+        "surface": "5 100 m² SDP"
+      },
+      "facts_en": {
+        "surface": "5 100 m² floor area"
+      },
+      "draft": true
+    },
+    {
+      "id": "piscine-saint-meen-le-grand",
+      "title": "Piscine communautaire, Saint-Méen-le-Grand",
+      "title_en": "Community swimming pool, Saint-Méen-le-Grand",
+      "image": "assets/images/piscine-saint-meen-le-grand/cover.jpg",
+      "category": "bois",
+      "featured": false,
+      "year": "2022",
+      "location": "Saint-Méen-le-Grand, France",
+      "location_en": "Saint-Méen-le-Grand, France",
+      "description": [
+        "Rénovation et extension d'une piscine existante, avec l'ajout d'un bassin de 25 m sous une couverture en ardoise portée par une structure bois.",
+        "Nous avons assuré une mission complète de maîtrise d'œuvre sur la structure bois et les fondations."
+      ],
+      "description_en": [
+        "Renovation and extension of an existing swimming pool, adding a 25 m pool under a slate roof carried by a timber structure.",
+        "We provided full design and site supervision services for the timber structure and the foundations."
+      ],
+      "gallery": [
+        "assets/images/piscine-saint-meen-le-grand/01.jpg"
+      ],
+      "facts": {
+        "client": "Communauté de communes de Saint-Méen Montauban",
+        "architect": "RAUM",
+        "surface": "590 m² (existant) + 570 m² (extension)"
+      },
+      "facts_en": {
+        "surface": "590 m² (existing) + 570 m² (extension)"
+      },
+      "draft": true
+    },
+    {
+      "id": "balcons-en-foret-saint-herblain",
+      "title": "Balcons en forêt, Saint-Herblain",
+      "title_en": "Balcons en forêt, Saint-Herblain",
+      "image": "assets/images/balcons-en-foret-saint-herblain/cover.jpg",
+      "category": "bois",
+      "featured": false,
+      "year": "2021",
+      "location": "Saint-Herblain, France",
+      "location_en": "Saint-Herblain, France",
+      "description": [
+        "Ensemble de 47 logements répartis en deux immeubles de 7 et 9 étages, en structure bois avec noyau béton et façades bois, dotés de larges balcons suspendus conçus selon la méthode de co-conception HOME. Le projet est lauréat, avec le Grand Prix du jury, du concours national PUCA / ADIVbois « Immeubles à vivre bois ».",
+        "Nous avons réalisé les détails d'assemblage de la structure bois et conçu l'ensemble de la structure des balcons suspendus, dont nous avons ensuite mené les études d'exécution."
+      ],
+      "description_en": [
+        "A 47-home development in two 7- and 9-storey buildings, with a timber structure around a concrete core, timber facades and generous suspended balconies developed through the HOME co-design method. The project won the jury's Grand Prize in the national PUCA / ADIVbois competition for timber residential high-rises.",
+        "We developed the connection details of the timber structure and designed the entire suspended-balcony structure, for which we then carried out the execution studies."
+      ],
+      "gallery": [
+        "assets/images/balcons-en-foret-saint-herblain/01.jpg",
+        "assets/images/balcons-en-foret-saint-herblain/02.jpg"
+      ],
+      "facts": {
+        "client": "Galéo",
+        "architect": "Atelier Pascal Gontier, SATHY",
+        "surface": "3 160 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "fachhochschule-rosenheim",
+      "title": "Fachhochschule, Rosenheim",
+      "title_en": "University of Applied Sciences, Rosenheim",
+      "image": "assets/images/fachhochschule-rosenheim/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2021",
+      "location": "Rosenheim, Allemagne",
+      "location_en": "Rosenheim, Germany",
+      "description": [
+        "Rénovation d'un établissement d'enseignement supérieur construit en 1988 à Rosenheim.",
+        "Nous avons analysé et diagnostiqué la structure — charpente bois, dalles en béton léger et toiture-terrasse —, conçu au cas par cas les reprises et renforts des zones endommagées et planifié les travaux selon leur degré d'urgence. Nous avons également analysé les désordres d'étanchéité et leurs causes, et conçu un nouveau système de toiture garantissant la pérennité de l'ouvrage."
+      ],
+      "description_en": [
+        "Renovation of a higher-education building in Rosenheim, built in 1988.",
+        "We analysed and assessed the structure — timber frame, lightweight-concrete slabs and flat roof — designed case-by-case repairs and reinforcements for the damaged areas, and scheduled the works according to their urgency. We also analysed the waterproofing failures and their causes, and designed a new roofing system to ensure the building's durability."
+      ],
+      "gallery": [
+        "assets/images/fachhochschule-rosenheim/01.jpg",
+        "assets/images/fachhochschule-rosenheim/02.jpg"
+      ],
+      "facts": {
+        "client": "Staatliches Bauamt Rosenheim",
+        "architect": "Leyck-Hugle-Kendlbacher Architekten",
+        "surface": "2 850 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "gare-de-rennes",
+      "title": "Gare de Rennes",
+      "title_en": "Rennes railway station",
+      "image": "assets/images/gare-de-rennes/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2020",
+      "location": "Rennes, France",
+      "location_en": "Rennes, France",
+      "description": [
+        "Restructuration de la gare de Rennes en pôle d'échanges multimodal majeur, sous une couverture innovante en coussins ETFE.",
+        "Pour le compte des entreprises Gagne et Taiyo, nous avons réalisé les plans d'exécution et de fabrication de la charpente acier et des coussins ETFE de l'ensemble de la couverture."
+      ],
+      "description_en": [
+        "Redevelopment of Rennes station into a major multimodal transport hub, beneath an innovative ETFE cushion roof.",
+        "On behalf of the contractors Gagne and Taiyo, we produced the execution and fabrication drawings for the steel structure and ETFE cushions of the entire roof."
+      ],
+      "gallery": [
+        "assets/images/gare-de-rennes/01.jpg",
+        "assets/images/gare-de-rennes/02.jpg",
+        "assets/images/gare-de-rennes/03.jpg",
+        "assets/images/gare-de-rennes/04.jpg",
+        "assets/images/gare-de-rennes/05.jpg",
+        "assets/images/gare-de-rennes/06.jpg"
+      ],
+      "facts": {
+        "client": "SNCF Gares & Connexions",
+        "architect": "AREP",
+        "surface": "3 000 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "diamaltpark-munich",
+      "title": "Diamaltpark, Munich",
+      "title_en": "Diamaltpark, Munich",
+      "image": "assets/images/diamaltpark-munich/cover.jpg",
+      "category": "bois",
+      "featured": false,
+      "year": "2020",
+      "location": "Munich, Allemagne",
+      "location_en": "Munich, Germany",
+      "description": [
+        "Construction de sept immeubles résidentiels en R+3 (129 logements) en structure bois dans le quartier Diamaltpark, à Munich-Allach. Les planchers sont en CLT et les murs en ossature bois ; le contreventement est assuré par les noyaux béton et par les plaques Fermacell des murs.",
+        "Nous avons réalisé les études d'exécution et les détails d'assemblage de la structure bois."
+      ],
+      "description_en": [
+        "Seven four-storey residential buildings (129 homes) with a timber structure in the Diamaltpark district of Munich-Allach. Floors are CLT and walls are timber-framed; bracing is provided by the concrete cores and the Fermacell sheathing of the walls.",
+        "We carried out the execution studies and connection details for the timber structure."
+      ],
+      "gallery": [
+        "assets/images/diamaltpark-munich/01.jpg",
+        "assets/images/diamaltpark-munich/02.jpg"
+      ],
+      "facts": {
+        "client": "ISARIA Wohnbau Objekt am Münchfeld GmbH",
+        "architect": "REINHART + PARTNER Architekten und Stadtplaner mbB",
+        "surface": "73 500 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "poste-blottereau-nantes",
+      "title": "Poste d'aiguillage du Blottereau, Nantes",
+      "title_en": "Blottereau signal box, Nantes",
+      "image": "assets/images/poste-blottereau-nantes/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2020",
+      "location": "Nantes, France",
+      "location_en": "Nantes, France",
+      "description": [
+        "Sur la ligne Nantes–Paris, le poste d'aiguillage SNCF du Blottereau est niché entre les voies ferrées, face à une bande de végétation sauvage et à proximité du parc du Grand Blottereau.",
+        "Nous avons repris la conception et assuré le suivi d'exécution de ce bâtiment en zone sismique, dont la structure associe palplanches, charpente acier, dalles et voiles béton."
+      ],
+      "description_en": [
+        "On the Nantes–Paris line, the Blottereau SNCF signal box sits between the tracks, facing a strip of wild vegetation near the Grand Blottereau park.",
+        "We took over the design and oversaw the execution of this building in a seismic zone, whose structure combines sheet piling, a steel frame, and concrete slabs and walls."
+      ],
+      "gallery": [
+        "assets/images/poste-blottereau-nantes/01.jpg",
+        "assets/images/poste-blottereau-nantes/02.jpg"
+      ],
+      "facts": {
+        "client": "SNCF",
+        "architect": "TITAN",
+        "surface": "800 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "tour-saint-gobain",
+      "title": "Tour Saint-Gobain, La Défense",
+      "title_en": "Saint-Gobain Tower, La Défense",
+      "image": "assets/images/tour-saint-gobain/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2019",
+      "location": "La Défense, France",
+      "location_en": "La Défense, France",
+      "description": [
+        "Nouveau siège social du groupe Saint-Gobain à La Défense : une tour de 44 niveaux comptant 1 100 m² de balcons et de terrasses végétalisés.",
+        "Nous avons réalisé la reprise de conception, les études d'exécution ainsi que les plans d'exécution et de fabrication de la coiffe de la tour, en charpente acier et verre extérieur attaché (5 400 m² de façade)."
+      ],
+      "description_en": [
+        "New headquarters of the Saint-Gobain group at La Défense: a 44-storey tower with 1,100 m² of planted balconies and terraces.",
+        "We carried out the design review, the execution studies and the execution and fabrication drawings for the tower's crown, in steel and point-fixed glazing (5,400 m² of facade)."
+      ],
+      "gallery": [
+        "assets/images/tour-saint-gobain/01.jpg",
+        "assets/images/tour-saint-gobain/02.jpg",
+        "assets/images/tour-saint-gobain/03.jpg",
+        "assets/images/tour-saint-gobain/04.jpg",
+        "assets/images/tour-saint-gobain/05.jpg",
+        "assets/images/tour-saint-gobain/06.jpg"
+      ],
+      "facts": {
+        "client": "Generali / Saint-Gobain",
+        "architect": "Valode & Pistre",
+        "surface": "48 900 m² (44 étages)"
+      },
+      "facts_en": {
+        "surface": "48 900 m² (44 storeys)"
+      },
+      "draft": true
+    },
+    {
+      "id": "step-wurtzbourg",
+      "title": "Station d'épuration, Wurtzbourg",
+      "title_en": "Wastewater treatment plant, Würzburg",
+      "image": "assets/images/step-wurtzbourg/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2019",
+      "location": "Wurtzbourg, Allemagne",
+      "location_en": "Würzburg, Germany",
+      "description": [
+        "Construction d'une station de traitement des eaux usées à Wurtzbourg, comprenant deux digesteurs et des bureaux.",
+        "Nous avons étudié les enveloppes en membrane PVC surpressée des deux digesteurs, soit 4 000 m² de membrane."
+      ],
+      "description_en": [
+        "Construction of a wastewater treatment plant in Würzburg, including two digesters and offices.",
+        "We designed the air-supported PVC membrane envelopes of the two digesters — 4,000 m² of membrane in total."
+      ],
+      "gallery": [
+        "assets/images/step-wurtzbourg/01.jpg",
+        "assets/images/step-wurtzbourg/02.jpg",
+        "assets/images/step-wurtzbourg/03.jpg",
+        "assets/images/step-wurtzbourg/04.jpg",
+        "assets/images/step-wurtzbourg/05.jpg"
+      ],
+      "facts": {
+        "client": "Ville de Wurtzbourg",
+        "architect": "Auer + Weber + Assoziierte",
+        "surface": "4 000 m² de membrane"
+      },
+      "facts_en": {
+        "client": "City of Würzburg",
+        "surface": "4 000 m² of membrane"
+      },
+      "draft": true
+    },
+    {
+      "id": "robatherm-jettingen",
+      "title": "Siège Robatherm, Jettingen-Scheppach",
+      "title_en": "Robatherm headquarters, Jettingen-Scheppach",
+      "image": "assets/images/robatherm-jettingen/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2019",
+      "location": "Jettingen-Scheppach, Allemagne",
+      "location_en": "Jettingen-Scheppach, Germany",
+      "description": [
+        "Nouveau siège social de l'entreprise Robatherm, réunissant bureaux, restaurant, espaces d'exposition et grandes salles de réunion.",
+        "En maîtrise d'œuvre, nous avons conçu la façade double peau en verre, maintenu en feuillure sur deux côtés : développement des détails de façade, physique du bâtiment de l'enveloppe, descriptifs techniques et suivi de chantier."
+      ],
+      "description_en": [
+        "New headquarters for Robatherm, bringing together offices, a restaurant, exhibition spaces and large meeting rooms.",
+        "As part of the design team, we designed the double-skin glass facade, with glazing supported on two edges: facade detailing, building physics of the envelope, technical specifications and site supervision."
+      ],
+      "gallery": [
+        "assets/images/robatherm-jettingen/01.jpg",
+        "assets/images/robatherm-jettingen/02.jpg",
+        "assets/images/robatherm-jettingen/03.jpg",
+        "assets/images/robatherm-jettingen/04.jpg",
+        "assets/images/robatherm-jettingen/05.jpg"
+      ],
+      "facts": {
+        "client": "Robatherm",
+        "architect": "HENN",
+        "surface": "4 800 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "augustenstrasse-munich",
+      "title": "Augustenstraße, Munich",
+      "title_en": "Augustenstraße, Munich",
+      "image": "assets/images/augustenstrasse-munich/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2019",
+      "location": "Munich, Allemagne",
+      "location_en": "Munich, Germany",
+      "description": [],
+      "description_en": [],
+      "gallery": [
+        "assets/images/augustenstrasse-munich/01.jpg",
+        "assets/images/augustenstrasse-munich/02.jpg",
+        "assets/images/augustenstrasse-munich/03.jpg",
+        "assets/images/augustenstrasse-munich/04.jpg",
+        "assets/images/augustenstrasse-munich/05.jpg",
+        "assets/images/augustenstrasse-munich/06.jpg",
+        "assets/images/augustenstrasse-munich/07.jpg"
+      ],
+      "draft": true
+    },
+    {
+      "id": "forum-vaureal",
+      "title": "Le Forum, Vauréal",
+      "title_en": "Le Forum, Vauréal",
+      "image": "assets/images/forum-vaureal/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2019",
+      "location": "Vauréal, France",
+      "location_en": "Vauréal, France",
+      "description": [
+        "Nouvelle scène de musiques actuelles de la ville de Vauréal, réunissant deux salles de 800 et 250 places, des studios de répétition et d'enregistrement, un pôle d'accueil, des bureaux, deux bars et des réserves.",
+        "Nous avons assuré la conception de la façade et de la structure du bâtiment."
+      ],
+      "description_en": [
+        "A new contemporary music venue for the town of Vauréal, with two halls seating 800 and 250, rehearsal and recording studios, a reception area, offices, two bars and storage.",
+        "We carried out the design of the building's facade and structure."
+      ],
+      "gallery": [
+        "assets/images/forum-vaureal/01.jpg",
+        "assets/images/forum-vaureal/02.jpg",
+        "assets/images/forum-vaureal/03.jpg"
+      ],
+      "facts": {
+        "client": "Ville de Vauréal",
+        "architect": "TETRARC",
+        "surface": "2 000 m²"
+      },
+      "facts_en": {
+        "client": "Town of Vauréal"
+      },
+      "draft": true
+    },
+    {
+      "id": "lillenium-lille",
+      "title": "Lillenium, Lille",
+      "title_en": "Lillenium, Lille",
+      "image": "assets/images/lillenium-lille/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2019",
+      "location": "Lille, France",
+      "location_en": "Lille, France",
+      "description": [
+        "Centre commercial réunissant une centaine de boutiques, un hypermarché, des cafés et un immeuble de bureaux, dont le cœur est couvert de coussins ETFE.",
+        "Nous avons réalisé les plans et les calculs d'exécution de la charpente métallique et des coussins ETFE couvrant le cœur du bâtiment."
+      ],
+      "description_en": [
+        "A shopping centre with around a hundred shops, a hypermarket, cafés and an office building, its central space covered with ETFE cushions.",
+        "We produced the execution drawings and calculations for the steel structure and the ETFE cushions covering the heart of the building."
+      ],
+      "gallery": [
+        "assets/images/lillenium-lille/01.jpg",
+        "assets/images/lillenium-lille/02.jpg"
+      ],
+      "facts": {
+        "client": "VICITY",
+        "architect": "Rudy Ricciotti",
+        "surface": "56 280 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "musee-omega-bienne",
+      "title": "Musée Omega, Bienne",
+      "title_en": "Omega Museum, Biel/Bienne",
+      "image": "assets/images/musee-omega-bienne/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2018",
+      "location": "Bienne, Suisse",
+      "location_en": "Biel/Bienne, Switzerland",
+      "description": [
+        "La façade principale du nouveau musée de l'horloger Omega est composée d'éléments de verre fixés sur une ossature autoporteuse. Au rez-de-chaussée, une façade courbe s'intègre sans cadre apparent dans les surfaces courbes de la structure en béton armé.",
+        "Nous avons conçu la façade en verre, en conciliant les multiples contraintes du mur-rideau et de la courbure."
+      ],
+      "description_en": [
+        "The main facade of watchmaker Omega's new museum is made of glass elements fixed to a self-supporting frame. On the ground floor, a curved facade blends frameless into the curved surfaces of the reinforced-concrete structure.",
+        "We designed the glass facade, reconciling the many constraints of curtain walling and curvature."
+      ],
+      "gallery": [
+        "assets/images/musee-omega-bienne/01.jpg",
+        "assets/images/musee-omega-bienne/02.jpg",
+        "assets/images/musee-omega-bienne/03.jpg",
+        "assets/images/musee-omega-bienne/04.jpg",
+        "assets/images/musee-omega-bienne/05.jpg",
+        "assets/images/musee-omega-bienne/06.jpg",
+        "assets/images/musee-omega-bienne/07.jpg",
+        "assets/images/musee-omega-bienne/08.jpg",
+        "assets/images/musee-omega-bienne/09.jpg",
+        "assets/images/musee-omega-bienne/10.jpg",
+        "assets/images/musee-omega-bienne/11.jpg"
+      ],
+      "facts": {
+        "client": "Omega SA",
+        "architect": "Shigeru Ban Architects",
+        "surface": "3 000 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "logements-begles",
+      "title": "Les Jardins de Mussonville, Bègles",
+      "title_en": "Les Jardins de Mussonville, Bègles",
+      "image": "assets/images/logements-begles/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2018",
+      "location": "Bègles, France",
+      "location_en": "Bègles, France",
+      "description": [
+        "Construction de 107 logements, du T2 au T4, répartis en quatre bâtiments sur un parking souterrain, sur d'anciennes terres maraîchères.",
+        "Nous avons réalisé les études de fondations et de structure du parking et des bâtiments, en béton armé et maçonnerie, et développé un joint spécifique pour reprendre les tassements différentiels. Nous avons également conçu les charpentes bois et acier des toitures, adaptées aux contraintes structurelles comme aux volumes intérieurs."
+      ],
+      "description_en": [
+        "Construction of 107 homes (one- to three-bedroom) in four buildings above an underground car park, on former market-garden land.",
+        "We carried out the foundation and structural studies for the car park and the buildings, in reinforced concrete and masonry, and developed a specific joint to accommodate differential settlement. We also designed the timber and steel roof structures, tailored to both the structural constraints and the interior volumes."
+      ],
+      "gallery": [
+        "assets/images/logements-begles/01.jpg",
+        "assets/images/logements-begles/02.jpg"
+      ],
+      "facts": {
+        "client": "SCCV S2, Chemin de Mussonville",
+        "architect": "Atelier Ferret Architectures",
+        "surface": "6 081 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "the-camp-aix",
+      "title": "The Camp, Aix-en-Provence",
+      "title_en": "The Camp, Aix-en-Provence",
+      "image": "assets/images/the-camp-aix/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2017",
+      "location": "Aix-en-Provence, France",
+      "location_en": "Aix-en-Provence, France",
+      "description": [
+        "Pôle numérique et incubateur de start-up, The Camp s'inscrit dans un paysage exceptionnel, entre roche et pinède. Sa couverture en reprend trois éléments : la forêt, la Sainte-Victoire et le piton rocheux.",
+        "Après avoir participé en maîtrise d'œuvre à la conception de ces trois impluviums en membrane PVC sur structure porteuse acier, nous en avons réalisé l'ensemble des études ainsi que les plans d'exécution et de fabrication."
+      ],
+      "description_en": [
+        "A digital hub and start-up incubator, The Camp sits in an exceptional landscape between rock and pine forest. Its roof echoes three elements of the site: the forest, the Sainte-Victoire mountain and the rocky outcrop.",
+        "Having helped design these three impluvium canopies — PVC membrane on a steel supporting structure — as part of the design team, we then carried out all of their engineering studies and their execution and fabrication drawings."
+      ],
+      "gallery": [
+        "assets/images/the-camp-aix/01.jpg",
+        "assets/images/the-camp-aix/02.jpg",
+        "assets/images/the-camp-aix/03.jpg",
+        "assets/images/the-camp-aix/04.jpg",
+        "assets/images/the-camp-aix/05.jpg",
+        "assets/images/the-camp-aix/06.jpg",
+        "assets/images/the-camp-aix/07.jpg",
+        "assets/images/the-camp-aix/08.jpg",
+        "assets/images/the-camp-aix/09.jpg"
+      ],
+      "facts": {
+        "client": "REDMAN",
+        "architect": "Corinne Vezzoni",
+        "surface": "7 000 m² de membrane PVC"
+      },
+      "facts_en": {
+        "surface": "7 000 m² of PVC membrane"
+      },
+      "draft": true
+    },
+    {
+      "id": "lords-warner-stand",
+      "title": "Warner Stand, Lord's Cricket Ground, Londres",
+      "title_en": "Warner Stand, Lord's Cricket Ground, London",
+      "image": "assets/images/lords-warner-stand/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2017",
+      "location": "Londres, Royaume-Uni",
+      "location_en": "London, United Kingdom",
+      "description": [
+        "Réhabilitation de la tribune Warner Stand du Lord's Cricket Ground, à Londres, haut lieu mondial du cricket.",
+        "Pour le compte de Taiyo Europe, nous avons réalisé les études d'exécution de la toiture en ETFE couvrant la tribune : modélisation et calcul des supports, des fixations et de la structure porteuse, ainsi que l'ensemble des modèles et plans de fabrication."
+      ],
+      "description_en": [
+        "Refurbishment of the Warner Stand at Lord's Cricket Ground in London, the world's most prestigious venue for professional cricket.",
+        "On behalf of Taiyo Europe, we carried out the execution studies for the ETFE roof over the stand: modelling and design of the supports, fixings and supporting structure, together with all fabrication models and drawings."
+      ],
+      "gallery": [
+        "assets/images/lords-warner-stand/01.jpg",
+        "assets/images/lords-warner-stand/02.jpg"
+      ],
+      "facts": {
+        "client": "Marylebone Cricket Club",
+        "architect": "Populous",
+        "surface": "950 m² (toiture)"
+      },
+      "facts_en": {
+        "surface": "950 m² (roof)"
+      },
+      "draft": true
+    },
+    {
+      "id": "cvut-prague",
+      "title": "Institut CIIRC, ČVUT, Prague",
+      "title_en": "CIIRC Institute, ČVUT, Prague",
+      "image": "assets/images/cvut-prague/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2016",
+      "location": "Prague, République tchèque",
+      "location_en": "Prague, Czech Republic",
+      "description": [
+        "Sur le campus de l'Université technique de Prague (ČVUT), l'Institut tchèque d'informatique, de robotique et de cybernétique s'est doté d'une extension de dix étages réunissant salles de cours, bureaux et laboratoires. Sa façade en ETFE forme une double peau aussi intéressante sur le plan énergétique qu'esthétique.",
+        "Nous avons réalisé l'ensemble des études d'exécution et de fabrication. Les coussins, dont certains dépassent 30 m de long, drapent d'un seul tenant les trois façades du bâtiment."
+      ],
+      "description_en": [
+        "On the campus of the Czech Technical University in Prague (ČVUT), the Czech Institute of Informatics, Robotics and Cybernetics gained a ten-storey extension housing classrooms, offices and laboratories. Its ETFE facade forms a double skin that is as effective in energy terms as it is striking.",
+        "We carried out all execution and fabrication studies. The cushions — some more than 30 m long — wrap the building's three facades in a single sweep."
+      ],
+      "gallery": [
+        "assets/images/cvut-prague/01.jpg",
+        "assets/images/cvut-prague/02.jpg"
+      ],
+      "facts": {
+        "client": "Université technique de Prague (ČVUT)",
+        "architect": "Petr Franta Architekti & Associates",
+        "surface": "4 500 m²"
+      },
+      "facts_en": {
+        "client": "Czech Technical University in Prague (ČVUT)"
+      },
+      "draft": true
+    },
+    {
+      "id": "pole-europe-mont-saint-martin",
+      "title": "Centre commercial Pôle Europe, Mont-Saint-Martin",
+      "title_en": "Pôle Europe shopping centre, Mont-Saint-Martin",
+      "image": "assets/images/pole-europe-mont-saint-martin/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2016",
+      "location": "Mont-Saint-Martin, France",
+      "location_en": "Mont-Saint-Martin, France",
+      "description": [
+        "Extension du centre commercial Pôle Europe, avec la construction d'un dôme de grande portée.",
+        "Au sein de l'équipe de maîtrise d'œuvre, nous avons assuré la mission de bureau d'études façade pour le dôme en structure métallique et coussins ETFE, ainsi que pour les façades réalisées dans le même matériau."
+      ],
+      "description_en": [
+        "Extension of the Pôle Europe shopping centre, including a long-span dome.",
+        "Within the design team, we were the facade engineers for the dome — a steel structure with ETFE cushions — and for the facades made of the same material."
+      ],
+      "gallery": [
+        "assets/images/pole-europe-mont-saint-martin/01.jpg",
+        "assets/images/pole-europe-mont-saint-martin/02.jpg"
+      ],
+      "facts": {
+        "client": "Auchan – Immochan",
+        "architect": "VDDT Architectes",
+        "surface": "12 000 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "paulaner-munich",
+      "title": "Siège Paulaner, Munich",
+      "title_en": "Paulaner headquarters, Munich",
+      "image": "assets/images/paulaner-munich/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2016",
+      "location": "Munich, Allemagne",
+      "location_en": "Munich, Germany",
+      "description": [
+        "Transformation et extension de l'ancienne brasserie Zacherl en siège administratif et salle d'exposition, avec une réinterprétation contemporaine et lumineuse de la façade en béton blanc, bronze et verre sérigraphié.",
+        "Nous avons établi le diagnostic de la structure historique existante, puis assuré la maîtrise d'œuvre et une partie des études d'exécution."
+      ],
+      "description_en": [
+        "Conversion and extension of the former Zacherl brewery into administrative headquarters and an exhibition hall, with a bright, contemporary reinterpretation of the facade in white concrete, bronze and screen-printed glass.",
+        "We carried out the structural assessment of the existing historic building, then provided design and site supervision services along with part of the execution studies."
+      ],
+      "gallery": [
+        "assets/images/paulaner-munich/01.jpg",
+        "assets/images/paulaner-munich/02.jpg"
+      ],
+      "facts": {
+        "client": "Paulaner Brauerei GmbH & Co. KG",
+        "architect": "Hierl Architekten",
+        "surface": "15 311 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "canary-wharf-londres",
+      "title": "Gare Crossrail de Canary Wharf, Londres",
+      "title_en": "Canary Wharf Crossrail Station, London",
+      "image": "assets/images/canary-wharf-londres/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2015",
+      "location": "Londres, Royaume-Uni",
+      "location_en": "London, United Kingdom",
+      "description": [
+        "La gare Crossrail de Canary Wharf fait partie d'un vaste projet d'infrastructure — neuf nouvelles gares et 42 km de tunnels — traversant Londres d'est en ouest.",
+        "Nous avons assuré la conception et les études de la charpente en bois lamellé-collé et des coussins ETFE de sa toiture."
+      ],
+      "description_en": [
+        "Canary Wharf Crossrail Station is part of a major infrastructure project — nine new stations and 42 km of tunnels — crossing London from east to west.",
+        "We carried out the design and engineering of its glued-laminated timber roof structure and ETFE cushions."
+      ],
+      "gallery": [
+        "assets/images/canary-wharf-londres/01.jpg",
+        "assets/images/canary-wharf-londres/02.jpg"
+      ],
+      "facts": {
+        "client": "Canary Wharf Contractors Ltd",
+        "architect": "Foster + Partners",
+        "surface": "12 000 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "center-parcs-trois-moutiers",
+      "title": "Center Parcs Le Bois aux Daims, Les Trois-Moutiers",
+      "title_en": "Center Parcs Le Bois aux Daims, Les Trois-Moutiers",
+      "image": "assets/images/center-parcs-trois-moutiers/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2015",
+      "location": "Les Trois-Moutiers, France",
+      "location_en": "Les Trois-Moutiers, France",
+      "description": [
+        "Ouvert à l'été 2015 dans la Vienne, entre Les Trois-Moutiers et Morton, le Center Parcs « Le Bois aux Daims » comprend notamment un espace aquatique dont la charpente bois porte une couverture en coussins ETFE.",
+        "Nous avons réalisé le calcul et la planification des coussins ETFE et de leur système d'ancrage en profilés aluminium, ainsi que la planification de la zinguerie et de l'isolation du faîtage."
+      ],
+      "description_en": [
+        "Opened in summer 2015 in the Vienne department, between Les Trois-Moutiers and Morton, the « Le Bois aux Daims » Center Parcs includes a water park whose timber structure supports an ETFE cushion roof.",
+        "We carried out the design and detailing of the ETFE cushions and their aluminium-profile anchoring system, as well as the detailing of the ridge flashing and insulation."
+      ],
+      "gallery": [
+        "assets/images/center-parcs-trois-moutiers/01.jpg",
+        "assets/images/center-parcs-trois-moutiers/02.jpg"
+      ],
+      "facts": {
+        "client": "Pierre & Vacances – Center Parcs",
+        "architect": "ART'UR Architectes",
+        "surface": "19 000 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "campus-esri-kranzberg",
+      "title": "Campus Esri, Kranzberg",
+      "title_en": "Esri campus, Kranzberg",
+      "image": "assets/images/campus-esri-kranzberg/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2015",
+      "location": "Kranzberg, Allemagne",
+      "location_en": "Kranzberg, Germany",
+      "description": [
+        "Construction de bâtiments administratifs sur le campus de l'entreprise Esri à Kranzberg, près de Munich : deux bâtiments de deux étages et un de trois étages, de forme cubique, en béton brut bouchardé et bois massif, à toiture plate et reliés par des coursives extérieures.",
+        "Nous avons assuré la conception de la structure et fourni les justifications de stabilité, puis pris en charge le suivi des travaux : réception de la construction tout au long du chantier et analyses de la structure en place."
+      ],
+      "description_en": [
+        "New administrative buildings on the Esri company campus in Kranzberg, near Munich: two two-storey buildings and one three-storey building, all cubic, in bush-hammered fair-faced concrete and solid timber, with flat roofs and linked by external walkways.",
+        "We carried out the structural design and provided the stability calculations, then oversaw the works, inspecting the construction throughout and analysing the as-built structure."
+      ],
+      "gallery": [
+        "assets/images/campus-esri-kranzberg/01.jpg",
+        "assets/images/campus-esri-kranzberg/02.jpg",
+        "assets/images/campus-esri-kranzberg/03.jpg",
+        "assets/images/campus-esri-kranzberg/04.jpg",
+        "assets/images/campus-esri-kranzberg/05.jpg"
+      ],
+      "facts": {
+        "client": "Esri Deutschland GmbH",
+        "architect": "Dominikus Stark Architekten GmbH",
+        "surface": "630 m² SHON"
+      },
+      "facts_en": {
+        "surface": "630 m² gross floor area"
+      },
+      "draft": true
+    },
+    {
+      "id": "stade-velodrome-marseille",
+      "title": "Stade Vélodrome, Marseille",
+      "title_en": "Stade Vélodrome, Marseille",
+      "image": "assets/images/stade-velodrome-marseille/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2014",
+      "location": "Marseille, France",
+      "location_en": "Marseille, France",
+      "description": [
+        "Dans le cadre de sa rénovation, le Stade Vélodrome a reçu une nouvelle couverture de 65 000 m² reposant sur quatre appuis.",
+        "Pour le compte de Seele, nous avons apporté notre conseil technique sur la charpente métallique et la couverture en toile tendue (fibre de verre enduite de PTFE)."
+      ],
+      "description_en": [
+        "As part of its renovation, the Stade Vélodrome received a new 65,000 m² roof resting on four supports.",
+        "On behalf of Seele, we provided technical advice on the steel structure and the tensioned fabric roof (PTFE-coated glass fibre)."
+      ],
+      "gallery": [
+        "assets/images/stade-velodrome-marseille/01.jpg",
+        "assets/images/stade-velodrome-marseille/02.jpg"
+      ],
+      "facts": {
+        "client": "AREMA",
+        "architect": "Henri Ploquin (stade d'origine), SCAU (rénovation)"
+      },
+      "facts_en": {
+        "architect": "Henri Ploquin (original stadium), SCAU (renovation)"
+      },
+      "draft": true
+    },
+    {
+      "id": "stade-curt-frenzel-augsbourg",
+      "title": "Curt-Frenzel-Stadion, Augsbourg",
+      "title_en": "Curt-Frenzel-Stadion, Augsburg",
+      "image": "assets/images/stade-curt-frenzel-augsbourg/cover.jpg",
+      "category": "facade",
+      "featured": false,
+      "year": "2014",
+      "location": "Augsbourg, Allemagne",
+      "location_en": "Augsburg, Germany",
+      "description": [
+        "Conception de l'enveloppe de la patinoire de hockey sur glace Curt-Frenzel-Stadion (6 218 places).",
+        "Nous avons conçu, avec un budget restreint, une façade en panneaux de polycarbonate courbés."
+      ],
+      "description_en": [
+        "Design of the envelope of the Curt-Frenzel-Stadion ice hockey arena (6,218 seats).",
+        "We designed, on a tight budget, a facade of curved polycarbonate panels."
+      ],
+      "gallery": [
+        "assets/images/stade-curt-frenzel-augsbourg/01.jpg",
+        "assets/images/stade-curt-frenzel-augsbourg/02.jpg"
+      ],
+      "facts": {
+        "client": "Ville d'Augsbourg (AGS GmbH)",
+        "architect": "Hermann + Öttl"
+      },
+      "facts_en": {
+        "client": "City of Augsburg (AGS GmbH)"
+      },
+      "draft": true
+    },
+    {
+      "id": "frac-dunkerque",
+      "title": "FRAC Nord-Pas-de-Calais, Dunkerque",
+      "title_en": "FRAC Nord-Pas-de-Calais, Dunkirk",
+      "image": "assets/images/frac-dunkerque/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2013",
+      "location": "Dunkerque, France",
+      "location_en": "Dunkirk, France",
+      "description": [
+        "Le Nord-Pas-de-Calais s'est doté d'un Fonds régional d'art contemporain en réhabilitant la halle AP2, ancien atelier de préfabrication des chantiers navals du port de Dunkerque.",
+        "Pour le compte de Taiyo Europe, nous avons assuré les études et la planification d'exécution, ainsi que les plans de fabrication de la façade en coussins ETFE."
+      ],
+      "description_en": [
+        "The Nord-Pas-de-Calais region gained a Regional Contemporary Art Fund (FRAC) by converting hall AP2, the former prefabrication workshop of the Dunkirk shipyards.",
+        "On behalf of Taiyo Europe, we carried out the execution studies and planning, as well as the fabrication drawings, for the ETFE cushion facade."
+      ],
+      "gallery": [
+        "assets/images/frac-dunkerque/01.jpg",
+        "assets/images/frac-dunkerque/02.jpg"
+      ],
+      "facts": {
+        "client": "Communauté urbaine de Dunkerque",
+        "architect": "Lacaton & Vassal",
+        "surface": "11 129 m² (9 157 m² neufs, 1 972 m² de halle existante)"
+      },
+      "facts_en": {
+        "client": "Dunkirk Urban Community",
+        "surface": "11 129 m² (9 157 m² new build, 1 972 m² existing hall)"
+      },
+      "draft": true
+    },
+    {
+      "id": "oberhaching-presbytere",
+      "title": "Centre paroissial, Oberhaching",
+      "title_en": "Parish centre, Oberhaching",
+      "image": "assets/images/oberhaching-presbytere/cover.jpg",
+      "category": "structure",
+      "featured": false,
+      "year": "2013",
+      "location": "Oberhaching, Allemagne",
+      "location_en": "Oberhaching, Germany",
+      "description": [
+        "Le centre paroissial d'Oberhaching, près de Munich, réunit logements et bureaux, une salle polyvalente et une garderie en sous-sol.",
+        "Nous avons conçu la structure mixte bois, acier et béton, établi la justification énergétique (EnEV) et l'analyse de sécurité incendie, traité l'isolation et le confort acoustiques du bâtiment, et assuré la direction du chantier."
+      ],
+      "description_en": [
+        "The Oberhaching parish centre, near Munich, combines housing and offices, a multi-purpose hall and a basement day nursery.",
+        "We designed the hybrid timber, steel and concrete structure, produced the energy-performance certification (EnEV) and the fire-safety analysis, handled the building's sound insulation and acoustic comfort, and supervised the works."
+      ],
+      "gallery": [
+        "assets/images/oberhaching-presbytere/01.jpg",
+        "assets/images/oberhaching-presbytere/02.jpg"
+      ],
+      "facts": {
+        "client": "Erzbischöfliches Ordinariat München",
+        "architect": "Deppisch Architekten, Freising",
+        "surface": "1 150 m²"
+      },
+      "draft": true
+    },
+    {
+      "id": "vergers-de-la-plaine-chambourcy",
+      "title": "Les Vergers de la Plaine, Chambourcy",
+      "title_en": "Les Vergers de la Plaine, Chambourcy",
+      "image": "assets/images/vergers-de-la-plaine-chambourcy/cover.jpg",
+      "category": "membrane",
+      "featured": false,
+      "year": "2012",
+      "location": "Chambourcy, France",
+      "location_en": "Chambourcy, France",
+      "description": [
+        "Ouvert à l'été 2012 à Chambourcy, aux portes de Paris, le centre commercial des Vergers de la Plaine s'étend sur 30 000 m². Son espace paysager, qui relie les enseignes au centre Carrefour voisin, est jalonné d'arbres fruitiers et d'auvents organiques de 12 m de haut qui s'imbriquent comme des champignons géants ; couverts de membranes ETFE, ils protègent les visiteurs du soleil et de la pluie.",
+        "Pour le compte d'ACS Production et de Taiyo Europe, nous avons assuré la conception préliminaire et détaillée des structures acier, les plans d'atelier des poteaux et la conception complète des membranes ETFE, du découpage jusqu'aux plans d'atelier."
+      ],
+      "description_en": [
+        "Opened in summer 2012 in Chambourcy, on the outskirts of Paris, the Vergers de la Plaine shopping centre covers 30,000 m². Its landscaped space, linking the stores to the neighbouring Carrefour centre, is dotted with fruit trees and 12 m-high organic canopies that interlock like giant mushrooms; covered with ETFE membranes, they shelter visitors from sun and rain.",
+        "On behalf of ACS Production and Taiyo Europe, we carried out the preliminary and detailed design of the steel structures, the shop drawings for the columns and the complete design of the ETFE membranes, from patterning to shop drawings."
+      ],
+      "gallery": [
+        "assets/images/vergers-de-la-plaine-chambourcy/01.jpg",
+        "assets/images/vergers-de-la-plaine-chambourcy/02.jpg",
+        "assets/images/vergers-de-la-plaine-chambourcy/03.jpg",
+        "assets/images/vergers-de-la-plaine-chambourcy/04.jpg",
+        "assets/images/vergers-de-la-plaine-chambourcy/05.jpg",
+        "assets/images/vergers-de-la-plaine-chambourcy/06.jpg",
+        "assets/images/vergers-de-la-plaine-chambourcy/07.jpg"
+      ],
+      "facts": {
+        "client": "Sopic",
+        "architect": "SCAU"
+      },
       "draft": true
     }
   ],

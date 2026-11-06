@@ -34,6 +34,177 @@
     "assets/images/ilot-condorcet/02.jpg": { "author": "LEF-T" },
     "assets/images/ilot-condorcet/03.jpg": { "author": "LEF-T" },
 
-    "assets/images/halle-villeneuve-la-garenne/cover.jpg": { "author": "Mathis" }
+    "assets/images/halle-villeneuve-la-garenne/cover.jpg": { "author": "Mathis" },
+
+    "assets/images/pressoir-crouttes-sur-marne/cover.jpg": { "author": "C. Zellek / Hans Février" },
+    "assets/images/pressoir-crouttes-sur-marne/01.jpg": { "author": "C. Zellek / Hans Février" },
+    "assets/images/pressoir-crouttes-sur-marne/02.jpg": { "author": "C. Zellek / Hans Février" },
+    "assets/images/pressoir-crouttes-sur-marne/03.jpg": { "author": "C. Zellek / Hans Février" },
+
+    "assets/images/halles-saint-nazaire/cover.jpg": { "author": "Atelier Ferret Architectures" },
+    "assets/images/halles-saint-nazaire/01.jpg": { "author": "Atelier Ferret Architectures" },
+    "assets/images/halles-saint-nazaire/02.jpg": { "author": "Atelier Ferret Architectures" },
+
+    "assets/images/bastide-niel-bordeaux/cover.jpg": { "author": "Atelier Ferret Architectures" },
+    "assets/images/bastide-niel-bordeaux/01.jpg": { "author": "Atelier Ferret Architectures" },
+    "assets/images/bastide-niel-bordeaux/02.jpg": { "author": "Atelier Ferret Architectures" },
+
+    "assets/images/piscine-saint-meen-le-grand/cover.jpg": { "author": "RAUM" },
+    "assets/images/piscine-saint-meen-le-grand/01.jpg": { "author": "RAUM" },
+
+    "assets/images/balcons-en-foret-saint-herblain/cover.jpg": { "author": "Atelier Pascal Gontier" },
+    "assets/images/balcons-en-foret-saint-herblain/01.jpg": { "author": "Atelier Pascal Gontier" },
+    "assets/images/balcons-en-foret-saint-herblain/02.jpg": { "author": "Atelier Pascal Gontier" },
+
+    "assets/images/fachhochschule-rosenheim/cover.jpg": { "author": "LEICHT France" },
+    "assets/images/fachhochschule-rosenheim/01.jpg": { "author": "LEICHT France" },
+    "assets/images/fachhochschule-rosenheim/02.jpg": { "author": "LEICHT France" },
+
+    "assets/images/gare-de-rennes/cover.jpg": { "author": "AREP / Mathieu Lee Vigneau, LEICHT France" },
+    "assets/images/gare-de-rennes/01.jpg": { "author": "AREP / Mathieu Lee Vigneau, LEICHT France" },
+    "assets/images/gare-de-rennes/02.jpg": { "author": "AREP / Mathieu Lee Vigneau, LEICHT France" },
+    "assets/images/gare-de-rennes/03.jpg": { "author": "AREP / Mathieu Lee Vigneau, LEICHT France" },
+    "assets/images/gare-de-rennes/04.jpg": { "author": "AREP / Mathieu Lee Vigneau, LEICHT France" },
+    "assets/images/gare-de-rennes/05.jpg": { "author": "AREP / Mathieu Lee Vigneau, LEICHT France" },
+    "assets/images/gare-de-rennes/06.jpg": { "author": "AREP / Mathieu Lee Vigneau, LEICHT France" },
+
+    "assets/images/diamaltpark-munich/cover.jpg": { "author": "REINHART + PARTNER Architekten und Stadtplaner mbB" },
+    "assets/images/diamaltpark-munich/01.jpg": { "author": "REINHART + PARTNER Architekten und Stadtplaner mbB" },
+    "assets/images/diamaltpark-munich/02.jpg": { "author": "REINHART + PARTNER Architekten und Stadtplaner mbB" },
+
+    "assets/images/poste-blottereau-nantes/cover.jpg": { "author": "TITAN" },
+    "assets/images/poste-blottereau-nantes/01.jpg": { "author": "TITAN" },
+    "assets/images/poste-blottereau-nantes/02.jpg": { "author": "TITAN" },
+
+    "assets/images/tour-saint-gobain/cover.jpg": { "author": "Valode & Pistre, LEICHT France" },
+    "assets/images/tour-saint-gobain/01.jpg": { "author": "Valode & Pistre, LEICHT France" },
+    "assets/images/tour-saint-gobain/02.jpg": { "author": "Valode & Pistre, LEICHT France" },
+    "assets/images/tour-saint-gobain/03.jpg": { "author": "Valode & Pistre, LEICHT France" },
+    "assets/images/tour-saint-gobain/04.jpg": { "author": "Valode & Pistre, LEICHT France" },
+    "assets/images/tour-saint-gobain/05.jpg": { "author": "Valode & Pistre, LEICHT France" },
+    "assets/images/tour-saint-gobain/06.jpg": { "author": "Valode & Pistre, LEICHT France" },
+
+    "assets/images/step-wurtzbourg/cover.jpg": { "author": "Auer + Weber + Assoziierte" },
+    "assets/images/step-wurtzbourg/01.jpg": { "author": "Auer + Weber + Assoziierte" },
+    "assets/images/step-wurtzbourg/02.jpg": { "author": "Auer + Weber + Assoziierte" },
+    "assets/images/step-wurtzbourg/03.jpg": { "author": "Auer + Weber + Assoziierte" },
+    "assets/images/step-wurtzbourg/04.jpg": { "author": "Auer + Weber + Assoziierte" },
+    "assets/images/step-wurtzbourg/05.jpg": { "author": "Auer + Weber + Assoziierte" },
+
+    "assets/images/robatherm-jettingen/cover.jpg": { "author": "LEICHT France" },
+    "assets/images/robatherm-jettingen/01.jpg": { "author": "LEICHT France" },
+    "assets/images/robatherm-jettingen/02.jpg": { "author": "LEICHT France" },
+    "assets/images/robatherm-jettingen/03.jpg": { "author": "LEICHT France" },
+    "assets/images/robatherm-jettingen/04.jpg": { "author": "LEICHT France" },
+    "assets/images/robatherm-jettingen/05.jpg": { "author": "LEICHT France" },
+
+    "assets/images/augustenstrasse-munich/cover.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+    "assets/images/augustenstrasse-munich/01.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+    "assets/images/augustenstrasse-munich/02.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+    "assets/images/augustenstrasse-munich/03.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+    "assets/images/augustenstrasse-munich/04.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+    "assets/images/augustenstrasse-munich/05.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+    "assets/images/augustenstrasse-munich/06.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+    "assets/images/augustenstrasse-munich/07.jpg": { "author": "LEICHT France, Pronesta GmbH" },
+
+    "assets/images/forum-vaureal/cover.jpg": { "author": "TETRARC" },
+    "assets/images/forum-vaureal/01.jpg": { "author": "TETRARC" },
+    "assets/images/forum-vaureal/02.jpg": { "author": "TETRARC" },
+    "assets/images/forum-vaureal/03.jpg": { "author": "TETRARC" },
+
+    "assets/images/lillenium-lille/cover.jpg": { "author": "Rudy Ricciotti, VICITY" },
+    "assets/images/lillenium-lille/01.jpg": { "author": "Rudy Ricciotti, VICITY" },
+    "assets/images/lillenium-lille/02.jpg": { "author": "Rudy Ricciotti, VICITY" },
+
+    "assets/images/musee-omega-bienne/cover.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/01.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/02.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/03.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/04.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/05.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/06.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/07.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/08.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/09.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/10.jpg": { "author": "citedutemps.com, LEICHT France" },
+    "assets/images/musee-omega-bienne/11.jpg": { "author": "citedutemps.com, LEICHT France" },
+
+    "assets/images/logements-begles/cover.jpg": { "author": "Atelier Ferret Architectures" },
+    "assets/images/logements-begles/01.jpg": { "author": "Atelier Ferret Architectures" },
+    "assets/images/logements-begles/02.jpg": { "author": "Atelier Ferret Architectures" },
+
+    "assets/images/the-camp-aix/cover.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/01.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/02.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/03.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/04.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/05.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/06.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/07.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/08.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+    "assets/images/the-camp-aix/09.jpg": { "author": "Corinne Vezzoni, Lisa Ricciotti" },
+
+    "assets/images/lords-warner-stand/cover.jpg": { "author": "Clare Skinner, Morley von Sternberg" },
+    "assets/images/lords-warner-stand/01.jpg": { "author": "Clare Skinner, Morley von Sternberg" },
+    "assets/images/lords-warner-stand/02.jpg": { "author": "Clare Skinner, Morley von Sternberg" },
+
+    "assets/images/cvut-prague/cover.jpg": { "author": "amcham, vces" },
+    "assets/images/cvut-prague/01.jpg": { "author": "amcham, vces" },
+    "assets/images/cvut-prague/02.jpg": { "author": "amcham, vces" },
+
+    "assets/images/pole-europe-mont-saint-martin/cover.jpg": { "author": "Seele" },
+    "assets/images/pole-europe-mont-saint-martin/01.jpg": { "author": "Seele" },
+    "assets/images/pole-europe-mont-saint-martin/02.jpg": { "author": "Seele" },
+
+    "assets/images/paulaner-munich/cover.jpg": { "author": "Hierl Architekten" },
+    "assets/images/paulaner-munich/01.jpg": { "author": "Hierl Architekten" },
+    "assets/images/paulaner-munich/02.jpg": { "author": "Hierl Architekten" },
+
+    "assets/images/canary-wharf-londres/cover.jpg": { "author": "LEICHT France, Nigel Young, Foster + Partners" },
+    "assets/images/canary-wharf-londres/01.jpg": { "author": "LEICHT France, Nigel Young, Foster + Partners" },
+    "assets/images/canary-wharf-londres/02.jpg": { "author": "LEICHT France, Nigel Young, Foster + Partners" },
+
+    "assets/images/center-parcs-trois-moutiers/cover.jpg": { "author": "Center Parcs, Taiyo Europe GmbH" },
+    "assets/images/center-parcs-trois-moutiers/01.jpg": { "author": "Center Parcs, Taiyo Europe GmbH" },
+    "assets/images/center-parcs-trois-moutiers/02.jpg": { "author": "Center Parcs, Taiyo Europe GmbH" },
+
+    "assets/images/campus-esri-kranzberg/cover.jpg": { "author": "LEICHT France, Michael Heinrich" },
+    "assets/images/campus-esri-kranzberg/01.jpg": { "author": "LEICHT France, Michael Heinrich" },
+    "assets/images/campus-esri-kranzberg/02.jpg": { "author": "LEICHT France, Michael Heinrich" },
+    "assets/images/campus-esri-kranzberg/03.jpg": { "author": "LEICHT France, Michael Heinrich" },
+    "assets/images/campus-esri-kranzberg/04.jpg": { "author": "LEICHT France, Michael Heinrich" },
+    "assets/images/campus-esri-kranzberg/05.jpg": { "author": "LEICHT France, Michael Heinrich" },
+
+    "assets/images/stade-velodrome-marseille/cover.jpg": { "author": "SCAU" },
+    "assets/images/stade-velodrome-marseille/01.jpg": { "author": "SCAU" },
+    "assets/images/stade-velodrome-marseille/02.jpg": { "author": "SCAU" },
+
+    "assets/images/stade-curt-frenzel-augsbourg/cover.jpg": { "author": "aev-panther.de, aladin.biz" },
+    "assets/images/stade-curt-frenzel-augsbourg/01.jpg": { "author": "aev-panther.de, aladin.biz" },
+    "assets/images/stade-curt-frenzel-augsbourg/02.jpg": { "author": "aev-panther.de, aladin.biz" },
+
+    "assets/images/frac-dunkerque/cover.jpg": { "author": "Erwin Acke" },
+    "assets/images/frac-dunkerque/01.jpg": { "author": "Erwin Acke" },
+    "assets/images/frac-dunkerque/02.jpg": { "author": "Erwin Acke" },
+
+    "assets/images/oberhaching-presbytere/cover.jpg": { "author": "Sebastian Schels, LEICHT France" },
+    "assets/images/oberhaching-presbytere/01.jpg": { "author": "Sebastian Schels, LEICHT France" },
+    "assets/images/oberhaching-presbytere/02.jpg": { "author": "Sebastian Schels, LEICHT France" },
+
+    "assets/images/vergers-de-la-plaine-chambourcy/cover.jpg": { "author": "LEICHT France" },
+    "assets/images/vergers-de-la-plaine-chambourcy/01.jpg": { "author": "LEICHT France" },
+    "assets/images/vergers-de-la-plaine-chambourcy/02.jpg": { "author": "LEICHT France" },
+    "assets/images/vergers-de-la-plaine-chambourcy/03.jpg": { "author": "LEICHT France" },
+    "assets/images/vergers-de-la-plaine-chambourcy/04.jpg": { "author": "LEICHT France" },
+    "assets/images/vergers-de-la-plaine-chambourcy/05.jpg": { "author": "LEICHT France" },
+    "assets/images/vergers-de-la-plaine-chambourcy/06.jpg": { "author": "LEICHT France" },
+    "assets/images/vergers-de-la-plaine-chambourcy/07.jpg": { "author": "LEICHT France" },
+
+    "assets/images/swatch-group-bienne/cover.jpg": { "author": "LEICHT France, Shigeru Ban Architects" },
+    "assets/images/swatch-group-bienne/01.jpg": { "author": "LEICHT France, Shigeru Ban Architects" },
+    "assets/images/swatch-group-bienne/02.jpg": { "author": "LEICHT France, Shigeru Ban Architects" },
+    "assets/images/swatch-group-bienne/03.jpg": { "author": "LEICHT France, Shigeru Ban Architects" },
+    "assets/images/swatch-group-bienne/04.jpg": { "author": "LEICHT France, Shigeru Ban Architects" },
+    "assets/images/swatch-group-bienne/05.jpg": { "author": "LEICHT France, Shigeru Ban Architects" }
   }
 }

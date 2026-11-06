@@ -127,7 +127,16 @@ fonctionnement établi est :
   (~1000 px). Ajout ensuite de `halle-villeneuve-la-garenne` (photo intérieure seule,
   © Mathis — l'image de rendu de la fiche est volontairement écartée à la demande de Paul).
   Maison Ste Germaine (aussi dans le PDF) non ajoutée.
-- - **Reste à faire, si Paul le demande** : 14 autres projets de ce même pptx n'ont pas
+- Nov. 2026 : import des 32 projets de leichtfrance.com (site WordPress appelé à disparaître),
+  récupérés via le navigateur intégré (le site est bloqué pour le cloud et le shell local).
+  Textes réécrits à la 1re personne LEF-T (« nous ») + traduction EN ; photos converties en
+  JPEG ≤ 2400 px q85 (beaucoup ne font que ~1100 px sur l'ancien site) ; crédits = champ
+  « Images » de chaque fiche LEICHT France. Tous en `draft: true` sauf `swatch-group-bienne`
+  (déjà publié, texte et photos remplacés, adresse/surface conservées). `garching` remplacé
+  (bâtiment Newton, toit ETFE) — pas de crédit photo sur l'ancien site. `augustenstrasse-munich`
+  sans description sur l'ancien site. `bastide-niel-bordeaux` encore « En cours » (date 2020).
+  Catégories utilisées : membrane, bois, structure, facade.
+- **Reste à faire, si Paul le demande** : 14 autres projets de ce même pptx n'ont pas
   encore été sélectionnés/ajoutés. Ne pas les ajouter sans qu'il les ait explicitement
   choisis.
 
