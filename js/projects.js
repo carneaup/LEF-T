@@ -79,7 +79,8 @@ function generateProjectCard(project, size) {
     const card = document.createElement('a');
     // Tuile double (2 × 2) dans la mosaïque, à gauche ou à droite de son bloc.
     card.className = 'project-tile' + (size === 'large-left' ? ' project-tile--large project-tile--left'
-        : size === 'large-right' ? ' project-tile--large project-tile--right' : '');
+        : size === 'large-right' ? ' project-tile--large project-tile--right'
+        : (typeof size === 'string' && size.indexOf('fill-') === 0) ? ' project-tile--' + size : '');
     card.href = url;
     card.innerHTML = html;
     return card.outerHTML;
@@ -136,7 +137,16 @@ function arrangeMosaic(projects) {
         side = (side === 'left') ? 'right' : 'left';
     }
     // Reste : grandes tuiles sans bloc complet + petites restantes, en petit.
-    large.concat(small).forEach(function(p) { out.push({ project: p, size: 'small' }); });
+    const rest = large.concat(small);
+    rest.forEach(function(p) { out.push({ project: p, size: 'small' }); });
+    // Dernière rangée incomplète (1 à 3 tuiles sur 4) : les tuiles s'élargissent
+    // pour remplir la rangée plutôt que de laisser une tuile isolée.
+    const tail = rest.length % 4;
+    if (tail) {
+        out.slice(out.length - tail).forEach(function(item, i) {
+            item.size = 'fill-' + tail + '-' + (i + 1);
+        });
+    }
     return out;
 }
 

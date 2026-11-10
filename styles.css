@@ -466,6 +466,21 @@ body.home-page .header .lang-current {
     gap: 12px;
 }
 
+/* Dernière rangée incomplète (voir arrangeMosaic) : 1 tuile → toute la largeur,
+   2 tuiles → une demi-rangée chacune, 3 tuiles → 2 + 1 + 1 colonnes. Les tuiles
+   élargies gardent la hauteur d'une petite tuile. */
+.projects-mosaic .project-tile--fill-1-1 {
+    grid-column: span 4;
+    aspect-ratio: 4 / 1;
+}
+
+.projects-mosaic .project-tile--fill-2-1,
+.projects-mosaic .project-tile--fill-2-2,
+.projects-mosaic .project-tile--fill-3-1 {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+}
+
 /* Page Projets : titre, filtres et « Autres références » alignés sur la mosaïque. */
 .page-projets .lang-block .page-header,
 .page-projets .lang-block .projects-filters,
@@ -602,6 +617,19 @@ body.home-page .header .lang-current {
     .projects-mosaic .project-tile--left,
     .projects-mosaic .project-tile--right {
         grid-column: 1 / -1;
+    }
+
+    /* Dernière rangée sur 2 colonnes : seule une tuile restée seule s'élargit. */
+    .projects-mosaic .project-tile--fill-2-1,
+    .projects-mosaic .project-tile--fill-2-2 {
+        grid-column: span 1;
+        aspect-ratio: 1;
+    }
+
+    .projects-mosaic .project-tile--fill-1-1,
+    .projects-mosaic .project-tile--fill-3-1 {
+        grid-column: 1 / -1;
+        aspect-ratio: 2 / 1;
     }
 
     /* Petites tuiles : légende réduite au titre. */

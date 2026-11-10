@@ -59,6 +59,7 @@
       "title_en": "Arboretum de Nanterre",
       "image": "assets/images/arboretum-nanterre/cover.jpg",
       "category": "structure",
+      "firm": "leicht-france",
       "featured": true,
       "year": "2022",
       "location": "Nanterre, France",
@@ -72,7 +73,13 @@
         "Our work covered the structural engineering as well as the design of sections and connections."
       ],
       "gallery": [
-        "assets/images/arboretum-nanterre/01.jpg"
+        "assets/images/arboretum-nanterre/01.jpg",
+        "assets/images/arboretum-nanterre/02.jpg",
+        "assets/images/arboretum-nanterre/03.jpg",
+        "assets/images/arboretum-nanterre/04.jpg",
+        "assets/images/arboretum-nanterre/05.jpg",
+        "assets/images/arboretum-nanterre/06.jpg",
+        "assets/images/arboretum-nanterre/07.jpg"
       ],
       "facts": {
         "address": "1 Pl des Papeteries, 92000 Nanterre, France",
@@ -206,6 +213,38 @@
       }
     },
     {
+      "id": "pinard",
+      "title": "Super-équipement Pinard, Paris 14e",
+      "title_en": "Pinard multi-purpose facility, Paris 14th",
+      "image": "assets/images/pinard/cover.jpg",
+      "category": "structure",
+      "firm": "lef-t",
+      "featured": false,
+      "year": "2025",
+      "location": "Paris 14e, France",
+      "location_en": "Paris 14th, France",
+      "description": [
+        "Le super-équipement Pinard est une opération de reconversion exemplaire : l'ancienne maternité historique de 1934, au cœur de la ZAC Saint-Vincent-de-Paul, devient un pôle multifonctionnel ouvert et partagé.",
+        "Il réunit sous un même toit une école et une crèche pour les familles du quartier, un gymnase moderne installé dans les volumes repensés de l'ancien parking, des espaces de travail et associatifs ainsi que des commerces de proximité.",
+        "Nous avons réalisé les études d'exécution : notes de calcul et plans de détail."
+      ],
+      "description_en": [
+        "The Pinard multi-purpose facility is an exemplary conversion project: the historic 1934 maternity hospital at the heart of the Saint-Vincent-de-Paul development zone becomes an open, shared multi-functional hub.",
+        "It brings together under one roof a school and a nursery for local families, a modern gymnasium set in the reworked volumes of the former car park, workspaces and community spaces, and local shops.",
+        "We carried out the execution studies: structural calculations and detail drawings."
+      ],
+      "gallery": [
+        "assets/images/pinard/01.jpg"
+      ],
+      "facts": {
+        "address": "82 avenue Denfert-Rochereau, 75014 Paris, France",
+        "client": "Paris & Métropole Aménagement (P&Ma)",
+        "architect": "Agence ChartierDalix",
+        "surface": "6 000 m²",
+        "cost": "19 800 000 € HT"
+      }
+    },
+    {
       "id": "tour-saint-gobain",
       "title": "Tour Saint-Gobain, La Défense",
       "title_en": "Saint-Gobain Tower, La Défense",
@@ -246,6 +285,7 @@
       "title_en": "Swatch Group Headquarters",
       "image": "assets/images/swatch-group-bienne/cover.jpg",
       "category": "facade",
+      "firm": "leicht-france",
       "featured": false,
       "year": "2019",
       "location": "Bienne, Suisse",
@@ -799,6 +839,7 @@
       "title_en": "Augustenstraße, Munich",
       "image": "assets/images/augustenstrasse-munich/cover.jpg",
       "category": "structure",
+      "firm": "leicht-france",
       "featured": false,
       "year": "2019",
       "location": "Munich, Allemagne",
@@ -884,6 +925,7 @@
       "title_en": "Omega Museum, Biel/Bienne",
       "image": "assets/images/musee-omega-bienne/cover.jpg",
       "category": "facade",
+      "firm": "leicht-france",
       "featured": false,
       "year": "2018",
       "location": "Bienne, Suisse",
@@ -1112,6 +1154,7 @@
       "title_en": "Canary Wharf Crossrail Station, London",
       "image": "assets/images/canary-wharf-londres/cover.jpg",
       "category": "membrane",
+      "firm": "leicht-france",
       "featured": false,
       "year": "2015",
       "location": "Londres, Royaume-Uni",

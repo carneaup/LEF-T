@@ -22,8 +22,14 @@
     "assets/images/cargo-schwehhr/04.jpg": { "author": "LEF-T" },
     "assets/images/cargo-schwehhr/05.jpg": { "author": "LEF-T" },
 
-    "assets/images/arboretum-nanterre/cover.jpg": { "author": "Mathis" },
-    "assets/images/arboretum-nanterre/01.jpg": { "author": "Mathis" },
+    "assets/images/arboretum-nanterre/cover.jpg": { "author": "LEF-T" },
+    "assets/images/arboretum-nanterre/01.jpg": { "author": "LEF-T" },
+    "assets/images/arboretum-nanterre/02.jpg": { "author": "LEF-T" },
+    "assets/images/arboretum-nanterre/03.jpg": { "author": "LEF-T" },
+    "assets/images/arboretum-nanterre/04.jpg": { "author": "LEF-T" },
+    "assets/images/arboretum-nanterre/05.jpg": { "author": "LEF-T" },
+    "assets/images/arboretum-nanterre/06.jpg": { "author": "Mathis" },
+    "assets/images/arboretum-nanterre/07.jpg": { "author": "Mathis" },
 
     "assets/images/cnam-intechmer/cover.jpg": { "author": "Valentin Leflamand" },
     "assets/images/cnam-intechmer/01.jpg": { "author": "Valentin Leflamand" },
@@ -33,6 +39,9 @@
     "assets/images/ilot-condorcet/01.jpg": { "author": "LEF-T" },
     "assets/images/ilot-condorcet/02.jpg": { "author": "LEF-T" },
     "assets/images/ilot-condorcet/03.jpg": { "author": "LEF-T" },
+
+    "assets/images/pinard/cover.jpg": { "author": "LEF-T" },
+    "assets/images/pinard/01.jpg": { "author": "LEF-T" },
 
     "assets/images/halle-villeneuve-la-garenne/cover.jpg": { "author": "Mathis" },
 

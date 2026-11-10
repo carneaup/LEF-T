@@ -59,7 +59,8 @@ Paul, c'est ce dossier qui est connecté.
   gauche / droite. Grandes tuiles = projets `"tile": "large"` (dans l'ordre du fichier),
   petites = les autres (dans l'ordre du fichier, toujours alterner visuels vélo blancs et
   photos). Une grande tuile n'est posée que s'il reste ≥ 4 petites pour son bloc (sinon
-  affichée en petit) → pas de trou, même filtré. Idéal : 1 grande tuile pour 4 petites
+  affichée en petit) → pas de trou, même filtré. Dernière rangée incomplète (1 à 3
+  tuiles) : les tuiles s'élargissent pour la remplir (classes `project-tile--fill-N-i`). Idéal : 1 grande tuile pour 4 petites
   (actuellement Grassau, Mémorial, Wurtzbourg + 12 petites = 3 blocs). Réserver les grandes
   tuiles aux photos ≥ 1200 px. 4 colonnes sur ordinateur/tablette, 2 sur mobile (grande
   tuile pleine largeur). Largeur alignée sur l'en-tête (1400 px max ; classe `page-projets`
@@ -70,7 +71,15 @@ Paul, c'est ce dossier qui est connecté.
   Rosenheim). Affiché « Réalisé par » / « Carried out by » en tête de la fiche technique et
   en petites capitales jaunes sous le lieu/année au survol des vignettes. Règle de Paul :
   tout projet LEICHT France / LEICHT / FTR doit être mentionné comme tel ; ne jamais
-  deviner l'entité, la demander à Paul.
+  deviner l'entité, la demander à Paul. Renseignés (nov. 2026) : `lef-t` pour Condorcet,
+  Pinard et les projets vélo ; `leicht-france` pour Swatch, Canary Wharf, Arboretum,
+  Augustenstraße, Omega (le pptx de Paul « 2026-07-10 Fiches de projet bois » le dit
+  explicitement). Les autres attendent la réponse de Paul.
+- Nov. 2026 : Arboretum — 6 photos LS (projet livré, © LEF-T, dossier Nextcloud2
+  « LF Communication/Photos site web LEF-T/ARBORETUM/261107 LS ») en couverture et
+  galerie, les 2 photos de chantier © Mathis passées en fin de galerie (06, 07).
+  Ajout de `pinard` (Super-équipement Pinard, Paris 14e, LEF-T, études EXE : notes de
+  calcul et plans de détail) depuis le pptx ; photos de chantier ~1400 px © LEF-T.
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
   mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
   lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution
