@@ -117,16 +117,33 @@ au lieu de planter.
 
 ## Ordre et taille des tuiles de la mosaïque
 
-- Les projets s'affichent dans l'ordre du tableau `projects` de
-  `data/projects.json` : déplacer une entrée change sa place. Alterner les
+- La mosaïque est rangée en blocs réguliers : **1 grande tuile + 4 petites**,
+  la grande alternant à gauche puis à droite (4 colonnes sur ordinateur,
+  2 sur mobile).
+- Les grandes tuiles sont les projets marqués `"tile": "large"`, les petites
+  tous les autres. Dans chaque groupe, l'ordre est celui du tableau `projects`
+  de `data/projects.json` : déplacer une entrée change sa place. Alterner les
   visuels (schémas de calcul sur fond blanc / photos) rend la mosaïque plus
   agréable.
-- Ajouter `"tile": "large"` à un projet affiche sa vignette en grand
-  (2 × 2 tuiles). À réserver à 2 ou 3 projets avec une belle photo bien
-  définie. Astuce : la mosaïque affiche 8 colonnes sur grand écran, 6 sur
-  écran moyen, 4 sur tablette et 2 sur mobile. La grille est pleine partout
-  quand (nombre de projets + 3 × nombre de grandes tuiles) est un multiple
-  de 24 (sinon, viser au moins un multiple de 8 pour les grands écrans).
+- Pour un rendu sans trou, viser **1 grande tuile pour 4 petites** (ex. 3
+  grandes + 12 petites). Une grande tuile sans 4 petites pour l'accompagner
+  s'affiche automatiquement en petit. Réserver les grandes tuiles aux photos
+  bien définies (≥ 1200 px).
+
+## Indiquer qui a réalisé le projet
+
+Ajouter `"firm"` à l'entrée du projet, avec l'un des identifiants du tableau
+`firms` de `data/projects.json` :
+
+| `firm` | Affiché |
+|---|---|
+| `lef-t` | LEF-T |
+| `leicht-france` | LEICHT France |
+| `leicht` | LEICHT (Allemagne) |
+| `ftr` | FTR — Fassade Tragwerk Rosenheim |
+
+Le site affiche alors « Réalisé par … » dans la fiche technique du projet et
+le nom sous la vignette au survol.
 
 ## Choisir les photos du fond d'écran de la page d'accueil
 

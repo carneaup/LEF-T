@@ -188,13 +188,17 @@ function renderProjectDetail(project) {
     const factsEl = document.getElementById('projectFacts');
     if (factsEl) {
         factsEl.innerHTML = '';
-        const baseFacts = project.facts || null;
+        // L'entité qui a réalisé le projet est ajoutée en tête de la fiche
+        // technique (même si le projet n'a pas d'autre information technique).
+        const firm = (typeof firmName === 'function') ? firmName(project) : '';
+        const baseFacts = (project.facts || firm) ? Object.assign({}, project.facts || {}) : null;
+        if (firm) baseFacts.firm = firm;
         if (baseFacts) {
             const overrides = (isEN && project.facts_en) ? project.facts_en : {};
             const labels = isEN
-                ? { address: 'Address', client: 'Client', architect: 'Architect', surface: 'Area', cost: 'Cost' }
-                : { address: 'Adresse', client: "Maître d'ouvrage", architect: 'Architecte', surface: 'Surface', cost: 'Coût' };
-            const order = ['client', 'architect', 'address', 'surface', 'cost'];
+                ? { firm: 'Carried out by', address: 'Address', client: 'Client', architect: 'Architect', surface: 'Area', cost: 'Cost' }
+                : { firm: 'Réalisé par', address: 'Adresse', client: "Maître d'ouvrage", architect: 'Architecte', surface: 'Surface', cost: 'Coût' };
+            const order = ['firm', 'client', 'architect', 'address', 'surface', 'cost'];
             order.forEach(function(key) {
                 const value = overrides[key] || baseFacts[key];
                 if (!value) return;

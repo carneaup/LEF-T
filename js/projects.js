@@ -42,7 +42,19 @@ async function loadProjects() {
     }
 }
 
-function generateProjectCard(project) {
+// size : 'small' (défaut), 'large-left' ou 'large-right' (voir arrangeMosaic).
+// Hors mosaïque (vignettes « Autres projets »), toutes les tuiles sont petites.
+// Entité ayant réalisé le projet ("firm" dans projects.json → tableau "firms" :
+// LEF-T, LEICHT France, LEICHT (Allemagne), FTR). Renvoie le nom affiché, ou ''
+// si le projet n'a pas (encore) d'entité renseignée.
+function firmName(project) {
+    if (!project || !project.firm || !projectsData || !projectsData.firms) return '';
+    const firm = projectsData.firms.find(function(f) { return f.id === project.firm; });
+    if (!firm) return '';
+    return (getLang() === 'EN' && firm.name_en) ? firm.name_en : firm.name;
+}
+
+function generateProjectCard(project, size) {
     const isEN = getLang() === 'EN';
     const image = PROJECTS_BASE_PATH + project.image;
     // L'URL est calculée depuis l'id : une seule page projet.html sert tous les
@@ -59,12 +71,15 @@ function generateProjectCard(project) {
         '<h3>' + title + '</h3>' +
         // L'année est facultative ; "year_en" permet une traduction (ex. "En cours" / "Ongoing")
         '<p>' + location + (year ? ' - ' + year : '') + '</p>' +
+        // Entité (LEICHT France, LEICHT, FTR, LEF-T) sous le lieu et l'année
+        (firmName(project) ? '<p class="project-tile-firm">' + firmName(project) + '</p>' : '') +
         '</div>' +
         // Crédit de l'image (« © Auteur »), voir js/credits.js et data/credits.json
         (typeof creditHTML === 'function' ? creditHTML(project.image) : '');
     const card = document.createElement('a');
-    // "tile": "large" dans projects.json → tuile double (2 × 2) dans la mosaïque.
-    card.className = 'project-tile' + (project.tile === 'large' ? ' project-tile--large' : '');
+    // Tuile double (2 × 2) dans la mosaïque, à gauche ou à droite de son bloc.
+    card.className = 'project-tile' + (size === 'large-left' ? ' project-tile--large project-tile--left'
+        : size === 'large-right' ? ' project-tile--large project-tile--right' : '');
     card.href = url;
     card.innerHTML = html;
     return card.outerHTML;
@@ -104,6 +119,27 @@ function hasImage(project) {
     return !!project.image;
 }
 
+// Rythme de la mosaïque : blocs de 5 tuiles = 1 grande (2 × 2) + 4 petites,
+// la grande alternant à gauche puis à droite (zigzag). Les grandes tuiles sont
+// prises parmi les projets "tile": "large" (dans l'ordre de projects.json), les
+// petites parmi les autres. Une grande tuile n'est placée que s'il reste au
+// moins 4 petites pour compléter son bloc (sinon elle s'affiche en petit), ce
+// qui évite les trous, y compris quand on filtre par catégorie.
+function arrangeMosaic(projects) {
+    const large = projects.filter(function(p) { return p.tile === 'large'; });
+    const small = projects.filter(function(p) { return p.tile !== 'large'; });
+    const out = [];
+    let side = 'left';
+    while (large.length && small.length >= 4) {
+        out.push({ project: large.shift(), size: 'large-' + side });
+        small.splice(0, 4).forEach(function(p) { out.push({ project: p, size: 'small' }); });
+        side = (side === 'left') ? 'right' : 'left';
+    }
+    // Reste : grandes tuiles sans bloc complet + petites restantes, en petit.
+    large.concat(small).forEach(function(p) { out.push({ project: p, size: 'small' }); });
+    return out;
+}
+
 function displayProjects(category) {
     let projects = publishedProjects();
     if (category !== 'all') {
@@ -112,7 +148,9 @@ function displayProjects(category) {
 
     // Il peut y avoir plusieurs conteneurs .projects-mosaic sur une même page
     // (un par bloc de langue .lang-fr / .lang-en) : on les met tous à jour.
-    const cardsHTML = projects.filter(hasImage).map(generateProjectCard).join('');
+    const cardsHTML = arrangeMosaic(projects.filter(hasImage)).map(function(item) {
+        return generateProjectCard(item.project, item.size);
+    }).join('');
     document.querySelectorAll('.projects-mosaic').forEach(function(container) {
         container.innerHTML = cardsHTML;
     });

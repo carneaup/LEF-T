@@ -36,6 +36,7 @@
       "title_en": "G1 Project - Stiffness",
       "image": "assets/images/g1-rigidite/cover.jpg",
       "category": "mobilite-douce",
+      "firm": "lef-t",
       "featured": true,
       "year": "2025",
       "location": "Paris, France",
@@ -148,6 +149,7 @@
       "title_en": "Cargo Schwehhr Project",
       "image": "assets/images/cargo-schwehhr/cover.jpg",
       "category": "mobilite-douce",
+      "firm": "lef-t",
       "featured": true,
       "year": "2026",
       "location": "Paris, France",
@@ -174,6 +176,7 @@
       "title_en": "Îlot Condorcet",
       "image": "assets/images/ilot-condorcet/cover.jpg",
       "category": "structure",
+      "firm": "lef-t",
       "featured": true,
       "year": "En cours",
       "year_en": "Ongoing",
@@ -379,6 +382,7 @@
       "title_en": "G1 Project - Modal Analysis",
       "image": "assets/images/g1-analyse-modale/cover.jpg",
       "category": "mobilite-douce",
+      "firm": "lef-t",
       "featured": false,
       "year": "2025",
       "location": "Paris, France",
@@ -460,6 +464,7 @@
       "title_en": "CFD Simulation - R2 Road Bike",
       "image": "assets/images/r2-cfd/cover.jpg",
       "category": "r2",
+      "firm": "lef-t",
       "featured": true,
       "year": "2025",
       "location": "Paris, France",
@@ -1402,6 +1407,28 @@
       "id": "membrane",
       "name": "Membrane",
       "name_en": "Membrane"
+    }
+  ],
+  "firms": [
+    {
+      "id": "lef-t",
+      "name": "LEF-T",
+      "name_en": "LEF-T"
+    },
+    {
+      "id": "leicht-france",
+      "name": "LEICHT France",
+      "name_en": "LEICHT France"
+    },
+    {
+      "id": "leicht",
+      "name": "LEICHT (Allemagne)",
+      "name_en": "LEICHT (Germany)"
+    },
+    {
+      "id": "ftr",
+      "name": "FTR — Fassade Tragwerk Rosenheim",
+      "name_en": "FTR — Fassade Tragwerk Rosenheim"
     }
   ]
 }

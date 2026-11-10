@@ -54,17 +54,23 @@ Paul, c'est ce dossier qui est connecté.
   agrandies). Mobile : photo principale, texte, autres photos. En bas : projet
   précédent/suivant + 3 vignettes « Autres projets » (même catégorie d'abord). Un projet
   sans aucune photo s'affiche sur une seule colonne.
-- **Mosaïque** : ordre = ordre du tableau `projects` dans `projects.json` (volontairement
-  mélangé pour alterner visuels vélo blancs et photos bâtiment ; garder ce principe en
-  ajoutant un projet). Option `"tile": "large"` → tuile 2 × 2 (`grid-auto-flow: dense`) ;
-  actuellement Gymnase de Grassau, Mémorial Alsace-Moselle et Station d'épuration de Wurtzbourg (nov. 2026), choisis pour la définition
-  de leur photo. Réserver les grandes tuiles aux photos ≥ 1200 px en carré.
-  Colonnes (nov. 2026) : 8 au-delà de 1500 px de large, 6 jusqu'à 1500, 4 jusqu'à 1100,
-  2 sur mobile (≤ 760 px, les grandes tuiles y gardent leur 2 × 2 = pleine largeur).
-  Largeur de la mosaïque alignée sur l'en-tête (1400 px max, classe `page-projets` sur le
-  `<body>` de projets.html). Grille pleine partout quand (projets publiés avec photo +
-  3 × grandes tuiles) est un multiple de 24 (actuellement 15 + 3 × 3 = 24).
-  Tuiles toutes identiques dans « Autres projets ».
+- **Mosaïque (nov. 2026, « zigzag »)** : `arrangeMosaic()` (js/projects.js) compose des blocs
+  de 2 rangées × 4 colonnes = 1 grande tuile (2 × 2) + 4 petites, la grande alternant
+  gauche / droite. Grandes tuiles = projets `"tile": "large"` (dans l'ordre du fichier),
+  petites = les autres (dans l'ordre du fichier, toujours alterner visuels vélo blancs et
+  photos). Une grande tuile n'est posée que s'il reste ≥ 4 petites pour son bloc (sinon
+  affichée en petit) → pas de trou, même filtré. Idéal : 1 grande tuile pour 4 petites
+  (actuellement Grassau, Mémorial, Wurtzbourg + 12 petites = 3 blocs). Réserver les grandes
+  tuiles aux photos ≥ 1200 px. 4 colonnes sur ordinateur/tablette, 2 sur mobile (grande
+  tuile pleine largeur). Largeur alignée sur l'en-tête (1400 px max ; classe `page-projets`
+  sur le `<body>` de projets.html pour aligner titre et filtres). Paul a trouvé la version
+  8/6 colonnes « moche » : ne pas y revenir sans lui demander.
+- **Entité** : champ `firm` dans chaque projet → id du tableau `firms` de projects.json
+  (`lef-t`, `leicht-france`, `leicht` = LEICHT Allemagne, `ftr` = Fassade Tragwerk
+  Rosenheim). Affiché « Réalisé par » / « Carried out by » en tête de la fiche technique et
+  en petites capitales jaunes sous le lieu/année au survol des vignettes. Règle de Paul :
+  tout projet LEICHT France / LEICHT / FTR doit être mentionné comme tel ; ne jamais
+  deviner l'entité, la demander à Paul.
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
   mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
   lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution
