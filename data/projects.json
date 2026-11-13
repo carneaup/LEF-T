@@ -314,6 +314,39 @@
       }
     },
     {
+      "id": "aquascope",
+      "title": "Aquascope, Futuroscope",
+      "title_en": "Aquascope, Futuroscope",
+      "image": "assets/images/aquascope/cover.jpg",
+      "category": "membrane",
+      "firm": "leicht-france",
+      "featured": false,
+      "year": "2024",
+      "location": "Chasseneuil-du-Poitou, France",
+      "location_en": "Chasseneuil-du-Poitou, France",
+      "description": [
+        "Au Futuroscope, l'Aquascope est un parc aquatique couvert et immersif, organisé en cinq univers : séquence d'entrée, hub central, zone Sensation et ses toboggans, zone Immersion et zone Distraction.",
+        "Sa tour de toboggans est enveloppée d'une façade en coussins ETFE triple peau. Pour le compte de Taiyo, en phase d'exécution, nous avons réalisé le dimensionnement des coussins, calculés pour résister aux intempéries, les plans d'assemblage et de fabrication, le dossier d'ATEx et l'ensemble de l'accastillage, ainsi que le système de ventilation qui maintient les coussins gonflés. Une maquette BIM a permis de définir précisément la forme de chaque coussin dans la structure métallique."
+      ],
+      "description_en": [
+        "At Futuroscope, the Aquascope is an immersive indoor water park organised into five zones: entrance sequence, central hub, Sensation zone with its slides, Immersion zone and Distraction zone.",
+        "Its slide tower is wrapped in a facade of triple-layer ETFE cushions. On behalf of Taiyo, at the execution stage, we carried out the structural design of the cushions to withstand the weather, the assembly and fabrication drawings, the ATEx technical approval file and all the fittings, as well as the ventilation system that keeps the cushions inflated. A BIM model was used to define the exact shape of each cushion within the steel structure."
+      ],
+      "gallery": [
+        "assets/images/aquascope/01.jpg"
+      ],
+      "facts": {
+        "address": "Avenue René Monory, 86360 Chasseneuil-du-Poitou, France",
+        "client": "Futur Resort",
+        "architect": "ART'UR Architectes, Bordeaux",
+        "surface": "7 500 m² intérieurs + 4 500 m² extérieurs",
+        "cost": "50 000 000 € HT"
+      },
+      "facts_en": {
+        "surface": "7 500 m² indoor + 4 500 m² outdoor"
+      }
+    },
+    {
       "id": "swatch-group-bienne",
       "title": "Siège social Swatch Group",
       "title_en": "Swatch Group Headquarters",
@@ -577,25 +610,6 @@
       ],
       "description_en": [
         "Wood and glass structure project for the Urwaldhaus museum in Munich."
-      ],
-      "gallery": [],
-      "draft": true
-    },
-    {
-      "id": "poitiers",
-      "title": "Projet Poitiers",
-      "title_en": "Poitiers Project",
-      "image": "assets/images/poitiers/cover.jpg",
-      "category": "urbanisme",
-      "featured": false,
-      "year": "2022",
-      "location": "Poitiers, France",
-      "location_en": "Poitiers, France",
-      "description": [
-        "Projet d'aquarium public avec structure en verre et acier pour la ville de Poitiers."
-      ],
-      "description_en": [
-        "Public aquarium project with glass and steel structure for the city of Poitiers."
       ],
       "gallery": [],
       "draft": true

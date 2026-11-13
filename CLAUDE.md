@@ -84,7 +84,12 @@ Paul, c'est ce dossier qui est connecté.
   Villejuif – Gustave Roussy (LEICHT France, EXE pour Taiyo : dimensionnement, plans
   d'assemblage et de fab, dossier d'ATEx de l'ETFE simple peau + accastillage). Publiée,
   `featured` (couverture paysage pour le fond d'accueil), 6 photos WhatsApp © LEF-T.
-  Paul indique que l'Aquascope (brouillon `poitiers` ?) est du même type (EXE pour Taiyo).
+- Nov. 2026 : brouillon fictif `poitiers` remplacé par `aquascope` (Aquascope, Futuroscope,
+  LEICHT France, EXE pour Taiyo : coussins ETFE triple peau + ventilation, ATEx, accastillage ;
+  texte et fiche technique depuis « 2025-01-16- Nouveau modéle fiche de projet.pptx », slide 1).
+  Architecte retenu par Paul : ART'UR Architectes. MOA « Futur Resort » (d'après le pptx, non
+  confirmé en ligne). Photos : auteur inconnu, « probablement Taiyo Europe » selon Paul
+  (LEICHT France n'est pas allé sur le chantier) → créditées Taiyo Europe, à confirmer.
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
   mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
   lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution
