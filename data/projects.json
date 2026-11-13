@@ -178,6 +178,40 @@
       ]
     },
     {
+      "id": "villejuif",
+      "title": "Gare Villejuif – Gustave Roussy",
+      "title_en": "Villejuif – Gustave Roussy station",
+      "image": "assets/images/villejuif/cover.jpg",
+      "category": "membrane",
+      "firm": "leicht-france",
+      "featured": true,
+      "year": "2025",
+      "location": "Villejuif, France",
+      "location_en": "Villejuif, France",
+      "description": [
+        "Conçue par Dominique Perrault, la gare Villejuif – Gustave Roussy du Grand Paris Express, au croisement des lignes 14 et 15, s'organise autour d'un vaste puits de lumière circulaire. Sa couverture en ETFE simple peau, portée par une structure rayonnante, fait entrer la lumière naturelle au cœur de la gare.",
+        "Pour le compte de Taiyo, en phase d'exécution, nous avons réalisé le dimensionnement, les plans d'assemblage et de fabrication ainsi que le dossier d'ATEx de la couverture ETFE simple peau et de l'ensemble de son accastillage, notamment les profils de connexion et les joncs transversaux."
+      ],
+      "description_en": [
+        "Designed by Dominique Perrault, Villejuif – Gustave Roussy station on the Grand Paris Express, at the junction of lines 14 and 15, is organised around a vast circular light well. Its single-layer ETFE roof, carried by a radiating structure, brings natural light into the heart of the station.",
+        "On behalf of Taiyo, at the execution stage, we carried out the structural design, the assembly and fabrication drawings and the ATEx technical approval file for the single-layer ETFE roof and all its fittings, including the connection profiles and transverse keder rods."
+      ],
+      "gallery": [
+        "assets/images/villejuif/01.jpg",
+        "assets/images/villejuif/02.jpg",
+        "assets/images/villejuif/03.jpg",
+        "assets/images/villejuif/04.jpg",
+        "assets/images/villejuif/05.jpg"
+      ],
+      "facts": {
+        "client": "Société des grands projets (ex-Société du Grand Paris)",
+        "architect": "Dominique Perrault Architecture"
+      },
+      "facts_en": {
+        "client": "Société des grands projets (formerly Société du Grand Paris)"
+      }
+    },
+    {
       "id": "ilot-condorcet",
       "title": "Îlot Condorcet",
       "title_en": "Îlot Condorcet",
@@ -562,25 +596,6 @@
       ],
       "description_en": [
         "Public aquarium project with glass and steel structure for the city of Poitiers."
-      ],
-      "gallery": [],
-      "draft": true
-    },
-    {
-      "id": "villejuif",
-      "title": "Projet Villejuif",
-      "title_en": "Villejuif Project",
-      "image": "assets/images/villejuif/cover.jpg",
-      "category": "urbanisme",
-      "featured": false,
-      "year": "2022",
-      "location": "Villejuif, France",
-      "location_en": "Villejuif, France",
-      "description": [
-        "Projet de couverture ETFE pour la ville de Villejuif. Structure légère et innovante."
-      ],
-      "description_en": [
-        "ETFE cover project for the city of Villejuif. Lightweight and innovative structure."
       ],
       "gallery": [],
       "draft": true

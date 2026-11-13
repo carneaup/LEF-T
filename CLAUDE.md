@@ -80,6 +80,11 @@ Paul, c'est ce dossier qui est connecté.
   galerie, les 2 photos de chantier © Mathis passées en fin de galerie (06, 07).
   Ajout de `pinard` (Super-équipement Pinard, Paris 14e, LEF-T, études EXE : notes de
   calcul et plans de détail) depuis le pptx ; photos de chantier ~1400 px © LEF-T.
+- Nov. 2026 : `villejuif` (ancien brouillon fictif) remplacé par la vraie fiche Gare
+  Villejuif – Gustave Roussy (LEICHT France, EXE pour Taiyo : dimensionnement, plans
+  d'assemblage et de fab, dossier d'ATEx de l'ETFE simple peau + accastillage). Publiée,
+  `featured` (couverture paysage pour le fond d'accueil), 6 photos WhatsApp © LEF-T.
+  Paul indique que l'Aquascope (brouillon `poitiers` ?) est du même type (EXE pour Taiyo).
 - **Références sans photo** : un projet publié sans `image` n'est pas dans la mosaïque
   mais dans la liste « Autres références » sous celle-ci (page Projets) : année, titre,
   lieu, `mission` / `mission_en` (champ court optionnel, ex. « Études d'exécution
